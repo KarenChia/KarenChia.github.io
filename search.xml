@@ -32,6 +32,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo + Coding 搭建博客之自定义域名的坑</title>
+    <url>/2020/11/18/coding-dns/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo 搭建的博客一般都是托管到第三方网站，如GitHub、Gitee、Coding。</p>
+<p>通常情况下，大多数教程或者是 Hexo 官网都介绍的是部署到 GitHub，但众所周知，GitHub的访问速度实在跟不上节奏，故而出现了双访问通道的部署方式：</p>
+<ul>
+<li>国内线路部署到 Coding</li>
+<li>国外线路部署到 GitHub</li>
+</ul>
+<p>本文主要讨论部署到 Coding 时，应注意的细节。</p>
+<h1 id="Hexo-部署到-Coding-的大致流程"><a href="#Hexo-部署到-Coding-的大致流程" class="headerlink" title="Hexo 部署到 Coding 的大致流程"></a>Hexo 部署到 Coding 的大致流程</h1><p>1 申请 <a href="https://e.coding.net/login">Coding</a> 账号</p>
+<p>2 在 Coding 创建项目</p>
+<p>3 本地 Hexo 项目提交至 Coding</p>
+<p>4 Coding 部署静态网站</p>
+<p>具体流程官网文档已经很详细了<a href="https://help.coding.net/docs/pages/practice/hexo.html">快速搭建 Hexo 个人博客</a></p>
+<h1 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h1><p>官方文档<a href="https://help.coding.net/docs/pages/operating/customize.html">自定义域名配置</a></p>
+<p>为什么要自定义域名：</p>
+<ul>
+<li>Coding 部署出来的静态网站访问地址不太友好，比如我的博客地址：<a href="https://coding-pages-bucket-3488949-8014283-4889-371964-1304213829.cos-website.ap-hongkong.myqcloud.com/">https://coding-pages-bucket-3488949-8014283-4889-371964-1304213829.cos-website.ap-hongkong.myqcloud.com/</a></li>
+<li>在自定义的域名中可设置站点访问路线，优化访问速度</li>
+<li>可视化的域名，比如我的自定义的域名<a href="https://karenchia.net/">https://karenchia.net/</a></li>
+</ul>
+<h1 id="自定义域名采坑记录"><a href="#自定义域名采坑记录" class="headerlink" title="自定义域名采坑记录"></a>自定义域名采坑记录</h1><p>按照官网所给的文档完成自定义域名后，使用自定义的域名即可访问站点。</p>
+<blockquote>
+<p>如果自定义的域名需要修改，必须在域名修改成功后，再次将本地的 Hexo 项目重新部署到 Coding。</p>
+</blockquote>
+<p>本地站点，一定要先执行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>然后重新编译文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>再将站点部署到 Coding</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p><strong>如果这样还是无法访问，重复以上步骤，多试几次…</strong></p>
+<hr>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a href="https://blog.csdn.net/victoryxa/article/details/104286462">Hexo博客部署到码云和Coding</a> <a href="https://blog.csdn.net/victoryxa/article/details/104286462">https://blog.csdn.net/victoryxa/article/details/104286462</a></p>
+]]></content>
+      <categories>
+        <category>Hexo配置问题</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Coding</tag>
+        <tag>自定义域名</tag>
+        <tag>域名解析</tag>
+        <tag>DNS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/11/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -56,6 +106,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
+    <url>/2020/11/18/hexo-set-up/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hexo Writing Exercise</title>
     <url>/2020/11/16/hexo-writing-exercise/</url>
     <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
@@ -67,11 +122,6 @@
       <tags>
         <tag>HexoDemo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
-    <url>/2020/11/18/hexo-set-up/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Valine评论插件报错：Code 403</title>
