@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/11/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>站点访问人数 Buszanui 插件数据统计错误</title>
     <url>/2020/11/18/buszanui-visitor-count/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
@@ -82,35 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/11/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
-    <url>/2020/11/18/hexo-set-up/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hexo Writing Exercise</title>
     <url>/2020/11/16/hexo-writing-exercise/</url>
     <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
@@ -141,6 +136,43 @@
         <tag>Hexo</tag>
         <tag>Valine插件</tag>
         <tag>Code 403</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
+    <url>/2020/11/18/hexo-set-up/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
+<p>起初写博客只是为了记录自己在平时开发过程中的经历，那些踩过的坑，还有那些优秀的框架。后面逐渐感受到学会一个新的知识点不容易，将这个知识点说得清楚，道得明白，更是不易，写博客也是对自己的一个提高。</p>
+<p>在此之前虽然写过一些博客，但内容着实不丰富，也体会到了创作的不易，期待后续能够推出一些高质量的博文。</p>
+<p>下面我们开始进入今天的正题。。。</p>
+<h1 id="搭建平台"><a href="#搭建平台" class="headerlink" title="搭建平台"></a>搭建平台</h1><p>基于 GitHub + Hexo + NexT 搭建个人博客</p>
+<ul>
+<li>GitHub 个人博客静态网页托管平台</li>
+<li>Hexo 快速、简洁且高效的博客框架，搭建本地静态网页站点</li>
+<li>NexT 个人博客主题，样式多样化、功能多样化</li>
+</ul>
+<h1 id="在使用-Hexo-之前，需要先注册-GitHub-账号"><a href="#在使用-Hexo-之前，需要先注册-GitHub-账号" class="headerlink" title="在使用 Hexo 之前，需要先注册 GitHub 账号"></a>在使用 Hexo 之前，需要先注册 GitHub 账号</h1><p><a href="https://github.com/">注册 GitHub 账号</a></p>
+<h1 id="安装配置-Hexo"><a href="#安装配置-Hexo" class="headerlink" title="安装配置 Hexo"></a>安装配置 Hexo</h1><p>Hexo 官方提供了多种主题配置，这里我选择了、、、</p>
+<p><a href="https://hexo.io/zh-cn/">Hexo 官方教程</a></p>
+<h1 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h1><p><a href="http://theme-next.iissnan.com/theme-settings.html">NexT 主题配置官网</a></p>
+<h5 id="这里为什么不详细介绍安装过程？"><a href="#这里为什么不详细介绍安装过程？" class="headerlink" title="这里为什么不详细介绍安装过程？"></a>这里为什么不详细介绍安装过程？</h5><p>官网文档已经将各类配置信息描述得非常清楚，文章中另说明在配置过程中需要注意的问题。</p>
+<h1 id="搭建过程中需要注意的问题"><a href="#搭建过程中需要注意的问题" class="headerlink" title="搭建过程中需要注意的问题"></a>搭建过程中需要注意的问题</h1><ul>
+<li>在 GitHub 上创建项目时，项目名必须是【你的 GitHub 用户名.github.io】，如：我的 GitHub 用户名为 KarenChia，那么项目的名称为【KarenChia.github.io】</li>
+<li>在 Hexo 的站点配置文件 【_config.yml】中的配置信息，均是以 key: value 形式进行配置，尤其要注意的是在 “:” 与 value 之前存在一个【空格】，如无【空格】，配置的相关属性无效。</li>
+<li>在将本地静态页面部署到 GitHub 时，仓库地址最好直接选择使用【HTTPS】，如果使用的是【SSH】，需要再对【SSH】进行配置，否则本地站点中的静态网页无法部署到 GitHub 上进行托管。</li>
+<li>在部署之前，需要先安装 【 hexo-deployer-git】插件，必须确保插件安装成功。</li>
+</ul>
+<h1 id="博客主题-Butterfly"><a href="#博客主题-Butterfly" class="headerlink" title="博客主题 Butterfly"></a>博客主题 Butterfly</h1><p>后续已将主题修改为 <a href="https://butterfly.js.org/">Butterfly</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Coding</tag>
+        <tag>Butterfly</tag>
+        <tag>GitHub</tag>
+        <tag>个人独立博客</tag>
       </tags>
   </entry>
 </search>
