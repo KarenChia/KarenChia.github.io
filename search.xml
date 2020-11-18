@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/11/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>站点访问人数 Buszanui 插件数据统计错误</title>
     <url>/2020/11/18/buszanui-visitor-count/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
@@ -106,36 +82,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Writing Exercise</title>
-    <url>/2020/11/16/hexo-writing-exercise/</url>
-    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
-<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/2020/11/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
         <category>Hexo独立博客配置</category>
       </categories>
       <tags>
         <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Valine评论插件报错：Code 403</title>
-    <url>/2020/11/17/valine-code-403/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code 403: Access denied by API domain white list, Please check your security domain.</span><br></pre></td></tr></table></figure>
-
-<p>大致意思是：访问被api域名白名单拒绝，请检查你的安全域名设置</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在 <a href="https://www.leancloud.cn/">LeanCloud</a> 的【应用 &gt; 设置 &gt; 安全中心 &gt; Web安全域名】中添加新的自定义域名即可解决该问题。</p>
-<p>此处【新的自定义域名】指的是：你的博客的访问域名。</p>
-<p><strong>安全域名的具体添加方式根据 LeanCloud 的要求添加即可。</strong><br><img src="/imgs/valine-code-403-doman.png"></p>
-]]></content>
-      <categories>
-        <category>Hexo配置问题</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Valine插件</tag>
-        <tag>Code 403</tag>
       </tags>
   </entry>
   <entry>
@@ -173,6 +140,39 @@
         <tag>Butterfly</tag>
         <tag>GitHub</tag>
         <tag>个人独立博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Valine评论插件报错：Code 403</title>
+    <url>/2020/11/17/valine-code-403/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code 403: Access denied by API domain white list, Please check your security domain.</span><br></pre></td></tr></table></figure>
+
+<p>大致意思是：访问被api域名白名单拒绝，请检查你的安全域名设置</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在 <a href="https://www.leancloud.cn/">LeanCloud</a> 的【应用 &gt; 设置 &gt; 安全中心 &gt; Web安全域名】中添加新的自定义域名即可解决该问题。</p>
+<p>此处【新的自定义域名】指的是：你的博客的访问域名。</p>
+<p><strong>安全域名的具体添加方式根据 LeanCloud 的要求添加即可。</strong><br><img src="/imgs/valine-code-403-doman.png"></p>
+]]></content>
+      <categories>
+        <category>Hexo配置问题</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Valine插件</tag>
+        <tag>Code 403</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Writing Exercise</title>
+    <url>/2020/11/16/hexo-writing-exercise/</url>
+    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
+<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
       </tags>
   </entry>
 </search>
