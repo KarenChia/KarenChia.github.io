@@ -56,11 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
-    <url>/2020/11/18/hexo-set-up/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hexo Writing Exercise</title>
     <url>/2020/11/16/hexo-writing-exercise/</url>
     <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
@@ -72,6 +67,11 @@
       <tags>
         <tag>HexoDemo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
+    <url>/2020/11/18/hexo-set-up/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Valine评论插件报错：Code 403</title>
