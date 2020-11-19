@@ -143,6 +143,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo Writing Exercise</title>
+    <url>/2020/11/16/hexo-writing-exercise/</url>
+    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
+<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Valine评论插件报错：Code 403</title>
     <url>/2020/11/17/valine-code-403/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
@@ -160,19 +173,6 @@
         <tag>Hexo</tag>
         <tag>Valine插件</tag>
         <tag>Code 403</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Writing Exercise</title>
-    <url>/2020/11/16/hexo-writing-exercise/</url>
-    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
-<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
       </tags>
   </entry>
 </search>
