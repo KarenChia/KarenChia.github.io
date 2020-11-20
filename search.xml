@@ -45,30 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/11/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo + Coding 搭建博客之自定义域名的坑</title>
     <url>/2020/11/18/coding-dns/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo 搭建的博客一般都是托管到第三方网站，如GitHub、Gitee、Coding。</p>
@@ -119,6 +95,30 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/11/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
     <url>/2020/11/18/hexo-set-up/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
@@ -166,6 +166,42 @@
       </categories>
       <tags>
         <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly 最新评论 newest-comments 401/资源加载错误（无法获取资料，请确认相关配置是否正确）</title>
+    <url>/2020/11/20/newest-comments/</url>
+    <content><![CDATA[<p>集成 Butterfly 博客主题中，在配置最新评论 newest comments 时，根据 Butterfly 的配置文档配置完成后，最新评论一直无法显示，提示错误信息：无法获取资料，请确认相关配置是否正确<br><img src="/imgs/newest-comments-401.jpg"></p>
+<p>在网页调试模式下，给出的错误信息大致是：找不到加载的资源 401</p>
+<h1 id="newest-comments-的配置信息"><a href="#newest-comments-的配置信息" class="headerlink" title="newest_comments 的配置信息"></a>newest_comments 的配置信息</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Aside widget - Newest Comments</span><br><span class="line">newest_comments:</span><br><span class="line">  enable: true</span><br><span class="line">  limit: 6</span><br><span class="line">  avatar: true</span><br><span class="line">  leancloud:</span><br><span class="line">    enable: true</span><br><span class="line">    appId: XXX # leancloud application app id</span><br><span class="line">    appKey: XXX # leancloud application app key</span><br><span class="line">    serverURL: XXX # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">    default_avatar: mp #mp&#x2F;identicon&#x2F;monsterid&#x2F;wavatar&#x2F;retro&#x2F;robohash&#x2F;blank</span><br><span class="line">  github_issues:</span><br><span class="line">    enable: true</span><br><span class="line">    repo: </span><br><span class="line">  # disqus:</span><br><span class="line">  #   enable: true</span><br><span class="line">  #   forum:</span><br><span class="line">  #   api_key:</span><br></pre></td></tr></table></figure>
+
+<p>Butterfly 的主题配置文件中是默认从 Valine 、 disqus 评论插件中读取评论信息，由于 disqus 的访问速度太慢，在我的博客中就没有使用 disqus ，故而将其注解。</p>
+<p>而问题也就出在这里 。。。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>我在这里做出假设：Butterfly 最新评论的显示，需要在其配置文件中至少配置两种不同类型的评论插件。</p>
+<p>上文提到，Butterfly 在最新评论处默认配置的 disqus 插件已被注解</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># disqus</span><br><span class="line"># https:&#x2F;&#x2F;disqus.com&#x2F;</span><br><span class="line">disqus:</span><br><span class="line">  shortname:</span><br></pre></td></tr></table></figure>
+<p>故而，上面这里关于 disqus 的配置是空的。</p>
+<p>在网上找了很长时间的资料，无奈，关于当前问题的文章实在是少之又少，也没有什么具体的解决方法。和 Butterfly 作者联系后，也尝试过些方法，还是没有得到解决 。。。</p>
+<p>最终，我考虑换其它的评论插件，因为 Butterfly 中集成了很多的评论插件，也方便集成，具体可查看其文档。就当我集成其它插件结束后，运行本地服务时，最新评论显示出来了<br><img src="/imgs/newest-comments-count.png"></p>
+<p>这里集成的插件任意选择一种（已集成的插件除外）即可。</p>
+<blockquote>
+<p>在本地服务运行期间，之前已经集成的插件并未删除。此时，在配置文件中配置了两种评论插件，我这里配置的是 Valine 和 Twikoo。</p>
+</blockquote>
+<p>具体的问题原因，其实并没有找到，配置到这里后，最新评论能正常显示了，我就结束了配置。如果你有相关的解决方案，欢迎在评论区留下你的宝贵意见 ！！！</p>
+<h2 id="Valine-配置信息"><a href="#Valine-配置信息" class="headerlink" title="Valine 配置信息"></a>Valine 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: XXX # leancloud application app id</span><br><span class="line">  appKey: XXX # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 记得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo配置问题</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>newest-comments</tag>
+        <tag>评论</tag>
+        <tag>401</tag>
+        <tag>资源加载</tag>
       </tags>
   </entry>
   <entry>
