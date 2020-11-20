@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
-    <url>/2020/11/19/blog-csdn/</url>
-    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+    <title>站点访问人数 Buszanui 插件数据统计错误</title>
+    <url>/2020/11/18/buszanui-visitor-count/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
+<blockquote>
+<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
+</blockquote>
+<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
+<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
+<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
+<blockquote>
+<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
+</blockquote>
+<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
+<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
+<li>GitHub Page</li>
+<li>Gitee Page</li>
+<li>Coding</li>
+</ul>
 ]]></content>
       <categories>
-        <category>博客</category>
+        <category>Hexo配置问题</category>
       </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>CSDN</tag>
+        <tag>Hexo</tag>
+        <tag>Buszanui</tag>
+        <tag>站点数据统计</tag>
       </tags>
   </entry>
   <entry>
@@ -64,34 +82,16 @@
       </tags>
   </entry>
   <entry>
-    <title>站点访问人数 Buszanui 插件数据统计错误</title>
-    <url>/2020/11/18/buszanui-visitor-count/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
-<blockquote>
-<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
-</blockquote>
-<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
-<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
-<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
-<blockquote>
-<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
-</blockquote>
-<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
-<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
-<li>GitHub Page</li>
-<li>Gitee Page</li>
-<li>Coding</li>
-</ul>
+    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
+    <url>/2020/11/19/blog-csdn/</url>
+    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
 ]]></content>
       <categories>
-        <category>Hexo配置问题</category>
+        <category>博客</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Buszanui</tag>
-        <tag>站点数据统计</tag>
+        <tag>博客</tag>
+        <tag>CSDN</tag>
       </tags>
   </entry>
   <entry>
