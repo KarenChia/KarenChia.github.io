@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android Studio 设置国内镜像网站</title>
+    <url>/2020/11/23/as-http-proxy/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
+<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
+<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
+<p><img src="/imgs/4.webp"></p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
+        <tag>国内镜像网站访问地址</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Lint found fatal errors while assembling a release target</title>
     <url>/2020/11/23/apk-release-lint/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
@@ -37,84 +54,6 @@
       <tags>
         <tag>博客</tag>
         <tag>CSDN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点访问人数 Buszanui 插件数据统计错误</title>
-    <url>/2020/11/18/buszanui-visitor-count/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
-<blockquote>
-<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
-</blockquote>
-<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
-<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
-<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
-<blockquote>
-<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
-</blockquote>
-<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
-<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
-<li>GitHub Page</li>
-<li>Gitee Page</li>
-<li>Coding</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Buszanui</tag>
-        <tag>站点数据统计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/11/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fragment中嵌套Fragment，不显示</title>
-    <url>/2020/11/23/fragment-child-fragment/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
-<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
-<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
-<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
-<p>正确的写法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>fragment</tag>
-        <tag>child fragment</tag>
-        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
@@ -168,6 +107,84 @@
       </tags>
   </entry>
   <entry>
+    <title>站点访问人数 Buszanui 插件数据统计错误</title>
+    <url>/2020/11/18/buszanui-visitor-count/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
+<blockquote>
+<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
+</blockquote>
+<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
+<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
+<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
+<blockquote>
+<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
+</blockquote>
+<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
+<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
+<li>GitHub Page</li>
+<li>Gitee Page</li>
+<li>Coding</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Buszanui</tag>
+        <tag>站点数据统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fragment中嵌套Fragment，不显示</title>
+    <url>/2020/11/23/fragment-child-fragment/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
+<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
+<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
+<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
+<p>正确的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>fragment</tag>
+        <tag>child fragment</tag>
+        <tag>嵌套</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/11/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
     <url>/2020/11/18/hexo-set-up/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
@@ -205,19 +222,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Writing Exercise</title>
-    <url>/2020/11/16/hexo-writing-exercise/</url>
-    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
-<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>极光：Unable to get provider cn.jpush.android.service.DownloadProvider</title>
     <url>/2020/11/23/jpush-download-provider/</url>
     <content><![CDATA[<p><strong>转载文章 原文出处：<a href="https://blog.csdn.net/qq_36347817/article/details/88552732">https://blog.csdn.net/qq_36347817/article/details/88552732</a></strong></p>
@@ -243,6 +247,19 @@
         <tag>Android</tag>
         <tag>极光</tag>
         <tag>DownloadProvider</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Writing Exercise</title>
+    <url>/2020/11/16/hexo-writing-exercise/</url>
+    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
+<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
       </tags>
   </entry>
   <entry>
