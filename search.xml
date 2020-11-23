@@ -6,7 +6,8 @@
     <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
 ]]></content>
       <categories>
-        <category>博客</category>
+        <category>博客搭建专栏</category>
+        <category>CSDN博客</category>
       </categories>
       <tags>
         <tag>博客</tag>
@@ -36,7 +37,8 @@
 </ul>
 ]]></content>
       <categories>
-        <category>Hexo配置问题</category>
+        <category>博客搭建专栏</category>
+        <category>Hexo配置问题汇总</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -81,10 +83,11 @@
 
 <p><strong>如果这样还是无法访问，重复以上步骤，多试几次…</strong></p>
 <hr>
-<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a href="https://blog.csdn.net/victoryxa/article/details/104286462">Hexo博客部署到码云和Coding</a> <a href="https://blog.csdn.net/victoryxa/article/details/104286462">https://blog.csdn.net/victoryxa/article/details/104286462</a></p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a href="https://blog.csdn.net/victoryxa/article/details/104286462">Hexo博客部署到码云和Coding</a></p>
 ]]></content>
       <categories>
-        <category>Hexo配置问题</category>
+        <category>博客搭建专栏</category>
+        <category>Hexo配置问题汇总</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -112,6 +115,7 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
+        <category>博客搭建专栏</category>
         <category>Hexo独立博客配置</category>
       </categories>
       <tags>
@@ -145,6 +149,7 @@
 <h1 id="博客主题-Butterfly"><a href="#博客主题-Butterfly" class="headerlink" title="博客主题 Butterfly"></a>博客主题 Butterfly</h1><p>后续已将主题修改为 <a href="https://butterfly.js.org/">Butterfly</a></p>
 ]]></content>
       <categories>
+        <category>博客搭建专栏</category>
         <category>Hexo独立博客配置</category>
       </categories>
       <tags>
@@ -162,10 +167,40 @@
 <h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>博客搭建专栏</category>
         <category>Hexo独立博客配置</category>
       </categories>
       <tags>
         <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>极光：Unable to get provider cn.jpush.android.service.DownloadProvider</title>
+    <url>/2020/11/23/jpush-download-provider/</url>
+    <content><![CDATA[<p><strong>转载文章 原文出处：<a href="https://blog.csdn.net/qq_36347817/article/details/88552732">https://blog.csdn.net/qq_36347817/article/details/88552732</a></strong></p>
+<p>最近需要将公司以前的项目，安装在一个版本为4.4.2的安卓板子上，准备降级操作。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">报错：java.lang.RuntimeException: Unable to get provider com.amitshekhar.DebugDBInitProvider: java.lang.ClassNotFoundException: Didn&#39;t find class</span><br></pre></td></tr></table></figure>
+<p>项目中是由于multiDex配置原因。</p>
+<p>因为以前支持版本号为21，现在使用 multidex 需要引入谷歌提供的 android-support-multidex.jar 包。</p>
+<p>解决方法：</p>
+<p>1.defaultConfig 中添加 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">defaultConfig &#123;</span><br><span class="line">        ······</span><br><span class="line"> </span><br><span class="line">        multiDexEnabled true</span><br><span class="line"> </span><br><span class="line">        ······</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.dependencies 中添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">implementation &#39;com.android.support:multidex:1.0.3&#39;</span><br></pre></td></tr></table></figure>
+<p>3.代码中加入支持 multidex 的功能：</p>
+<p>重写 Application 的 attachBaseContext 方法。</p>
+<p>在该方法里面加入MultiDex.install(this)，这个方法比 Application 的 onCreate 要先执行。 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void attachBaseContext(Context base)&#123;</span><br><span class="line">    super.attachBaseContext(base);</span><br><span class="line">    MultiDex.install(this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>4.重新运行</p>
+]]></content>
+      <categories>
+        <category>Android专栏</category>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>极光</tag>
+        <tag>DownloadProvider</tag>
       </tags>
   </entry>
   <entry>
@@ -192,7 +227,8 @@
 
 <h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Hexo配置问题</category>
+        <category>博客搭建专栏</category>
+        <category>Hexo配置问题汇总</category>
       </categories>
       <tags>
         <tag>博客</tag>
@@ -216,7 +252,8 @@
 <p><strong>安全域名的具体添加方式根据 LeanCloud 的要求添加即可。</strong><br><img src="/imgs/valine-code-403-doman.png"></p>
 ]]></content>
       <categories>
-        <category>Hexo配置问题</category>
+        <category>博客搭建专栏</category>
+        <category>Hexo配置问题汇总</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
