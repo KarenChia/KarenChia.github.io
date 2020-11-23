@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Lint found fatal errors while assembling a release target</title>
+    <url>/2020/11/23/apk-release-lint/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
+<p>Android在debug模式下应用没有问题，但是在打包release版本时出现一下问题：</p>
+<p><img src="/imgs/apk-release-lint-reason.webp"></p>
+<p>提示中，关闭lint checkReleaseBuilds 的检查，可以这样实现：</p>
+<p><img src="/imgs/1.webp"></p>
+<p>虽然这样可以解决问题，但是没有解决根本问题。也就是说隐患依旧会存在。</p>
+<p>lint 是代码检查，可以优化代码，发现一些潜在的bug，所以尽量不要关闭</p>
+<p>这个错误报告会生成在</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[app module]&#x2F;build&#x2F;reports&#x2F;lint-results-yourBuildName-fatal.html </span><br></pre></td></tr></table></figure>
+
+<p>打开这个网页，一定要用浏览器打开。</p>
+<p><img src="/imgs/2.webp"></p>
+<p>这样错误就很明显了，改掉即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>release</tag>
+        <tag>lint</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
     <url>/2020/11/19/blog-csdn/</url>
     <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
@@ -42,6 +68,53 @@
         <tag>Hexo</tag>
         <tag>Buszanui</tag>
         <tag>站点数据统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/11/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fragment中嵌套Fragment，不显示</title>
+    <url>/2020/11/23/fragment-child-fragment/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
+<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
+<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
+<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
+<p>正确的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>fragment</tag>
+        <tag>child fragment</tag>
+        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
@@ -92,53 +165,6 @@
         <tag>自定义域名</tag>
         <tag>域名解析</tag>
         <tag>DNS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/11/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fragment中嵌套Fragment，不显示</title>
-    <url>/2020/11/23/fragment-child-fragment/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
-<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
-<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
-<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
-<p>正确的写法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>fragment</tag>
-        <tag>child fragment</tag>
-        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
