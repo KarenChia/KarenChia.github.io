@@ -27,6 +27,19 @@
       </tags>
   </entry>
   <entry>
+    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
+    <url>/2020/11/19/blog-csdn/</url>
+    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+]]></content>
+      <categories>
+        <category>CSDN博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>CSDN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android 更换 APP Logo 无效问题处理</title>
     <url>/2020/11/24/app-logo-invalid/</url>
     <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
@@ -47,36 +60,6 @@
         <tag>logo</tag>
         <tag>app</tag>
         <tag>logo更换无效</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Studio 设置国内镜像网站</title>
-    <url>/2020/11/23/as-http-proxy/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
-<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
-<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
-<p><img src="/imgs/4.webp"></p>
-]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Android Studio</tag>
-        <tag>国内镜像网站访问地址</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
-    <url>/2020/11/19/blog-csdn/</url>
-    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
-]]></content>
-      <categories>
-        <category>CSDN博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>CSDN</tag>
       </tags>
   </entry>
   <entry>
@@ -108,6 +91,23 @@
         <tag>Hexo</tag>
         <tag>Buszanui</tag>
         <tag>站点数据统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio 设置国内镜像网站</title>
+    <url>/2020/11/23/as-http-proxy/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
+<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
+<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
+<p><img src="/imgs/4.webp"></p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
+        <tag>国内镜像网站访问地址</tag>
       </tags>
   </entry>
   <entry>
@@ -319,6 +319,71 @@
         <tag>评论</tag>
         <tag>401</tag>
         <tag>资源加载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RecyclerView系列 - RecyclerView的基本使用</title>
+    <url>/2020/11/24/recycleview-base-use/</url>
+    <content><![CDATA[<blockquote>
+<p>文章欢迎转载，转载请注明出处：文章首发于【Karen Chia の 程序人生】<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
+</blockquote>
+<h1 id="按照惯例，先上效果图"><a href="#按照惯例，先上效果图" class="headerlink" title="按照惯例，先上效果图"></a>按照惯例，先上效果图</h1><p><img src="https://img-blog.csdnimg.cn/20190905165047660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>效果图不是我想要的效果，怎么办？</p>
+<p>查看关于 RecyclerView 系列的其它文章，总有你想要的效果 ↓↓↓</p>
+<h2 id="KarenChia-的-RecyclerView-系列文章"><a href="#KarenChia-的-RecyclerView-系列文章" class="headerlink" title="KarenChia 的 RecyclerView 系列文章"></a>KarenChia 的 RecyclerView 系列文章</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
+<p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>RecyclerView 在本文发布之前，已经出来很久了，之前也有很多关于 RecyclerView 的优秀文章，那我为什么还要在这里写下本文呢，实不相瞒，我是 ListView 的忠实粉，之前很少使用到 RecyclerView，最近发现了不少关于 RecyclerView 的优秀框架，于是开始使用 RecyclerView，在使用第三方优秀框架的同时，也需要了解框架背后对组件进行的处理及封装，便于后期对项目维护。</p>
+<h1 id="为什么选择-RecyclerView？"><a href="#为什么选择-RecyclerView？" class="headerlink" title="为什么选择 RecyclerView？"></a>为什么选择 RecyclerView？</h1><p>相对于 ListView、GridView 这类滑动列表组件来说，RecyclerView 具有：</p>
+<ul>
+<li>使用更加灵活<br>1 通过设置布局管理器，可轻松实现组件列表垂直滑动或水平滑动效果<br>2 给列表的 item 项设置【增加或删除】动画<br>3 当列表组件滑动到顶端或底部时，带有波纹效果，更显列表立体感</li>
+<li>代码高度解耦<br>代码高幅度降低了耦合度，维护起来非常方便</li>
+<li>拓展方便<br>1 轻松实现 ListView 及 Gridview 组件的相关列表效果，学会 RecyclerView，相当于学会了 ListView + Gridview<br>2 难得一见的【瀑布流】列表滑动效果</li>
+</ul>
+<h1 id="RecyclerView-不是万能的，存在以下不足："><a href="#RecyclerView-不是万能的，存在以下不足：" class="headerlink" title="RecyclerView 不是万能的，存在以下不足："></a>RecyclerView 不是万能的，存在以下不足：</h1><ul>
+<li>不像 ListView那样，它没有分割线的设置方法</li>
+<li>没有实现 item 的相关点击事件</li>
+</ul>
+<p><strong>但是，重点来了：</strong></p>
+<p>也正是由于 RecyclerView 存在的这些缺点，我们不就可以根据自己的需求去定义嘛，怎么开心怎么玩！！！</p>
+<p>下面开始进入我们今天的主题 ↓↓↓</p>
+<h1 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1 添加依赖"></a>1 添加依赖</h1><p>在 module（一般都是在 app 下） 的 build.gradle 文件下添加组件依赖：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">implementation &#39;androidx.recyclerview:recyclerview:1.0.0&#39;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：由于使用的 Android Studio 版本不同，依赖语句也有所不同，我这里使用的 AS 版本是 V3.4.1</strong> </p>
+<h1 id="2-在布局文件中使用-RecyclerView"><a href="#2-在布局文件中使用-RecyclerView" class="headerlink" title="2 在布局文件中使用 RecyclerView"></a>2 在布局文件中使用 RecyclerView</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:background&#x3D;&quot;@color&#x2F;app_bg&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;androidx.recyclerview.widget.RecyclerView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;rvTest&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="3-为-RecycleView-设置布局管理器-LinearLayoutManager"><a href="#3-为-RecycleView-设置布局管理器-LinearLayoutManager" class="headerlink" title="3 为 RecycleView 设置布局管理器 LinearLayoutManager"></a>3 为 RecycleView 设置布局管理器 LinearLayoutManager</h1><p>这里列表默认是垂直滑动的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.setLayoutManager(new LinearLayoutManager(this));</span><br></pre></td></tr></table></figure>
+<p>不要问我为什么，问就【看源码】，看 LinearLayoutManager 构造器源码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Creates a vertical LinearLayoutManager</span><br><span class="line"> *</span><br><span class="line"> * @param context Current context, will be used to access resources.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public LinearLayoutManager(Context context) &#123;</span><br><span class="line">    this(context, RecyclerView.DEFAULT_ORIENTATION, false);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于 DEFAULT_ORIENTATION 的定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">static final int DEFAULT_ORIENTATION &#x3D; VERTICAL;</span><br></pre></td></tr></table></figure>
+<p>关于 VERTICAL 的定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static final int VERTICAL &#x3D; LinearLayout.VERTICAL;</span><br></pre></td></tr></table></figure>
+<p>源码中使用的属性还是线性布局 LinearLayout 的垂直属性</p>
+<p>那么问题来了，我要让 RecyclerView 水平滑动怎么办？</p>
+<h2 id="3-1-设置-RecyclerView-列表水平滑动"><a href="#3-1-设置-RecyclerView-列表水平滑动" class="headerlink" title="3.1 设置 RecyclerView 列表水平滑动"></a>3.1 设置 RecyclerView 列表水平滑动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LinearLayoutManager mLinearLayoutManager &#x3D; new LinearLayoutManager(this);</span><br><span class="line">mLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);</span><br><span class="line">rvTest.setLayoutManager(mLinearLayoutManager);</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-设置-item-增加和删除时的动画效果"><a href="#4-设置-item-增加和删除时的动画效果" class="headerlink" title="4 设置 item 增加和删除时的动画效果"></a>4 设置 item 增加和删除时的动画效果</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.setItemAnimator(new DefaultItemAnimator());</span><br></pre></td></tr></table></figure>
+<p>这里设置的是 RecyclerView 默认的动画效果</p>
+<h1 id="5-设置适配器"><a href="#5-设置适配器" class="headerlink" title="5 设置适配器"></a>5 设置适配器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mRecyclerViewTestAdapter &#x3D; new RecyclerViewTestAdapter(this, testData);</span><br><span class="line">rvTest.setAdapter(mRecyclerViewTestAdapter);</span><br></pre></td></tr></table></figure>
+<p>RecyclerView 的适配器继承至 RecyclerView.Adapter &lt; VH extends ViewHolder &gt;，泛型类型为ViewHolder。</p>
+<p>RecyclerView 对 ViewHolder 进行了封装，使得我们使用起来更加的方便，自定义的 ViewHolder 只需继承 RecyclerView.ViewHolder 即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.karenchia.andprimarylp.adapter;</span><br><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.view.LayoutInflater;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.view.ViewGroup;</span><br><span class="line">import android.widget.TextView;</span><br><span class="line"></span><br><span class="line">import androidx.annotation.NonNull;</span><br><span class="line">import androidx.recyclerview.widget.RecyclerView;</span><br><span class="line"></span><br><span class="line">import com.karenchia.andprimarylp.R;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line">import butterknife.ButterKnife;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * RecyclerView 测试数据适配器</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by KarenChia on 2019&#x2F;9&#x2F;4.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class RecyclerViewTestAdapter extends RecyclerView.Adapter&lt;RecyclerViewTestAdapter.RecyclerViewTestViewHolder&gt; &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 上下文对象</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private Context mContext;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 测试数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private List&lt;String&gt; testDataList;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 函数构造器</span><br><span class="line">     *</span><br><span class="line">     * @param mContext     上下文对象</span><br><span class="line">     * @param testDataList 测试数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public RecyclerViewTestAdapter(Context mContext, List&lt;String&gt; testDataList) &#123;</span><br><span class="line">        this.mContext &#x3D; mContext;</span><br><span class="line">        this.testDataList &#x3D; testDataList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 加载 item 的布局文件</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @NonNull</span><br><span class="line">    @Override</span><br><span class="line">    public RecyclerViewTestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) &#123;</span><br><span class="line">        return new RecyclerViewTestViewHolder(</span><br><span class="line">                LayoutInflater.from(mContext).inflate(R.layout.item_recycler_view_test, parent, false));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 将数据与 item 视图进行绑定</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onBindViewHolder(@NonNull RecyclerViewTestViewHolder holder, int position) &#123;</span><br><span class="line">        holder.tvData.setText(testDataList.get(position));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getItemCount() &#123;</span><br><span class="line">        return testDataList &#x3D;&#x3D; null ? 0 : testDataList.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * RecycleView 中 ViewHolder 的定义方式</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public class RecyclerViewTestViewHolder extends RecyclerView.ViewHolder &#123;</span><br><span class="line"></span><br><span class="line">        @BindView(R.id.tvData)</span><br><span class="line">        TextView tvData;</span><br><span class="line"></span><br><span class="line">        public RecyclerViewTestViewHolder(@NonNull View itemView) &#123;</span><br><span class="line">            super(itemView);</span><br><span class="line">            ButterKnife.bind(this, itemView);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>列表 item 布局文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;</span><br><span class="line">    android:padding&#x3D;&quot;10dp&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;tvData&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:textColor&#x3D;&quot;@android:color&#x2F;black&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p>至此，RecyclerView 的基本用法结束。</p>
+<h1 id="6-相关类的代码"><a href="#6-相关类的代码" class="headerlink" title="6 相关类的代码"></a>6 相关类的代码</h1><p>这里贴一下相关类的代码实现</p>
+<p>项目使用的是 MVP 模式，别问我为什么要使用 MVP 模式，问就请看这里：<a href="https://blog.csdn.net/ZhaiKun68/article/details/100033584#1_AndroidMVP_3">https://blog.csdn.net/ZhaiKun68/article/details/100033584#1_AndroidMVP_3</a></p>
+<h2 id="6-1-RecyclerViewDemoContract-类"><a href="#6-1-RecyclerViewDemoContract-类" class="headerlink" title="6.1 RecyclerViewDemoContract 类"></a>6.1 RecyclerViewDemoContract 类</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.karenchia.andprimarylp.ui.contract;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * MVP 模式接口抽取</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by KarenChia on 2019&#x2F;9&#x2F;4.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public interface RecyclerViewDemoContract &#123;</span><br><span class="line"></span><br><span class="line">    interface Model &#123;</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * 加载测试数据</span><br><span class="line">         *</span><br><span class="line">         * @return 测试数据</span><br><span class="line">         *&#x2F;</span><br><span class="line">        List&lt;String&gt; testData();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    interface View &#123;</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * 显示测试数据列表</span><br><span class="line">         *</span><br><span class="line">         * @param testData 测试数据</span><br><span class="line">         *&#x2F;</span><br><span class="line">        void showTestData(List&lt;String&gt; testData);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    interface Presenter &#123;</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * 获取测试数据</span><br><span class="line">         *&#x2F;</span><br><span class="line">        void getTestData();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="6-2-RecyclerViewDemoModel-类"><a href="#6-2-RecyclerViewDemoModel-类" class="headerlink" title="6.2 RecyclerViewDemoModel 类"></a>6.2 RecyclerViewDemoModel 类</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.karenchia.andprimarylp.ui.model;</span><br><span class="line"></span><br><span class="line">import com.karenchia.andprimarylp.ui.contract.RecyclerViewDemoContract;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * model 层数据逻辑处理</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by KarenChia on 2019&#x2F;9&#x2F;4.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class RecyclerViewDemoModel implements RecyclerViewDemoContract.Model &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 加载测试数据</span><br><span class="line">     *</span><br><span class="line">     * @return 测试数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;String&gt; testData() &#123;</span><br><span class="line">        List&lt;String&gt; testData &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">            testData.add(&quot;我是 Karen Chia &quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">        return testData;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="6-3-RecyclerViewDemoActivity-类"><a href="#6-3-RecyclerViewDemoActivity-类" class="headerlink" title="6.3 RecyclerViewDemoActivity 类"></a>6.3 RecyclerViewDemoActivity 类</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.karenchia.andprimarylp.ui.activity.newfeature;</span><br><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line"></span><br><span class="line">import androidx.annotation.Nullable;</span><br><span class="line">import androidx.appcompat.app.AppCompatActivity;</span><br><span class="line">import androidx.recyclerview.widget.DefaultItemAnimator;</span><br><span class="line">import androidx.recyclerview.widget.LinearLayoutManager;</span><br><span class="line">import androidx.recyclerview.widget.RecyclerView;</span><br><span class="line"></span><br><span class="line">import com.karenchia.andprimarylp.R;</span><br><span class="line">import com.karenchia.andprimarylp.adapter.RecyclerViewTestAdapter;</span><br><span class="line">import com.karenchia.andprimarylp.ui.contract.RecyclerViewDemoContract;</span><br><span class="line">import com.karenchia.andprimarylp.ui.presenter.RecyclerViewDemoPresenter;</span><br><span class="line">import com.socks.library.KLog;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line">import butterknife.ButterKnife;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * RecyclerView 演示类 view 层逻辑处理</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by KarenChia on 2019&#x2F;9&#x2F;3.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class RecyclerViewDemoActivity extends AppCompatActivity implements RecyclerViewDemoContract.View &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * view层与model层交互的桥梁</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private RecyclerViewDemoContract.Presenter mPresenter;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * RecyclerView 组件</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @BindView(R.id.rvTest)</span><br><span class="line">    RecyclerView rvTest;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * RecyclerView 的数据适配器</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private RecyclerViewTestAdapter mRecyclerViewTestAdapter;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(@Nullable Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_recycler_view_demo);</span><br><span class="line">        ButterKnife.bind(this);</span><br><span class="line">        mPresenter &#x3D; new RecyclerViewDemoPresenter(this);</span><br><span class="line">        initData();</span><br><span class="line">        initView();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void initData() &#123;</span><br><span class="line">        mPresenter.getTestData();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 组件初始化</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private void initView() &#123;</span><br><span class="line">        &#x2F;&#x2F;为 RecycleView 设置布局管理器</span><br><span class="line">        rvTest.setLayoutManager(new LinearLayoutManager(this));</span><br><span class="line">        &#x2F;&#x2F;LinearLayoutManager mLinearLayoutManager &#x3D; new LinearLayoutManager(this);</span><br><span class="line">        &#x2F;&#x2F;mLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);</span><br><span class="line">        &#x2F;&#x2F;rvTest.setLayoutManager(mLinearLayoutManager);</span><br><span class="line">        &#x2F;&#x2F;设置 item 增加和删除时的动画效果</span><br><span class="line">        rvTest.setItemAnimator(new DefaultItemAnimator());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 显示测试数据列表</span><br><span class="line">     *</span><br><span class="line">     * @param testData 测试数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void showTestData(List&lt;String&gt; testData) &#123;</span><br><span class="line">        &#x2F;&#x2F;设置适配器</span><br><span class="line">        mRecyclerViewTestAdapter &#x3D; new RecyclerViewTestAdapter(this, testData);</span><br><span class="line">        rvTest.setAdapter(mRecyclerViewTestAdapter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="6-4-RecyclerViewDemoPresenter-类"><a href="#6-4-RecyclerViewDemoPresenter-类" class="headerlink" title="6.4 RecyclerViewDemoPresenter 类"></a>6.4 RecyclerViewDemoPresenter 类</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.karenchia.andprimarylp.ui.presenter;</span><br><span class="line"></span><br><span class="line">import com.karenchia.andprimarylp.ui.contract.RecyclerViewDemoContract;</span><br><span class="line">import com.karenchia.andprimarylp.ui.model.RecyclerViewDemoModel;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * model层 与 View层 通信的桥梁</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by KarenChia on 2019&#x2F;9&#x2F;4.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class RecyclerViewDemoPresenter implements RecyclerViewDemoContract.Presenter &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * model层数据逻辑处理</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private RecyclerViewDemoContract.Model mModel;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * view层交互逻辑处理</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private RecyclerViewDemoContract.View mView;</span><br><span class="line"></span><br><span class="line">    public RecyclerViewDemoPresenter(RecyclerViewDemoContract.View mView) &#123;</span><br><span class="line">        mModel &#x3D; new RecyclerViewDemoModel();</span><br><span class="line">        this.mView &#x3D; mView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获取测试数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void getTestData() &#123;</span><br><span class="line">        mView.showTestData(mModel.testData());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>RecycleView</tag>
+        <tag>ListView</tag>
+        <tag>GridView</tag>
       </tags>
   </entry>
   <entry>
