@@ -809,6 +809,187 @@
       </tags>
   </entry>
   <entry>
+    <title>Ionic 3 项目实战------创建项目</title>
+    <url>/2020/11/24/ionic-create-project/</url>
+    <content><![CDATA[<p>关于开发环境的搭建，请参考小编的另一篇文章<a href="https://blog.csdn.net/zhaikun68/article/details/77838152">Ionic 介绍、安装、配置、项目不同平台编译、DeBug调试经验总结</a></p>
+<p>此处，小编的开发环境已搭建完成，使用的Ionic版本为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic -v</span><br><span class="line">3.9.2</span><br></pre></td></tr></table></figure>
+
+<p>这是在任意目录下，输入命令查看的结果V3.9.2</p>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>当然了，相信牛X的你每天都有堆积如山的工作，那么多的命令记不住也是常有的事。小编常用的解决方案就是help、help、help</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic --help</span><br><span class="line">   _             _</span><br><span class="line">  (_)           (_)</span><br><span class="line">   _  ___  _ __  _  ___</span><br><span class="line">  | |&#x2F; _ \| &#39;_ \| |&#x2F; __|</span><br><span class="line">  | | (_) | | | | | (__</span><br><span class="line">  |_|\___&#x2F;|_| |_|_|\___|  CLI 3.9.2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Usage:</span><br><span class="line"></span><br><span class="line">    $ ionic &lt;command&gt; [&lt;args&gt;] [--help] [--verbose] [--quiet] [--no-interactive] [--confirm] [options]</span><br><span class="line"></span><br><span class="line">  Global Commands:</span><br><span class="line"></span><br><span class="line">    config &lt;subcommand&gt; ...... Manage CLI and project config values (subcommands: get, set)</span><br><span class="line">    docs ..................... Open the Ionic documentation website</span><br><span class="line">    info ..................... Print system&#x2F;environment info</span><br><span class="line">    login .................... Login with your Ionic ID</span><br><span class="line">    signup ................... Create an Ionic account</span><br><span class="line">    start .................... Create a new project</span><br><span class="line">    telemetry ................ Opt in and out of telemetry</span><br></pre></td></tr></table></figure>
+
+<p>看一下给出的命令及对应的解释，就可以很清楚的知道，我们创建一个项目需要使用start命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic start</span><br></pre></td></tr></table></figure>
+
+<p>然后系统会提示我们，给我们创建的项目取一个响亮的名字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project:</span><br></pre></td></tr></table></figure>
+
+<p>此处小编的项目名称为MyIonicDemo</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project: MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>回车，提示让我们选择一个创建模板，此处小编选择的是tabs模板</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What starter would you like to use: tabs</span><br></pre></td></tr></table></figure>
+
+<p>回车，等待项目创建完毕即可，这里查看下项目创建过程和成功后的信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">√ Creating directory .\MyIonicDemo - done!</span><br><span class="line">[INFO] Fetching app base (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-app-base&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">[INFO] Fetching starter template tabs (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-starter-tabs&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">√ Updating package.json with app details - done!</span><br><span class="line">√ Creating configuration file ionic.config.json - done!</span><br><span class="line">[INFO] Installing dependencies may take several minutes!</span><br><span class="line">&gt; npm install</span><br><span class="line">√ Running command - done!</span><br><span class="line">&gt; git init</span><br><span class="line">&gt; git add -A</span><br><span class="line">&gt; git commit -m &quot;Initial commit&quot; --no-gpg-sign</span><br><span class="line"></span><br><span class="line">♬ ♫ ♬ ♫  Your Ionic app is ready to go! ♬ ♫ ♬ ♫</span><br><span class="line"></span><br><span class="line">Run your app in the browser (great for initial development):</span><br><span class="line">  ionic serve</span><br><span class="line"></span><br><span class="line">Run on a device or simulator:</span><br><span class="line">  ionic cordova run ios</span><br><span class="line"></span><br><span class="line">Test and share your app on a device with the Ionic View app:</span><br><span class="line">  http:&#x2F;&#x2F;view.ionic.io</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Next Steps:</span><br><span class="line">Go to your newly created project: cd .\MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>此处项目的创建过程说的比较繁琐，目的是为了强调，如果命令行记不住咱们应该如何应对，下文中将使用相关命令直接进行，创建项目的完整命令为 $ ionic start MyIonicDemo tabs</p>
+<h1 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a>跨平台编译</h1><p>进入我们创建的项目的根目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>为项目添加Android平台</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add android</span><br></pre></td></tr></table></figure>
+
+<p>添加iOS平台</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add ios</span><br></pre></td></tr></table></figure>
+
+<p>在添加平台支持时，会下载一些所必须的插件，建议全称翻墙</p>
+<p>添加成功后会在项目的platforms文件夹中显示添加的平台支持</p>
+<p><img src="/imgs/63.png"></p>
+<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic serve</span><br></pre></td></tr></table></figure>
+
+<p>使用上面的命令会使项目运行在浏览器中</p>
+<p><img src="/imgs/64.png"></p>
+<p>作为一个APP开发人员，让我看到如此的界面是无发忍受的，我们需要看到的是在手机上的显示效果，在浏览器地址后面加上 ionic-lab</p>
+<p><img src="/imgs/65.png"></p>
+<p>图片太小看不清楚，怎么办？鼠标指针悬停在图片上，右键点击，选择在新浏览器中打开，come on</p>
+<p>在模拟器中查看运行效果（以Android为例，需要配置好JDK、Android SDK）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova emulate android</span><br></pre></td></tr></table></figure>
+
+<h1 id="项目编译（以Android为例）"><a href="#项目编译（以Android为例）" class="headerlink" title="项目编译（以Android为例）"></a>项目编译（以Android为例）</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova build android</span><br></pre></td></tr></table></figure>
+
+<p>编译成功后，会在对应目录下生成相应的apk文件</p>
+<p><img src="/imgs/66.png"></p>
+<h1 id="项目调试"><a href="#项目调试" class="headerlink" title="项目调试"></a>项目调试</h1><p>不管是Android平台，还是iOS平台，都可以将platforms文件夹下的android文件夹或iOS文件夹直接在IDE中打开即可</p>
+<p><img src="/imgs/67.png"></p>
+<p>打开的项目是可以直接在IDE中运行调试的，但是切记，不要再IDE中修改android或iOS文件夹下的任何文件，因为改动是无效的，对于Ionic模式下建立的项目，其源码都是存放于项目根目录下的src文件夹中的。</p>
+<p>关于Ionic项目的工程目录结构，请查看<a href="https://blog.csdn.net/zhaikun68/article/details/77849751">Ionic 3 项目的工程目录结构</a></p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>环境搭建</tag>
+        <tag>项目创建-编译-调试</tag>
+        <tag>目录结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic 3 项目实战------自定义插件</title>
+    <url>/2020/11/24/ionic-custom-plugin/</url>
+    <content><![CDATA[<p>之前对 Ionic 3 项目插件的结构做过简单的介绍<a href="https://blog.csdn.net/zhaikun68/article/details/77851760">Ionic 3 插件应用：plugin基本知识了解</a></p>
+<p>一个插件应该至少包含以下file：</p>
+<p>plugin-name</p>
+<p>—————–src    //插件支持平台</p>
+<p>——android.java      //添加了支持Android平台</p>
+<p>—————–www    //JS文件，将Cordova.exec方法暴露给HTML/JS调用</p>
+<p>                       ——android.js</p>
+<p>—————–plugin.xml     //插件的配置文件，通知CLI哪个平台应该从什么地方Copy哪些文件到什么地方，以及CLI在生成config.xml时应该根据平台加入什么样的特殊设置</p>
+<p>在自定插件时，我们可以按照上述的目录结构，建立各自的文件，但是这样做的话，比较繁琐，因此一般不推荐这样做。</p>
+<p>推荐使用插件生成工具plugman，他会自动帮我们创建好想要的插件目录，然后去对应文件中实现我们需要的功能即可。</p>
+<h1 id="安装plugman"><a href="#安装plugman" class="headerlink" title="安装plugman"></a>安装plugman</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g plugman</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建插件模板"><a href="#创建插件模板" class="headerlink" title="创建插件模板"></a>创建插件模板</h1><p>先看一下plugman可用的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">plugman manages plugin.xml-compatible cordova plugins into cordova-generated projects.</span><br><span class="line"></span><br><span class="line">Usage</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">To display this help file, use one of the following:</span><br><span class="line"></span><br><span class="line">$ plugman --help</span><br><span class="line">$ plugman -h</span><br><span class="line"></span><br><span class="line">To display the plugman version, use one of the following:</span><br><span class="line"></span><br><span class="line"> $ plugman --version</span><br><span class="line"> $ plugman -v</span><br><span class="line"></span><br><span class="line">Optional flags</span><br><span class="line">--------------</span><br><span class="line"></span><br><span class="line"> --debug|-d    : Verbose mode</span><br><span class="line"></span><br><span class="line">Install a plugin</span><br><span class="line">----------------</span><br><span class="line"></span><br><span class="line">    $ plugman install --platform &lt;platform&gt; --project &lt;directory&gt; --plugin &lt;plugin&gt; [--variable NAME&#x3D;VALUE]</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line"> - platform &lt;platform&gt;: One of android, ios, blackberry10, wp8, or windows8</span><br><span class="line"> - project &lt;directory&gt;: Path reference to a cordova-generated project of the platform you specify</span><br><span class="line"> - plugin &lt;plugin&gt;: One of a path reference to a local copy of a plugin, or a remote https: or git: URL pointing to a cordova plugin (optionally append #branch:subdir) or</span><br><span class="line"> a plugin ID from http:&#x2F;&#x2F;plugins.cordova.io</span><br><span class="line"> - variable NAME&#x3D;VALUE: Some plugins require install-time variables to be defined. These could be things like API keys&#x2F;tokens or other app-specific variables.</span><br><span class="line"></span><br><span class="line"> Optional parameters:</span><br><span class="line"></span><br><span class="line"> - www &lt;directory&gt;: www assets for the plugin will be installed into this directory. Default is to install into the standard www directory for the platform specified</span><br><span class="line"> - plugins_dir &lt;directory&gt;: a copy of the plugin will be stored in this directory. Default is to install into the &lt;project directory&gt;&#x2F;plugins folder</span><br><span class="line"> - searchpath &lt;directory&gt;: when looking up plugins by ID, look in this directory and each of its subdirectories for the plugin before hitting the registry.</span><br><span class="line">   Multiple search paths can be used by either specifying the flag multiple times, or by separating paths with a delimiter (: on &#39;nix, ; on Windows).</span><br><span class="line"></span><br><span class="line">Uninstall a plugin</span><br><span class="line">------------------</span><br><span class="line"></span><br><span class="line">    $ plugman uninstall --platform &lt;platform&gt; --project &lt;directory&gt; --plugin &lt;plugin-id&gt;</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line"> - platform &lt;platform&gt;: One of android, ios, blackberry10, wp8, or windows8</span><br><span class="line"> - project &lt;directory&gt;: Path reference to a cordova-generated project of the platform you specify</span><br><span class="line"> - plugin &lt;plugin-id&gt;: The plugin to remove, identified by its id (see the plugin.xml&#39;s &lt;plugin id&gt; attribute)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Interacting with the registry</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">NOTICE: The Cordova Plugin registry became read-only, so the following commands have been deprecated and removed:</span><br><span class="line"></span><br><span class="line">    $ plugman adduser</span><br><span class="line">    $ plugman publish</span><br><span class="line">    $ plugman unpublish</span><br><span class="line">    $ plugman owner add&#x2F;rm</span><br><span class="line"></span><br><span class="line">For managing plugins for the npm registry, use corresponding npm commands. For more info on npm commands see &#96;npm help &lt;command&gt;&#96;.</span><br><span class="line">Learn more about publishing your plugins to npm at http:&#x2F;&#x2F;plugins.cordova.io&#x2F;npm&#x2F;developers.html</span><br><span class="line"></span><br><span class="line">Search for a plugin</span><br><span class="line">-------------------</span><br><span class="line"></span><br><span class="line">    $ plugman search &lt;keyword1 keyword2 ...&gt;</span><br><span class="line"></span><br><span class="line">Display plugin information</span><br><span class="line">--------------------------</span><br><span class="line"></span><br><span class="line">    $ plugman info &lt;pluginID&gt;</span><br><span class="line"></span><br><span class="line">Manage registry configuration</span><br><span class="line">-----------------------------</span><br><span class="line">Display current configuration settings:</span><br><span class="line"></span><br><span class="line">    $ plugman config ls</span><br><span class="line"></span><br><span class="line">Display the current registry URL:</span><br><span class="line"></span><br><span class="line">    $ plugman config get registry</span><br><span class="line"></span><br><span class="line">Set registry URL:</span><br><span class="line"></span><br><span class="line">    $ plugman config set registry &lt;url&gt;</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">    $ plugman config set registry http:&#x2F;&#x2F;localhost:5984&#x2F;registry&#x2F;_design&#x2F;app&#x2F;_rewrite</span><br><span class="line"></span><br><span class="line">Manage Owners</span><br><span class="line">-------------</span><br><span class="line">Plugin owners are allowed to publish updates to a plugin. To display a list of owners for a plugin, use:</span><br><span class="line"></span><br><span class="line">    $ plugman owner ls &lt;pluginID&gt;</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">    $ plugman owner ls org.apache.cordova.core.file</span><br><span class="line"></span><br><span class="line">Create A Plugin</span><br><span class="line">---------------</span><br><span class="line"></span><br><span class="line">    $ plugman create --name &lt;pluginName&gt; --plugin_id &lt;pluginID&gt; --plugin_version &lt;version&gt; [--path &lt;directory&gt;] [--variable NAME&#x3D;VALUE]</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line"> - &lt;pluginName&gt;: The name of the plugin</span><br><span class="line"> - &lt;pluginID&gt;: An ID for the plugin, ex: org.bar.foo</span><br><span class="line"> - &lt;version&gt;: A version for the plugin, ex: 0.0.1</span><br><span class="line"> - &lt;directory&gt;: An absolute or relative path for the directory where the plugin project will be created</span><br><span class="line"> - variable NAME&#x3D;VALUE: Extra variables such as description or Author</span><br><span class="line"></span><br><span class="line">Add a Package.JSON file to plugin</span><br><span class="line">---------------------------------</span><br><span class="line">Creates a package.json file in the plugin based on values from plugin.xml.</span><br><span class="line"></span><br><span class="line"> $ plugman createpackagejson &lt;directory&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Add a Platform to a Plugin</span><br><span class="line">--------------------------</span><br><span class="line"></span><br><span class="line">    $ plugman platform add --platform_name &lt;platform&gt;</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line">- &lt;platform&gt;: One of android, ios</span><br><span class="line"></span><br><span class="line">Remove a Platform from a Plugin</span><br><span class="line">-------------------------------</span><br><span class="line"></span><br><span class="line">    $ plugman platform remove --platform_name &lt;platform&gt;</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line">- &lt;platform&gt;: One of android, ios</span><br></pre></td></tr></table></figure>
+
+<p>然后使用创建插件的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Create A Plugin</span><br><span class="line">---------------</span><br><span class="line"></span><br><span class="line">    $ plugman create --name &lt;pluginName&gt; --plugin_id &lt;pluginID&gt; --plugin_version &lt;version&gt; [--path &lt;directory&gt;] [--variable NAME&#x3D;VALUE]</span><br><span class="line"></span><br><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line"> - &lt;pluginName&gt;: The name of the plugin</span><br><span class="line"> - &lt;pluginID&gt;: An ID for the plugin, ex: org.bar.foo</span><br><span class="line"> - &lt;version&gt;: A version for the plugin, ex: 0.0.1</span><br><span class="line"> - &lt;directory&gt;: An absolute or relative path for the directory where the plugin project will be created</span><br><span class="line"> - variable NAME&#x3D;VALUE: Extra variables such as description or Author</span><br></pre></td></tr></table></figure>
+
+<p>对应的参数都有说明，此处不再进行翻译，开始创建一个插件模板（插件可以选择创建在任意目录）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ plugman create --name ZKCustomPlugin --plugin_id zhaikun68.plugin.custom --plugin_version 0.0.1 --path E:\zhaikun\MyPlugins --variable zhaikun68</span><br></pre></td></tr></table></figure>
+
+<p>打开创建的插件模块</p>
+<p><img src="/imgs/49.png"></p>
+<h1 id="添加插件支持的平台"><a href="#添加插件支持的平台" class="headerlink" title="添加插件支持的平台"></a>添加插件支持的平台</h1><p>进入插件的根目录</p>
+<p>支持Android</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ plugman platform add --platform_name android</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/50.png"></p>
+<p>支持iOS平台</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ plugman platform add --platform_name ios</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/51.png"></p>
+<p>plugin.xml文件内容说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&#39;1.0&#39; encoding&#x3D;&#39;utf-8&#39;?&gt;</span><br><span class="line">&lt;!--插件的标识，即发布安装到 plugin 的 ID ，在创建插件是设定--&gt;</span><br><span class="line">&lt;plugin id&#x3D;&quot;zhaikun68.plugin.custom&quot; version&#x3D;&quot;0.0.1&quot; xmlns&#x3D;&quot;http:&#x2F;&#x2F;apache.org&#x2F;cordova&#x2F;ns&#x2F;plugins&#x2F;1.0&quot;</span><br><span class="line">        xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;&gt;</span><br><span class="line">    &lt;!--插件的名称--&gt;</span><br><span class="line">    &lt;name&gt;ZKCustomPlugin&lt;&#x2F;name&gt;</span><br><span class="line">    &lt;ZHAIKUN68&#x2F;&gt;</span><br><span class="line">    &lt;!--对应我们的 javascript 文件，src 属性指向 www&#x2F;ZKCustomPlugin.js--&gt;</span><br><span class="line">    &lt;js-module name&#x3D;&quot;ZKCustomPlugin&quot; src&#x3D;&quot;www&#x2F;ZKCustomPlugin.js&quot;&gt;</span><br><span class="line">        &lt;!--指定clobbers ，然后通过target的值来调用 ZKCustomPlugin.js,此处对应 ZKCustomPlugin.js 中exports的对象--&gt;</span><br><span class="line">        &lt;clobbers target&#x3D;&quot;cordova.plugins.ZKCustomPlugin&quot;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;js-module&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--支持的平台Android--&gt;</span><br><span class="line">    &lt;platform name&#x3D;&quot;android&quot;&gt;</span><br><span class="line">        &lt;config-file parent&#x3D;&quot;&#x2F;*&quot;</span><br><span class="line">                     target&#x3D;&quot;res&#x2F;xml&#x2F;config.xml&quot;&gt;&lt;!--这里是表示在res&#x2F;xml&#x2F;config.xml文件中插入以下一行代码--&gt;</span><br><span class="line">            &lt;feature name&#x3D;&quot;ZKCustomPlugin&quot;&gt;</span><br><span class="line">                &lt;param name&#x3D;&quot;android-package&quot;</span><br><span class="line">                       value&#x3D;&quot;zhaikun68.plugin.custom.ZKCustomPlugin&quot;&#x2F;&gt;&lt;!--调用插件的类名，实现了execute方法--&gt;</span><br><span class="line">            &lt;&#x2F;feature&gt;</span><br><span class="line">        &lt;&#x2F;config-file&gt;</span><br><span class="line">        &lt;config-file parent&#x3D;&quot;&#x2F;*&quot; target&#x3D;&quot;AndroidManifest.xml&quot;&#x2F;&gt;&lt;!--对AndroidManifest.xml文件进行修改--&gt;</span><br><span class="line">        &lt;!--表示将插件src&#x2F;android目录下的ZKCustomPlugin.java文件拷贝到android的src&#x2F;zhaikun68&#x2F;plugin&#x2F;custom目录下面去--&gt;</span><br><span class="line">        &lt;!--如果有引用包，也可以这样拷贝到安卓的指定lib下面去--&gt;</span><br><span class="line">        &lt;source-file src&#x3D;&quot;src&#x2F;android&#x2F;ZKCustomPlugin.java&quot; target-dir&#x3D;&quot;src&#x2F;zhaikun68&#x2F;plugin&#x2F;custom&#x2F;ZKCustomPlugin&quot;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;platform&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--支持的平台iOS--&gt;</span><br><span class="line">    &lt;platform name&#x3D;&quot;ios&quot;&gt;</span><br><span class="line">        &lt;config-file parent&#x3D;&quot;&#x2F;*&quot; target&#x3D;&quot;config.xml&quot;&gt;</span><br><span class="line">            &lt;feature name&#x3D;&quot;ZKCustomPlugin&quot;&gt;</span><br><span class="line">                &lt;param name&#x3D;&quot;ios-package&quot; value&#x3D;&quot;ZKCustomPlugin&quot;&#x2F;&gt;</span><br><span class="line">            &lt;&#x2F;feature&gt;</span><br><span class="line">        &lt;&#x2F;config-file&gt;</span><br><span class="line">        &lt;source-file src&#x3D;&quot;src&#x2F;ios&#x2F;ZKCustomPlugin.m&quot;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;platform&gt;</span><br><span class="line">&lt;&#x2F;plugin&gt;</span><br></pre></td></tr></table></figure>
+
+<p>ZKCustomPlugin.js文件内容说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var exec &#x3D; require(&#39;cordova&#x2F;exec&#39;);</span><br><span class="line"></span><br><span class="line">exports.coolMethod &#x3D; function (arg0, success, error) &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Cordova.exec（）方法说明</span><br><span class="line">     * function(winParam) &#123;&#125;：成功回调函数。假设您的 exec成功完成，此功能将随您传递给它的任何参数一起执行</span><br><span class="line">     * function(error) &#123;&#125;：错误回调函数。如果操作未成功完成，则此功能将执行可选的错误参数</span><br><span class="line">     * &quot;service&quot;：在本机端呼叫的服务名称,与原生端的类名保持一致</span><br><span class="line">     * &quot;action&quot;：在本机端调用的动作名称，对应原生类execute（）的入参，原生代码通过对action进行判断，从而知道JS让原生端执行什么样的功能</span><br><span class="line">     * [ arguments ]：传到原生环境的参数数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    exec(success, error, &quot;ZKCustomPlugin&quot;, &quot;coolMethod&quot;, [arg0]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>ZKCustomPlugin.java文件内容说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package zhaikun68.plugin.custom;</span><br><span class="line"></span><br><span class="line">import org.apache.cordova.CordovaPlugin;</span><br><span class="line">import org.apache.cordova.CallbackContext;</span><br><span class="line"></span><br><span class="line">import org.json.JSONArray;</span><br><span class="line">import org.json.JSONException;</span><br><span class="line">import org.json.JSONObject;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * This class echoes a string called from JavaScript.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class ZKCustomPlugin extends CordovaPlugin &#123;&#x2F;&#x2F;必须继承CordovaPlugin</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * action对应exec传过来的action</span><br><span class="line">    * args对应exec传过来的参数数组</span><br><span class="line">    * callbackContext：对应exec传过来的回调函数</span><br><span class="line">    *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException &#123;</span><br><span class="line">        if (action.equals(&quot;coolMethod&quot;)) &#123;</span><br><span class="line">            String message &#x3D; args.getString(0);</span><br><span class="line">            this.coolMethod(message, callbackContext);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void coolMethod(String message, CallbackContext callbackContext) &#123;</span><br><span class="line">        if (message !&#x3D; null &amp;&amp; message.length() &gt; 0) &#123;</span><br><span class="line">            callbackContext.success(message);&#x2F;&#x2F;成功的回调函数</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            callbackContext.error(&quot;Expected one non-empty string argument.&quot;);&#x2F;&#x2F;失败的回调函数</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="将自定义的插件添加到我们创建的项目"><a href="#将自定义的插件添加到我们创建的项目" class="headerlink" title="将自定义的插件添加到我们创建的项目"></a>将自定义的插件添加到我们创建的项目</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova plugin add E:\zhaikun\MyPlugins\ZKCustomPlugin</span><br></pre></td></tr></table></figure>
+
+<p>未添加成功，有错误信息提示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ &gt; cordova plugin add E:\zhaikun\MyPlugins\ZKCustomPlugin --save</span><br><span class="line">× Running command - failed!</span><br><span class="line">[ERROR] An error occurred while running cordova plugin add E:\zhaikun\MyPlugins\ZKCustomPlugin --save (exit code 1):</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Error: Invalid Plugin! E:\zhaikun\MyPlugins\ZKCustomPlugin needs a valid package.json</span><br></pre></td></tr></table></figure>
+
+<p>错误信息翻译过来大概就是：插件的根目录下需要一个package.json文件</p>
+<p>记性好的大牛应该发现了在 plugman 工具中，正好有创建package.json文件的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Add a Package.JSON file to plugin</span><br><span class="line">---------------------------------</span><br><span class="line">Creates a package.json file in the plugin based on values from plugin.xml.</span><br><span class="line"></span><br><span class="line"> $ plugman createpackagejson &lt;directory&gt;</span><br></pre></td></tr></table></figure>
+
+<p>创建package.json文件（进入插件的根目录）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ plugman createpackagejson E:\zhaikun\MyPlugins\ZKCustomPlugin</span><br></pre></td></tr></table></figure>
+
+<p>回车后会提示输入插件名、版本号、插件描述、git仓库地址、作者和证书信息，如果不进行修改，一直回车即可</p>
+<p><img src="/imgs/52.png"></p>
+<p>回到我们项目的根目录，重新添加插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova plugin add E:\zhaikun\MyPlugins\ZKCustomPlugin</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/53.png"></p>
+<h1 id="插件调用"><a href="#插件调用" class="headerlink" title="插件调用"></a>插件调用</h1><p>在home.html文件中增加两个按钮</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-header&gt;</span><br><span class="line">  &lt;ion-navbar&gt;</span><br><span class="line">    &lt;ion-title&gt;Home&lt;&#x2F;ion-title&gt;</span><br><span class="line">  &lt;&#x2F;ion-navbar&gt;</span><br><span class="line">&lt;&#x2F;ion-header&gt;</span><br><span class="line"></span><br><span class="line">&lt;ion-content padding&gt;</span><br><span class="line">  &lt;h2&gt;Welcome to Ionic!&lt;&#x2F;h2&gt;</span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    This starter project comes with simple tabs-based layout for apps</span><br><span class="line">    that are going to primarily use a Tabbed UI.</span><br><span class="line">  &lt;&#x2F;p&gt;</span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    Take a look at the &lt;code&gt;src&#x2F;pages&#x2F;&lt;&#x2F;code&gt; directory to add or change tabs,</span><br><span class="line">    update any existing page or create new pages.</span><br><span class="line">  &lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!--这里是添加的两个按钮--&gt;</span><br><span class="line">  &lt;button ion-button (click)&#x3D;&quot;getNativeSuccess()&quot;&gt;模拟-成功调用原生插件&lt;&#x2F;button&gt;</span><br><span class="line">  &lt;button ion-button (click)&#x3D;&quot;getNativeFailed()&quot;&gt;模拟-失败调用原生插件&lt;&#x2F;button&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ion-content&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后修改home.ts文件中的内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123;Component&#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123;NavController&#125; from &#39;ionic-angular&#39;;</span><br><span class="line"></span><br><span class="line">declare let cordova: any;&#x2F;&#x2F;这里是修改的代码</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  selector: &#39;page-home&#39;,</span><br><span class="line">  templateUrl: &#39;home.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class HomePage &#123;</span><br><span class="line"></span><br><span class="line">  constructor(public navCtrl: NavController) &#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;这里是修改的代码</span><br><span class="line">  getNativeSuccess() &#123;</span><br><span class="line">    cordova.plugins.ZKCustomPlugin.coolMethod(</span><br><span class="line">      &#39;原生插件调用成功&#39;,</span><br><span class="line">      successMsg &#x3D;&gt; &#123;</span><br><span class="line">        alert(successMsg)</span><br><span class="line">      &#125;, failedMsg &#x3D;&gt; &#123;</span><br><span class="line">        alert(failedMsg)</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;这里是修改的代码</span><br><span class="line">  getNativeFailed() &#123;</span><br><span class="line">    cordova.plugins.ZKCustomPlugin.coolMethod(</span><br><span class="line">      &#39;&#39;,</span><br><span class="line">      successMsg &#x3D;&gt; &#123;</span><br><span class="line">        alert(successMsg)</span><br><span class="line">      &#125;, failedMsg &#x3D;&gt; &#123;</span><br><span class="line">        alert(failedMsg)</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后编译项目即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova build android</span><br></pre></td></tr></table></figure>
+
+<p>效果图</p>
+<p><img src="/imgs/54.png"></p>
+<p><img src="/imgs/55.png"></p>
+<p><img src="/imgs/56.png"></p>
+<p>此处的调试是在真机上进行的，在浏览器调试会出现运行时异常</p>
+<p>此外，插件一旦添加到项目中，以后如需对插件进行升级，需先卸载掉原先的插件，在重新安装</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>自定义插件</tag>
+        <tag>数据交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic创建项目失败Error:read ETIMEDOUT解决方案</title>
+    <url>/2020/11/24/ionic-error-etimedout/</url>
+    <content><![CDATA[<p>在使用Ionic创建项目时，出现以下错误：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ ionic start IonicAppDemo tabs</span><br><span class="line">✖ Downloading and extracting tabs starter - failed!</span><br><span class="line">Error: read ETIMEDOUT</span><br><span class="line">    at TLSWrap.onread (net.js:659:25)</span><br></pre></td></tr></table></figure>
+
+<p>原因：在下载项目对应的模板时无法下载。</p>
+<p>在网上研究了很多方法，有大神提出改动npm源后再进行操作，但是这是下载模板的问题，在下载模板时还没有使用到npm，注意：npm install是在Ionic的项目模板下载完之后才执行的。</p>
+<p>方案一：尝试翻墙后重新创建项目</p>
+<p>方案二：在IonicTeam的GitHub上找对应使用的模板<a href="https://github.com/ionic-team?page=3">https://github.com/ionic-team?page=3</a></p>
+<p>方案三：Ionic版本回退到V3.9.2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g ionic@3.9.2</span><br></pre></td></tr></table></figure>
+
+<p>在macOS中注意在npm前加入sudo，增加权限访问</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>Ionic Error</tag>
+        <tag>read ETIMEDOUT</tag>
+        <tag>创建项目</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>取消npm代理或淘宝镜像</title>
     <url>/2020/11/24/ionic-npm/</url>
     <content><![CDATA[<p>1、取消npm代理</p>
@@ -827,6 +1008,112 @@
         <tag>npm</tag>
         <tag>代理</tag>
         <tag>淘宝镜像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic 3 插件应用：plugin基本知识了解</title>
+    <url>/2020/11/24/ionic-plugin-knowledge/</url>
+    <content><![CDATA[<p>既然Ionic CLI（命令行工具）依赖于Cordova，就可调用原生的API，那么在我们的Ionic项目中如何实现，今天我们了解下ionic中plugin的使用。</p>
+<p>Ionic与Cordova/phoneGP都是基于HTML5的移动开发框架，Ionic在Cordova的基础上进行了优化，但其插件依然遵循Cordova插件的相关规范，同时提供类似于Cordova的plugin管理方法。</p>
+<h1 id="此处使用Ionic为最新的V3-9-2版本为例"><a href="#此处使用Ionic为最新的V3-9-2版本为例" class="headerlink" title="此处使用Ionic为最新的V3.9.2版本为例"></a>此处使用Ionic为最新的V3.9.2版本为例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic -v</span><br></pre></td></tr></table></figure>
+
+<p>直接检测系统安装的Ionic版本</p>
+<h1 id="项目中插件目录（新建的Ionic项目，如果不添加platform，在项目中是没有plugins插件目录的）"><a href="#项目中插件目录（新建的Ionic项目，如果不添加platform，在项目中是没有plugins插件目录的）" class="headerlink" title="项目中插件目录（新建的Ionic项目，如果不添加platform，在项目中是没有plugins插件目录的）"></a>项目中插件目录（新建的Ionic项目，如果不添加platform，在项目中是没有plugins插件目录的）</h1><p>如何添加platform？以Android为例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add android</span><br></pre></td></tr></table></figure>
+
+<p>tip：不同版本的Ionic，其CLI有可能不同，使用帮助命令查看即可</p>
+<p><img src="/imgs/69.png"></p>
+<h1 id="查看已经安装的插件"><a href="#查看已经安装的插件" class="headerlink" title="查看已经安装的插件"></a>查看已经安装的插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects\Demo&gt;ionic cordova plugin -list</span><br><span class="line">&gt; cordova plugin ls</span><br><span class="line">√ Running command - done!</span><br><span class="line">cordova-plugin-console 1.0.5 &quot;Console&quot;</span><br><span class="line">cordova-plugin-device 1.1.4 &quot;Device&quot;</span><br><span class="line">cordova-plugin-splashscreen 4.0.3 &quot;Splashscreen&quot;</span><br><span class="line">cordova-plugin-statusbar 2.2.2 &quot;StatusBar&quot;</span><br><span class="line">cordova-plugin-whitelist 1.3.1 &quot;Whitelist&quot;</span><br><span class="line">ionic-plugin-keyboard 2.2.1 &quot;Keyboard&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这是小编创建的项目中已经安装的plugin，由于添加的platform平台和自定义添加的plugin的不同，此处显示的plugin插件数目视具体的项目而定。</p>
+<h1 id="plugin帮助命令"><a href="#plugin帮助命令" class="headerlink" title="plugin帮助命令"></a>plugin帮助命令</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova plugin --help</span><br></pre></td></tr></table></figure>
+
+<p>将显示有关plugin的操作命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova plugin add [插件名] &#x2F;&#x2F;添加插件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova plugin rm [插件名] &#x2F;&#x2F;删除插件</span><br></pre></td></tr></table></figure>
+
+<h1 id="plugins目录下android-json和ios-json文件说明"><a href="#plugins目录下android-json和ios-json文件说明" class="headerlink" title="plugins目录下android.json和ios.json文件说明"></a>plugins目录下android.json和ios.json文件说明</h1><p><img src="/imgs/70.png"></p>
+<p>以android.json为例：文件中保存了对应Android平台所安装插件的条目，在使用plugin管理命令对plugin进行添加或删除时，文件中记录的插件条目也会随之变化。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;prepare_queue&quot;: &#123;</span><br><span class="line">        &quot;installed&quot;: [],</span><br><span class="line">        &quot;uninstalled&quot;: []</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;config_munge&quot;: &#123;</span><br><span class="line">        &quot;files&quot;: &#123;</span><br><span class="line">            &quot;res&#x2F;xml&#x2F;config.xml&quot;: &#123;</span><br><span class="line">                &quot;parents&quot;: &#123;</span><br><span class="line">                    &quot;&#x2F;*&quot;: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            &quot;xml&quot;: &quot;&lt;feature name&#x3D;\&quot;Whitelist\&quot;&gt;&lt;param name&#x3D;\&quot;android-package\&quot; value&#x3D;\&quot;org.apache.cordova.whitelist.WhitelistPlugin\&quot; &#x2F;&gt;&lt;param name&#x3D;\&quot;onload\&quot; value&#x3D;\&quot;true\&quot; &#x2F;&gt;&lt;&#x2F;feature&gt;&quot;,</span><br><span class="line">                            &quot;count&quot;: 1</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                            &quot;xml&quot;: &quot;&lt;feature name&#x3D;\&quot;StatusBar\&quot;&gt;&lt;param name&#x3D;\&quot;android-package\&quot; value&#x3D;\&quot;org.apache.cordova.statusbar.StatusBar\&quot; &#x2F;&gt;&lt;param name&#x3D;\&quot;onload\&quot; value&#x3D;\&quot;true\&quot; &#x2F;&gt;&lt;&#x2F;feature&gt;&quot;,</span><br><span class="line">                            &quot;count&quot;: 1</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                            &quot;xml&quot;: &quot;&lt;feature name&#x3D;\&quot;Device\&quot;&gt;&lt;param name&#x3D;\&quot;android-package\&quot; value&#x3D;\&quot;org.apache.cordova.device.Device\&quot; &#x2F;&gt;&lt;&#x2F;feature&gt;&quot;,</span><br><span class="line">                            &quot;count&quot;: 1</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                            &quot;xml&quot;: &quot;&lt;feature name&#x3D;\&quot;SplashScreen\&quot;&gt;&lt;param name&#x3D;\&quot;android-package\&quot; value&#x3D;\&quot;org.apache.cordova.splashscreen.SplashScreen\&quot; &#x2F;&gt;&lt;param name&#x3D;\&quot;onload\&quot; value&#x3D;\&quot;true\&quot; &#x2F;&gt;&lt;&#x2F;feature&gt;&quot;,</span><br><span class="line">                            &quot;count&quot;: 1</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                            &quot;xml&quot;: &quot;&lt;feature name&#x3D;\&quot;Keyboard\&quot;&gt;&lt;param name&#x3D;\&quot;android-package\&quot; value&#x3D;\&quot;io.ionic.keyboard.IonicKeyboard\&quot; &#x2F;&gt;&lt;param name&#x3D;\&quot;onload\&quot; value&#x3D;\&quot;true\&quot; &#x2F;&gt;&lt;&#x2F;feature&gt;&quot;,</span><br><span class="line">                            &quot;count&quot;: 1</span><br><span class="line">                        &#125;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;installed_plugins&quot;: &#123;</span><br><span class="line">        &quot;cordova-plugin-whitelist&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;cordova-plugin-console&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;cordova-plugin-statusbar&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;cordova-plugin-device&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;cordova-plugin-splashscreen&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;ionic-plugin-keyboard&quot;: &#123;</span><br><span class="line">            &quot;PACKAGE_NAME&quot;: &quot;io.ionic.starter&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;dependent_plugins&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="具体插件分析，以ionic-plugin-keyboard为例："><a href="#具体插件分析，以ionic-plugin-keyboard为例：" class="headerlink" title="具体插件分析，以ionic-plugin-keyboard为例："></a>具体插件分析，以ionic-plugin-keyboard为例：</h1><p><img src="/imgs/71.png"></p>
+<p>由于plugin插件的定义遵循Cordova插件的相关规范，因此每一个插件的命名格式是一致的。在自定义一个新的插件时，我们也推荐这样做。插件中将不同平台的实现代码放在了各自对应的平台文件夹中（android/ios），在使用Ionic CLI 构建应用程序时，会根据不同平台的实现代码，生成对应不同平台的应用程序。</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>Ionic</tag>
+        <tag>plugins</tag>
+        <tag>插件</tag>
+        <tag>cordova</tag>
+        <tag>基本知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic 3 项目实战------插件原理</title>
+    <url>/2020/11/24/ionic-plugin-theory/</url>
+    <content><![CDATA[<p>在此之前，JS和原生的交互主要是通过WebView（Android）和UIWebView（iOS）进行，但在Ionic 3 中，Cordova提供了标准的API，来让JS和native进行数据交互。</p>
+<p>在Android中，Cordova提供了exec（）方法，将访问原生的方法暴露给JS，而Java通过CordovaPlugin.execute（）方法与之进行数据对接</p>
+<p><img src="/imgs/61.png"></p>
+<p>以下是Cordova.exec（）方法说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cordova.exec(function(winParam) &#123;&#125;,</span><br><span class="line">             function(error) &#123;&#125;,</span><br><span class="line">             &quot;service&quot;,</span><br><span class="line">             &quot;action&quot;,</span><br><span class="line">             [&quot;firstArgument&quot;, &quot;secondArgument&quot;, 42, false]);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>function(winParam) {}：成功回调函数。假设您的 exec成功完成，此功能将随您传递给它的任何参数一起执行。</p>
+</li>
+<li><p>function(error) {}：错误回调函数。如果操作未成功完成，则此功能将执行可选的错误参数。</p>
+</li>
+<li><p>“service”：在本机端呼叫的服务名称。上面图中的java代码中未A.java，那么此处对应的就是A。</p>
+</li>
+<li><p>“action”：在本机端调用的动作名称。原生代码通过对action进行判断，从而知道JS让原生端执行什么样的功能。</p>
+</li>
+<li><p>[/* arguments */]：传到原生环境的参数数组。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>java</tag>
+        <tag>javascript</tag>
+        <tag>插件原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic 3 项目实战------项目开发目录</title>
+    <url>/2020/11/24/ionic-project-catalog/</url>
+    <content><![CDATA[<p>在之前的文章中有提到项目的源码全部存放在项目根目录的src文件夹，我们之后所有的代码开发也是在该目录进行</p>
+<p><img src="/imgs/58.png"></p>
+<h1 id="app文件夹"><a href="#app文件夹" class="headerlink" title="app文件夹"></a>app文件夹</h1><h2 id="pp-component-ts-根组件"><a href="#pp-component-ts-根组件" class="headerlink" title="pp.component.ts 根组件"></a>pp.component.ts 根组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; Component &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; Platform &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  templateUrl: &#39;app.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class MyApp &#123;</span><br><span class="line">  rootPage:any &#x3D; TabsPage;</span><br><span class="line"></span><br><span class="line">  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) &#123;</span><br><span class="line">    platform.ready().then(() &#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; Okay, so the platform is ready and our plugins are available.</span><br><span class="line">      &#x2F;&#x2F; Here you can do any higher level native things you might need.</span><br><span class="line">      statusBar.styleDefault();</span><br><span class="line">      splashScreen.hide();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>平时所说的视图，主要定义了app整体的视觉表现，比如根页面、状态栏、启动界面等等。</p>
+<h2 id="app-html-APP的根界面"><a href="#app-html-APP的根界面" class="headerlink" title="app.html APP的根界面"></a>app.html APP的根界面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-nav [root]&#x3D;&quot;rootPage&quot;&gt;&lt;&#x2F;ion-nav&gt;</span><br></pre></td></tr></table></figure>
+
+<p>相当于Android的MainActivity界面显示的内容</p>
+<h2 id="app-module-ts-根模块文件"><a href="#app-module-ts-根模块文件" class="headerlink" title="app.module.ts 根模块文件"></a>app.module.ts 根模块文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; NgModule, ErrorHandler &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; BrowserModule &#125; from &#39;@angular&#x2F;platform-browser&#39;;</span><br><span class="line">import &#123; IonicApp, IonicModule, IonicErrorHandler &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; MyApp &#125; from &#39;.&#x2F;app.component&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AboutPage &#125; from &#39;..&#x2F;pages&#x2F;about&#x2F;about&#39;;</span><br><span class="line">import &#123; ContactPage &#125; from &#39;..&#x2F;pages&#x2F;contact&#x2F;contact&#39;;</span><br><span class="line">import &#123; HomePage &#125; from &#39;..&#x2F;pages&#x2F;home&#x2F;home&#39;;</span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  imports: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    IonicModule.forRoot(MyApp)</span><br><span class="line">  ],</span><br><span class="line">  bootstrap: [IonicApp],</span><br><span class="line">  entryComponents: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  providers: [</span><br><span class="line">    StatusBar,</span><br><span class="line">    SplashScreen,</span><br><span class="line">    &#123;provide: ErrorHandler, useClass: IonicErrorHandler&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ionic是基于angular的，而angular是完全模块化的。配置项目中使用到的模块、组件、服务、管道、指令等。</p>
+<h2 id="app-scss-全局样式文件"><a href="#app-scss-全局样式文件" class="headerlink" title="app.scss 全局样式文件"></a>app.scss 全局样式文件</h2><h2 id="main-ts-入口文件"><a href="#main-ts-入口文件" class="headerlink" title="main.ts 入口文件"></a>main.ts 入口文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; platformBrowserDynamic &#125; from &#39;@angular&#x2F;platform-browser-dynamic&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AppModule &#125; from &#39;.&#x2F;app.module&#39;;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule);</span><br></pre></td></tr></table></figure>
+
+<p>在最初接触到网页开发时，都是用到一个js，就在HTML中增加一个 script 标签，现在只需要调用入口文件，然后由入口文件去引入其它依赖的文件。</p>
+<h2 id="assets文件夹"><a href="#assets文件夹" class="headerlink" title="assets文件夹"></a>assets文件夹</h2><p>存放项目中使用到的各种资源</p>
+<h2 id="pages文件夹"><a href="#pages文件夹" class="headerlink" title="pages文件夹"></a>pages文件夹</h2><p>存放APP中用到的所有界面，其下的一个文件夹就是独立的一个界面</p>
+<p><img src="/imgs/59.png"></p>
+<p>每一个界面文件夹下存放三个文件，分别是界面、模板样式和业务处理逻辑（用TypeScript—JavaScript的超级 语法编写）</p>
+<h2 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h2><p>APP主题样式文件</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>源码目录</tag>
+        <tag>开发目录</tag>
       </tags>
   </entry>
   <entry>
