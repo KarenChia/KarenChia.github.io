@@ -27,16 +27,20 @@
       </tags>
   </entry>
   <entry>
-    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
-    <url>/2020/11/19/blog-csdn/</url>
-    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+    <title>Android Studio 设置国内镜像网站</title>
+    <url>/2020/11/23/as-http-proxy/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
+<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
+<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
+<p><img src="/imgs/4.webp"></p>
 ]]></content>
       <categories>
-        <category>CSDN博客</category>
+        <category>Android开发基础</category>
       </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>CSDN</tag>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
+        <tag>国内镜像网站访问地址</tag>
       </tags>
   </entry>
   <entry>
@@ -60,6 +64,19 @@
         <tag>logo</tag>
         <tag>app</tag>
         <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
+    <url>/2020/11/19/blog-csdn/</url>
+    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+]]></content>
+      <categories>
+        <category>CSDN博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>CSDN</tag>
       </tags>
   </entry>
   <entry>
@@ -94,20 +111,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio 设置国内镜像网站</title>
-    <url>/2020/11/23/as-http-proxy/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
-<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
-<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
-<p><img src="/imgs/4.webp"></p>
+    <title>Fragment中嵌套Fragment，不显示</title>
+    <url>/2020/11/23/fragment-child-fragment/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
+<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
+<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
+<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
+<p>正确的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
 ]]></content>
       <categories>
-        <category>Android开发基础</category>
+        <category>Android开发问题汇总</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Android Studio</tag>
-        <tag>国内镜像网站访问地址</tag>
+        <tag>fragment</tag>
+        <tag>child fragment</tag>
+        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
@@ -158,29 +181,6 @@
         <tag>自定义域名</tag>
         <tag>域名解析</tag>
         <tag>DNS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fragment中嵌套Fragment，不显示</title>
-    <url>/2020/11/23/fragment-child-fragment/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
-<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
-<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
-<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
-<p>正确的写法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>fragment</tag>
-        <tag>child fragment</tag>
-        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
@@ -456,6 +456,96 @@
         <tag>Hexo</tag>
         <tag>Valine插件</tag>
         <tag>Code 403</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IM即时通讯</title>
+    <url>/2020/11/24/third-party-im/</url>
+    <content><![CDATA[<p><a href="http://www.chiefmore.com/yuntongxun/3643.jhtml">国内主流IM即时通讯平台综合评测</a></p>
+<h1 id="1-网易云信"><a href="#1-网易云信" class="headerlink" title="1 网易云信"></a>1 网易云信</h1><p><a href="https://netease.im/">https://netease.im/</a></p>
+<h1 id="2-环信"><a href="#2-环信" class="headerlink" title="2 环信"></a>2 环信</h1><p><a href="https://www.easemob.com/">https://www.easemob.com/</a></p>
+<h1 id="3-融云"><a href="#3-融云" class="headerlink" title="3 融云"></a>3 融云</h1><p><a href="https://www.rongcloud.cn/">https://www.rongcloud.cn/</a></p>
+<h1 id="4-极光"><a href="#4-极光" class="headerlink" title="4 极光"></a>4 极光</h1><p><a href="https://www.jiguang.cn/">https://www.jiguang.cn/</a></p>
+<h1 id="5-容联云通讯"><a href="#5-容联云通讯" class="headerlink" title="5 容联云通讯"></a>5 容联云通讯</h1><p><a href="https://www.yuntongxun.com/">https://www.yuntongxun.com/</a></p>
+<h1 id="6-LeanCloud"><a href="#6-LeanCloud" class="headerlink" title="6 LeanCloud"></a>6 LeanCloud</h1><p><a href="https://leancloud.cn/">https://leancloud.cn/</a></p>
+<h1 id="7-亲加通讯云"><a href="#7-亲加通讯云" class="headerlink" title="7 亲加通讯云"></a>7 亲加通讯云</h1><p><a href="http://www.gotye.com.cn/">http://www.gotye.com.cn/</a></p>
+<h1 id="8-aurora-imui-通用的即时通讯（IM）UI-库"><a href="#8-aurora-imui-通用的即时通讯（IM）UI-库" class="headerlink" title="8 aurora-imui 通用的即时通讯（IM）UI 库"></a>8 aurora-imui 通用的即时通讯（IM）UI 库</h1><p>Aurora IMUI 是个通用的即时通讯（IM）UI 库，不特定于任何 IM SDK。</p>
+<p>本 UI 库提供了消息列表、输入视图等常用组件，支持常见的消息类型：文字、图片、语音、视频等。默认包含多套界面风格，也能根据自己的需要自定义。</p>
+<p>项目地址：<a href="https://github.com/jpush/aurora-imui/blob/master/README_zh.md">https://github.com/jpush/aurora-imui/blob/master/README_zh.md</a></p>
+<h1 id="9-国内主流IM即时通讯平台综合评测"><a href="#9-国内主流IM即时通讯平台综合评测" class="headerlink" title="9 国内主流IM即时通讯平台综合评测"></a>9 国内主流IM即时通讯平台综合评测</h1><blockquote>
+<p>相关参考资料来源于 企业服务汇<br><a href="http://www.chiefmore.com/yuntongxun/3643.jhtml"> http://www.chiefmore.com/yuntongxun/3643.jhtml</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>服务平台</th>
+<th>IM即时通讯功能服务与性能</th>
+<th>IM即时通讯功能接入与部署方式</th>
+<th>IM即时通讯功能收费</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>环信</strong></td>
+<td>目前环信可以提供比==较完善的人与人之间的聊天与消息功能==，不过在==人与智能机器人聊天方面仅支持最基础的机器人服务，适用于在线客服类产品==，在这一点上与容联云通讯和网易云信相比有一定的不足。</td>
+<td>在这四家服务商中，环信==唯一提供React Native demo接口来方便企业集成实现其IM功能==，这对于一些==使用JavaScript和React来开发原生的iOS和Android产品应用的企业来说十分友好==，它可以帮助企业有效提升产品IM功能的开发效率；另外环信支持上述全部的公有云、私有云、专有云、托管云以及海外部署方式，==企业在部署时面临的选择性非常灵活==。</td>
+<td>目前环信、容联云通讯、极光推送、网易云信这四家云通讯平台，在IM即时通讯功能的收费价格方面，均按照基础IM功能（通常按照产品日活数收费）、增值IM功能（最典型的是实时音视频通话功能，按照使用分钟数收费）以及扩展IM功能分别进行收费。企业在选购时，需要根据自己的产品类型、实际需要的IM即时通讯功能以及实际的产品日活数来进行综合选择。</td>
+</tr>
+<tr>
+<td>容联云通讯</td>
+<td>目前容联云通讯提供==非常丰富的聊天与消息功能== ，==支持人与智能机器之间的单聊、群聊以及闲聊语料、天气查询等个性化聊天功能==，可有效提升用户使用体验和产品活跃度；不过容联云通讯在==性能水平方面，目前暂不支持智能反垃圾服务和敏感词过滤服务==，企业对于用户在聊天过程中产生的消息可能无法做到有效的实时监控，从而==不利于企业构建良好的网络聊天环境==。</td>
+<td>目前容联云通讯==仅支持最基础的接入方式==，并且还==支持专有云部署方式==，与其他服务商相比并无特别之处。</td>
+<td>目前环信、容联云通讯、极光推送、网易云信这四家云通讯平台，在IM即时通讯功能的收费价格方面，均按照基础IM功能（通常按照产品日活数收费）、增值IM功能（最典型的是实时音视频通话功能，按照使用分钟数收费）以及扩展IM功能分别进行收费。企业在选购时，需要根据自己的产品类型、实际需要的IM即时通讯功能以及实际的产品日活数来进行综合选择。</td>
+</tr>
+<tr>
+<td>极光</td>
+<td>目前极光推送==不提供聊天室功能（在视频直播类产品中经常用到）、实时音视频通话功能（在熟人社交/在线教育/在线医疗等需要直接通话才能实现有效沟通的产品中经常用到）以及人与智能机器人聊天等功能==，==仅可以为企业提供最基础的聊天与消息功能==，与其他服务商相比具有较为明显的不足，因此==仅能够满足企业产品最基本的IM即时通讯需求，适用于有轻量级的IM即时通讯功能需求的企业==。</td>
+<td>目前与其他三家服务商相比，极光推送==支持的接入与部署方式均是最少的==，在这一点上有一定的不足。</td>
+<td>目前环信、容联云通讯、极光推送、网易云信这四家云通讯平台，在IM即时通讯功能的收费价格方面，均按照基础IM功能（通常按照产品日活数收费）、增值IM功能（最典型的是实时音视频通话功能，按照使用分钟数收费）以及扩展IM功能分别进行收费。企业在选购时，需要根据自己的产品类型、实际需要的IM即时通讯功能以及实际的产品日活数来进行综合选择。</td>
+</tr>
+<tr>
+<td><strong>网易云信</strong></td>
+<td>与其他三家服务商相比，目前==网易云信提供的IM聊天与消息功能最为完善==，并且网易云信还==唯一支持用户托管==功能，可以帮助企业有效维护闲置的用户资料/关系；另外网易云信提供的==人与智能机器人聊天功能也比较丰富==，也支持人机之间的单聊、群聊等功能，==适用于在线教育、企业协同办公以及智能客服等产品==。</td>
+<td>目前网易云信与其他三家服务商相比，==支持的接入方式最为全面==，并且==唯一支持macOS、Cocos-2d和Unity这三个平台系统的接入==，在这一点有较大的竞争优势。</td>
+<td>目前环信、容联云通讯、极光推送、网易云信这四家云通讯平台，在IM即时通讯功能的收费价格方面，均按照基础IM功能（通常按照产品日活数收费）、增值IM功能（最典型的是实时音视频通话功能，按照使用分钟数收费）以及扩展IM功能分别进行收费。企业在选购时，需要根据自己的产品类型、实际需要的IM即时通讯功能以及实际的产品日活数来进行综合选择。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>服务平台</th>
+<th>IM即时通讯功能服务与性能</th>
+<th>IM即时通讯功能接入与部署方式</th>
+<th>IM即时通讯功能收费</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>融云</strong></td>
+<td>与其他两家服务商相比，==融云唯一提供非常完整的实时音视频通话功能，并且支持企业基于此功能实现视频会议功能，在这一点融云有着较大的竞争优势==。同时融云还支持==在后台为企业提供完善的后台数据统计功能==，方便企业直接查看用户活跃以及费用消耗方面的数据。</td>
+<td>与其他两家服务商相比，目前融云==唯一支持macOS、Linux等平台系统的接入==，对于基于这两大平台开发产品的企业非常友好，企业可以实现快速接入；另外融云也==可以单独提供专有云部署服务==，通过为企业提供专有的服务集群和海外数据中心，来充分满足企业的特殊需求，企业在部署方式方面选择性很强。</td>
+<td>目前融云、LeanCloud、亲加通讯云这三家云通讯平台，在IM即时通讯功能的收费价格方面，其收费方式和收费标准各不一样，具体如下：融云主要是按照产品日活数按月收费；LeanCloud主要是按照产品日活数按天收费（其中美国和中国分别收费）；而亲加通讯云因为本身仅专注于为企业的视频直播和游戏类产品提供服务，因此按照直播时的使用带宽峰值以及产品日活数分别收费。企业在选购时，需要明确自己产品的类型、需要的IM即时通讯功能以及目前比较稳定的产品日活数来综合对比进行选择。</td>
+</tr>
+<tr>
+<td>LeanCloud</td>
+<td>目前LeanCloud==不支持实时音视频通话功能==，仅为企业==提供最基础的聊天服务==；同时LeanCloud在海外仅支持美国用户使用其服务，不支持全球范围内的其他国家或地区使用，与另外两家服务商相比有一定的不足。</td>
+<td>目前LeanCloud仅==支持最基础最常见的接入与部署方式==，与其他两家服务商相比表现较为一般。</td>
+<td>目前融云、LeanCloud、亲加通讯云这三家云通讯平台，在IM即时通讯功能的收费价格方面，其收费方式和收费标准各不一样，具体如下：融云主要是按照产品日活数按月收费；LeanCloud主要是按照产品日活数按天收费（其中美国和中国分别收费）；而亲加通讯云因为本身仅专注于为企业的视频直播和游戏类产品提供服务，因此按照直播时的使用带宽峰值以及产品日活数分别收费。企业在选购时，需要明确自己产品的类型、需要的IM即时通讯功能以及目前比较稳定的产品日活数来综合对比进行选择。</td>
+</tr>
+<tr>
+<td>亲加通讯云</td>
+<td>亲加通讯云与其他两家服务商最大的不同在于——亲加通讯云本身==仅专注于为企业的视频直播以及游戏类产品提供IM即时通讯服务==，这一点企业在选购时需要特别注意。另外亲加通讯云==可以为企业提供最基础的聊天功能以及实时音频通话功能==，通常==适用于游戏类的产品==。</td>
+<td>与其他两家服务商相比，目前亲加通讯云==最大的不同在于——在接入方式上唯一支持Unity和Cocos-2d这两大手游引擎的接入，因此非常适用于开发游戏类产品的企业==。</td>
+<td>目前融云、LeanCloud、亲加通讯云这三家云通讯平台，在IM即时通讯功能的收费价格方面，其收费方式和收费标准各不一样，具体如下：融云主要是按照产品日活数按月收费；LeanCloud主要是按照产品日活数按天收费（其中美国和中国分别收费）；而亲加通讯云因为本身仅专注于为企业的视频直播和游戏类产品提供服务，因此按照直播时的使用带宽峰值以及产品日活数分别收费。企业在选购时，需要明确自己产品的类型、需要的IM即时通讯功能以及目前比较稳定的产品日活数来综合对比进行选择。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>第三方开发API</category>
+      </categories>
+      <tags>
+        <tag>即时通讯</tag>
+        <tag>网易云信</tag>
+        <tag>环信</tag>
+        <tag>融云</tag>
       </tags>
   </entry>
   <entry>
