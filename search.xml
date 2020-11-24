@@ -27,23 +27,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio 设置国内镜像网站</title>
-    <url>/2020/11/23/as-http-proxy/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
-<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
-<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
-<p><img src="/imgs/4.webp"></p>
-]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Android Studio</tag>
-        <tag>国内镜像网站访问地址</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android 更换 APP Logo 无效问题处理</title>
     <url>/2020/11/24/app-logo-invalid/</url>
     <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
@@ -64,6 +47,23 @@
         <tag>logo</tag>
         <tag>app</tag>
         <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio 设置国内镜像网站</title>
+    <url>/2020/11/23/as-http-proxy/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
+<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
+<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
+<p><img src="/imgs/4.webp"></p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
+        <tag>国内镜像网站访问地址</tag>
       </tags>
   </entry>
   <entry>
@@ -111,26 +111,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Fragment中嵌套Fragment，不显示</title>
-    <url>/2020/11/23/fragment-child-fragment/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
-<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
-<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
-<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
-<p>正确的写法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
+    <title>ADB 命令使用 - 优质项目推荐</title>
+    <url>/2020/11/24/cmd-adb-project/</url>
+    <content><![CDATA[<blockquote>
+<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
+</blockquote>
+<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
+<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
+<p>推荐一个优秀的 GitHub 项目：</p>
+<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
 ]]></content>
       <categories>
-        <category>Android开发问题汇总</category>
+        <category>CMD终端命令</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>fragment</tag>
-        <tag>child fragment</tag>
-        <tag>嵌套</tag>
+        <tag>adb</tag>
+        <tag>CMD终端命令</tag>
       </tags>
   </entry>
   <entry>
@@ -181,6 +178,29 @@
         <tag>自定义域名</tag>
         <tag>域名解析</tag>
         <tag>DNS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fragment中嵌套Fragment，不显示</title>
+    <url>/2020/11/23/fragment-child-fragment/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
+<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
+<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
+<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
+<p>正确的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>fragment</tag>
+        <tag>child fragment</tag>
+        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
@@ -439,26 +459,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Valine评论插件报错：Code 403</title>
-    <url>/2020/11/17/valine-code-403/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code 403: Access denied by API domain white list, Please check your security domain.</span><br></pre></td></tr></table></figure>
-
-<p>大致意思是：访问被api域名白名单拒绝，请检查你的安全域名设置</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在 <a href="https://www.leancloud.cn/">LeanCloud</a> 的【应用 &gt; 设置 &gt; 安全中心 &gt; Web安全域名】中添加新的自定义域名即可解决该问题。</p>
-<p>此处【新的自定义域名】指的是：你的博客的访问域名。</p>
-<p><strong>安全域名的具体添加方式根据 LeanCloud 的要求添加即可。</strong><br><img src="/imgs/valine-code-403-doman.png"></p>
-]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Valine插件</tag>
-        <tag>Code 403</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IM即时通讯</title>
     <url>/2020/11/24/third-party-im/</url>
     <content><![CDATA[<p><a href="http://www.chiefmore.com/yuntongxun/3643.jhtml">国内主流IM即时通讯平台综合评测</a></p>
@@ -546,6 +546,26 @@
         <tag>网易云信</tag>
         <tag>环信</tag>
         <tag>融云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Valine评论插件报错：Code 403</title>
+    <url>/2020/11/17/valine-code-403/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code 403: Access denied by API domain white list, Please check your security domain.</span><br></pre></td></tr></table></figure>
+
+<p>大致意思是：访问被api域名白名单拒绝，请检查你的安全域名设置</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在 <a href="https://www.leancloud.cn/">LeanCloud</a> 的【应用 &gt; 设置 &gt; 安全中心 &gt; Web安全域名】中添加新的自定义域名即可解决该问题。</p>
+<p>此处【新的自定义域名】指的是：你的博客的访问域名。</p>
+<p><strong>安全域名的具体添加方式根据 LeanCloud 的要求添加即可。</strong><br><img src="/imgs/valine-code-403-doman.png"></p>
+]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Valine插件</tag>
+        <tag>Code 403</tag>
       </tags>
   </entry>
   <entry>
