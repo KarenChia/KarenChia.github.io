@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lint found fatal errors while assembling a release target</title>
     <url>/2020/11/23/apk-release-lint/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
@@ -47,6 +24,206 @@
         <tag>Android</tag>
         <tag>release</tag>
         <tag>lint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
+    <url>/2020/11/24/apple-http-1004/</url>
+    <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nw_proxy_resolver_create_parsed_array PAC evaluation error: NSURLErrorDomain: -1004</span><br></pre></td></tr></table></figure>
+
+<p>这主要是在Mac系统中设置了网络自动代理而导致</p>
+<p>解决方案：系统偏好设置 → 网络 → 高级 → 代理 → 取消自动代理配置</p>
+]]></content>
+      <categories>
+        <category>Apple开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>网络</tag>
+        <tag>-1004</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS中配置JDK环境变量</title>
+    <url>/2020/11/24/apple-jdk/</url>
+    <content><![CDATA[<p>macOS中JDK安装路径：</p>
+<p>OSX默认的JDK<br>/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home</p>
+<p>这其实是一个符号链接，它指向：</p>
+<p>/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home</p>
+<p>OS X自带的JRE<br>/System/Library/Frameworks/JavaVM.framework/Versions/Current</p>
+<p>ORACLE的JDK7<br>/Library/Java/JavaVirtualMachines/jdk1.7.0_xx.jdk/Contents/Home</p>
+<p>ORACLE的JRE7<br>/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home</p>
+<p>OPENJDK7<br>/Library/Java/JavaVirtualMachines/jdk1.7.0.jdk/Contents/Home</p>
+<p>配置过程：</p>
+<p>1、启动终端，可以在Spotlight中搜索“终端”</p>
+<p>2、进入当前用户的HOME目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd $HOME</span><br></pre></td></tr></table></figure>
+
+<p>3、创建“.bash_profile”文件（当该文件不存在时），如果文件已存在，直接打开文件即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>4、打开.bash_profile文件，对其内容进行编辑</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>5、此时文本编辑器会打开一个文本，增加如下内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JAVA_HOME&#x3D;&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk-10.0.1.jdk&#x2F;Contents&#x2F;Home</span><br><span class="line">CLASSPAHT&#x3D;.:$JAVA_HOME&#x2F;lib&#x2F;dt.jar:$JAVA_HOME&#x2F;lib&#x2F;tools.jar</span><br><span class="line">PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH:</span><br><span class="line">export JAVA_HOME</span><br><span class="line">export CLASSPATH</span><br><span class="line">export PATH</span><br><span class="line">JAVA_HOME为JDK安装路径</span><br></pre></td></tr></table></figure>
+
+<p>6、保存文件，关闭.bash_profile</p>
+<p>7、更新刚配置的环境变量，在终端执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>8、验证配置是否成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ java -version</span><br><span class="line">java version &quot;10.0.1&quot; 2018-04-17</span><br><span class="line">Java(TM) SE Runtime Environment 18.3 (build 10.0.1+10)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.1+10, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<p>JDK环境变量配置路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ echo $JAVA_HOME</span><br><span class="line">&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk-10.0.1.jdk&#x2F;Contents&#x2F;Home</span><br></pre></td></tr></table></figure>
+
+<p>以上配置只能在当前用户中使用</p>
+<p>参考文档：<a href="https://www.cnblogs.com/cuiliang/p/4603762.html">https://www.cnblogs.com/cuiliang/p/4603762.html</a></p>
+<p>参考文档：<a href="https://blog.csdn.net/binbinzheng/article/details/46621639">https://blog.csdn.net/binbinzheng/article/details/46621639</a></p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>JDK</tag>
+        <tag>环境变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac终端常用命令</title>
+    <url>/2020/11/24/apple-cmd/</url>
+    <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
+<p>1、pwd：终端当前的工作路径</p>
+<p>2、ls：显示当前工作路径下的所有文件夹和文件</p>
+<p>3、ls -l：以详细信息的形式显示当前工作路径下的所有文件夹和文件</p>
+<p>4、cd Applications：切换终端的工作路径为/Users/ZhaiKun/Applications，cd + 终端需要进入的工作路径</p>
+<p>5、Tab建的使用：Tab建可作为系统已经存在的默认路径的自动补全，如 Applications 文件夹，输入前几个（字符个数不定）关键字母（App），再按下Tab建，即可自动完成Applications 的完整拼写</p>
+<p>6、cd ..：回退到当前工作路径的父路径</p>
+<p>7、mkdir 文件夹名称：在当前的工作路径下创建一个新的文件夹</p>
+<p>8、clear：清除终端界面上的命令信息</p>
+<p>9、touch 文件名称（注意增加文件的后缀名）：在当前工作路径新建一个文件，我们知道，在 Mac 的 Finder 中是不能新建文件的，使用该命令即可新建一个文件</p>
+<p>10、cc：任意工作路径下输入此命令，可检测系统是否装有 C 语言的开发环境</p>
+<p>11、cc -c C语言源文件名（加后缀名）：在终端中编译C语言文件，编译成功后可生成源文件（xxx.c）对应的机器文件（xxx.o 二进制文件），这个xxx.o的二进制文件是不能直接运行的</p>
+<p>编译前</p>
+<p><img src="/imgs/41.png"></p>
+<p>cc -c firstC.c 命令编译后</p>
+<p><img src="/imgs/42.png"></p>
+<p>12、cc C语言源文件编译过后的二进制文件（xxx.o）：cc xxx.o 在这个二进制文件中增加C语言平台的启动代码，成功后生成a.out文件，该文件可以直接被CPU识别运行</p>
+<p>cc firstC.o 命令执行后</p>
+<p><img src="/imgs/43.png"></p>
+<p>13、./a.out：执行a.out文件（ ./ 代表当前目录）</p>
+]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>终端</tag>
+        <tag>常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS中安装node.js</title>
+    <url>/2020/11/24/apple-node/</url>
+    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
+<p><img src="/imgs/38.png"></p>
+<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
+<p><img src="/imgs/39.png"></p>
+<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>node.js</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中类的声明与实现</title>
+    <url>/2020/11/24/apple-oc-class-sm/</url>
+    <content><![CDATA[<h1 id="类的声明和实现语法"><a href="#类的声明和实现语法" class="headerlink" title="类的声明和实现语法"></a>类的声明和实现语法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类的属性-特征"><a href="#类的属性-特征" class="headerlink" title="类的属性/特征"></a>类的属性/特征</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类属性的调用"><a href="#类属性的调用" class="headerlink" title="类属性的调用"></a>类属性的调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    @public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"><a href="#类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用" class="headerlink" title="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"></a>类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">@public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;方法的声明</span><br><span class="line">- (void)noParamMethod;&#x2F;&#x2F;声明一个 返回值为空void 无参数 名为noParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带有一个参数的方法</span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam;&#x2F;&#x2F;声明一个 返回值为空void 参数类型为NSString * 参数名为name 名为oneParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带多个参数的方法</span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在类方法的实现中，可以直接访问类的属性</span><br><span class="line">- (int)classSelfParamMethod;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line">&#x2F;&#x2F;方法的实现</span><br><span class="line">- (void)noParamMethod&#123;</span><br><span class="line">    NSLog(@&quot;noParamMethod方法的实现&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam&#123;</span><br><span class="line">    nameParam &#x3D; @&quot;带有一个参数的方法&quot;;</span><br><span class="line">    NSLog(@&quot;%@&quot;, nameParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2&#123;</span><br><span class="line">    NSLog(@&quot;多个参数的方法：%d&quot;, age1+age2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (int)classSelfParamMethod&#123;</span><br><span class="line">    age &#x3D; 18;</span><br><span class="line">    return age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的，类中的属性和方法必须通过类的实例对象进行调用</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;方法的调用</span><br><span class="line">        [person noParamMethod];</span><br><span class="line">        [person oneParamMethod:@&quot;&quot;];</span><br><span class="line">        [person paramsMethod:1 :2];</span><br><span class="line">        NSLog(@&quot;在方法中直接调用类的属性：%d&quot;, [person classSelfParamMethod]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>class</tag>
+        <tag>类</tag>
+        <tag>属性</tag>
+        <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中类是如何存储在内存中的</title>
+    <url>/2020/11/24/apple-oc-class/</url>
+    <content><![CDATA[<h1 id="内存的五大区域"><a href="#内存的五大区域" class="headerlink" title="内存的五大区域"></a>内存的五大区域</h1><p>堆 手动申请的字节空间</p>
+<p>栈 存储局部变量</p>
+<p>BSS段 存储未被初始化的全局变量、静态变量</p>
+<p>数据段（常量区） 存储已经被初始化的全局变量、静态变量、常量数据</p>
+<p>代码段 存储代码</p>
+<h1 id="类的加载过程"><a href="#类的加载过程" class="headerlink" title="类的加载过程"></a>类的加载过程</h1><p>在程序的执行过程中，当类被首次访问（在声明类的指针变量或创建实例对象的时候）时，会将类的声明与实现的代码存储在内存的代码段中。类的加载只会被执行一次。当程序运行结束后，才会释放内存空间。</p>
+<h1 id="类的存储"><a href="#类的存储" class="headerlink" title="类的存储"></a>类的存储</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassLoadDemo 类在内存中的存储</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    @public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)helloWorld;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">-(void)helloWorld&#123;</span><br><span class="line">    NSLog(@&quot;Hello World!&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;1、声明一个Person类型的局部变量person，在内存的栈中分配一片空间给person，指针变量person所指向的内存空间存储的是一个地址</span><br><span class="line">    Person *person;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;2、在堆内存中创建Person的一个实例对象person</span><br><span class="line">    &#x2F;&#x2F;a、在堆内存中申请一片适合Person对象大小的空间</span><br><span class="line">    &#x2F;&#x2F;b、在该内存中根据Person类的模板创建对象：将类中定义的属性声明在对象中（没有方法），在该片存储空间中的person对象有一个默认的属性isa，isa是一个指针，指向person对象的所属类Person在内存的代码段中的存储地址</span><br><span class="line">    &#x2F;&#x2F;c、初始化对象的属性：基本数据类型---0，C语言的指针类型---NULL，OC的类指针类型---nil</span><br><span class="line">    &#x2F;&#x2F;d、返回Person类的实例对象person的地址</span><br><span class="line">    person &#x3D; [Person new];</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;3、属性调用：根据person指针所指向的地址，找到堆内存中创建的对象，再找到age属性</span><br><span class="line">    person-&gt;age &#x3D; 18;</span><br><span class="line">    NSLog(@&quot;%d&quot;, person-&gt;age);</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;4、方法的调用：根据person指针所指向的地址，找到堆内存中创建的对象，再找到isa属性，通过isa指向的地址空间，调用存储在内存的代码段中的类的方法</span><br><span class="line">    [person helloWorld];</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;%@&quot;, person);</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看完之后呢，有个小小的疑问，为什么类中的方法没有存储在对象中？</p>
+<p>当在创建多个对象时，每一个对象中的方法是相同的，重复创建对象中的方法造成了空间的浪费，直接将方法存储在了代码段中的类中，每一个被创建的对象的isa指针属性指向了代码段中的类，再通过类找到方法，节省了内存空间。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>内存</tag>
+        <tag>对象</tag>
+        <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac中NTFS格式文件的读写</title>
+    <url>/2020/11/24/apple-ntfs/</url>
+    <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
+<p>Tuxera NTFS 自行百度下载安装即可。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>mac</tag>
+        <tag>NTFS格式文件读写</tag>
       </tags>
   </entry>
   <entry>
@@ -103,21 +280,17 @@
       </tags>
   </entry>
   <entry>
-    <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
-    <url>/2020/11/24/apple-http-1004/</url>
-    <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nw_proxy_resolver_create_parsed_array PAC evaluation error: NSURLErrorDomain: -1004</span><br></pre></td></tr></table></figure>
-
-<p>这主要是在Mac系统中设置了网络自动代理而导致</p>
-<p>解决方案：系统偏好设置 → 网络 → 高级 → 代理 → 取消自动代理配置</p>
+    <title>import指令与include指令的区别</title>
+    <url>/2020/11/24/apple-oc-import/</url>
+    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
+<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
+<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
 ]]></content>
       <categories>
-        <category>Apple开发问题汇总</category>
+        <category>Apple开发基础</category>
       </categories>
       <tags>
         <tag>iOS</tag>
-        <tag>网络</tag>
-        <tag>-1004</tag>
       </tags>
   </entry>
   <entry>
@@ -208,6 +381,133 @@
       </tags>
   </entry>
   <entry>
+    <title>Objective-C中NULL与nil的区别</title>
+    <url>/2020/11/24/apple-oc-null-nil/</url>
+    <content><![CDATA[<h1 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
+<h1 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
+<h1 id="使用规范"><a href="#使用规范" class="headerlink" title="使用规范"></a>使用规范</h1><p>C语言指针类型，用NULL</p>
+<p>OC类指针类型，用nil</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NullAndNilDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        int *a &#x3D; NULL;&#x2F;&#x2F;表示a不指向内存中的任何一片空间</span><br><span class="line">        Person *person &#x3D; nil;&#x2F;&#x2F;表示person不指向内存中的任何一个对象</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过被赋值为nil的类指针去调用对象中的属性时，运行时出错，调用方法不会出错，但是方法不会执行，没有任何效果，这是Objective-C语言的机制，不要问我为什么、、、</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>nil</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中NSString的使用</title>
+    <url>/2020/11/24/apple-oc-nsstring/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>NSString</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>访问权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中注释和函数的定义</title>
+    <url>/2020/11/24/apple-oc-zs/</url>
+    <content><![CDATA[<p>小编之前是从事Android开发的，不浪费口舌了，直接上代码，看看注释就明了了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;这里表示的是单行注释</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 这里表示的多行注释</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">void customMethod();&#x2F;&#x2F;函数的定义</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool    &#x2F;&#x2F;自动释放池，可以将代码写到自动释放池中，也可以将自动释放池删除，不会对应用程序造成影响</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);&#x2F;&#x2F;自动换行，如果在结尾加上\n换行符，自动换行失效，\n生效</span><br><span class="line">        </span><br><span class="line">        customMethod();&#x2F;&#x2F;调用自定义的函数，main函数作为程序的入口和出口，因此自定义的函数必须在main函数之前进行声明</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;自定义函数的实现，也可以在函数定义时进行功能的实现</span><br><span class="line">void customMethod()&#123;</span><br><span class="line">    NSLog(@&quot;简单的声明一个函数&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>函数</tag>
+        <tag>注释</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中@符号说明</title>
+    <url>/2020/11/24/apple-oc/</url>
+    <content><![CDATA[<p>常见的两个功能：</p>
+<p>1、将C字符串转换为OC字符串</p>
+<p>2、OC中的大多数关键字都是以@符号开头</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>符号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS配置Android SDK 环境变量</title>
+    <url>/2020/11/24/apple-sdk/</url>
+    <content><![CDATA[<p>1、启动终端，可以在Spotlight中搜索“终端”</p>
+<p>2、进入当前用户的HOME目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd $HOME</span><br></pre></td></tr></table></figure>
+
+<p>3、创建“.bash_profile”文件（当该文件不存在时），如果文件已存在，直接打开文件即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>4、打开.bash_profile文件，对其内容进行编辑</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>5、此时文本编辑器会打开一个文本，增加如下内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ANDROID_HOME&#x3D;&#x2F;Users&#x2F;zhaikun&#x2F;Downloads&#x2F;ZhaiKun&#x2F;Android&#x2F;android-sdk-macosx</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
+
+<p>ANDROID_HOME配置为Android SDK的安装路径</p>
+<p>6、保存文件，关闭.bash_profile</p>
+<p>7、更新刚配置的环境变量，在终端执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>8、验证配置是否成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+
+<p>配置结果</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">* daemon not running; starting now at tcp:5037</span><br><span class="line">* daemon started successfully</span><br><span class="line">93bab263	device</span><br></pre></td></tr></table></figure>
+
+<p>或者直接在终端输入adb，不提示“-bash: a: command not found”即表示配置成功</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>Android SDK</tag>
+        <tag>ANDROID_HOME</tag>
+        <tag>配置环境变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
+    <url>/2020/11/19/blog-csdn/</url>
+    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+]]></content>
+      <categories>
+        <category>CSDN博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>CSDN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Studio 设置国内镜像网站</title>
     <url>/2020/11/23/as-http-proxy/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
@@ -222,19 +522,6 @@
         <tag>Android</tag>
         <tag>Android Studio</tag>
         <tag>国内镜像网站访问地址</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
-    <url>/2020/11/19/blog-csdn/</url>
-    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
-]]></content>
-      <categories>
-        <category>CSDN博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>CSDN</tag>
       </tags>
   </entry>
   <entry>
@@ -513,6 +800,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Java基础面试题：String与StringBuffer的区别</title>
+    <url>/2020/11/24/java-mst-string-stringbuffer/</url>
+    <content><![CDATA[<p>1 String被创建后，值不能被改变，如果参与了操作，引用发生变化，不是在原有的字符串上操作，而是产生一个新的字符串</p>
+<p>2 StringBuffer被创建后，值能被改变，如果参与了操作，引用不会发生变化，在原有的字符串上操作，线程安全</p>
+]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>String</tag>
+        <tag>StringBuffer</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java基础面试题：int 与 Integer 的区别</title>
     <url>/2020/11/24/java-mst-int-integer/</url>
     <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
@@ -525,27 +829,10 @@
       </categories>
       <tags>
         <tag>Java面试题</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
         <tag>int</tag>
         <tag>integer</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java基础面试题：String与StringBuffer的区别</title>
-    <url>/2020/11/24/java-mst-string-stringbuffer/</url>
-    <content><![CDATA[<p>1 String被创建后，值不能被改变，如果参与了操作，引用发生变化，不是在原有的字符串上操作，而是产生一个新的字符串</p>
-<p>2 StringBuffer被创建后，值能被改变，如果参与了操作，引用不会发生变化，在原有的字符串上操作，线程安全</p>
-]]></content>
-      <categories>
-        <category>面试题 - Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试题</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
-        <tag>String</tag>
-        <tag>StringBuffer</tag>
       </tags>
   </entry>
   <entry>
@@ -574,42 +861,6 @@
         <tag>Android</tag>
         <tag>极光</tag>
         <tag>DownloadProvider</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly 最新评论 newest-comments 401/资源加载错误（无法获取资料，请确认相关配置是否正确）</title>
-    <url>/2020/11/20/newest-comments/</url>
-    <content><![CDATA[<p>集成 Butterfly 博客主题中，在配置最新评论 newest comments 时，根据 Butterfly 的配置文档配置完成后，最新评论一直无法显示，提示错误信息：无法获取资料，请确认相关配置是否正确<br><img src="/imgs/newest-comments-401.jpg"></p>
-<p>在网页调试模式下，给出的错误信息大致是：找不到加载的资源 401</p>
-<h1 id="newest-comments-的配置信息"><a href="#newest-comments-的配置信息" class="headerlink" title="newest_comments 的配置信息"></a>newest_comments 的配置信息</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Aside widget - Newest Comments</span><br><span class="line">newest_comments:</span><br><span class="line">  enable: true</span><br><span class="line">  limit: 6</span><br><span class="line">  avatar: true</span><br><span class="line">  leancloud:</span><br><span class="line">    enable: true</span><br><span class="line">    appId: XXX # leancloud application app id</span><br><span class="line">    appKey: XXX # leancloud application app key</span><br><span class="line">    serverURL: XXX # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">    default_avatar: mp #mp&#x2F;identicon&#x2F;monsterid&#x2F;wavatar&#x2F;retro&#x2F;robohash&#x2F;blank</span><br><span class="line">  github_issues:</span><br><span class="line">    enable: true</span><br><span class="line">    repo: </span><br><span class="line">  # disqus:</span><br><span class="line">  #   enable: true</span><br><span class="line">  #   forum:</span><br><span class="line">  #   api_key:</span><br></pre></td></tr></table></figure>
-
-<p>Butterfly 的主题配置文件中是默认从 Valine 、 disqus 评论插件中读取评论信息，由于 disqus 的访问速度太慢，在我的博客中就没有使用 disqus ，故而将其注解。</p>
-<p>而问题也就出在这里 。。。</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>我在这里做出假设：Butterfly 最新评论的显示，需要在其配置文件中至少配置两种不同类型的评论插件。</p>
-<p>上文提到，Butterfly 在最新评论处默认配置的 disqus 插件已被注解</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># disqus</span><br><span class="line"># https:&#x2F;&#x2F;disqus.com&#x2F;</span><br><span class="line">disqus:</span><br><span class="line">  shortname:</span><br></pre></td></tr></table></figure>
-<p>故而，上面这里关于 disqus 的配置是空的。</p>
-<p>在网上找了很长时间的资料，无奈，关于当前问题的文章实在是少之又少，也没有什么具体的解决方法。和 Butterfly 作者联系后，也尝试过些方法，还是没有得到解决 。。。</p>
-<p>最终，我考虑换其它的评论插件，因为 Butterfly 中集成了很多的评论插件，也方便集成，具体可查看其文档。就当我集成其它插件结束后，运行本地服务时，最新评论显示出来了<br><img src="/imgs/newest-comments-count.png"></p>
-<p>这里集成的插件任意选择一种（已集成的插件除外）即可。</p>
-<blockquote>
-<p>在本地服务运行期间，之前已经集成的插件并未删除。此时，在配置文件中配置了两种评论插件，我这里配置的是 Valine 和 Twikoo。</p>
-</blockquote>
-<p>具体的问题原因，其实并没有找到，配置到这里后，最新评论能正常显示了，我就结束了配置。如果你有相关的解决方案，欢迎在评论区留下你的宝贵意见 ！！！</p>
-<h2 id="Valine-配置信息"><a href="#Valine-配置信息" class="headerlink" title="Valine 配置信息"></a>Valine 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: XXX # leancloud application app id</span><br><span class="line">  appKey: XXX # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 记得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
-
-<h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>newest-comments</tag>
-        <tag>评论</tag>
-        <tag>401</tag>
-        <tag>资源加载</tag>
       </tags>
   </entry>
   <entry>
@@ -817,6 +1068,42 @@
         <tag>网易云信</tag>
         <tag>环信</tag>
         <tag>融云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly 最新评论 newest-comments 401/资源加载错误（无法获取资料，请确认相关配置是否正确）</title>
+    <url>/2020/11/20/newest-comments/</url>
+    <content><![CDATA[<p>集成 Butterfly 博客主题中，在配置最新评论 newest comments 时，根据 Butterfly 的配置文档配置完成后，最新评论一直无法显示，提示错误信息：无法获取资料，请确认相关配置是否正确<br><img src="/imgs/newest-comments-401.jpg"></p>
+<p>在网页调试模式下，给出的错误信息大致是：找不到加载的资源 401</p>
+<h1 id="newest-comments-的配置信息"><a href="#newest-comments-的配置信息" class="headerlink" title="newest_comments 的配置信息"></a>newest_comments 的配置信息</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Aside widget - Newest Comments</span><br><span class="line">newest_comments:</span><br><span class="line">  enable: true</span><br><span class="line">  limit: 6</span><br><span class="line">  avatar: true</span><br><span class="line">  leancloud:</span><br><span class="line">    enable: true</span><br><span class="line">    appId: XXX # leancloud application app id</span><br><span class="line">    appKey: XXX # leancloud application app key</span><br><span class="line">    serverURL: XXX # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">    default_avatar: mp #mp&#x2F;identicon&#x2F;monsterid&#x2F;wavatar&#x2F;retro&#x2F;robohash&#x2F;blank</span><br><span class="line">  github_issues:</span><br><span class="line">    enable: true</span><br><span class="line">    repo: </span><br><span class="line">  # disqus:</span><br><span class="line">  #   enable: true</span><br><span class="line">  #   forum:</span><br><span class="line">  #   api_key:</span><br></pre></td></tr></table></figure>
+
+<p>Butterfly 的主题配置文件中是默认从 Valine 、 disqus 评论插件中读取评论信息，由于 disqus 的访问速度太慢，在我的博客中就没有使用 disqus ，故而将其注解。</p>
+<p>而问题也就出在这里 。。。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>我在这里做出假设：Butterfly 最新评论的显示，需要在其配置文件中至少配置两种不同类型的评论插件。</p>
+<p>上文提到，Butterfly 在最新评论处默认配置的 disqus 插件已被注解</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># disqus</span><br><span class="line"># https:&#x2F;&#x2F;disqus.com&#x2F;</span><br><span class="line">disqus:</span><br><span class="line">  shortname:</span><br></pre></td></tr></table></figure>
+<p>故而，上面这里关于 disqus 的配置是空的。</p>
+<p>在网上找了很长时间的资料，无奈，关于当前问题的文章实在是少之又少，也没有什么具体的解决方法。和 Butterfly 作者联系后，也尝试过些方法，还是没有得到解决 。。。</p>
+<p>最终，我考虑换其它的评论插件，因为 Butterfly 中集成了很多的评论插件，也方便集成，具体可查看其文档。就当我集成其它插件结束后，运行本地服务时，最新评论显示出来了<br><img src="/imgs/newest-comments-count.png"></p>
+<p>这里集成的插件任意选择一种（已集成的插件除外）即可。</p>
+<blockquote>
+<p>在本地服务运行期间，之前已经集成的插件并未删除。此时，在配置文件中配置了两种评论插件，我这里配置的是 Valine 和 Twikoo。</p>
+</blockquote>
+<p>具体的问题原因，其实并没有找到，配置到这里后，最新评论能正常显示了，我就结束了配置。如果你有相关的解决方案，欢迎在评论区留下你的宝贵意见 ！！！</p>
+<h2 id="Valine-配置信息"><a href="#Valine-配置信息" class="headerlink" title="Valine 配置信息"></a>Valine 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: XXX # leancloud application app id</span><br><span class="line">  appKey: XXX # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 记得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>newest-comments</tag>
+        <tag>评论</tag>
+        <tag>401</tag>
+        <tag>资源加载</tag>
       </tags>
   </entry>
   <entry>
