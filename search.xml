@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lint found fatal errors while assembling a release target</title>
     <url>/2020/11/23/apk-release-lint/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
@@ -47,6 +24,29 @@
         <tag>Android</tag>
         <tag>release</tag>
         <tag>lint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
       </tags>
   </entry>
   <entry>
@@ -161,6 +161,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Fragment中嵌套Fragment，不显示</title>
+    <url>/2020/11/23/fragment-child-fragment/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
+<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
+<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
+<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
+<p>正确的写法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>fragment</tag>
+        <tag>child fragment</tag>
+        <tag>嵌套</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/11/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -182,29 +205,6 @@
       </categories>
       <tags>
         <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fragment中嵌套Fragment，不显示</title>
-    <url>/2020/11/23/fragment-child-fragment/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
-<p>先看一段错误代码，这段代码写在一个 Fragment 中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码看上去一切正常，但是有时候就是好好的就是现实不出来，找来找去死活找不到原因。<br>一切东西都是普通的再不普通不过的 List 或者 Adapter，List这么简单的东西还能出问题？<br>那就是Adapter的问题了，Adapter里面实现的不对吗？也没有问题啊，就那么简单的几个方法。</p>
-<p>最后终于发现，问题就在 new ViewPageAdpater( getFragmentManager() ); 这里。</p>
-<p>之前就知道 fragment中嵌套fragment 应该使用 getChildFragmentManager() ，每次用起来都是忘了。<br>自己把自己丢坑里去了。<br>发现了之后，清楚的想起了，自己之前被坑过一次，这次又…………</p>
-<p>正确的写法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">private void initView()&#123;</span><br><span class="line">    mViewPageAdpater &#x3D; new ViewPageAdpater( getChildFragmentManager() );</span><br><span class="line">    </span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title1&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title2&quot; );</span><br><span class="line">    mFragments.add( new BoonListFragment() );</span><br><span class="line">    mTitles.add( &quot;title3&quot; );</span><br><span class="line">    </span><br><span class="line">    mViewPageAdpater.setFragments( mFragments, mTitles );       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以后每当在 Fragment 中要用到 FragmentManager 的时候一定要记住，使用 getChildFragmentManager()。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>fragment</tag>
-        <tag>child fragment</tag>
-        <tag>嵌套</tag>
       </tags>
   </entry>
   <entry>
