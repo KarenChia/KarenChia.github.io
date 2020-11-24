@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Lint found fatal errors while assembling a release target</title>
     <url>/2020/11/23/apk-release-lint/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
@@ -27,26 +50,161 @@
       </tags>
   </entry>
   <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+    <title>Objective-C中异常处理</title>
+    <url>/2020/11/24/apple-oc-exception/</url>
+    <content><![CDATA[<p>何为异常？</p>
+<p>我的简单理解是：程序可以编译、运行，但是在某些特定的执行环境下会导致程序运行终止，也就是我们常说的崩溃或者闪退现象。</p>
+<p>如何处理？</p>
+<p>我们要抓住这个导致程序运行终止的代码，然后采取合理的方式将其处理掉。Objective-C提供了异常的处理机制</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@try &#123;</span><br><span class="line">    &lt;#Code that can potentially throw an exception#&gt;</span><br><span class="line">&#125; @catch (NSException *exception) &#123;</span><br><span class="line">    &lt;#Handle an exception thrown in the @try block#&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有如下例子：</p>
+<p>1、接下来，我们定义一个Person类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">- (void)run;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>在Person类中声明了一个run方法</p>
+<p>2、再看Person类的实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>在Person类的实现代码中，没有实现run方法</p>
+<p>3、接下来在程序的入口函数中对run方法进行调用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ExceptionDeal 异常处理</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    Person *person &#x3D; [Person new];</span><br><span class="line">    [person run];</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;程序执行到了这里&quot;);</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行到[person run]时，就终止了运行，调试信息显示：run方法声明了，但是没有实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:03:53.177952+0800 ExceptionDeal[812:23032] -[Person run]: unrecognized selector sent to instance 0x100406730</span><br><span class="line">2017-10-11 10:03:53.178930+0800 ExceptionDeal[812:23032] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39;-[Person run]: unrecognized selector sent to instance 0x100406730&#39;</span><br><span class="line">*** First throw call stack:</span><br><span class="line">(</span><br><span class="line">	0   CoreFoundation                      0x00007fffb6f012cb __exceptionPreprocess + 171</span><br><span class="line">	1   libobjc.A.dylib                     0x00007fffcbd1948d objc_exception_throw + 48</span><br><span class="line">	2   CoreFoundation                      0x00007fffb6f82f04 -[NSObject(NSObject) doesNotRecognizeSelector:] + 132</span><br><span class="line">	3   CoreFoundation                      0x00007fffb6e73755 ___forwarding___ + 1061</span><br><span class="line">	4   CoreFoundation                      0x00007fffb6e732a8 _CF_forwarding_prep_0 + 120</span><br><span class="line">	5   ExceptionDeal                       0x0000000100000f26 main + 70</span><br><span class="line">	6   libdyld.dylib                       0x00007fffcc5ff235 start + 1</span><br><span class="line">	7   ???                                 0x0000000000000001 0x0 + 1</span><br><span class="line">)</span><br><span class="line">libc++abi.dylib: terminating with uncaught exception of type NSException</span><br><span class="line">(lldb) </span><br></pre></td></tr></table></figure>
+<p>4、对这个异常进行处理，使程序可以继续运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ExceptionDeal 异常处理</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    Person *person &#x3D; [Person new];</span><br><span class="line">    </span><br><span class="line">    @try &#123;</span><br><span class="line">        &#x2F;&#x2F;将可能发生异常的代码写在@try块中</span><br><span class="line">        [person run];&#x2F;&#x2F;一旦发生异常，立即执行@catch块中的代码，不会执行@try块中发生异常代码处之后的代码</span><br><span class="line">        NSLog(@&quot;我是处于异常后面的代码&quot;);</span><br><span class="line">    &#125; @catch (NSException *exception) &#123;</span><br><span class="line">        &#x2F;&#x2F;确定异常已经发生，执行@catch块中的代码。如果@try块中的代码没有发生异常，是不会执行@catch块中的代码的</span><br><span class="line">        NSLog(@&quot;这里是处理异常&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;程序执行到了这里&quot;);</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:22:36.727478+0800 ExceptionDeal[913:27826] -[Person run]: unrecognized selector sent to instance 0x1002032b0</span><br><span class="line">2017-10-11 10:22:36.728071+0800 ExceptionDeal[913:27826] 这里是处理异常</span><br><span class="line">2017-10-11 10:22:36.728109+0800 ExceptionDeal[913:27826] 程序执行到了这里</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>5、验证没有异常时不会执行@catch块中的代码，实现Person类中的run方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">- (void)run&#123;</span><br><span class="line">    NSLog(@&quot;实现了run方法&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>程序运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:29:33.763648+0800 ExceptionDeal[967:29474] 实现了run方法</span><br><span class="line">2017-10-11 10:29:33.763909+0800 ExceptionDeal[967:29474] 我是处于异常后面的代码</span><br><span class="line">2017-10-11 10:29:33.763935+0800 ExceptionDeal[967:29474] 程序执行到了这里</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>在@try块中，没有异常时，依次执行了@try块中的所有代码，直接跳过了@catch块</p>
+<p>6、@catch块参数说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@catch (NSException *exception) &#123;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>exception 指针对象，通过它可以拿到发生异常的原因。添加打印异常信息的代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@catch (NSException *exception) &#123;</span><br><span class="line">    &#x2F;&#x2F;确定异常已经发生，执行@catch块中的代码。如果@try块中的代码没有发生异常，是不会执行@catch块中的代码的</span><br><span class="line">    NSLog(@&quot;这里是处理异常&quot;);</span><br><span class="line">    NSLog(@&quot;发生异常的原因：%@&quot;, exception);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:45:46.946998+0800 ExceptionDeal[1044:33191] -[Person run]: unrecognized selector sent to instance 0x100504590</span><br><span class="line">2017-10-11 10:45:46.947636+0800 ExceptionDeal[1044:33191] 这里是处理异常</span><br><span class="line">2017-10-11 10:45:46.947709+0800 ExceptionDeal[1044:33191] 发生异常的原因：-[Person run]: unrecognized selector sent to instance 0x100504590</span><br><span class="line">2017-10-11 10:45:46.947741+0800 ExceptionDeal[1044:33191] 程序执行到了这里</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>7、@finally处理机制说明：位于@try{ }@catch{ }的后面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@try &#123;</span><br><span class="line">    &lt;#Code that can potentially throw an exception#&gt;</span><br><span class="line">&#125; @catch (NSException *exception) &#123;</span><br><span class="line">    &lt;#Handle an exception thrown in the @try block#&gt;</span><br><span class="line">&#125; @finally &#123;</span><br><span class="line">    &lt;#Code that gets executed whether or not an exception is thrown#&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在入口函数中增加@finally块</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ExceptionDeal 异常处理</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    Person *person &#x3D; [Person new];</span><br><span class="line"></span><br><span class="line">    @try &#123;</span><br><span class="line">        &#x2F;&#x2F;将可能发生异常的代码写在@try块中</span><br><span class="line">        [person run];&#x2F;&#x2F;一旦发生异常，立即执行@catch块中的代码，不会执行@try块中发生异常代码处之后的代码</span><br><span class="line">        NSLog(@&quot;我是处于异常后面的代码&quot;);</span><br><span class="line">    &#125; @catch (NSException *exception) &#123;</span><br><span class="line">        &#x2F;&#x2F;确定异常已经发生，执行@catch块中的代码。如果@try块中的代码没有发生异常，是不会执行@catch块中的代码的</span><br><span class="line">        NSLog(@&quot;这里是处理异常&quot;);</span><br><span class="line">        NSLog(@&quot;发生异常的原因：%@&quot;, exception);</span><br><span class="line">    &#125;@finally &#123;</span><br><span class="line">        &#x2F;&#x2F;无论@try块中是否有异常，都会执行这里的代码</span><br><span class="line">        NSLog(@&quot;I am finally！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;程序执行到了这里&quot;);</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>模拟发生异常时的运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:57:44.240396+0800 ExceptionDeal[1141:36516] -[Person run]: unrecognized selector sent to instance 0x100202330</span><br><span class="line">2017-10-11 10:57:44.241212+0800 ExceptionDeal[1141:36516] 这里是处理异常</span><br><span class="line">2017-10-11 10:57:44.241259+0800 ExceptionDeal[1141:36516] 发生异常的原因：-[Person run]: unrecognized selector sent to instance 0x100202330</span><br><span class="line">2017-10-11 10:57:44.241286+0800 ExceptionDeal[1141:36516] I am finally！</span><br><span class="line">2017-10-11 10:57:44.241301+0800 ExceptionDeal[1141:36516] 程序执行到了这里</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>模拟没有异常出现时的运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 10:58:37.252254+0800 ExceptionDeal[1177:36918] 实现了run方法</span><br><span class="line">2017-10-11 10:58:37.252422+0800 ExceptionDeal[1177:36918] 我是处于异常后面的代码</span><br><span class="line">2017-10-11 10:58:37.252447+0800 ExceptionDeal[1177:36918] I am finally！</span><br><span class="line">2017-10-11 10:58:37.252465+0800 ExceptionDeal[1177:36918] 程序执行到了这里</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>得出结论：无论在@try块中是否有异常，程序最终都会执行@finally块中的代码</p>
+<p>注意：@try、、、@catch对异常的处理是有一定的局限性的，也就是说这个东东是不能处理所有的异常的，典型的例子就是做除法运算时分母为0的情况。那么我们又怎么样对它不能处理的异常进行处理呢？推荐的方法是：进行逻辑判断处理。</p>
 ]]></content>
       <categories>
-        <category>Android开发问题汇总</category>
+        <category>Apple开发问题汇总</category>
       </categories>
       <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
+        <tag>objective-c</tag>
+        <tag>异常处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
+    <url>/2020/11/24/apple-http-1004/</url>
+    <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nw_proxy_resolver_create_parsed_array PAC evaluation error: NSURLErrorDomain: -1004</span><br></pre></td></tr></table></figure>
+
+<p>这主要是在Mac系统中设置了网络自动代理而导致</p>
+<p>解决方案：系统偏好设置 → 网络 → 高级 → 代理 → 取消自动代理配置</p>
+]]></content>
+      <categories>
+        <category>Apple开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>网络</tag>
+        <tag>-1004</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中编程小技巧</title>
+    <url>/2020/11/24/apple-oc-jq/</url>
+    <content><![CDATA[<p>1、分组导航</p>
+<p>实现在同一个文件中，代码的快速定位。有如下代码文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  GroupNavigationMark 分组导航标记</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Students : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Students</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Bird : NSObject</span><br><span class="line"></span><br><span class="line">- (void)fly;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Bird</span><br><span class="line"></span><br><span class="line">-(void)fly&#123;</span><br><span class="line">    NSLog(@&quot;我会飞&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Cat : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Cat</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Apple : NSObject</span><br><span class="line"></span><br><span class="line">- (void)red;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Apple</span><br><span class="line"></span><br><span class="line">-(void)red&#123;</span><br><span class="line">    NSLog(@&quot;我是红色的&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Bananer : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Bananer</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果文件中的代码不断的增加，那么在查找文件中的某一个类或者方法等就没有那么方便了。在文件的顶部，有一个文件的导航：</p>
+<p><img src="/imgs/19.png"></p>
+<p>点击No Selection，显示当前文件中相关的类、方法等，可快速定位</p>
+<p><img src="/imgs/20.png"></p>
+<p>为分组栏添加标记，使用#pragma mark x 语法，根据需求增加代码即可</p>
+<p><img src="/imgs/21.png"></p>
+<p>小编在此处将代码做如下修改</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  GroupNavigationMark 分组导航标记</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">#pragma mark - 人类</span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Students : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Students</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">#pragma mark - 动物类</span><br><span class="line">@interface Bird : NSObject</span><br><span class="line"></span><br><span class="line">- (void)fly;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Bird</span><br><span class="line"></span><br><span class="line">-(void)fly&#123;</span><br><span class="line">    NSLog(@&quot;我会飞&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Cat : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Cat</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">#pragma mark - 食物类</span><br><span class="line">@interface Apple : NSObject</span><br><span class="line"></span><br><span class="line">- (void)red;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Apple</span><br><span class="line"></span><br><span class="line">-(void)red&#123;</span><br><span class="line">    NSLog(@&quot;我是红色的&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@interface Bananer : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation Bananer</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">#pragma mark - 程序入口函数</span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现效果</p>
+<p><img src="/imgs/22.png"></p>
+<p>2、牛逼哄哄的你可能会忘记的小细节</p>
+<p>2.1 类的声明@interface与类的实现@implementation不能嵌套使用</p>
+<p>2.2 类必须先声明再实现</p>
+<p>2.3 类的声明与实现必须同时存在。特殊情况下，可以没有声明，而只有实现，但不推荐这种写法</p>
+<p>2.4 类的声明必须放在使用该类的语法的前面，类的实现可以放在使用该类的语法的前面或后面</p>
+<p>2.5 属性名以下划线开头，类名首字母大写（规范）</p>
+<p>2.6 属性不允许声明时初始化</p>
+<p>2.7 OC方法必须通过创建对象，由对象来进行调用；函数是可以直接调用的</p>
+<p>2.8 方法只有声明没有实现，运行是会报错的</p>
+<p>3、将类写在一个模块中，便于代码的维护、团队开发</p>
+<p>一个模块，至少包含两个文件：</p>
+<p>.h 头文件 写类的声明</p>
+<p>.m 实现文件 写类的实现</p>
+<p>在模块文件夹下新建文件</p>
+<p><img src="/imgs/23.png"></p>
+<p>创建一个新的Cocoa Class文件</p>
+<p><img src="/imgs/24.png"></p>
+<p>系统会默认建立.h和.m模板文件</p>
+<p><img src="/imgs/25.png"></p>
+<p>.h 头文件默认代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>.m 类的实现文件默认代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>修改.h头文件中的代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    @public</span><br><span class="line">    NSString *_name;</span><br><span class="line">    int _age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)run;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>再修改.m类实现文件中的代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">- (void)run&#123;</span><br><span class="line">    NSLog(@&quot;我跑的很快、、、&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>在程序的入口函数main.m文件中进行调用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassModuleDevelop 类的模块开发演示</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;&#x2F;&#x2F;导入头文件，使用文件中的类</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        Person *person &#x3D; [Person new];</span><br><span class="line">        [person run];</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>建议在.h头文件中只写一个类的声明，.m文件只写一个类的实现</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>编程</tag>
+        <tag>代码分组导航</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中的方法说明</title>
+    <url>/2020/11/24/apple-oc-method/</url>
+    <content><![CDATA[<p>1、Objective-C中两种类型的方法</p>
+<p>实例方法或对象方法：在类中以“-”号声明的方法，在此之前的文章中所声明的方法都是实例方法，实例方法的声明请参考之前的文章Objective-C中类的声明与实现</p>
+<p>类方法：在类中以“+”号声明，其余与实例方法都一样</p>
+<p>2、类方法的声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">+ (void)talk;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+
+<p>3、类方法的实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">+(void)talk&#123;</span><br><span class="line">    NSLog(@&quot;我是一个类方法&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+
+<p>注意：类方法的声明和实现与实例方法的声明和实现唯一的区别就在于“+”号和“-”号，其它地方均一样</p>
+<p>4、类方法的调用</p>
+<p>类方法的调用不同于实例方法，直接通过类名调用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassMethod 类方法的声明与调用</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    [Person talk];&#x2F;&#x2F;直接使用类名调用类方法</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 11:43:03.617613+0800 ClassMethod[1389:47747] 我是一个类方法</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>5、类方法的调用过程</p>
+<p>我之前的文章Objective-C中类是如何存储在内存中的对实例方法在内存中的存储进行了说明，类方法在内存中的存储方式和实例方法一样，都是在内存的代码段中。在调用类方法时，直接在代码段中调用，省去了类的实例对象的创建，从而节省了内存空间，提高了类方法的调用效率。</p>
+<p>此外，在类方法中不能直接访问类的属性和实例方法。因为在类方法被调用时，有可能类的实例没有被创建。可以在类方法中直接创建类的实例，通过创建的实例来访问实例的属性和实例方法。在实例方法中可以直接调用类方法。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>类方法</tag>
       </tags>
   </entry>
   <entry>
@@ -77,37 +235,6 @@
       <tags>
         <tag>博客</tag>
         <tag>CSDN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点访问人数 Buszanui 插件数据统计错误</title>
-    <url>/2020/11/18/buszanui-visitor-count/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
-<blockquote>
-<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
-</blockquote>
-<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
-<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
-<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
-<blockquote>
-<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
-</blockquote>
-<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
-<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
-<li>GitHub Page</li>
-<li>Gitee Page</li>
-<li>Coding</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Buszanui</tag>
-        <tag>站点数据统计</tag>
       </tags>
   </entry>
   <entry>
@@ -149,6 +276,74 @@
         <tag>ADB</tag>
         <tag>数据库文件</tag>
         <tag>DB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点访问人数 Buszanui 插件数据统计错误</title>
+    <url>/2020/11/18/buszanui-visitor-count/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
+<blockquote>
+<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
+</blockquote>
+<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
+<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
+<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
+<blockquote>
+<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
+</blockquote>
+<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
+<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
+<li>GitHub Page</li>
+<li>Gitee Page</li>
+<li>Coding</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Buszanui</tag>
+        <tag>站点数据统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ADB 命令使用 - 优质项目推荐</title>
+    <url>/2020/11/24/cmd-adb-project/</url>
+    <content><![CDATA[<blockquote>
+<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
+</blockquote>
+<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
+<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
+<p>推荐一个优秀的 GitHub 项目：</p>
+<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
+]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>CMD终端命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
+    <url>/2020/11/24/cmd-adb-screenshot/</url>
+    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
+<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>屏幕截图</tag>
+        <tag>保存到电脑</tag>
       </tags>
   </entry>
   <entry>
@@ -202,26 +397,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ADB 命令使用 - 优质项目推荐</title>
-    <url>/2020/11/24/cmd-adb-project/</url>
-    <content><![CDATA[<blockquote>
-<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
-</blockquote>
-<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
-<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
-<p>推荐一个优秀的 GitHub 项目：</p>
-<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
-]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>CMD终端命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fragment中嵌套Fragment，不显示</title>
     <url>/2020/11/23/fragment-child-fragment/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
@@ -269,19 +444,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Writing Exercise</title>
-    <url>/2020/11/16/hexo-writing-exercise/</url>
-    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
-<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
     <url>/2020/11/18/hexo-set-up/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
@@ -319,22 +481,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础面试题：int 与 Integer 的区别</title>
-    <url>/2020/11/24/java-mst-int-integer/</url>
-    <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
-<p>2 当int、Integer作为类的属性声明时的类型时，int的默认值是0，Integer的默认值是null</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.csdn.blog.karen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装类演示</span><br><span class="line"> * </span><br><span class="line"> * @author：Karen Chia</span><br><span class="line"> * @date：2018年11月13日 上午9:32:06</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class ClazzDemo &#123;</span><br><span class="line"></span><br><span class="line">	private static int intVal;</span><br><span class="line">	private static Integer integerVal;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;int类型的初始值 &#x3D; &quot; + intVal);</span><br><span class="line">		System.out.println(&quot;Integer类型的初始值 &#x3D; &quot; + integerVal);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int类型的初始值 &#x3D; 0</span><br><span class="line">Integer类型的初始值 &#x3D; null</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Hexo Writing Exercise</title>
+    <url>/2020/11/16/hexo-writing-exercise/</url>
+    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
+<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
-        <category>面试题 - Java</category>
+        <category>Hexo独立博客配置</category>
       </categories>
       <tags>
-        <tag>Java面试题</tag>
-        <tag>int</tag>
-        <tag>integer</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
+        <tag>HexoDemo</tag>
       </tags>
   </entry>
   <entry>
@@ -354,6 +510,25 @@
         <tag>数字转换</tag>
         <tag>最快效率将2转换为8</tag>
         <tag>二进制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础面试题：int 与 Integer 的区别</title>
+    <url>/2020/11/24/java-mst-int-integer/</url>
+    <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
+<p>2 当int、Integer作为类的属性声明时的类型时，int的默认值是0，Integer的默认值是null</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.csdn.blog.karen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装类演示</span><br><span class="line"> * </span><br><span class="line"> * @author：Karen Chia</span><br><span class="line"> * @date：2018年11月13日 上午9:32:06</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class ClazzDemo &#123;</span><br><span class="line"></span><br><span class="line">	private static int intVal;</span><br><span class="line">	private static Integer integerVal;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;int类型的初始值 &#x3D; &quot; + intVal);</span><br><span class="line">		System.out.println(&quot;Integer类型的初始值 &#x3D; &quot; + integerVal);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int类型的初始值 &#x3D; 0</span><br><span class="line">Integer类型的初始值 &#x3D; null</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>int</tag>
+        <tag>integer</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
       </tags>
   </entry>
   <entry>
@@ -693,23 +868,6 @@
         <tag>Webview</tag>
         <tag>加载闪退问题处理</tag>
         <tag>崩溃</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
-    <url>/2020/11/24/cmd-adb-screenshot/</url>
-    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
-<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>屏幕截图</tag>
-        <tag>保存到电脑</tag>
       </tags>
   </entry>
 </search>
