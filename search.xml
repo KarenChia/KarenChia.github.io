@@ -50,6 +50,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac终端常用命令</title>
+    <url>/2020/11/24/apple-cmd/</url>
+    <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
+<p>1、pwd：终端当前的工作路径</p>
+<p>2、ls：显示当前工作路径下的所有文件夹和文件</p>
+<p>3、ls -l：以详细信息的形式显示当前工作路径下的所有文件夹和文件</p>
+<p>4、cd Applications：切换终端的工作路径为/Users/ZhaiKun/Applications，cd + 终端需要进入的工作路径</p>
+<p>5、Tab建的使用：Tab建可作为系统已经存在的默认路径的自动补全，如 Applications 文件夹，输入前几个（字符个数不定）关键字母（App），再按下Tab建，即可自动完成Applications 的完整拼写</p>
+<p>6、cd ..：回退到当前工作路径的父路径</p>
+<p>7、mkdir 文件夹名称：在当前的工作路径下创建一个新的文件夹</p>
+<p>8、clear：清除终端界面上的命令信息</p>
+<p>9、touch 文件名称（注意增加文件的后缀名）：在当前工作路径新建一个文件，我们知道，在 Mac 的 Finder 中是不能新建文件的，使用该命令即可新建一个文件</p>
+<p>10、cc：任意工作路径下输入此命令，可检测系统是否装有 C 语言的开发环境</p>
+<p>11、cc -c C语言源文件名（加后缀名）：在终端中编译C语言文件，编译成功后可生成源文件（xxx.c）对应的机器文件（xxx.o 二进制文件），这个xxx.o的二进制文件是不能直接运行的</p>
+<p>编译前</p>
+<p><img src="/imgs/41.png"></p>
+<p>cc -c firstC.c 命令编译后</p>
+<p><img src="/imgs/42.png"></p>
+<p>12、cc C语言源文件编译过后的二进制文件（xxx.o）：cc xxx.o 在这个二进制文件中增加C语言平台的启动代码，成功后生成a.out文件，该文件可以直接被CPU识别运行</p>
+<p>cc firstC.o 命令执行后</p>
+<p><img src="/imgs/43.png"></p>
+<p>13、./a.out：执行a.out文件（ ./ 代表当前目录）</p>
+]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>终端</tag>
+        <tag>常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
     <url>/2020/11/24/apple-http-1004/</url>
     <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
@@ -116,39 +149,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac终端常用命令</title>
-    <url>/2020/11/24/apple-cmd/</url>
-    <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
-<p>1、pwd：终端当前的工作路径</p>
-<p>2、ls：显示当前工作路径下的所有文件夹和文件</p>
-<p>3、ls -l：以详细信息的形式显示当前工作路径下的所有文件夹和文件</p>
-<p>4、cd Applications：切换终端的工作路径为/Users/ZhaiKun/Applications，cd + 终端需要进入的工作路径</p>
-<p>5、Tab建的使用：Tab建可作为系统已经存在的默认路径的自动补全，如 Applications 文件夹，输入前几个（字符个数不定）关键字母（App），再按下Tab建，即可自动完成Applications 的完整拼写</p>
-<p>6、cd ..：回退到当前工作路径的父路径</p>
-<p>7、mkdir 文件夹名称：在当前的工作路径下创建一个新的文件夹</p>
-<p>8、clear：清除终端界面上的命令信息</p>
-<p>9、touch 文件名称（注意增加文件的后缀名）：在当前工作路径新建一个文件，我们知道，在 Mac 的 Finder 中是不能新建文件的，使用该命令即可新建一个文件</p>
-<p>10、cc：任意工作路径下输入此命令，可检测系统是否装有 C 语言的开发环境</p>
-<p>11、cc -c C语言源文件名（加后缀名）：在终端中编译C语言文件，编译成功后可生成源文件（xxx.c）对应的机器文件（xxx.o 二进制文件），这个xxx.o的二进制文件是不能直接运行的</p>
-<p>编译前</p>
-<p><img src="/imgs/41.png"></p>
-<p>cc -c firstC.c 命令编译后</p>
-<p><img src="/imgs/42.png"></p>
-<p>12、cc C语言源文件编译过后的二进制文件（xxx.o）：cc xxx.o 在这个二进制文件中增加C语言平台的启动代码，成功后生成a.out文件，该文件可以直接被CPU识别运行</p>
-<p>cc firstC.o 命令执行后</p>
-<p><img src="/imgs/43.png"></p>
-<p>13、./a.out：执行a.out文件（ ./ 代表当前目录）</p>
-]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>终端</tag>
-        <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>macOS中安装node.js</title>
     <url>/2020/11/24/apple-node/</url>
     <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
@@ -164,6 +164,21 @@
         <tag>macOS</tag>
         <tag>node.js</tag>
         <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac中NTFS格式文件的读写</title>
+    <url>/2020/11/24/apple-ntfs/</url>
+    <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
+<p>Tuxera NTFS 自行百度下载安装即可。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>iOS</tag>
+        <tag>NTFS格式文件读写</tag>
       </tags>
   </entry>
   <entry>
@@ -209,21 +224,6 @@
         <tag>内存</tag>
         <tag>对象</tag>
         <tag>数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac中NTFS格式文件的读写</title>
-    <url>/2020/11/24/apple-ntfs/</url>
-    <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
-<p>Tuxera NTFS 自行百度下载安装即可。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>mac</tag>
-        <tag>NTFS格式文件读写</tag>
       </tags>
   </entry>
   <entry>
@@ -381,6 +381,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Objective-C中NSString的使用</title>
+    <url>/2020/11/24/apple-oc-nsstring/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>NSString</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Objective-C中NULL与nil的区别</title>
     <url>/2020/11/24/apple-oc-null-nil/</url>
     <content><![CDATA[<h1 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
@@ -397,19 +410,6 @@
       <tags>
         <tag>objective-c</tag>
         <tag>nil</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中NSString的使用</title>
-    <url>/2020/11/24/apple-oc-nsstring/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>NSString</tag>
       </tags>
   </entry>
   <entry>
@@ -495,19 +495,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
-    <url>/2020/11/19/blog-csdn/</url>
-    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
-]]></content>
-      <categories>
-        <category>CSDN博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>CSDN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Studio 设置国内镜像网站</title>
     <url>/2020/11/23/as-http-proxy/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
@@ -522,6 +509,50 @@
         <tag>Android</tag>
         <tag>Android Studio</tag>
         <tag>国内镜像网站访问地址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
+    <url>/2020/11/19/blog-csdn/</url>
+    <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
+]]></content>
+      <categories>
+        <category>CSDN博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>CSDN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点访问人数 Buszanui 插件数据统计错误</title>
+    <url>/2020/11/18/buszanui-visitor-count/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
+<blockquote>
+<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
+</blockquote>
+<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
+<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
+<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
+<blockquote>
+<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
+</blockquote>
+<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
+<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
+<li>GitHub Page</li>
+<li>Gitee Page</li>
+<li>Coding</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Buszanui</tag>
+        <tag>站点数据统计</tag>
       </tags>
   </entry>
   <entry>
@@ -563,37 +594,6 @@
         <tag>ADB</tag>
         <tag>数据库文件</tag>
         <tag>DB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点访问人数 Buszanui 插件数据统计错误</title>
-    <url>/2020/11/18/buszanui-visitor-count/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客时，在博客中集成了站点访问数据量统计插件 <a href="http://busuanzi.ibruce.info/">busuanzi</a>。在本地启动服务后，统计数据错误。</p>
-<blockquote>
-<p>本地服务中，busuanzi 统计的数据信息未从0开始且起始数据显示过于庞大</p>
-</blockquote>
-<h2 id="busuanzi-站点起始统计数据"><a href="#busuanzi-站点起始统计数据" class="headerlink" title="busuanzi 站点起始统计数据"></a>busuanzi 站点起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-website.png"></p>
-<h2 id="busuanzi-页面起始统计数据"><a href="#busuanzi-页面起始统计数据" class="headerlink" title="busuanzi 页面起始统计数据"></a>busuanzi 页面起始统计数据</h2><p><img src="/imgs/busuanzi-visitor-count-post.png"></p>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>静态网站是无后台服务支撑的，大多数情况下都需要借助第三方的插件实现相关功能。</p>
-<p>上述的问题是在本地项目执行命令：Hexo s，后产生的，具体的原因博主也没有弄清楚。猜测是在本地部署时，busuanzi 自身的初始化数据，或是博客主题（butterfly）中的初始化数据…</p>
-<blockquote>
-<p>将项目部署到静态网站后，busuanzi 数据统计正常</p>
-</blockquote>
-<p>总结：busuanzi 数据统计不能依赖于本地服务</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>博客部署到相关的静态网站即可</p>
-<h2 id="静态网站"><a href="#静态网站" class="headerlink" title="静态网站"></a>静态网站</h2><ul>
-<li>GitHub Page</li>
-<li>Gitee Page</li>
-<li>Coding</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Buszanui</tag>
-        <tag>站点数据统计</tag>
       </tags>
   </entry>
   <entry>
@@ -781,6 +781,55 @@
       </tags>
   </entry>
   <entry>
+    <title>安装指定版本的Ionic或Cordova</title>
+    <url>/2020/11/24/ionic-assign-version/</url>
+    <content><![CDATA[<p>安装ionic 及 cordova</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cordova ionic</span><br></pre></td></tr></table></figure>
+
+<p>更新命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update -g cordova ionic</span><br></pre></td></tr></table></figure>
+
+<p>安装特定版本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g ionic cordova@5.0.0</span><br><span class="line">npm install -g ionic@1.6.5</span><br></pre></td></tr></table></figure>
+
+<p>删除命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall cordova -g</span><br><span class="line">npm uninstall ionic -g</span><br></pre></td></tr></table></figure>
+
+<p>在macOS中，需要在npm前添加sudo，增加权限访问</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>Ionic</tag>
+        <tag>Cordova</tag>
+        <tag>安装</tag>
+        <tag>指定版本</tag>
+        <tag>命令行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>取消npm代理或淘宝镜像</title>
+    <url>/2020/11/24/ionic-npm/</url>
+    <content><![CDATA[<p>1、取消npm代理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br></pre></td></tr></table></figure>
+
+<p>2、取消淘宝镜像</p>
+<p>打开npm代理编辑</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config edit</span><br></pre></td></tr></table></figure>
+
+<p>找到对应的淘宝代理执行删除命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete [需要删除的代理名称]</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>代理</tag>
+        <tag>淘宝镜像</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java基础面试题：使用最快的效率将2变成8</title>
     <url>/2020/11/24/java-mst-2-to-8/</url>
     <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
@@ -800,23 +849,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础面试题：String与StringBuffer的区别</title>
-    <url>/2020/11/24/java-mst-string-stringbuffer/</url>
-    <content><![CDATA[<p>1 String被创建后，值不能被改变，如果参与了操作，引用发生变化，不是在原有的字符串上操作，而是产生一个新的字符串</p>
-<p>2 StringBuffer被创建后，值能被改变，如果参与了操作，引用不会发生变化，在原有的字符串上操作，线程安全</p>
-]]></content>
-      <categories>
-        <category>面试题 - Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试题</tag>
-        <tag>String</tag>
-        <tag>StringBuffer</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java基础面试题：int 与 Integer 的区别</title>
     <url>/2020/11/24/java-mst-int-integer/</url>
     <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
@@ -829,10 +861,27 @@
       </categories>
       <tags>
         <tag>Java面试题</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
         <tag>int</tag>
         <tag>integer</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础面试题：String与StringBuffer的区别</title>
+    <url>/2020/11/24/java-mst-string-stringbuffer/</url>
+    <content><![CDATA[<p>1 String被创建后，值不能被改变，如果参与了操作，引用发生变化，不是在原有的字符串上操作，而是产生一个新的字符串</p>
+<p>2 StringBuffer被创建后，值能被改变，如果参与了操作，引用不会发生变化，在原有的字符串上操作，线程安全</p>
+]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
+        <tag>String</tag>
+        <tag>StringBuffer</tag>
       </tags>
   </entry>
   <entry>
@@ -861,6 +910,42 @@
         <tag>Android</tag>
         <tag>极光</tag>
         <tag>DownloadProvider</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly 最新评论 newest-comments 401/资源加载错误（无法获取资料，请确认相关配置是否正确）</title>
+    <url>/2020/11/20/newest-comments/</url>
+    <content><![CDATA[<p>集成 Butterfly 博客主题中，在配置最新评论 newest comments 时，根据 Butterfly 的配置文档配置完成后，最新评论一直无法显示，提示错误信息：无法获取资料，请确认相关配置是否正确<br><img src="/imgs/newest-comments-401.jpg"></p>
+<p>在网页调试模式下，给出的错误信息大致是：找不到加载的资源 401</p>
+<h1 id="newest-comments-的配置信息"><a href="#newest-comments-的配置信息" class="headerlink" title="newest_comments 的配置信息"></a>newest_comments 的配置信息</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Aside widget - Newest Comments</span><br><span class="line">newest_comments:</span><br><span class="line">  enable: true</span><br><span class="line">  limit: 6</span><br><span class="line">  avatar: true</span><br><span class="line">  leancloud:</span><br><span class="line">    enable: true</span><br><span class="line">    appId: XXX # leancloud application app id</span><br><span class="line">    appKey: XXX # leancloud application app key</span><br><span class="line">    serverURL: XXX # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">    default_avatar: mp #mp&#x2F;identicon&#x2F;monsterid&#x2F;wavatar&#x2F;retro&#x2F;robohash&#x2F;blank</span><br><span class="line">  github_issues:</span><br><span class="line">    enable: true</span><br><span class="line">    repo: </span><br><span class="line">  # disqus:</span><br><span class="line">  #   enable: true</span><br><span class="line">  #   forum:</span><br><span class="line">  #   api_key:</span><br></pre></td></tr></table></figure>
+
+<p>Butterfly 的主题配置文件中是默认从 Valine 、 disqus 评论插件中读取评论信息，由于 disqus 的访问速度太慢，在我的博客中就没有使用 disqus ，故而将其注解。</p>
+<p>而问题也就出在这里 。。。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>我在这里做出假设：Butterfly 最新评论的显示，需要在其配置文件中至少配置两种不同类型的评论插件。</p>
+<p>上文提到，Butterfly 在最新评论处默认配置的 disqus 插件已被注解</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># disqus</span><br><span class="line"># https:&#x2F;&#x2F;disqus.com&#x2F;</span><br><span class="line">disqus:</span><br><span class="line">  shortname:</span><br></pre></td></tr></table></figure>
+<p>故而，上面这里关于 disqus 的配置是空的。</p>
+<p>在网上找了很长时间的资料，无奈，关于当前问题的文章实在是少之又少，也没有什么具体的解决方法。和 Butterfly 作者联系后，也尝试过些方法，还是没有得到解决 。。。</p>
+<p>最终，我考虑换其它的评论插件，因为 Butterfly 中集成了很多的评论插件，也方便集成，具体可查看其文档。就当我集成其它插件结束后，运行本地服务时，最新评论显示出来了<br><img src="/imgs/newest-comments-count.png"></p>
+<p>这里集成的插件任意选择一种（已集成的插件除外）即可。</p>
+<blockquote>
+<p>在本地服务运行期间，之前已经集成的插件并未删除。此时，在配置文件中配置了两种评论插件，我这里配置的是 Valine 和 Twikoo。</p>
+</blockquote>
+<p>具体的问题原因，其实并没有找到，配置到这里后，最新评论能正常显示了，我就结束了配置。如果你有相关的解决方案，欢迎在评论区留下你的宝贵意见 ！！！</p>
+<h2 id="Valine-配置信息"><a href="#Valine-配置信息" class="headerlink" title="Valine 配置信息"></a>Valine 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: XXX # leancloud application app id</span><br><span class="line">  appKey: XXX # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 记得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo配置问题汇总</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>newest-comments</tag>
+        <tag>评论</tag>
+        <tag>401</tag>
+        <tag>资源加载</tag>
       </tags>
   </entry>
   <entry>
@@ -1068,42 +1153,6 @@
         <tag>网易云信</tag>
         <tag>环信</tag>
         <tag>融云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly 最新评论 newest-comments 401/资源加载错误（无法获取资料，请确认相关配置是否正确）</title>
-    <url>/2020/11/20/newest-comments/</url>
-    <content><![CDATA[<p>集成 Butterfly 博客主题中，在配置最新评论 newest comments 时，根据 Butterfly 的配置文档配置完成后，最新评论一直无法显示，提示错误信息：无法获取资料，请确认相关配置是否正确<br><img src="/imgs/newest-comments-401.jpg"></p>
-<p>在网页调试模式下，给出的错误信息大致是：找不到加载的资源 401</p>
-<h1 id="newest-comments-的配置信息"><a href="#newest-comments-的配置信息" class="headerlink" title="newest_comments 的配置信息"></a>newest_comments 的配置信息</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Aside widget - Newest Comments</span><br><span class="line">newest_comments:</span><br><span class="line">  enable: true</span><br><span class="line">  limit: 6</span><br><span class="line">  avatar: true</span><br><span class="line">  leancloud:</span><br><span class="line">    enable: true</span><br><span class="line">    appId: XXX # leancloud application app id</span><br><span class="line">    appKey: XXX # leancloud application app key</span><br><span class="line">    serverURL: XXX # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">    default_avatar: mp #mp&#x2F;identicon&#x2F;monsterid&#x2F;wavatar&#x2F;retro&#x2F;robohash&#x2F;blank</span><br><span class="line">  github_issues:</span><br><span class="line">    enable: true</span><br><span class="line">    repo: </span><br><span class="line">  # disqus:</span><br><span class="line">  #   enable: true</span><br><span class="line">  #   forum:</span><br><span class="line">  #   api_key:</span><br></pre></td></tr></table></figure>
-
-<p>Butterfly 的主题配置文件中是默认从 Valine 、 disqus 评论插件中读取评论信息，由于 disqus 的访问速度太慢，在我的博客中就没有使用 disqus ，故而将其注解。</p>
-<p>而问题也就出在这里 。。。</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>我在这里做出假设：Butterfly 最新评论的显示，需要在其配置文件中至少配置两种不同类型的评论插件。</p>
-<p>上文提到，Butterfly 在最新评论处默认配置的 disqus 插件已被注解</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># disqus</span><br><span class="line"># https:&#x2F;&#x2F;disqus.com&#x2F;</span><br><span class="line">disqus:</span><br><span class="line">  shortname:</span><br></pre></td></tr></table></figure>
-<p>故而，上面这里关于 disqus 的配置是空的。</p>
-<p>在网上找了很长时间的资料，无奈，关于当前问题的文章实在是少之又少，也没有什么具体的解决方法。和 Butterfly 作者联系后，也尝试过些方法，还是没有得到解决 。。。</p>
-<p>最终，我考虑换其它的评论插件，因为 Butterfly 中集成了很多的评论插件，也方便集成，具体可查看其文档。就当我集成其它插件结束后，运行本地服务时，最新评论显示出来了<br><img src="/imgs/newest-comments-count.png"></p>
-<p>这里集成的插件任意选择一种（已集成的插件除外）即可。</p>
-<blockquote>
-<p>在本地服务运行期间，之前已经集成的插件并未删除。此时，在配置文件中配置了两种评论插件，我这里配置的是 Valine 和 Twikoo。</p>
-</blockquote>
-<p>具体的问题原因，其实并没有找到，配置到这里后，最新评论能正常显示了，我就结束了配置。如果你有相关的解决方案，欢迎在评论区留下你的宝贵意见 ！！！</p>
-<h2 id="Valine-配置信息"><a href="#Valine-配置信息" class="headerlink" title="Valine 配置信息"></a>Valine 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: XXX # leancloud application app id</span><br><span class="line">  appKey: XXX # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 记得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
-
-<h2 id="Twikoo-配置信息"><a href="#Twikoo-配置信息" class="headerlink" title="Twikoo 配置信息"></a>Twikoo 配置信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Twikoo</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;imaegoo&#x2F;twikoo</span><br><span class="line">twikoo: XXX</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo配置问题汇总</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>newest-comments</tag>
-        <tag>评论</tag>
-        <tag>401</tag>
-        <tag>资源加载</tag>
       </tags>
   </entry>
   <entry>
