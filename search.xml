@@ -152,43 +152,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ADB 命令使用 - 优质项目推荐</title>
-    <url>/2020/11/24/cmd-adb-project/</url>
-    <content><![CDATA[<blockquote>
-<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
-</blockquote>
-<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
-<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
-<p>推荐一个优秀的 GitHub 项目：</p>
-<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
-]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>CMD终端命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
-    <url>/2020/11/24/cmd-adb-screenshot/</url>
-    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
-<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>屏幕截图</tag>
-        <tag>保存到电脑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo + Coding 搭建博客之自定义域名的坑</title>
     <url>/2020/11/18/coding-dns/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo 搭建的博客一般都是托管到第三方网站，如GitHub、Gitee、Coding。</p>
@@ -239,6 +202,26 @@
       </tags>
   </entry>
   <entry>
+    <title>ADB 命令使用 - 优质项目推荐</title>
+    <url>/2020/11/24/cmd-adb-project/</url>
+    <content><![CDATA[<blockquote>
+<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
+</blockquote>
+<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
+<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
+<p>推荐一个优秀的 GitHub 项目：</p>
+<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
+]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>CMD终端命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fragment中嵌套Fragment，不显示</title>
     <url>/2020/11/23/fragment-child-fragment/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/e146698482f5">https://www.jianshu.com/p/e146698482f5</a></strong></p>
@@ -286,6 +269,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo Writing Exercise</title>
+    <url>/2020/11/16/hexo-writing-exercise/</url>
+    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
+<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
     <url>/2020/11/18/hexo-set-up/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
@@ -323,19 +319,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Writing Exercise</title>
-    <url>/2020/11/16/hexo-writing-exercise/</url>
-    <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
-<h1 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sticky: 1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>HexoDemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java基础面试题：int 与 Integer 的区别</title>
     <url>/2020/11/24/java-mst-int-integer/</url>
     <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
@@ -352,6 +335,25 @@
         <tag>integer</tag>
         <tag>区别</tag>
         <tag>异同点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础面试题：使用最快的效率将2变成8</title>
+    <url>/2020/11/24/java-mst-2-to-8/</url>
+    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
+<p>原理：将被转换的数字进行位移运算</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
+]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>数字转换</tag>
+        <tag>最快效率将2转换为8</tag>
+        <tag>二进制</tag>
       </tags>
   </entry>
   <entry>
@@ -501,6 +503,58 @@
       </tags>
   </entry>
   <entry>
+    <title>RecyclerView系列 - 如何优雅的实现分割线</title>
+    <url>/2020/11/24/recycleview-line/</url>
+    <content><![CDATA[<blockquote>
+<p>文章欢迎转载，转载请注明出处：文章首发于<a href="https://blog.csdn.net/zhaikun68">【Karen Chia の 程序人生】</a><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20190907111120364.gif" alt="在这里插入图片描述"><br>效果图不是我想要的效果，怎么办？</p>
+<p>查看关于 RecyclerView 系列的其它文章，总有你想要的效果 ↓↓↓</p>
+<h2 id="KarenChia-的-RecyclerView-系列文章"><a href="#KarenChia-的-RecyclerView-系列文章" class="headerlink" title="KarenChia 的 RecyclerView 系列文章"></a>KarenChia 的 RecyclerView 系列文章</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
+<p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在 RecyclerView 系列文章中，上一篇我们说到了 RecyclerView 的基本使用，期间提到了 RecyclerView 自身是不能设置分割线的，需要自行设置。本篇文章将从不同的“视角”讲解 RecyclerView 分割线的设置方法，文章建立在上一篇文章【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】的基础上，如果需要了解 RecyclerView 的基本使用、布局管理器的设置、数据适配器的设置等，请自行查看【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】</p>
+<h1 id="1-RecyclerView-分割线设置方式一"><a href="#1-RecyclerView-分割线设置方式一" class="headerlink" title="1 RecyclerView 分割线设置方式一"></a>1 RecyclerView 分割线设置方式一</h1><h6 id="更改列表子项-item-布局"><a href="#更改列表子项-item-布局" class="headerlink" title="更改列表子项 item 布局"></a>更改列表子项 item 布局</h6><p>这种方式设置的其实不是 RecyclerView 组件的分割线，只是更改了 item 的布局文件，在视觉效果上达到了分割线的效果。</p>
+<p>item 的布局文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:background&#x3D;&quot;@android:color&#x2F;white&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;tvData&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_margin&#x3D;&quot;10dp&quot;</span><br><span class="line">        android:textColor&#x3D;&quot;@android:color&#x2F;black&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;viewDivider&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;1dp&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p>这里在原有文件的基础上，新增了 View 组件，用于实现视觉效果上的分割线。</p>
+<p>可设置水平分割线的高度及颜色，更改 View 组件的相关属性即可。</p>
+<p>这样的设置方法，在列表的最后一项是带有分割线的，需要在 adapter 的数据与视图进行绑定的方法中，控制 View 组件的显示与隐藏：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 将数据与 item 视图进行绑定</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Override</span><br><span class="line">public void onBindViewHolder(@NonNull RecyclerViewTestViewHolder holder, int position) &#123;</span><br><span class="line">    &#x2F;&#x2F;最后一项 item 不显示分割线</span><br><span class="line">    if (position &#x3D;&#x3D; testDataList.size() - 1) &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.GONE);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line">    holder.tvData.setText(testDataList.get(position));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-RecyclerView-分割线设置方式二"><a href="#2-RecyclerView-分割线设置方式二" class="headerlink" title="2 RecyclerView 分割线设置方式二"></a>2 RecyclerView 分割线设置方式二</h1><h6 id="使用-Android-自带的分割线"><a href="#使用-Android-自带的分割线" class="headerlink" title="使用 Android 自带的分割线"></a>使用 Android 自带的分割线</h6><p>RecyclerView 提供了 addItemDecoration(@NonNull ItemDecoration decor) 方法，可用于设置系统默认分割线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void addItemDecoration(@NonNull ItemDecoration decor) &#123;</span><br><span class="line">    addItemDecoration(decor, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>给 RecyclerView 添加分割线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));</span><br></pre></td></tr></table></figure>
+<p>这里的 DividerItemDecoration 采用的是 RecyclerView 组件的背景色</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:background&#x3D;&quot;@color&#x2F;app_bg&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;androidx.recyclerview.widget.RecyclerView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;rvTest&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145121583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>采用这种方式设置的分割线的高度是系统默认的，我们无法修改分割线的高度。</p>
+<h6 id="为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。"><a href="#为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。" class="headerlink" title="为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。"></a>为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Sets the &#123;@link Drawable&#125; for this divider.</span><br><span class="line"> *</span><br><span class="line"> * @param drawable Drawable that should be used as a divider.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public void setDrawable(@NonNull Drawable drawable) &#123;</span><br><span class="line">    if (drawable &#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new IllegalArgumentException(&quot;Drawable cannot be null.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    mDivider &#x3D; drawable;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>新建 Drawable 资源文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;solid android:color&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
+<p>为 RecyclerView 设置自定义的分割线样式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DividerItemDecoration dividerItemDecoration &#x3D; new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);</span><br><span class="line">dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.shape_recycler_view_divider));</span><br><span class="line">rvTest.addItemDecoration(dividerItemDecoration);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145509496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微复杂一点的，可以为分割线定义渐变色，修改 Drawable 资源文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;gradient</span><br><span class="line">        android:centerColor&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot;</span><br><span class="line">        android:endColor&#x3D;&quot;@android:color&#x2F;background_dark&quot;</span><br><span class="line">        android:startColor&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145942185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="3-RecyclerView-分割线设置方式三"><a href="#3-RecyclerView-分割线设置方式三" class="headerlink" title="3 RecyclerView 分割线设置方式三"></a>3 RecyclerView 分割线设置方式三</h1><h6 id="利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。"><a href="#利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。" class="headerlink" title="利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。"></a>利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。</h6><p>在 RecyclerView 适配器中的 onCreateViewHolder()方法中，加载 item 布局时进行设置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 加载 item 的布局文件</span><br><span class="line"> *&#x2F;</span><br><span class="line">@NonNull</span><br><span class="line">@Override</span><br><span class="line">public RecyclerViewTestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) &#123;</span><br><span class="line">    View view &#x3D; LayoutInflater.from(mContext).inflate(R.layout.item_recycler_view_test, parent, false);</span><br><span class="line">    RecyclerView.LayoutParams layoutParams &#x3D; (RecyclerView.LayoutParams) view.getLayoutParams();</span><br><span class="line">    layoutParams.bottomMargin &#x3D; 10;</span><br><span class="line">    view.setLayoutParams(layoutParams);</span><br><span class="line">    return new RecyclerViewTestViewHolder(view);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907151552852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="4-RecyclerView-分割线设置方式四"><a href="#4-RecyclerView-分割线设置方式四" class="headerlink" title="4 RecyclerView 分割线设置方式四"></a>4 RecyclerView 分割线设置方式四</h1><p>在之前提到的使用 Android 默认的方式来设置分割线的方法中，可以看到 DividerItemDecoration 类继承了 RecyclerView.ItemDecoration，那么我们也可以继承 RecyclerView.ItemDecoration，从而实现自己的分割线。</p>
+<p>先看下源码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * An ItemDecoration allows the application to add a special drawing and layout offset</span><br><span class="line"> * to specific item views from the adapter&#39;s data set. This can be useful for drawing dividers</span><br><span class="line"> * between items, highlights, visual grouping boundaries and more.</span><br><span class="line"> *</span><br><span class="line"> * &lt;p&gt;All ItemDecorations are drawn in the order they were added, before the item</span><br><span class="line"> * views (in &#123;@link ItemDecoration#onDraw(Canvas, RecyclerView, RecyclerView.State) onDraw()&#125;</span><br><span class="line"> * and after the items (in &#123;@link ItemDecoration#onDrawOver(Canvas, RecyclerView,</span><br><span class="line"> * RecyclerView.State)&#125;.&lt;&#x2F;p&gt;</span><br><span class="line"> *&#x2F;</span><br><span class="line">public abstract static class ItemDecoration &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn before the item views are drawn,</span><br><span class="line">     * and will thus appear underneath the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        onDraw(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDraw(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn after the item views are drawn</span><br><span class="line">     * and will thus appear over the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent,</span><br><span class="line">            @NonNull State state) &#123;</span><br><span class="line">        onDrawOver(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDrawOver(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Use &#123;@link #getItemOffsets(Rect, View, RecyclerView, State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, int itemPosition,</span><br><span class="line">            @NonNull RecyclerView parent) &#123;</span><br><span class="line">        outRect.set(0, 0, 0, 0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Retrieve any offsets for the given item. Each field of &lt;code&gt;outRect&lt;&#x2F;code&gt; specifies</span><br><span class="line">     * the number of pixels that the item view should be inset by, similar to padding or margin.</span><br><span class="line">     * The default implementation sets the bounds of outRect to 0 and returns.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If this ItemDecoration does not affect the positioning of item views, it should set</span><br><span class="line">     * all four fields of &lt;code&gt;outRect&lt;&#x2F;code&gt; (left, top, right, bottom) to zero</span><br><span class="line">     * before returning.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If you need to access Adapter for additional data, you can call</span><br><span class="line">     * &#123;@link RecyclerView#getChildAdapterPosition(View)&#125; to get the adapter position of the</span><br><span class="line">     * View.</span><br><span class="line">     *</span><br><span class="line">     * @param outRect Rect to receive the output.</span><br><span class="line">     * @param view    The child view to decorate</span><br><span class="line">     * @param parent  RecyclerView this ItemDecoration is decorating</span><br><span class="line">     * @param state   The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,</span><br><span class="line">            @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        getItemOffsets(outRect, ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition(),</span><br><span class="line">                parent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ItemDecoration  类包含了三个主要的方法：onDraw()、onDrawOver()、getItemOffsets()</p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>RecycleView</tag>
+        <tag>分割线</tag>
+        <tag>divider</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IM即时通讯</title>
     <url>/2020/11/24/third-party-im/</url>
     <content><![CDATA[<p><a href="http://www.chiefmore.com/yuntongxun/3643.jhtml">国内主流IM即时通讯平台综合评测</a></p>
@@ -591,58 +645,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RecyclerView系列 - 如何优雅的实现分割线</title>
-    <url>/2020/11/24/recycleview-line/</url>
-    <content><![CDATA[<blockquote>
-<p>文章欢迎转载，转载请注明出处：文章首发于<a href="https://blog.csdn.net/zhaikun68">【Karen Chia の 程序人生】</a><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190907111120364.gif" alt="在这里插入图片描述"><br>效果图不是我想要的效果，怎么办？</p>
-<p>查看关于 RecyclerView 系列的其它文章，总有你想要的效果 ↓↓↓</p>
-<h2 id="KarenChia-的-RecyclerView-系列文章"><a href="#KarenChia-的-RecyclerView-系列文章" class="headerlink" title="KarenChia 的 RecyclerView 系列文章"></a>KarenChia 的 RecyclerView 系列文章</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
-<p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在 RecyclerView 系列文章中，上一篇我们说到了 RecyclerView 的基本使用，期间提到了 RecyclerView 自身是不能设置分割线的，需要自行设置。本篇文章将从不同的“视角”讲解 RecyclerView 分割线的设置方法，文章建立在上一篇文章【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】的基础上，如果需要了解 RecyclerView 的基本使用、布局管理器的设置、数据适配器的设置等，请自行查看【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】</p>
-<h1 id="1-RecyclerView-分割线设置方式一"><a href="#1-RecyclerView-分割线设置方式一" class="headerlink" title="1 RecyclerView 分割线设置方式一"></a>1 RecyclerView 分割线设置方式一</h1><h6 id="更改列表子项-item-布局"><a href="#更改列表子项-item-布局" class="headerlink" title="更改列表子项 item 布局"></a>更改列表子项 item 布局</h6><p>这种方式设置的其实不是 RecyclerView 组件的分割线，只是更改了 item 的布局文件，在视觉效果上达到了分割线的效果。</p>
-<p>item 的布局文件如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:background&#x3D;&quot;@android:color&#x2F;white&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;tvData&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_margin&#x3D;&quot;10dp&quot;</span><br><span class="line">        android:textColor&#x3D;&quot;@android:color&#x2F;black&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;viewDivider&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;1dp&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>这里在原有文件的基础上，新增了 View 组件，用于实现视觉效果上的分割线。</p>
-<p>可设置水平分割线的高度及颜色，更改 View 组件的相关属性即可。</p>
-<p>这样的设置方法，在列表的最后一项是带有分割线的，需要在 adapter 的数据与视图进行绑定的方法中，控制 View 组件的显示与隐藏：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 将数据与 item 视图进行绑定</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Override</span><br><span class="line">public void onBindViewHolder(@NonNull RecyclerViewTestViewHolder holder, int position) &#123;</span><br><span class="line">    &#x2F;&#x2F;最后一项 item 不显示分割线</span><br><span class="line">    if (position &#x3D;&#x3D; testDataList.size() - 1) &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.GONE);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line">    holder.tvData.setText(testDataList.get(position));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-RecyclerView-分割线设置方式二"><a href="#2-RecyclerView-分割线设置方式二" class="headerlink" title="2 RecyclerView 分割线设置方式二"></a>2 RecyclerView 分割线设置方式二</h1><h6 id="使用-Android-自带的分割线"><a href="#使用-Android-自带的分割线" class="headerlink" title="使用 Android 自带的分割线"></a>使用 Android 自带的分割线</h6><p>RecyclerView 提供了 addItemDecoration(@NonNull ItemDecoration decor) 方法，可用于设置系统默认分割线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void addItemDecoration(@NonNull ItemDecoration decor) &#123;</span><br><span class="line">    addItemDecoration(decor, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>给 RecyclerView 添加分割线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));</span><br></pre></td></tr></table></figure>
-<p>这里的 DividerItemDecoration 采用的是 RecyclerView 组件的背景色</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:background&#x3D;&quot;@color&#x2F;app_bg&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;androidx.recyclerview.widget.RecyclerView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;rvTest&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145121583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>采用这种方式设置的分割线的高度是系统默认的，我们无法修改分割线的高度。</p>
-<h6 id="为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。"><a href="#为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。" class="headerlink" title="为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。"></a>为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Sets the &#123;@link Drawable&#125; for this divider.</span><br><span class="line"> *</span><br><span class="line"> * @param drawable Drawable that should be used as a divider.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public void setDrawable(@NonNull Drawable drawable) &#123;</span><br><span class="line">    if (drawable &#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new IllegalArgumentException(&quot;Drawable cannot be null.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    mDivider &#x3D; drawable;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>新建 Drawable 资源文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;solid android:color&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
-<p>为 RecyclerView 设置自定义的分割线样式：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DividerItemDecoration dividerItemDecoration &#x3D; new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);</span><br><span class="line">dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.shape_recycler_view_divider));</span><br><span class="line">rvTest.addItemDecoration(dividerItemDecoration);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145509496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微复杂一点的，可以为分割线定义渐变色，修改 Drawable 资源文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;gradient</span><br><span class="line">        android:centerColor&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot;</span><br><span class="line">        android:endColor&#x3D;&quot;@android:color&#x2F;background_dark&quot;</span><br><span class="line">        android:startColor&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145942185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="3-RecyclerView-分割线设置方式三"><a href="#3-RecyclerView-分割线设置方式三" class="headerlink" title="3 RecyclerView 分割线设置方式三"></a>3 RecyclerView 分割线设置方式三</h1><h6 id="利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。"><a href="#利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。" class="headerlink" title="利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。"></a>利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。</h6><p>在 RecyclerView 适配器中的 onCreateViewHolder()方法中，加载 item 布局时进行设置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 加载 item 的布局文件</span><br><span class="line"> *&#x2F;</span><br><span class="line">@NonNull</span><br><span class="line">@Override</span><br><span class="line">public RecyclerViewTestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) &#123;</span><br><span class="line">    View view &#x3D; LayoutInflater.from(mContext).inflate(R.layout.item_recycler_view_test, parent, false);</span><br><span class="line">    RecyclerView.LayoutParams layoutParams &#x3D; (RecyclerView.LayoutParams) view.getLayoutParams();</span><br><span class="line">    layoutParams.bottomMargin &#x3D; 10;</span><br><span class="line">    view.setLayoutParams(layoutParams);</span><br><span class="line">    return new RecyclerViewTestViewHolder(view);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907151552852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="4-RecyclerView-分割线设置方式四"><a href="#4-RecyclerView-分割线设置方式四" class="headerlink" title="4 RecyclerView 分割线设置方式四"></a>4 RecyclerView 分割线设置方式四</h1><p>在之前提到的使用 Android 默认的方式来设置分割线的方法中，可以看到 DividerItemDecoration 类继承了 RecyclerView.ItemDecoration，那么我们也可以继承 RecyclerView.ItemDecoration，从而实现自己的分割线。</p>
-<p>先看下源码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * An ItemDecoration allows the application to add a special drawing and layout offset</span><br><span class="line"> * to specific item views from the adapter&#39;s data set. This can be useful for drawing dividers</span><br><span class="line"> * between items, highlights, visual grouping boundaries and more.</span><br><span class="line"> *</span><br><span class="line"> * &lt;p&gt;All ItemDecorations are drawn in the order they were added, before the item</span><br><span class="line"> * views (in &#123;@link ItemDecoration#onDraw(Canvas, RecyclerView, RecyclerView.State) onDraw()&#125;</span><br><span class="line"> * and after the items (in &#123;@link ItemDecoration#onDrawOver(Canvas, RecyclerView,</span><br><span class="line"> * RecyclerView.State)&#125;.&lt;&#x2F;p&gt;</span><br><span class="line"> *&#x2F;</span><br><span class="line">public abstract static class ItemDecoration &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn before the item views are drawn,</span><br><span class="line">     * and will thus appear underneath the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        onDraw(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDraw(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn after the item views are drawn</span><br><span class="line">     * and will thus appear over the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent,</span><br><span class="line">            @NonNull State state) &#123;</span><br><span class="line">        onDrawOver(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDrawOver(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Use &#123;@link #getItemOffsets(Rect, View, RecyclerView, State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, int itemPosition,</span><br><span class="line">            @NonNull RecyclerView parent) &#123;</span><br><span class="line">        outRect.set(0, 0, 0, 0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Retrieve any offsets for the given item. Each field of &lt;code&gt;outRect&lt;&#x2F;code&gt; specifies</span><br><span class="line">     * the number of pixels that the item view should be inset by, similar to padding or margin.</span><br><span class="line">     * The default implementation sets the bounds of outRect to 0 and returns.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If this ItemDecoration does not affect the positioning of item views, it should set</span><br><span class="line">     * all four fields of &lt;code&gt;outRect&lt;&#x2F;code&gt; (left, top, right, bottom) to zero</span><br><span class="line">     * before returning.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If you need to access Adapter for additional data, you can call</span><br><span class="line">     * &#123;@link RecyclerView#getChildAdapterPosition(View)&#125; to get the adapter position of the</span><br><span class="line">     * View.</span><br><span class="line">     *</span><br><span class="line">     * @param outRect Rect to receive the output.</span><br><span class="line">     * @param view    The child view to decorate</span><br><span class="line">     * @param parent  RecyclerView this ItemDecoration is decorating</span><br><span class="line">     * @param state   The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,</span><br><span class="line">            @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        getItemOffsets(outRect, ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition(),</span><br><span class="line">                parent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ItemDecoration  类包含了三个主要的方法：onDraw()、onDrawOver()、getItemOffsets()</p>
-]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>RecycleView</tag>
-        <tag>分割线</tag>
-        <tag>divider</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Valine评论插件报错：Code 403</title>
     <url>/2020/11/17/valine-code-403/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
@@ -691,6 +693,23 @@
         <tag>Webview</tag>
         <tag>加载闪退问题处理</tag>
         <tag>崩溃</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
+    <url>/2020/11/24/cmd-adb-screenshot/</url>
+    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
+<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>屏幕截图</tag>
+        <tag>保存到电脑</tag>
       </tags>
   </entry>
 </search>
