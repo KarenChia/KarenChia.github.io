@@ -27,6 +27,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac终端常用命令</title>
     <url>/2020/11/24/apple-cmd/</url>
     <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
@@ -57,29 +80,6 @@
         <tag>mac</tag>
         <tag>终端</tag>
         <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
       </tags>
   </entry>
   <entry>
@@ -280,6 +280,20 @@
       </tags>
   </entry>
   <entry>
+    <title>import指令与include指令的区别</title>
+    <url>/2020/11/24/apple-oc-import/</url>
+    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
+<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
+<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Objective-C中编程小技巧</title>
     <url>/2020/11/24/apple-oc-jq/</url>
     <content><![CDATA[<p>1、分组导航</p>
@@ -337,95 +351,6 @@
       </tags>
   </entry>
   <entry>
-    <title>import指令与include指令的区别</title>
-    <url>/2020/11/24/apple-oc-import/</url>
-    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
-<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
-<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中NSString的使用</title>
-    <url>/2020/11/24/apple-oc-nsstring/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>NSString</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中的访问权限</title>
-    <url>/2020/11/24/apple-oc-permission/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>访问权限</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中NULL与nil的区别</title>
-    <url>/2020/11/24/apple-oc-null-nil/</url>
-    <content><![CDATA[<h1 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
-<h1 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
-<h1 id="使用规范"><a href="#使用规范" class="headerlink" title="使用规范"></a>使用规范</h1><p>C语言指针类型，用NULL</p>
-<p>OC类指针类型，用nil</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NullAndNilDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        int *a &#x3D; NULL;&#x2F;&#x2F;表示a不指向内存中的任何一片空间</span><br><span class="line">        Person *person &#x3D; nil;&#x2F;&#x2F;表示person不指向内存中的任何一个对象</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过被赋值为nil的类指针去调用对象中的属性时，运行时出错，调用方法不会出错，但是方法不会执行，没有任何效果，这是Objective-C语言的机制，不要问我为什么、、、</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>nil</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中@符号说明</title>
-    <url>/2020/11/24/apple-oc/</url>
-    <content><![CDATA[<p>常见的两个功能：</p>
-<p>1、将C字符串转换为OC字符串</p>
-<p>2、OC中的大多数关键字都是以@符号开头</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>符号</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中注释和函数的定义</title>
-    <url>/2020/11/24/apple-oc-zs/</url>
-    <content><![CDATA[<p>小编之前是从事Android开发的，不浪费口舌了，直接上代码，看看注释就明了了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;这里表示的是单行注释</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 这里表示的多行注释</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">void customMethod();&#x2F;&#x2F;函数的定义</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool    &#x2F;&#x2F;自动释放池，可以将代码写到自动释放池中，也可以将自动释放池删除，不会对应用程序造成影响</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);&#x2F;&#x2F;自动换行，如果在结尾加上\n换行符，自动换行失效，\n生效</span><br><span class="line">        </span><br><span class="line">        customMethod();&#x2F;&#x2F;调用自定义的函数，main函数作为程序的入口和出口，因此自定义的函数必须在main函数之前进行声明</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;自定义函数的实现，也可以在函数定义时进行功能的实现</span><br><span class="line">void customMethod()&#123;</span><br><span class="line">    NSLog(@&quot;简单的声明一个函数&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>函数</tag>
-        <tag>注释</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Objective-C中的方法说明</title>
     <url>/2020/11/24/apple-oc-method/</url>
     <content><![CDATA[<p>1、Objective-C中两种类型的方法</p>
@@ -453,6 +378,163 @@
       <tags>
         <tag>objective-c</tag>
         <tag>类方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中NSString的使用</title>
+    <url>/2020/11/24/apple-oc-nsstring/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>NSString</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中NULL与nil的区别</title>
+    <url>/2020/11/24/apple-oc-null-nil/</url>
+    <content><![CDATA[<h1 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
+<h1 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
+<h1 id="使用规范"><a href="#使用规范" class="headerlink" title="使用规范"></a>使用规范</h1><p>C语言指针类型，用NULL</p>
+<p>OC类指针类型，用nil</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NullAndNilDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        int *a &#x3D; NULL;&#x2F;&#x2F;表示a不指向内存中的任何一片空间</span><br><span class="line">        Person *person &#x3D; nil;&#x2F;&#x2F;表示person不指向内存中的任何一个对象</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过被赋值为nil的类指针去调用对象中的属性时，运行时出错，调用方法不会出错，但是方法不会执行，没有任何效果，这是Objective-C语言的机制，不要问我为什么、、、</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>nil</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>访问权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中注释和函数的定义</title>
+    <url>/2020/11/24/apple-oc-zs/</url>
+    <content><![CDATA[<p>小编之前是从事Android开发的，不浪费口舌了，直接上代码，看看注释就明了了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;这里表示的是单行注释</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 这里表示的多行注释</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">void customMethod();&#x2F;&#x2F;函数的定义</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool    &#x2F;&#x2F;自动释放池，可以将代码写到自动释放池中，也可以将自动释放池删除，不会对应用程序造成影响</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);&#x2F;&#x2F;自动换行，如果在结尾加上\n换行符，自动换行失效，\n生效</span><br><span class="line">        </span><br><span class="line">        customMethod();&#x2F;&#x2F;调用自定义的函数，main函数作为程序的入口和出口，因此自定义的函数必须在main函数之前进行声明</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;自定义函数的实现，也可以在函数定义时进行功能的实现</span><br><span class="line">void customMethod()&#123;</span><br><span class="line">    NSLog(@&quot;简单的声明一个函数&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>函数</tag>
+        <tag>注释</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中@符号说明</title>
+    <url>/2020/11/24/apple-oc/</url>
+    <content><![CDATA[<p>常见的两个功能：</p>
+<p>1、将C字符串转换为OC字符串</p>
+<p>2、OC中的大多数关键字都是以@符号开头</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>符号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS配置Android SDK 环境变量</title>
+    <url>/2020/11/24/apple-sdk/</url>
+    <content><![CDATA[<p>1、启动终端，可以在Spotlight中搜索“终端”</p>
+<p>2、进入当前用户的HOME目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd $HOME</span><br></pre></td></tr></table></figure>
+
+<p>3、创建“.bash_profile”文件（当该文件不存在时），如果文件已存在，直接打开文件即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>4、打开.bash_profile文件，对其内容进行编辑</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>5、此时文本编辑器会打开一个文本，增加如下内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ANDROID_HOME&#x3D;&#x2F;Users&#x2F;zhaikun&#x2F;Downloads&#x2F;ZhaiKun&#x2F;Android&#x2F;android-sdk-macosx</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
+
+<p>ANDROID_HOME配置为Android SDK的安装路径</p>
+<p>6、保存文件，关闭.bash_profile</p>
+<p>7、更新刚配置的环境变量，在终端执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>8、验证配置是否成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+
+<p>配置结果</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">* daemon not running; starting now at tcp:5037</span><br><span class="line">* daemon started successfully</span><br><span class="line">93bab263	device</span><br></pre></td></tr></table></figure>
+
+<p>或者直接在终端输入adb，不提示“-bash: a: command not found”即表示配置成功</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>Android SDK</tag>
+        <tag>ANDROID_HOME</tag>
+        <tag>配置环境变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>冒泡排序</title>
+    <url>/2020/11/25/arithmetic-bubble-sort/</url>
+    <content><![CDATA[<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>将相邻的两个元素逐一进行比较，将大的一个元素后移，每比较完一次都会将最大的一个元素移动到最后，然后再用相同的方法依次比较剩余的元素。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;22.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 冒泡排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class BubbleSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TAG &#x3D; &quot;BubbleSortDemo&quot;;&#x2F;&#x2F;日志打印标记</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;9, 10, 1, 2, 0, 8, 0, 5, 8, 3&#125;;</span><br><span class="line">        int[] sortAfterArray &#x3D; bubbleSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 冒泡排序算法实现，以简单数组为例</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序的数组</span><br><span class="line">     * @return 排序后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] bubbleSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int outIndex &#x3D; sortArray.length - 1; outIndex &gt; 1; outIndex--) &#123;</span><br><span class="line">            for (int inIndex &#x3D; 0; inIndex &lt; outIndex; inIndex++) &#123;</span><br><span class="line">                if (sortArray[inIndex] &gt; sortArray[inIndex + 1]) &#123;</span><br><span class="line">                    int temp &#x3D; sortArray[inIndex];</span><br><span class="line">                    sortArray[inIndex] &#x3D; sortArray[inIndex + 1];</span><br><span class="line">                    sortArray[inIndex + 1] &#x3D; temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>算法</tag>
+        <tag>排序</tag>
+        <tag>冒泡排序</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插入排序</title>
+    <url>/2020/11/25/arithmetic-insertion-sorting/</url>
+    <content><![CDATA[<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>有待排序数组A，任意指定A中某一位置作为元素的插入位置B。此时，假设B位置左端的所有元素都是有序的，记录下B位置的元素ValueB，将ValueB与其左端的有序元素进行比较，如果ValueB左端的元素大于或等于ValueB，则将其后移一位，最后在后移空出的位置将ValueB插入。重复以上步骤，直到数组中的最后一个元素，排序结束。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;24.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 插入排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class InsertSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 插入排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 已排序数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] insertSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int temp;&#x2F;&#x2F;记录插入数组中的元素</span><br><span class="line">        int inIndex;&#x2F;&#x2F;内层循环索引</span><br><span class="line">        for (int outIndex &#x3D; 1; outIndex &lt; sortArray.length; outIndex++) &#123;</span><br><span class="line">            temp &#x3D; sortArray[outIndex];</span><br><span class="line">            inIndex &#x3D; outIndex;</span><br><span class="line">            while (inIndex &gt; 0 &amp;&amp; sortArray[inIndex - 1] &gt;&#x3D; temp) &#123;</span><br><span class="line">                sortArray[inIndex] &#x3D; sortArray[inIndex - 1];</span><br><span class="line">                --inIndex;</span><br><span class="line">            &#125;</span><br><span class="line">            sortArray[inIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;2, 3, 2, 2, 6, 9, 0, 7, 4, 5&#125;;&#x2F;&#x2F;初始化一个待排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; insertSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>插入排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>选择排序</title>
+    <url>/2020/11/25/arithmetic-selection-sort/</url>
+    <content><![CDATA[<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>在待排序的数组中，任意指定一个数作为数组中最小的数并记录其在数组中的位置，记为a，将该数与待排序数组中的数据依次进行比较，当该数字比数组中的数字大时，将此时数组中小的数据的位置交给a，此时a位置所对应在数组中的值作为指定的最小数再次与数组中剩余的数依次进行比较；当指定的最小数与数组中的数据全部比较完之后，得到一个数组中最小的数，然后将这个最小的数排到数组的最左端，在待排序数组中排除最左端已经完成排序的数，将剩下的数作为一个数组，按一样的方式再次进行比较。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;23.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 选择排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SelectionSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 选择排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 排序完成后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] selectionSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int minIndex;&#x2F;&#x2F;指定一个比较值在待比较数组中的下标</span><br><span class="line">        for (int outIndex &#x3D; 0; outIndex &lt; sortArray.length - 1; outIndex++) &#123;</span><br><span class="line">            minIndex &#x3D; outIndex;</span><br><span class="line">            for (int inIndex &#x3D; outIndex + 1; inIndex &lt; sortArray.length; inIndex++) &#123;</span><br><span class="line">                if (sortArray[minIndex] &gt; sortArray[inIndex]) &#123;</span><br><span class="line">                    minIndex &#x3D; inIndex;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int temp &#x3D; sortArray[outIndex];</span><br><span class="line">            sortArray[outIndex] &#x3D; sortArray[minIndex];</span><br><span class="line">            sortArray[minIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;1, 1, 5, 0, 2, 2, 10, 5, 3, 6&#125;;&#x2F;&#x2F;初始化一个需要排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; selectionSort(initArray);</span><br><span class="line">        System.out.print(Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>排序</tag>
+        <tag>选择排序</tag>
       </tags>
   </entry>
   <entry>
@@ -517,45 +599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>macOS配置Android SDK 环境变量</title>
-    <url>/2020/11/24/apple-sdk/</url>
-    <content><![CDATA[<p>1、启动终端，可以在Spotlight中搜索“终端”</p>
-<p>2、进入当前用户的HOME目录</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd $HOME</span><br></pre></td></tr></table></figure>
-
-<p>3、创建“.bash_profile”文件（当该文件不存在时），如果文件已存在，直接打开文件即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">touch .bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>4、打开.bash_profile文件，对其内容进行编辑</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>5、此时文本编辑器会打开一个文本，增加如下内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ANDROID_HOME&#x3D;&#x2F;Users&#x2F;zhaikun&#x2F;Downloads&#x2F;ZhaiKun&#x2F;Android&#x2F;android-sdk-macosx</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;tools</span><br><span class="line">export PATH&#x3D;$PATH:$ANDROID_HOME&#x2F;platform-tools</span><br></pre></td></tr></table></figure>
-
-<p>ANDROID_HOME配置为Android SDK的安装路径</p>
-<p>6、保存文件，关闭.bash_profile</p>
-<p>7、更新刚配置的环境变量，在终端执行命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>8、验证配置是否成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
-
-<p>配置结果</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">* daemon not running; starting now at tcp:5037</span><br><span class="line">* daemon started successfully</span><br><span class="line">93bab263	device</span><br></pre></td></tr></table></figure>
-
-<p>或者直接在终端输入adb，不提示“-bash: a: command not found”即表示配置成功</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-        <tag>Android SDK</tag>
-        <tag>ANDROID_HOME</tag>
-        <tag>配置环境变量</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用adb命令导出设备中安装的APP中的数据库（DB）文件</title>
     <url>/2020/11/24/cmd-adb-db/</url>
     <content><![CDATA[<h2 id="1-在导出数据库文件之前，需要确保设备处于连接状态"><a href="#1-在导出数据库文件之前，需要确保设备处于连接状态" class="headerlink" title="1 在导出数据库文件之前，需要确保设备处于连接状态"></a>1 在导出数据库文件之前，需要确保设备处于连接状态</h2><p>打开命令行窗口，输入命令：</p>
@@ -597,23 +640,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
-    <url>/2020/11/24/cmd-adb-screenshot/</url>
-    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
-<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>屏幕截图</tag>
-        <tag>保存到电脑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ADB 命令使用 - 优质项目推荐</title>
     <url>/2020/11/24/cmd-adb-project/</url>
     <content><![CDATA[<blockquote>
@@ -631,6 +657,23 @@
         <tag>Android</tag>
         <tag>adb</tag>
         <tag>CMD终端命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
+    <url>/2020/11/24/cmd-adb-screenshot/</url>
+    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
+<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>屏幕截图</tag>
+        <tag>保存到电脑</tag>
       </tags>
   </entry>
   <entry>
@@ -754,6 +797,43 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
+    <url>/2020/11/18/hexo-set-up/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
+<p>起初写博客只是为了记录自己在平时开发过程中的经历，那些踩过的坑，还有那些优秀的框架。后面逐渐感受到学会一个新的知识点不容易，将这个知识点说得清楚，道得明白，更是不易，写博客也是对自己的一个提高。</p>
+<p>在此之前虽然写过一些博客，但内容着实不丰富，也体会到了创作的不易，期待后续能够推出一些高质量的博文。</p>
+<p>下面我们开始进入今天的正题。。。</p>
+<h1 id="搭建平台"><a href="#搭建平台" class="headerlink" title="搭建平台"></a>搭建平台</h1><p>基于 GitHub + Hexo + NexT 搭建个人博客</p>
+<ul>
+<li>GitHub 个人博客静态网页托管平台</li>
+<li>Hexo 快速、简洁且高效的博客框架，搭建本地静态网页站点</li>
+<li>NexT 个人博客主题，样式多样化、功能多样化</li>
+</ul>
+<h1 id="在使用-Hexo-之前，需要先注册-GitHub-账号"><a href="#在使用-Hexo-之前，需要先注册-GitHub-账号" class="headerlink" title="在使用 Hexo 之前，需要先注册 GitHub 账号"></a>在使用 Hexo 之前，需要先注册 GitHub 账号</h1><p><a href="https://github.com/">注册 GitHub 账号</a></p>
+<h1 id="安装配置-Hexo"><a href="#安装配置-Hexo" class="headerlink" title="安装配置 Hexo"></a>安装配置 Hexo</h1><p>Hexo 官方提供了多种主题配置，这里我选择了、、、</p>
+<p><a href="https://hexo.io/zh-cn/">Hexo 官方教程</a></p>
+<h1 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h1><p><a href="http://theme-next.iissnan.com/theme-settings.html">NexT 主题配置官网</a></p>
+<h5 id="这里为什么不详细介绍安装过程？"><a href="#这里为什么不详细介绍安装过程？" class="headerlink" title="这里为什么不详细介绍安装过程？"></a>这里为什么不详细介绍安装过程？</h5><p>官网文档已经将各类配置信息描述得非常清楚，文章中另说明在配置过程中需要注意的问题。</p>
+<h1 id="搭建过程中需要注意的问题"><a href="#搭建过程中需要注意的问题" class="headerlink" title="搭建过程中需要注意的问题"></a>搭建过程中需要注意的问题</h1><ul>
+<li>在 GitHub 上创建项目时，项目名必须是【你的 GitHub 用户名.github.io】，如：我的 GitHub 用户名为 KarenChia，那么项目的名称为【KarenChia.github.io】</li>
+<li>在 Hexo 的站点配置文件 【_config.yml】中的配置信息，均是以 key: value 形式进行配置，尤其要注意的是在 “:” 与 value 之前存在一个【空格】，如无【空格】，配置的相关属性无效。</li>
+<li>在将本地静态页面部署到 GitHub 时，仓库地址最好直接选择使用【HTTPS】，如果使用的是【SSH】，需要再对【SSH】进行配置，否则本地站点中的静态网页无法部署到 GitHub 上进行托管。</li>
+<li>在部署之前，需要先安装 【 hexo-deployer-git】插件，必须确保插件安装成功。</li>
+</ul>
+<h1 id="博客主题-Butterfly"><a href="#博客主题-Butterfly" class="headerlink" title="博客主题 Butterfly"></a>博客主题 Butterfly</h1><p>后续已将主题修改为 <a href="https://butterfly.js.org/">Butterfly</a></p>
+]]></content>
+      <categories>
+        <category>Hexo独立博客配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Coding</tag>
+        <tag>Butterfly</tag>
+        <tag>GitHub</tag>
+        <tag>个人独立博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo Writing Exercise</title>
     <url>/2020/11/16/hexo-writing-exercise/</url>
     <content><![CDATA[<p>Hexo 主题配置的相关命令</p>
@@ -804,43 +884,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo + Butterfly + GitHub/Coding 搭建个人独立博客</title>
-    <url>/2020/11/18/hexo-set-up/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自从在CSDN写博客以来，开始慢慢觉得应该拥有一个属于自己的博客网站，期间折腾了很多次，结果都不了了知，最近终于将这颗浮躁的心安抚了下来，咱还是做一个有始有终的程序员。</p>
-<p>起初写博客只是为了记录自己在平时开发过程中的经历，那些踩过的坑，还有那些优秀的框架。后面逐渐感受到学会一个新的知识点不容易，将这个知识点说得清楚，道得明白，更是不易，写博客也是对自己的一个提高。</p>
-<p>在此之前虽然写过一些博客，但内容着实不丰富，也体会到了创作的不易，期待后续能够推出一些高质量的博文。</p>
-<p>下面我们开始进入今天的正题。。。</p>
-<h1 id="搭建平台"><a href="#搭建平台" class="headerlink" title="搭建平台"></a>搭建平台</h1><p>基于 GitHub + Hexo + NexT 搭建个人博客</p>
-<ul>
-<li>GitHub 个人博客静态网页托管平台</li>
-<li>Hexo 快速、简洁且高效的博客框架，搭建本地静态网页站点</li>
-<li>NexT 个人博客主题，样式多样化、功能多样化</li>
-</ul>
-<h1 id="在使用-Hexo-之前，需要先注册-GitHub-账号"><a href="#在使用-Hexo-之前，需要先注册-GitHub-账号" class="headerlink" title="在使用 Hexo 之前，需要先注册 GitHub 账号"></a>在使用 Hexo 之前，需要先注册 GitHub 账号</h1><p><a href="https://github.com/">注册 GitHub 账号</a></p>
-<h1 id="安装配置-Hexo"><a href="#安装配置-Hexo" class="headerlink" title="安装配置 Hexo"></a>安装配置 Hexo</h1><p>Hexo 官方提供了多种主题配置，这里我选择了、、、</p>
-<p><a href="https://hexo.io/zh-cn/">Hexo 官方教程</a></p>
-<h1 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h1><p><a href="http://theme-next.iissnan.com/theme-settings.html">NexT 主题配置官网</a></p>
-<h5 id="这里为什么不详细介绍安装过程？"><a href="#这里为什么不详细介绍安装过程？" class="headerlink" title="这里为什么不详细介绍安装过程？"></a>这里为什么不详细介绍安装过程？</h5><p>官网文档已经将各类配置信息描述得非常清楚，文章中另说明在配置过程中需要注意的问题。</p>
-<h1 id="搭建过程中需要注意的问题"><a href="#搭建过程中需要注意的问题" class="headerlink" title="搭建过程中需要注意的问题"></a>搭建过程中需要注意的问题</h1><ul>
-<li>在 GitHub 上创建项目时，项目名必须是【你的 GitHub 用户名.github.io】，如：我的 GitHub 用户名为 KarenChia，那么项目的名称为【KarenChia.github.io】</li>
-<li>在 Hexo 的站点配置文件 【_config.yml】中的配置信息，均是以 key: value 形式进行配置，尤其要注意的是在 “:” 与 value 之前存在一个【空格】，如无【空格】，配置的相关属性无效。</li>
-<li>在将本地静态页面部署到 GitHub 时，仓库地址最好直接选择使用【HTTPS】，如果使用的是【SSH】，需要再对【SSH】进行配置，否则本地站点中的静态网页无法部署到 GitHub 上进行托管。</li>
-<li>在部署之前，需要先安装 【 hexo-deployer-git】插件，必须确保插件安装成功。</li>
-</ul>
-<h1 id="博客主题-Butterfly"><a href="#博客主题-Butterfly" class="headerlink" title="博客主题 Butterfly"></a>博客主题 Butterfly</h1><p>后续已将主题修改为 <a href="https://butterfly.js.org/">Butterfly</a></p>
-]]></content>
-      <categories>
-        <category>Hexo独立博客配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Coding</tag>
-        <tag>Butterfly</tag>
-        <tag>GitHub</tag>
-        <tag>个人独立博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WebStorm代码输入提示忽略首字母大小写</title>
     <url>/2020/11/25/html-webtorm-ignore-dxx/</url>
     <content><![CDATA[<p>在写代码时，我是无法容忍为了一个大写开头的代码而特意的切换我的输入法的，那就来解决一下下。</p>
@@ -883,6 +926,75 @@
         <tag>Cordova</tag>
         <tag>指定版本</tag>
         <tag>命令行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic 3 项目实战------创建项目</title>
+    <url>/2020/11/24/ionic-create-project/</url>
+    <content><![CDATA[<p>关于开发环境的搭建，请参考小编的另一篇文章<a href="https://blog.csdn.net/zhaikun68/article/details/77838152">Ionic 介绍、安装、配置、项目不同平台编译、DeBug调试经验总结</a></p>
+<p>此处，小编的开发环境已搭建完成，使用的Ionic版本为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic -v</span><br><span class="line">3.9.2</span><br></pre></td></tr></table></figure>
+
+<p>这是在任意目录下，输入命令查看的结果V3.9.2</p>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>当然了，相信牛X的你每天都有堆积如山的工作，那么多的命令记不住也是常有的事。小编常用的解决方案就是help、help、help</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic --help</span><br><span class="line">   _             _</span><br><span class="line">  (_)           (_)</span><br><span class="line">   _  ___  _ __  _  ___</span><br><span class="line">  | |&#x2F; _ \| &#39;_ \| |&#x2F; __|</span><br><span class="line">  | | (_) | | | | | (__</span><br><span class="line">  |_|\___&#x2F;|_| |_|_|\___|  CLI 3.9.2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Usage:</span><br><span class="line"></span><br><span class="line">    $ ionic &lt;command&gt; [&lt;args&gt;] [--help] [--verbose] [--quiet] [--no-interactive] [--confirm] [options]</span><br><span class="line"></span><br><span class="line">  Global Commands:</span><br><span class="line"></span><br><span class="line">    config &lt;subcommand&gt; ...... Manage CLI and project config values (subcommands: get, set)</span><br><span class="line">    docs ..................... Open the Ionic documentation website</span><br><span class="line">    info ..................... Print system&#x2F;environment info</span><br><span class="line">    login .................... Login with your Ionic ID</span><br><span class="line">    signup ................... Create an Ionic account</span><br><span class="line">    start .................... Create a new project</span><br><span class="line">    telemetry ................ Opt in and out of telemetry</span><br></pre></td></tr></table></figure>
+
+<p>看一下给出的命令及对应的解释，就可以很清楚的知道，我们创建一个项目需要使用start命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic start</span><br></pre></td></tr></table></figure>
+
+<p>然后系统会提示我们，给我们创建的项目取一个响亮的名字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project:</span><br></pre></td></tr></table></figure>
+
+<p>此处小编的项目名称为MyIonicDemo</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project: MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>回车，提示让我们选择一个创建模板，此处小编选择的是tabs模板</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What starter would you like to use: tabs</span><br></pre></td></tr></table></figure>
+
+<p>回车，等待项目创建完毕即可，这里查看下项目创建过程和成功后的信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">√ Creating directory .\MyIonicDemo - done!</span><br><span class="line">[INFO] Fetching app base (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-app-base&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">[INFO] Fetching starter template tabs (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-starter-tabs&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">√ Updating package.json with app details - done!</span><br><span class="line">√ Creating configuration file ionic.config.json - done!</span><br><span class="line">[INFO] Installing dependencies may take several minutes!</span><br><span class="line">&gt; npm install</span><br><span class="line">√ Running command - done!</span><br><span class="line">&gt; git init</span><br><span class="line">&gt; git add -A</span><br><span class="line">&gt; git commit -m &quot;Initial commit&quot; --no-gpg-sign</span><br><span class="line"></span><br><span class="line">♬ ♫ ♬ ♫  Your Ionic app is ready to go! ♬ ♫ ♬ ♫</span><br><span class="line"></span><br><span class="line">Run your app in the browser (great for initial development):</span><br><span class="line">  ionic serve</span><br><span class="line"></span><br><span class="line">Run on a device or simulator:</span><br><span class="line">  ionic cordova run ios</span><br><span class="line"></span><br><span class="line">Test and share your app on a device with the Ionic View app:</span><br><span class="line">  http:&#x2F;&#x2F;view.ionic.io</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Next Steps:</span><br><span class="line">Go to your newly created project: cd .\MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>此处项目的创建过程说的比较繁琐，目的是为了强调，如果命令行记不住咱们应该如何应对，下文中将使用相关命令直接进行，创建项目的完整命令为 $ ionic start MyIonicDemo tabs</p>
+<h1 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a>跨平台编译</h1><p>进入我们创建的项目的根目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd MyIonicDemo</span><br></pre></td></tr></table></figure>
+
+<p>为项目添加Android平台</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add android</span><br></pre></td></tr></table></figure>
+
+<p>添加iOS平台</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add ios</span><br></pre></td></tr></table></figure>
+
+<p>在添加平台支持时，会下载一些所必须的插件，建议全称翻墙</p>
+<p>添加成功后会在项目的platforms文件夹中显示添加的平台支持</p>
+<p><img src="/imgs/63.png"></p>
+<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic serve</span><br></pre></td></tr></table></figure>
+
+<p>使用上面的命令会使项目运行在浏览器中</p>
+<p><img src="/imgs/64.png"></p>
+<p>作为一个APP开发人员，让我看到如此的界面是无发忍受的，我们需要看到的是在手机上的显示效果，在浏览器地址后面加上 ionic-lab</p>
+<p><img src="/imgs/65.png"></p>
+<p>图片太小看不清楚，怎么办？鼠标指针悬停在图片上，右键点击，选择在新浏览器中打开，come on</p>
+<p>在模拟器中查看运行效果（以Android为例，需要配置好JDK、Android SDK）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova emulate android</span><br></pre></td></tr></table></figure>
+
+<h1 id="项目编译（以Android为例）"><a href="#项目编译（以Android为例）" class="headerlink" title="项目编译（以Android为例）"></a>项目编译（以Android为例）</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova build android</span><br></pre></td></tr></table></figure>
+
+<p>编译成功后，会在对应目录下生成相应的apk文件</p>
+<p><img src="/imgs/66.png"></p>
+<h1 id="项目调试"><a href="#项目调试" class="headerlink" title="项目调试"></a>项目调试</h1><p>不管是Android平台，还是iOS平台，都可以将platforms文件夹下的android文件夹或iOS文件夹直接在IDE中打开即可</p>
+<p><img src="/imgs/67.png"></p>
+<p>打开的项目是可以直接在IDE中运行调试的，但是切记，不要再IDE中修改android或iOS文件夹下的任何文件，因为改动是无效的，对于Ionic模式下建立的项目，其源码都是存放于项目根目录下的src文件夹中的。</p>
+<p>关于Ionic项目的工程目录结构，请查看<a href="https://blog.csdn.net/zhaikun68/article/details/77849751">Ionic 3 项目的工程目录结构</a></p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>环境搭建</tag>
+        <tag>项目创建-编译-调试</tag>
+        <tag>目录结构</tag>
       </tags>
   </entry>
   <entry>
@@ -995,75 +1107,6 @@
         <tag>Ionic Error</tag>
         <tag>read ETIMEDOUT</tag>
         <tag>创建项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ionic 3 项目实战------创建项目</title>
-    <url>/2020/11/24/ionic-create-project/</url>
-    <content><![CDATA[<p>关于开发环境的搭建，请参考小编的另一篇文章<a href="https://blog.csdn.net/zhaikun68/article/details/77838152">Ionic 介绍、安装、配置、项目不同平台编译、DeBug调试经验总结</a></p>
-<p>此处，小编的开发环境已搭建完成，使用的Ionic版本为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic -v</span><br><span class="line">3.9.2</span><br></pre></td></tr></table></figure>
-
-<p>这是在任意目录下，输入命令查看的结果V3.9.2</p>
-<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>当然了，相信牛X的你每天都有堆积如山的工作，那么多的命令记不住也是常有的事。小编常用的解决方案就是help、help、help</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic --help</span><br><span class="line">   _             _</span><br><span class="line">  (_)           (_)</span><br><span class="line">   _  ___  _ __  _  ___</span><br><span class="line">  | |&#x2F; _ \| &#39;_ \| |&#x2F; __|</span><br><span class="line">  | | (_) | | | | | (__</span><br><span class="line">  |_|\___&#x2F;|_| |_|_|\___|  CLI 3.9.2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Usage:</span><br><span class="line"></span><br><span class="line">    $ ionic &lt;command&gt; [&lt;args&gt;] [--help] [--verbose] [--quiet] [--no-interactive] [--confirm] [options]</span><br><span class="line"></span><br><span class="line">  Global Commands:</span><br><span class="line"></span><br><span class="line">    config &lt;subcommand&gt; ...... Manage CLI and project config values (subcommands: get, set)</span><br><span class="line">    docs ..................... Open the Ionic documentation website</span><br><span class="line">    info ..................... Print system&#x2F;environment info</span><br><span class="line">    login .................... Login with your Ionic ID</span><br><span class="line">    signup ................... Create an Ionic account</span><br><span class="line">    start .................... Create a new project</span><br><span class="line">    telemetry ................ Opt in and out of telemetry</span><br></pre></td></tr></table></figure>
-
-<p>看一下给出的命令及对应的解释，就可以很清楚的知道，我们创建一个项目需要使用start命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\zhaikun\IonicProjects&gt;ionic start</span><br></pre></td></tr></table></figure>
-
-<p>然后系统会提示我们，给我们创建的项目取一个响亮的名字</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project:</span><br></pre></td></tr></table></figure>
-
-<p>此处小编的项目名称为MyIonicDemo</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What would you like to name your project: MyIonicDemo</span><br></pre></td></tr></table></figure>
-
-<p>回车，提示让我们选择一个创建模板，此处小编选择的是tabs模板</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">? What starter would you like to use: tabs</span><br></pre></td></tr></table></figure>
-
-<p>回车，等待项目创建完毕即可，这里查看下项目创建过程和成功后的信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">√ Creating directory .\MyIonicDemo - done!</span><br><span class="line">[INFO] Fetching app base (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-app-base&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">[INFO] Fetching starter template tabs (https:&#x2F;&#x2F;github.com&#x2F;ionic-team&#x2F;ionic2-starter-tabs&#x2F;archive&#x2F;master.tar.gz)</span><br><span class="line">√ Downloading - done!</span><br><span class="line">√ Updating package.json with app details - done!</span><br><span class="line">√ Creating configuration file ionic.config.json - done!</span><br><span class="line">[INFO] Installing dependencies may take several minutes!</span><br><span class="line">&gt; npm install</span><br><span class="line">√ Running command - done!</span><br><span class="line">&gt; git init</span><br><span class="line">&gt; git add -A</span><br><span class="line">&gt; git commit -m &quot;Initial commit&quot; --no-gpg-sign</span><br><span class="line"></span><br><span class="line">♬ ♫ ♬ ♫  Your Ionic app is ready to go! ♬ ♫ ♬ ♫</span><br><span class="line"></span><br><span class="line">Run your app in the browser (great for initial development):</span><br><span class="line">  ionic serve</span><br><span class="line"></span><br><span class="line">Run on a device or simulator:</span><br><span class="line">  ionic cordova run ios</span><br><span class="line"></span><br><span class="line">Test and share your app on a device with the Ionic View app:</span><br><span class="line">  http:&#x2F;&#x2F;view.ionic.io</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Next Steps:</span><br><span class="line">Go to your newly created project: cd .\MyIonicDemo</span><br></pre></td></tr></table></figure>
-
-<p>此处项目的创建过程说的比较繁琐，目的是为了强调，如果命令行记不住咱们应该如何应对，下文中将使用相关命令直接进行，创建项目的完整命令为 $ ionic start MyIonicDemo tabs</p>
-<h1 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a>跨平台编译</h1><p>进入我们创建的项目的根目录</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd MyIonicDemo</span><br></pre></td></tr></table></figure>
-
-<p>为项目添加Android平台</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add android</span><br></pre></td></tr></table></figure>
-
-<p>添加iOS平台</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova platform add ios</span><br></pre></td></tr></table></figure>
-
-<p>在添加平台支持时，会下载一些所必须的插件，建议全称翻墙</p>
-<p>添加成功后会在项目的platforms文件夹中显示添加的平台支持</p>
-<p><img src="/imgs/63.png"></p>
-<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic serve</span><br></pre></td></tr></table></figure>
-
-<p>使用上面的命令会使项目运行在浏览器中</p>
-<p><img src="/imgs/64.png"></p>
-<p>作为一个APP开发人员，让我看到如此的界面是无发忍受的，我们需要看到的是在手机上的显示效果，在浏览器地址后面加上 ionic-lab</p>
-<p><img src="/imgs/65.png"></p>
-<p>图片太小看不清楚，怎么办？鼠标指针悬停在图片上，右键点击，选择在新浏览器中打开，come on</p>
-<p>在模拟器中查看运行效果（以Android为例，需要配置好JDK、Android SDK）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova emulate android</span><br></pre></td></tr></table></figure>
-
-<h1 id="项目编译（以Android为例）"><a href="#项目编译（以Android为例）" class="headerlink" title="项目编译（以Android为例）"></a>项目编译（以Android为例）</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ionic cordova build android</span><br></pre></td></tr></table></figure>
-
-<p>编译成功后，会在对应目录下生成相应的apk文件</p>
-<p><img src="/imgs/66.png"></p>
-<h1 id="项目调试"><a href="#项目调试" class="headerlink" title="项目调试"></a>项目调试</h1><p>不管是Android平台，还是iOS平台，都可以将platforms文件夹下的android文件夹或iOS文件夹直接在IDE中打开即可</p>
-<p><img src="/imgs/67.png"></p>
-<p>打开的项目是可以直接在IDE中运行调试的，但是切记，不要再IDE中修改android或iOS文件夹下的任何文件，因为改动是无效的，对于Ionic模式下建立的项目，其源码都是存放于项目根目录下的src文件夹中的。</p>
-<p>关于Ionic项目的工程目录结构，请查看<a href="https://blog.csdn.net/zhaikun68/article/details/77849751">Ionic 3 项目的工程目录结构</a></p>
-]]></content>
-      <categories>
-        <category>混合开发</category>
-      </categories>
-      <tags>
-        <tag>hybrid app</tag>
-        <tag>Ionic3</tag>
-        <tag>环境搭建</tag>
-        <tag>项目创建-编译-调试</tag>
-        <tag>目录结构</tag>
       </tags>
   </entry>
   <entry>
@@ -1524,58 +1567,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RecyclerView系列 - 如何优雅的实现分割线</title>
-    <url>/2020/11/24/recycleview-line/</url>
-    <content><![CDATA[<blockquote>
-<p>文章欢迎转载，转载请注明出处：文章首发于<a href="https://blog.csdn.net/zhaikun68">【Karen Chia の 程序人生】</a><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190907111120364.gif" alt="在这里插入图片描述"><br>效果图不是我想要的效果，怎么办？</p>
-<p>查看关于 RecyclerView 系列的其它文章，总有你想要的效果 ↓↓↓</p>
-<h2 id="KarenChia-的-RecyclerView-系列文章"><a href="#KarenChia-的-RecyclerView-系列文章" class="headerlink" title="KarenChia 的 RecyclerView 系列文章"></a>KarenChia 的 RecyclerView 系列文章</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
-<p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在 RecyclerView 系列文章中，上一篇我们说到了 RecyclerView 的基本使用，期间提到了 RecyclerView 自身是不能设置分割线的，需要自行设置。本篇文章将从不同的“视角”讲解 RecyclerView 分割线的设置方法，文章建立在上一篇文章【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】的基础上，如果需要了解 RecyclerView 的基本使用、布局管理器的设置、数据适配器的设置等，请自行查看【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】</p>
-<h1 id="1-RecyclerView-分割线设置方式一"><a href="#1-RecyclerView-分割线设置方式一" class="headerlink" title="1 RecyclerView 分割线设置方式一"></a>1 RecyclerView 分割线设置方式一</h1><h6 id="更改列表子项-item-布局"><a href="#更改列表子项-item-布局" class="headerlink" title="更改列表子项 item 布局"></a>更改列表子项 item 布局</h6><p>这种方式设置的其实不是 RecyclerView 组件的分割线，只是更改了 item 的布局文件，在视觉效果上达到了分割线的效果。</p>
-<p>item 的布局文件如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:background&#x3D;&quot;@android:color&#x2F;white&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;tvData&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_margin&#x3D;&quot;10dp&quot;</span><br><span class="line">        android:textColor&#x3D;&quot;@android:color&#x2F;black&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;viewDivider&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;1dp&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>这里在原有文件的基础上，新增了 View 组件，用于实现视觉效果上的分割线。</p>
-<p>可设置水平分割线的高度及颜色，更改 View 组件的相关属性即可。</p>
-<p>这样的设置方法，在列表的最后一项是带有分割线的，需要在 adapter 的数据与视图进行绑定的方法中，控制 View 组件的显示与隐藏：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 将数据与 item 视图进行绑定</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Override</span><br><span class="line">public void onBindViewHolder(@NonNull RecyclerViewTestViewHolder holder, int position) &#123;</span><br><span class="line">    &#x2F;&#x2F;最后一项 item 不显示分割线</span><br><span class="line">    if (position &#x3D;&#x3D; testDataList.size() - 1) &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.GONE);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line">    holder.tvData.setText(testDataList.get(position));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-RecyclerView-分割线设置方式二"><a href="#2-RecyclerView-分割线设置方式二" class="headerlink" title="2 RecyclerView 分割线设置方式二"></a>2 RecyclerView 分割线设置方式二</h1><h6 id="使用-Android-自带的分割线"><a href="#使用-Android-自带的分割线" class="headerlink" title="使用 Android 自带的分割线"></a>使用 Android 自带的分割线</h6><p>RecyclerView 提供了 addItemDecoration(@NonNull ItemDecoration decor) 方法，可用于设置系统默认分割线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void addItemDecoration(@NonNull ItemDecoration decor) &#123;</span><br><span class="line">    addItemDecoration(decor, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>给 RecyclerView 添加分割线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));</span><br></pre></td></tr></table></figure>
-<p>这里的 DividerItemDecoration 采用的是 RecyclerView 组件的背景色</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:background&#x3D;&quot;@color&#x2F;app_bg&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;androidx.recyclerview.widget.RecyclerView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;rvTest&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145121583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>采用这种方式设置的分割线的高度是系统默认的，我们无法修改分割线的高度。</p>
-<h6 id="为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。"><a href="#为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。" class="headerlink" title="为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。"></a>为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Sets the &#123;@link Drawable&#125; for this divider.</span><br><span class="line"> *</span><br><span class="line"> * @param drawable Drawable that should be used as a divider.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public void setDrawable(@NonNull Drawable drawable) &#123;</span><br><span class="line">    if (drawable &#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new IllegalArgumentException(&quot;Drawable cannot be null.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    mDivider &#x3D; drawable;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>新建 Drawable 资源文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;solid android:color&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
-<p>为 RecyclerView 设置自定义的分割线样式：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DividerItemDecoration dividerItemDecoration &#x3D; new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);</span><br><span class="line">dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.shape_recycler_view_divider));</span><br><span class="line">rvTest.addItemDecoration(dividerItemDecoration);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145509496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微复杂一点的，可以为分割线定义渐变色，修改 Drawable 资源文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;gradient</span><br><span class="line">        android:centerColor&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot;</span><br><span class="line">        android:endColor&#x3D;&quot;@android:color&#x2F;background_dark&quot;</span><br><span class="line">        android:startColor&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907145942185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="3-RecyclerView-分割线设置方式三"><a href="#3-RecyclerView-分割线设置方式三" class="headerlink" title="3 RecyclerView 分割线设置方式三"></a>3 RecyclerView 分割线设置方式三</h1><h6 id="利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。"><a href="#利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。" class="headerlink" title="利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。"></a>利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。</h6><p>在 RecyclerView 适配器中的 onCreateViewHolder()方法中，加载 item 布局时进行设置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 加载 item 的布局文件</span><br><span class="line"> *&#x2F;</span><br><span class="line">@NonNull</span><br><span class="line">@Override</span><br><span class="line">public RecyclerViewTestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) &#123;</span><br><span class="line">    View view &#x3D; LayoutInflater.from(mContext).inflate(R.layout.item_recycler_view_test, parent, false);</span><br><span class="line">    RecyclerView.LayoutParams layoutParams &#x3D; (RecyclerView.LayoutParams) view.getLayoutParams();</span><br><span class="line">    layoutParams.bottomMargin &#x3D; 10;</span><br><span class="line">    view.setLayoutParams(layoutParams);</span><br><span class="line">    return new RecyclerViewTestViewHolder(view);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190907151552852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="4-RecyclerView-分割线设置方式四"><a href="#4-RecyclerView-分割线设置方式四" class="headerlink" title="4 RecyclerView 分割线设置方式四"></a>4 RecyclerView 分割线设置方式四</h1><p>在之前提到的使用 Android 默认的方式来设置分割线的方法中，可以看到 DividerItemDecoration 类继承了 RecyclerView.ItemDecoration，那么我们也可以继承 RecyclerView.ItemDecoration，从而实现自己的分割线。</p>
-<p>先看下源码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * An ItemDecoration allows the application to add a special drawing and layout offset</span><br><span class="line"> * to specific item views from the adapter&#39;s data set. This can be useful for drawing dividers</span><br><span class="line"> * between items, highlights, visual grouping boundaries and more.</span><br><span class="line"> *</span><br><span class="line"> * &lt;p&gt;All ItemDecorations are drawn in the order they were added, before the item</span><br><span class="line"> * views (in &#123;@link ItemDecoration#onDraw(Canvas, RecyclerView, RecyclerView.State) onDraw()&#125;</span><br><span class="line"> * and after the items (in &#123;@link ItemDecoration#onDrawOver(Canvas, RecyclerView,</span><br><span class="line"> * RecyclerView.State)&#125;.&lt;&#x2F;p&gt;</span><br><span class="line"> *&#x2F;</span><br><span class="line">public abstract static class ItemDecoration &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn before the item views are drawn,</span><br><span class="line">     * and will thus appear underneath the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        onDraw(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDraw(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn after the item views are drawn</span><br><span class="line">     * and will thus appear over the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent,</span><br><span class="line">            @NonNull State state) &#123;</span><br><span class="line">        onDrawOver(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDrawOver(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Use &#123;@link #getItemOffsets(Rect, View, RecyclerView, State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, int itemPosition,</span><br><span class="line">            @NonNull RecyclerView parent) &#123;</span><br><span class="line">        outRect.set(0, 0, 0, 0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Retrieve any offsets for the given item. Each field of &lt;code&gt;outRect&lt;&#x2F;code&gt; specifies</span><br><span class="line">     * the number of pixels that the item view should be inset by, similar to padding or margin.</span><br><span class="line">     * The default implementation sets the bounds of outRect to 0 and returns.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If this ItemDecoration does not affect the positioning of item views, it should set</span><br><span class="line">     * all four fields of &lt;code&gt;outRect&lt;&#x2F;code&gt; (left, top, right, bottom) to zero</span><br><span class="line">     * before returning.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If you need to access Adapter for additional data, you can call</span><br><span class="line">     * &#123;@link RecyclerView#getChildAdapterPosition(View)&#125; to get the adapter position of the</span><br><span class="line">     * View.</span><br><span class="line">     *</span><br><span class="line">     * @param outRect Rect to receive the output.</span><br><span class="line">     * @param view    The child view to decorate</span><br><span class="line">     * @param parent  RecyclerView this ItemDecoration is decorating</span><br><span class="line">     * @param state   The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,</span><br><span class="line">            @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        getItemOffsets(outRect, ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition(),</span><br><span class="line">                parent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ItemDecoration  类包含了三个主要的方法：onDraw()、onDrawOver()、getItemOffsets()</p>
-]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>RecycleView</tag>
-        <tag>分割线</tag>
-        <tag>divider</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RecyclerView系列 - RecyclerView的基本使用</title>
     <url>/2020/11/24/recycleview-base-use/</url>
     <content><![CDATA[<blockquote>
@@ -1638,6 +1629,58 @@
         <tag>RecycleView</tag>
         <tag>ListView</tag>
         <tag>GridView</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RecyclerView系列 - 如何优雅的实现分割线</title>
+    <url>/2020/11/24/recycleview-line/</url>
+    <content><![CDATA[<blockquote>
+<p>文章欢迎转载，转载请注明出处：文章首发于<a href="https://blog.csdn.net/zhaikun68">【Karen Chia の 程序人生】</a><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20190907111120364.gif" alt="在这里插入图片描述"><br>效果图不是我想要的效果，怎么办？</p>
+<p>查看关于 RecyclerView 系列的其它文章，总有你想要的效果 ↓↓↓</p>
+<h2 id="KarenChia-的-RecyclerView-系列文章"><a href="#KarenChia-的-RecyclerView-系列文章" class="headerlink" title="KarenChia 的 RecyclerView 系列文章"></a>KarenChia 的 RecyclerView 系列文章</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a></p>
+<p><a href="https://blog.csdn.net/ZhaiKun68/article/details/100591943">RecyclerView系列 - 如何优雅的实现分割线</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在 RecyclerView 系列文章中，上一篇我们说到了 RecyclerView 的基本使用，期间提到了 RecyclerView 自身是不能设置分割线的，需要自行设置。本篇文章将从不同的“视角”讲解 RecyclerView 分割线的设置方法，文章建立在上一篇文章【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】的基础上，如果需要了解 RecyclerView 的基本使用、布局管理器的设置、数据适配器的设置等，请自行查看【<a href="https://blog.csdn.net/ZhaiKun68/article/details/100557688">RecyclerView系列 - RecyclerView的基本使用</a>】</p>
+<h1 id="1-RecyclerView-分割线设置方式一"><a href="#1-RecyclerView-分割线设置方式一" class="headerlink" title="1 RecyclerView 分割线设置方式一"></a>1 RecyclerView 分割线设置方式一</h1><h6 id="更改列表子项-item-布局"><a href="#更改列表子项-item-布局" class="headerlink" title="更改列表子项 item 布局"></a>更改列表子项 item 布局</h6><p>这种方式设置的其实不是 RecyclerView 组件的分割线，只是更改了 item 的布局文件，在视觉效果上达到了分割线的效果。</p>
+<p>item 的布局文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:background&#x3D;&quot;@android:color&#x2F;white&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;tvData&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_margin&#x3D;&quot;10dp&quot;</span><br><span class="line">        android:textColor&#x3D;&quot;@android:color&#x2F;black&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;View</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;viewDivider&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;1dp&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p>这里在原有文件的基础上，新增了 View 组件，用于实现视觉效果上的分割线。</p>
+<p>可设置水平分割线的高度及颜色，更改 View 组件的相关属性即可。</p>
+<p>这样的设置方法，在列表的最后一项是带有分割线的，需要在 adapter 的数据与视图进行绑定的方法中，控制 View 组件的显示与隐藏：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 将数据与 item 视图进行绑定</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Override</span><br><span class="line">public void onBindViewHolder(@NonNull RecyclerViewTestViewHolder holder, int position) &#123;</span><br><span class="line">    &#x2F;&#x2F;最后一项 item 不显示分割线</span><br><span class="line">    if (position &#x3D;&#x3D; testDataList.size() - 1) &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.GONE);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        holder.viewDivider.setVisibility(View.VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line">    holder.tvData.setText(testDataList.get(position));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-RecyclerView-分割线设置方式二"><a href="#2-RecyclerView-分割线设置方式二" class="headerlink" title="2 RecyclerView 分割线设置方式二"></a>2 RecyclerView 分割线设置方式二</h1><h6 id="使用-Android-自带的分割线"><a href="#使用-Android-自带的分割线" class="headerlink" title="使用 Android 自带的分割线"></a>使用 Android 自带的分割线</h6><p>RecyclerView 提供了 addItemDecoration(@NonNull ItemDecoration decor) 方法，可用于设置系统默认分割线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void addItemDecoration(@NonNull ItemDecoration decor) &#123;</span><br><span class="line">    addItemDecoration(decor, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>给 RecyclerView 添加分割线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rvTest.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));</span><br></pre></td></tr></table></figure>
+<p>这里的 DividerItemDecoration 采用的是 RecyclerView 组件的背景色</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:background&#x3D;&quot;@color&#x2F;app_bg&quot;</span><br><span class="line">    android:orientation&#x3D;&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;androidx.recyclerview.widget.RecyclerView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;rvTest&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:background&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145121583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>采用这种方式设置的分割线的高度是系统默认的，我们无法修改分割线的高度。</p>
+<h6 id="为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。"><a href="#为了方便修改分割线的高度、颜色，DividerItemDecoration-类提供了-setDrawable-方法，供开发者自定义分割线。" class="headerlink" title="为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。"></a>为了方便修改分割线的高度、颜色，DividerItemDecoration 类提供了 setDrawable() 方法，供开发者自定义分割线。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Sets the &#123;@link Drawable&#125; for this divider.</span><br><span class="line"> *</span><br><span class="line"> * @param drawable Drawable that should be used as a divider.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public void setDrawable(@NonNull Drawable drawable) &#123;</span><br><span class="line">    if (drawable &#x3D;&#x3D; null) &#123;</span><br><span class="line">        throw new IllegalArgumentException(&quot;Drawable cannot be null.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    mDivider &#x3D; drawable;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>新建 Drawable 资源文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;solid android:color&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
+<p>为 RecyclerView 设置自定义的分割线样式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DividerItemDecoration dividerItemDecoration &#x3D; new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);</span><br><span class="line">dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.shape_recycler_view_divider));</span><br><span class="line">rvTest.addItemDecoration(dividerItemDecoration);</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145509496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>稍微复杂一点的，可以为分割线定义渐变色，修改 Drawable 资源文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:shape&#x3D;&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;gradient</span><br><span class="line">        android:centerColor&#x3D;&quot;@android:color&#x2F;holo_blue_bright&quot;</span><br><span class="line">        android:endColor&#x3D;&quot;@android:color&#x2F;background_dark&quot;</span><br><span class="line">        android:startColor&#x3D;&quot;@android:color&#x2F;holo_red_dark&quot; &#x2F;&gt;</span><br><span class="line">    &lt;size android:height&#x3D;&quot;4dp&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;shape&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907145942185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="3-RecyclerView-分割线设置方式三"><a href="#3-RecyclerView-分割线设置方式三" class="headerlink" title="3 RecyclerView 分割线设置方式三"></a>3 RecyclerView 分割线设置方式三</h1><h6 id="利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。"><a href="#利用-item-与-RecyclerView-之间的-Margin，达到显示分割线的效果，分割线的颜色为-RecyclerView-的背景色。" class="headerlink" title="利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。"></a>利用 item 与 RecyclerView 之间的 Margin，达到显示分割线的效果，分割线的颜色为 RecyclerView 的背景色。</h6><p>在 RecyclerView 适配器中的 onCreateViewHolder()方法中，加载 item 布局时进行设置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 加载 item 的布局文件</span><br><span class="line"> *&#x2F;</span><br><span class="line">@NonNull</span><br><span class="line">@Override</span><br><span class="line">public RecyclerViewTestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) &#123;</span><br><span class="line">    View view &#x3D; LayoutInflater.from(mContext).inflate(R.layout.item_recycler_view_test, parent, false);</span><br><span class="line">    RecyclerView.LayoutParams layoutParams &#x3D; (RecyclerView.LayoutParams) view.getLayoutParams();</span><br><span class="line">    layoutParams.bottomMargin &#x3D; 10;</span><br><span class="line">    view.setLayoutParams(layoutParams);</span><br><span class="line">    return new RecyclerViewTestViewHolder(view);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190907151552852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="4-RecyclerView-分割线设置方式四"><a href="#4-RecyclerView-分割线设置方式四" class="headerlink" title="4 RecyclerView 分割线设置方式四"></a>4 RecyclerView 分割线设置方式四</h1><p>在之前提到的使用 Android 默认的方式来设置分割线的方法中，可以看到 DividerItemDecoration 类继承了 RecyclerView.ItemDecoration，那么我们也可以继承 RecyclerView.ItemDecoration，从而实现自己的分割线。</p>
+<p>先看下源码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * An ItemDecoration allows the application to add a special drawing and layout offset</span><br><span class="line"> * to specific item views from the adapter&#39;s data set. This can be useful for drawing dividers</span><br><span class="line"> * between items, highlights, visual grouping boundaries and more.</span><br><span class="line"> *</span><br><span class="line"> * &lt;p&gt;All ItemDecorations are drawn in the order they were added, before the item</span><br><span class="line"> * views (in &#123;@link ItemDecoration#onDraw(Canvas, RecyclerView, RecyclerView.State) onDraw()&#125;</span><br><span class="line"> * and after the items (in &#123;@link ItemDecoration#onDrawOver(Canvas, RecyclerView,</span><br><span class="line"> * RecyclerView.State)&#125;.&lt;&#x2F;p&gt;</span><br><span class="line"> *&#x2F;</span><br><span class="line">public abstract static class ItemDecoration &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn before the item views are drawn,</span><br><span class="line">     * and will thus appear underneath the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        onDraw(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDraw(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Draw any appropriate decorations into the Canvas supplied to the RecyclerView.</span><br><span class="line">     * Any content drawn by this method will be drawn after the item views are drawn</span><br><span class="line">     * and will thus appear over the views.</span><br><span class="line">     *</span><br><span class="line">     * @param c Canvas to draw into</span><br><span class="line">     * @param parent RecyclerView this ItemDecoration is drawing into</span><br><span class="line">     * @param state The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent,</span><br><span class="line">            @NonNull State state) &#123;</span><br><span class="line">        onDrawOver(c, parent);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Override &#123;@link #onDrawOver(Canvas, RecyclerView, RecyclerView.State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * @deprecated</span><br><span class="line">     * Use &#123;@link #getItemOffsets(Rect, View, RecyclerView, State)&#125;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Deprecated</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, int itemPosition,</span><br><span class="line">            @NonNull RecyclerView parent) &#123;</span><br><span class="line">        outRect.set(0, 0, 0, 0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Retrieve any offsets for the given item. Each field of &lt;code&gt;outRect&lt;&#x2F;code&gt; specifies</span><br><span class="line">     * the number of pixels that the item view should be inset by, similar to padding or margin.</span><br><span class="line">     * The default implementation sets the bounds of outRect to 0 and returns.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If this ItemDecoration does not affect the positioning of item views, it should set</span><br><span class="line">     * all four fields of &lt;code&gt;outRect&lt;&#x2F;code&gt; (left, top, right, bottom) to zero</span><br><span class="line">     * before returning.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * If you need to access Adapter for additional data, you can call</span><br><span class="line">     * &#123;@link RecyclerView#getChildAdapterPosition(View)&#125; to get the adapter position of the</span><br><span class="line">     * View.</span><br><span class="line">     *</span><br><span class="line">     * @param outRect Rect to receive the output.</span><br><span class="line">     * @param view    The child view to decorate</span><br><span class="line">     * @param parent  RecyclerView this ItemDecoration is decorating</span><br><span class="line">     * @param state   The current state of RecyclerView.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,</span><br><span class="line">            @NonNull RecyclerView parent, @NonNull State state) &#123;</span><br><span class="line">        getItemOffsets(outRect, ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition(),</span><br><span class="line">                parent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ItemDecoration  类包含了三个主要的方法：onDraw()、onDrawOver()、getItemOffsets()</p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>RecycleView</tag>
+        <tag>分割线</tag>
+        <tag>divider</tag>
       </tags>
   </entry>
   <entry>
