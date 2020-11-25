@@ -27,6 +27,57 @@
       </tags>
   </entry>
   <entry>
+    <title>APP架构搭建 - MVP基础版</title>
+    <url>/2020/11/25/app-framework-mvp-base/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>快速完成APP框架的搭建，节约开发时间。系统的基本搭建，基本借助了优秀的第三方工具。第三方工具的选择，根据自身项目而定，需要利于项目后期的更新、迭代及相关维护。</p>
+<blockquote>
+<p>完成本文后，可对MVP框架有基本的认识。</p>
+</blockquote>
+<h1 id="1-Android开发框架MVP"><a href="#1-Android开发框架MVP" class="headerlink" title="1 Android开发框架MVP"></a>1 Android开发框架MVP</h1><p><a href="https://baike.baidu.com/item/MVP%E6%A8%A1%E5%BC%8F?fr=aladdin">百度百科 - MVP模式介绍</a></p>
+<p><a href="https://blog.csdn.net/qq137722697/article/details/52212348">博客推荐 - 博主 - 大力-哥 -【android进阶篇】MVP+Retrofit+RxJava框架结合</a></p>
+<p><a href="https://github.com/googlesamples/android-architecture">Google 关于 MVP 模式的介绍项目</a></p>
+<h1 id="2-底部导航栏"><a href="#2-底部导航栏" class="headerlink" title="2 底部导航栏"></a>2 底部导航栏</h1><p><a href="https://blog.csdn.net/afei__/article/details/80950288">博客推荐 - 博主 - 阿飞__ - Android底部导航栏，三种风格和实现</a></p>
+<p><a href="https://blog.csdn.net/qq_32770809/article/details/79093158">博客推荐 - 博主 - cc_wentian - Android底部导航栏最常用的两种写法</a></p>
+<p><a href="https://www.cnblogs.com/yelanggu/p/9516429.html">博客推荐 - 博主- 野狼谷 - Android (争取做到)最全的底部导航栏实现方法</a></p>
+<p><a href="https://blog.csdn.net/tiandixuanwuliang/article/details/56279956">博客推荐 - 博主 - 天地炫舞 - LinearLayout+Fragment实现下导航栏效果</a></p>
+<h1 id="3-BaseActivity基类设计"><a href="#3-BaseActivity基类设计" class="headerlink" title="3 BaseActivity基类设计"></a>3 BaseActivity基类设计</h1><p><a href="https://www.jianshu.com/p/289dfb1a839a">博客推荐 - 博主 - 吾非言 -【Android】BaseActivity基类设计</a></p>
+<h1 id="4-日志管理"><a href="#4-日志管理" class="headerlink" title="4 日志管理"></a>4 日志管理</h1><h2 id="4-1-Klog"><a href="#4-1-Klog" class="headerlink" title="4.1 Klog"></a>4.1 Klog</h2><p>使用方法：<a href="https://blog.csdn.net/m0_37705108/article/details/85047441">博客推荐 - 博主 - 熊旭川 - Klog的使用</a></p>
+<p>项目地址：<a href="https://github.com/ZhaoKaiQiang/KLog">https://github.com/ZhaoKaiQiang/KLog</a></p>
+<h1 id="5-标题栏"><a href="#5-标题栏" class="headerlink" title="5 标题栏"></a>5 标题栏</h1><p><a href="https://www.jianshu.com/p/36fc921ab0b1">博客推荐 - 博主 - lovesosoi - Android 去掉标题栏的真正使用方式</a></p>
+<h1 id="6-侧滑返回"><a href="#6-侧滑返回" class="headerlink" title="6 侧滑返回"></a>6 侧滑返回</h1><h2 id="6-1-swipeback-android-侧滑返回控件"><a href="#6-1-swipeback-android-侧滑返回控件" class="headerlink" title="6.1 swipeback-android 侧滑返回控件"></a>6.1 swipeback-android 侧滑返回控件</h2><p>侧滑返回控件，支持右滑手势以及下拉手势</p>
+<p>项目地址：<a href="https://github.com/1004145468/swipeback-android">https://github.com/1004145468/swipeback-android</a></p>
+<h1 id="7-网络请求框架"><a href="#7-网络请求框架" class="headerlink" title="7 网络请求框架"></a>7 网络请求框架</h1><h2 id="7-1-Retrofit"><a href="#7-1-Retrofit" class="headerlink" title="7.1 Retrofit"></a>7.1 Retrofit</h2><p><a href="https://www.jianshu.com/p/0fda3132cf98">博客推荐 - 博主 - SHERLOCKvv - 网络加载框架 - Retrofit</a></p>
+<p><a href="https://www.jianshu.com/p/a3e162261ab6">博客推荐 - 博主 - Carson_Ho - Android Retrofit 2.0 的详细使用攻略（含实例讲解）</a></p>
+<p><a href="https://www.jianshu.com/p/2c54f9ccd52f">博客推荐 - 博主 - Carson_Ho - Android：Retrofit 结合 RxJava的优雅使用（含实例教程）</a></p>
+<p><a href="https://blog.csdn.net/weixin_37577039/article/details/79495797">博客推荐 - 博主 - 5ingwings - Retrofit2.0（三）封装：如超时设置，加请求头，加公共请求参数，加拦截器等</a></p>
+<p><a href="https://blog.csdn.net/ding_GC/article/details/80492229">博客推荐 - 博主 - ding_GC - Retrofit 拦截器-基础公共参数拦截器实现</a></p>
+<p><a href="https://blog.csdn.net/u014624241/article/details/77069712">博客推荐 - 博主 - 不对法 - retrofit http取消请求</a></p>
+<h2 id="7-2-okhttp-RxHttp"><a href="#7-2-okhttp-RxHttp" class="headerlink" title="7.2 okhttp-RxHttp"></a>7.2 okhttp-RxHttp</h2><p>项目地址：<a href="https://github.com/liujingxing/okhttp-RxHttp">https://github.com/liujingxing/okhttp-RxHttp</a></p>
+<h2 id="7-3-图片上传"><a href="#7-3-图片上传" class="headerlink" title="7.3 图片上传"></a>7.3 图片上传</h2><p><a href="https://blog.csdn.net/q6978541/article/details/89512544">博客推荐 - 博主 - q6978541 - Retrofit2 上传图片(服务器端+Android端)</a></p>
+<p><a href="https://www.jianshu.com/p/a330b0df54ae">博客推荐 - Android Retrofit 实现（图文上传）文字（参数）和多张图片一起上传</a></p>
+<h1 id="8-沉浸式开发"><a href="#8-沉浸式开发" class="headerlink" title="8 沉浸式开发"></a>8 沉浸式开发</h1><h2 id="8-1-ImmersionBar-沉浸式状态栏和沉浸式导航栏管理"><a href="#8-1-ImmersionBar-沉浸式状态栏和沉浸式导航栏管理" class="headerlink" title="8.1 ImmersionBar 沉浸式状态栏和沉浸式导航栏管理"></a>8.1 ImmersionBar 沉浸式状态栏和沉浸式导航栏管理</h2><p>android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏切换、刘海屏、软键盘弹出等问题，可以修改状态栏字体颜色和导航栏图标颜色，以及不可修改字体颜色手机的适配，适用于Activity、Fragment、DialogFragment、Dialog，PopupWindow，一句代码轻松实现，以及对bar的其他设置。</p>
+<p>使用方法：<a href="https://www.jianshu.com/p/2a884e211a62">博客推荐 - 博主 - HeLe小子拽 - android4.4以上沉浸式状态栏和导航栏实现以及Bar的其他管理</a></p>
+<p>项目地址：<a href="https://github.com/gyf-dev/ImmersionBar">https://github.com/gyf-dev/ImmersionBar</a></p>
+<h1 id="9-数据库管理"><a href="#9-数据库管理" class="headerlink" title="9 数据库管理"></a>9 数据库管理</h1><h2 id="9-1-GreenDao"><a href="#9-1-GreenDao" class="headerlink" title="9.1 GreenDao"></a>9.1 GreenDao</h2><p><a href="https://blog.csdn.net/scorpio_gao/article/details/53048699">博客推荐 - 博主 - 大城小小爱 - GreenDao:3.2.0用法</a></p>
+<p><a href="https://www.jianshu.com/p/dfdd3c0896b3">博客推荐 - 博主 - 闲庭CC - GreenDao3.0简单使用</a></p>
+<p><a href="https://www.jianshu.com/p/82d7c0bc7abd">博客推荐 - 博主 - 闲庭CC - GreenDao设置数据库路径以及数据库升级</a></p>
+<h2 id="9-2-LitePal"><a href="#9-2-LitePal" class="headerlink" title="9.2 LitePal"></a>9.2 LitePal</h2><p>使用方法：<a href="https://blog.csdn.net/sinyu890807/column/info/android-database-pro">博客推荐 - 博主 - guolin - SQLite中一些不为人知的使用技巧，以及全面剖析 LitePal 这款Android数据库框架的所有用法</a></p>
+<p>项目地址：<a href="https://github.com/LitePalFramework/LitePal">https://github.com/LitePalFramework/LitePal</a></p>
+<h1 id="10-事件分发处理"><a href="#10-事件分发处理" class="headerlink" title="10 事件分发处理"></a>10 事件分发处理</h1><h2 id="10-1-EventBus"><a href="#10-1-EventBus" class="headerlink" title="10.1 EventBus"></a>10.1 EventBus</h2><p>项目地址：<a href="https://github.com/greenrobot/EventBus">https://github.com/greenrobot/EventBus</a></p>
+<h1 id="11-图片加载"><a href="#11-图片加载" class="headerlink" title="11 图片加载"></a>11 图片加载</h1><h2 id="11-1-Glide"><a href="#11-1-Glide" class="headerlink" title="11.1 Glide"></a>11.1 Glide</h2><p>使用方法：<a href="https://blog.csdn.net/sinyu890807/column/info/15318">博客推荐 - 博主 - guolin - Glide最全解析</a></p>
+<p>使用方法：<a href="https://www.cnblogs.com/guilin-hu/p/5706916.html">博客推荐 - 博主 - 遗失的流年 - roid图片加载框架Glide用法</a></p>
+<p>GitHub：<a href="https://github.com/wasabeef/glide-transformations">glide-transformations实现图片变换</a></p>
+]]></content>
+      <categories>
+        <category>AA博客导航AA</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>APP架构搭建</tag>
+        <tag>移动开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android 更换 APP Logo 无效问题处理</title>
     <url>/2020/11/24/app-logo-invalid/</url>
     <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
@@ -149,24 +200,6 @@
       </tags>
   </entry>
   <entry>
-    <title>macOS中安装node.js</title>
-    <url>/2020/11/24/apple-node/</url>
-    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
-<p><img src="/imgs/38.png"></p>
-<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
-<p><img src="/imgs/39.png"></p>
-<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-        <tag>node.js</tag>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac中NTFS格式文件的读写</title>
     <url>/2020/11/24/apple-ntfs/</url>
     <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
@@ -200,6 +233,24 @@
         <tag>类</tag>
         <tag>属性</tag>
         <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS中安装node.js</title>
+    <url>/2020/11/24/apple-node/</url>
+    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
+<p><img src="/imgs/38.png"></p>
+<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
+<p><img src="/imgs/39.png"></p>
+<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>node.js</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -277,20 +328,6 @@
       <tags>
         <tag>objective-c</tag>
         <tag>异常处理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>import指令与include指令的区别</title>
-    <url>/2020/11/24/apple-oc-import/</url>
-    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
-<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
-<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
@@ -381,6 +418,20 @@
       </tags>
   </entry>
   <entry>
+    <title>import指令与include指令的区别</title>
+    <url>/2020/11/24/apple-oc-import/</url>
+    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
+<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
+<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Objective-C中NSString的使用</title>
     <url>/2020/11/24/apple-oc-nsstring/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -413,18 +464,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中的访问权限</title>
-    <url>/2020/11/24/apple-oc-permission/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>访问权限</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Objective-C中注释和函数的定义</title>
     <url>/2020/11/24/apple-oc-zs/</url>
     <content><![CDATA[<p>小编之前是从事Android开发的，不浪费口舌了，直接上代码，看看注释就明了了</p>
@@ -440,19 +479,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中@符号说明</title>
-    <url>/2020/11/24/apple-oc/</url>
-    <content><![CDATA[<p>常见的两个功能：</p>
-<p>1、将C字符串转换为OC字符串</p>
-<p>2、OC中的大多数关键字都是以@符号开头</p>
-]]></content>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Apple开发基础</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
         <tag>objective-c</tag>
-        <tag>符号</tag>
+        <tag>访问权限</tag>
       </tags>
   </entry>
   <entry>
@@ -495,6 +530,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Objective-C中@符号说明</title>
+    <url>/2020/11/24/apple-oc/</url>
+    <content><![CDATA[<p>常见的两个功能：</p>
+<p>1、将C字符串转换为OC字符串</p>
+<p>2、OC中的大多数关键字都是以@符号开头</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>符号</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>冒泡排序</title>
     <url>/2020/11/25/arithmetic-bubble-sort/</url>
     <content><![CDATA[<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>将相邻的两个元素逐一进行比较，将大的一个元素后移，每比较完一次都会将最大的一个元素移动到最后，然后再用相同的方法依次比较剩余的元素。</p>
@@ -524,20 +575,6 @@
       </tags>
   </entry>
   <entry>
-    <title>选择排序</title>
-    <url>/2020/11/25/arithmetic-selection-sort/</url>
-    <content><![CDATA[<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>在待排序的数组中，任意指定一个数作为数组中最小的数并记录其在数组中的位置，记为a，将该数与待排序数组中的数据依次进行比较，当该数字比数组中的数字大时，将此时数组中小的数据的位置交给a，此时a位置所对应在数组中的值作为指定的最小数再次与数组中剩余的数依次进行比较；当指定的最小数与数组中的数据全部比较完之后，得到一个数组中最小的数，然后将这个最小的数排到数组的最左端，在待排序数组中排除最左端已经完成排序的数，将剩下的数作为一个数组，按一样的方式再次进行比较。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;23.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 选择排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SelectionSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 选择排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 排序完成后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] selectionSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int minIndex;&#x2F;&#x2F;指定一个比较值在待比较数组中的下标</span><br><span class="line">        for (int outIndex &#x3D; 0; outIndex &lt; sortArray.length - 1; outIndex++) &#123;</span><br><span class="line">            minIndex &#x3D; outIndex;</span><br><span class="line">            for (int inIndex &#x3D; outIndex + 1; inIndex &lt; sortArray.length; inIndex++) &#123;</span><br><span class="line">                if (sortArray[minIndex] &gt; sortArray[inIndex]) &#123;</span><br><span class="line">                    minIndex &#x3D; inIndex;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int temp &#x3D; sortArray[outIndex];</span><br><span class="line">            sortArray[outIndex] &#x3D; sortArray[minIndex];</span><br><span class="line">            sortArray[minIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;1, 1, 5, 0, 2, 2, 10, 5, 3, 6&#125;;&#x2F;&#x2F;初始化一个需要排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; selectionSort(initArray);</span><br><span class="line">        System.out.print(Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>排序</tag>
-        <tag>选择排序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Studio 设置国内镜像网站</title>
     <url>/2020/11/23/as-http-proxy/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
@@ -552,6 +589,20 @@
         <tag>Android</tag>
         <tag>Android Studio</tag>
         <tag>国内镜像网站访问地址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>选择排序</title>
+    <url>/2020/11/25/arithmetic-selection-sort/</url>
+    <content><![CDATA[<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>在待排序的数组中，任意指定一个数作为数组中最小的数并记录其在数组中的位置，记为a，将该数与待排序数组中的数据依次进行比较，当该数字比数组中的数字大时，将此时数组中小的数据的位置交给a，此时a位置所对应在数组中的值作为指定的最小数再次与数组中剩余的数依次进行比较；当指定的最小数与数组中的数据全部比较完之后，得到一个数组中最小的数，然后将这个最小的数排到数组的最左端，在待排序数组中排除最左端已经完成排序的数，将剩下的数作为一个数组，按一样的方式再次进行比较。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;23.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 选择排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SelectionSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 选择排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 排序完成后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] selectionSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int minIndex;&#x2F;&#x2F;指定一个比较值在待比较数组中的下标</span><br><span class="line">        for (int outIndex &#x3D; 0; outIndex &lt; sortArray.length - 1; outIndex++) &#123;</span><br><span class="line">            minIndex &#x3D; outIndex;</span><br><span class="line">            for (int inIndex &#x3D; outIndex + 1; inIndex &lt; sortArray.length; inIndex++) &#123;</span><br><span class="line">                if (sortArray[minIndex] &gt; sortArray[inIndex]) &#123;</span><br><span class="line">                    minIndex &#x3D; inIndex;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int temp &#x3D; sortArray[outIndex];</span><br><span class="line">            sortArray[outIndex] &#x3D; sortArray[minIndex];</span><br><span class="line">            sortArray[minIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;1, 1, 5, 0, 2, 2, 10, 5, 3, 6&#125;;&#x2F;&#x2F;初始化一个需要排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; selectionSort(initArray);</span><br><span class="line">        System.out.print(Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>排序</tag>
+        <tag>选择排序</tag>
       </tags>
   </entry>
   <entry>
@@ -599,6 +650,26 @@
       </tags>
   </entry>
   <entry>
+    <title>ADB 命令使用 - 优质项目推荐</title>
+    <url>/2020/11/24/cmd-adb-project/</url>
+    <content><![CDATA[<blockquote>
+<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
+</blockquote>
+<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
+<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
+<p>推荐一个优秀的 GitHub 项目：</p>
+<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
+]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>CMD终端命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用adb命令导出设备中安装的APP中的数据库（DB）文件</title>
     <url>/2020/11/24/cmd-adb-db/</url>
     <content><![CDATA[<h2 id="1-在导出数据库文件之前，需要确保设备处于连接状态"><a href="#1-在导出数据库文件之前，需要确保设备处于连接状态" class="headerlink" title="1 在导出数据库文件之前，需要确保设备处于连接状态"></a>1 在导出数据库文件之前，需要确保设备处于连接状态</h2><p>打开命令行窗口，输入命令：</p>
@@ -637,26 +708,6 @@
         <tag>ADB</tag>
         <tag>数据库文件</tag>
         <tag>DB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ADB 命令使用 - 优质项目推荐</title>
-    <url>/2020/11/24/cmd-adb-project/</url>
-    <content><![CDATA[<blockquote>
-<p>ADB，Android Debug Bridge，它是 Android 开发/测试人员不可替代的强大工具，也是 Android 设备玩家的好玩具。</p>
-</blockquote>
-<p>当同事跟楼主说，你可以用adb命令完成xxx功能的时候，楼主一脸懵逼的看着大佬，心里真是无限感慨Biubiubiu。。。</p>
-<p>确实，掌握好adb相关的命令，可以提高开发者的开发效率，还有就是。。。逼格 → 逼格高呀！</p>
-<p>推荐一个优秀的 GitHub 项目：</p>
-<p><a href="https://github.com/mzlogin/awesome-adb">https://github.com/mzlogin/awesome-adb</a></p>
-]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>CMD终端命令</tag>
       </tags>
   </entry>
   <entry>
@@ -750,29 +801,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git 本地仓库和远程创库的同步</title>
-    <url>/2020/11/25/git-warehouse-synchronization/</url>
-    <content><![CDATA[<p>今天在本地创建了一个仓库，为便于代码的管理，准备将本地的仓库同步到git，实现代码的同步更新</p>
-<p>1、在git上先创建一个仓库，选用模板创建或创建一个空仓库均可</p>
-<p>2、没有创建本地仓库的情况</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir IonicCss &#x2F;&#x2F;选择仓库的创建路径，然后使用该命令创建一个名为IonicCss的文件夹</span><br><span class="line">$ cd IonicCss &#x2F;&#x2F;进入创建文件夹的根目录</span><br><span class="line">$ git init &#x2F;&#x2F;将当前目录初始化为本地git仓库</span><br><span class="line">$ touch README.md &#x2F;&#x2F;新增一个名为README.md的文件</span><br><span class="line">$ git add README.md &#x2F;&#x2F;将文件README.md添加到暂存区</span><br><span class="line">$ git commit -m &quot;first commit&quot; &#x2F;&#x2F;提交README.md文件</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git &#x2F;&#x2F;将本地仓库同步至地址为https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git（改地址未git仓库的HTTPS地址，也可直接更换为SSH地址）的git仓库</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>3、已经创建好了本地仓库，在本地仓库的根目录，直接使用一下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>此时，已完成本地仓库和远程git仓库的代码同步</p>
-]]></content>
-      <categories>
-        <category>Code代码托管</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>库</tag>
-        <tag>管理</tag>
-        <tag>本地仓库与git远程仓库同步</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/11/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -794,6 +822,29 @@
       </categories>
       <tags>
         <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 本地仓库和远程创库的同步</title>
+    <url>/2020/11/25/git-warehouse-synchronization/</url>
+    <content><![CDATA[<p>今天在本地创建了一个仓库，为便于代码的管理，准备将本地的仓库同步到git，实现代码的同步更新</p>
+<p>1、在git上先创建一个仓库，选用模板创建或创建一个空仓库均可</p>
+<p>2、没有创建本地仓库的情况</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir IonicCss &#x2F;&#x2F;选择仓库的创建路径，然后使用该命令创建一个名为IonicCss的文件夹</span><br><span class="line">$ cd IonicCss &#x2F;&#x2F;进入创建文件夹的根目录</span><br><span class="line">$ git init &#x2F;&#x2F;将当前目录初始化为本地git仓库</span><br><span class="line">$ touch README.md &#x2F;&#x2F;新增一个名为README.md的文件</span><br><span class="line">$ git add README.md &#x2F;&#x2F;将文件README.md添加到暂存区</span><br><span class="line">$ git commit -m &quot;first commit&quot; &#x2F;&#x2F;提交README.md文件</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git &#x2F;&#x2F;将本地仓库同步至地址为https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git（改地址未git仓库的HTTPS地址，也可直接更换为SSH地址）的git仓库</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>3、已经创建好了本地仓库，在本地仓库的根目录，直接使用一下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;git.oschina.net&#x2F;zk15519092013&#x2F;IonicCss.git</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>此时，已完成本地仓库和远程git仓库的代码同步</p>
+]]></content>
+      <categories>
+        <category>Code代码托管</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>库</tag>
+        <tag>管理</tag>
+        <tag>本地仓库与git远程仓库同步</tag>
       </tags>
   </entry>
   <entry>
@@ -1204,6 +1255,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Ionic 3 项目实战------项目开发目录</title>
+    <url>/2020/11/24/ionic-project-catalog/</url>
+    <content><![CDATA[<p>在之前的文章中有提到项目的源码全部存放在项目根目录的src文件夹，我们之后所有的代码开发也是在该目录进行</p>
+<p><img src="/imgs/58.png"></p>
+<h1 id="app文件夹"><a href="#app文件夹" class="headerlink" title="app文件夹"></a>app文件夹</h1><h2 id="pp-component-ts-根组件"><a href="#pp-component-ts-根组件" class="headerlink" title="pp.component.ts 根组件"></a>pp.component.ts 根组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; Component &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; Platform &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  templateUrl: &#39;app.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class MyApp &#123;</span><br><span class="line">  rootPage:any &#x3D; TabsPage;</span><br><span class="line"></span><br><span class="line">  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) &#123;</span><br><span class="line">    platform.ready().then(() &#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; Okay, so the platform is ready and our plugins are available.</span><br><span class="line">      &#x2F;&#x2F; Here you can do any higher level native things you might need.</span><br><span class="line">      statusBar.styleDefault();</span><br><span class="line">      splashScreen.hide();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>平时所说的视图，主要定义了app整体的视觉表现，比如根页面、状态栏、启动界面等等。</p>
+<h2 id="app-html-APP的根界面"><a href="#app-html-APP的根界面" class="headerlink" title="app.html APP的根界面"></a>app.html APP的根界面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-nav [root]&#x3D;&quot;rootPage&quot;&gt;&lt;&#x2F;ion-nav&gt;</span><br></pre></td></tr></table></figure>
+
+<p>相当于Android的MainActivity界面显示的内容</p>
+<h2 id="app-module-ts-根模块文件"><a href="#app-module-ts-根模块文件" class="headerlink" title="app.module.ts 根模块文件"></a>app.module.ts 根模块文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; NgModule, ErrorHandler &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; BrowserModule &#125; from &#39;@angular&#x2F;platform-browser&#39;;</span><br><span class="line">import &#123; IonicApp, IonicModule, IonicErrorHandler &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; MyApp &#125; from &#39;.&#x2F;app.component&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AboutPage &#125; from &#39;..&#x2F;pages&#x2F;about&#x2F;about&#39;;</span><br><span class="line">import &#123; ContactPage &#125; from &#39;..&#x2F;pages&#x2F;contact&#x2F;contact&#39;;</span><br><span class="line">import &#123; HomePage &#125; from &#39;..&#x2F;pages&#x2F;home&#x2F;home&#39;;</span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  imports: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    IonicModule.forRoot(MyApp)</span><br><span class="line">  ],</span><br><span class="line">  bootstrap: [IonicApp],</span><br><span class="line">  entryComponents: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  providers: [</span><br><span class="line">    StatusBar,</span><br><span class="line">    SplashScreen,</span><br><span class="line">    &#123;provide: ErrorHandler, useClass: IonicErrorHandler&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ionic是基于angular的，而angular是完全模块化的。配置项目中使用到的模块、组件、服务、管道、指令等。</p>
+<h2 id="app-scss-全局样式文件"><a href="#app-scss-全局样式文件" class="headerlink" title="app.scss 全局样式文件"></a>app.scss 全局样式文件</h2><h2 id="main-ts-入口文件"><a href="#main-ts-入口文件" class="headerlink" title="main.ts 入口文件"></a>main.ts 入口文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; platformBrowserDynamic &#125; from &#39;@angular&#x2F;platform-browser-dynamic&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AppModule &#125; from &#39;.&#x2F;app.module&#39;;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule);</span><br></pre></td></tr></table></figure>
+
+<p>在最初接触到网页开发时，都是用到一个js，就在HTML中增加一个 script 标签，现在只需要调用入口文件，然后由入口文件去引入其它依赖的文件。</p>
+<h2 id="assets文件夹"><a href="#assets文件夹" class="headerlink" title="assets文件夹"></a>assets文件夹</h2><p>存放项目中使用到的各种资源</p>
+<h2 id="pages文件夹"><a href="#pages文件夹" class="headerlink" title="pages文件夹"></a>pages文件夹</h2><p>存放APP中用到的所有界面，其下的一个文件夹就是独立的一个界面</p>
+<p><img src="/imgs/59.png"></p>
+<p>每一个界面文件夹下存放三个文件，分别是界面、模板样式和业务处理逻辑（用TypeScript—JavaScript的超级 语法编写）</p>
+<h2 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h2><p>APP主题样式文件</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>源码目录</tag>
+        <tag>开发目录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ionic 介绍、安装、配置、项目不同平台编译、DeBug调试经验总结</title>
     <url>/2020/11/25/ionic-project-base-configuration/</url>
     <content><![CDATA[<h1 id="Ionic简介"><a href="#Ionic简介" class="headerlink" title="Ionic简介"></a>Ionic简介</h1><p>一个H5的移动应用开发框架，非常适合 Hybrid APP 混合开发模式，使用标准的HTML、 CSS和JavaScript，开发跨平台（目前支持：Android、iOS） 的原生App应用，ionic是一个轻量级别的手机UI库，具有速度快，界面现代化、美观等特点。</p>
@@ -1248,39 +1332,6 @@
         <tag>简介</tag>
         <tag>安装配置</tag>
         <tag>编译调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ionic 3 项目实战------项目开发目录</title>
-    <url>/2020/11/24/ionic-project-catalog/</url>
-    <content><![CDATA[<p>在之前的文章中有提到项目的源码全部存放在项目根目录的src文件夹，我们之后所有的代码开发也是在该目录进行</p>
-<p><img src="/imgs/58.png"></p>
-<h1 id="app文件夹"><a href="#app文件夹" class="headerlink" title="app文件夹"></a>app文件夹</h1><h2 id="pp-component-ts-根组件"><a href="#pp-component-ts-根组件" class="headerlink" title="pp.component.ts 根组件"></a>pp.component.ts 根组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; Component &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; Platform &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  templateUrl: &#39;app.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class MyApp &#123;</span><br><span class="line">  rootPage:any &#x3D; TabsPage;</span><br><span class="line"></span><br><span class="line">  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) &#123;</span><br><span class="line">    platform.ready().then(() &#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; Okay, so the platform is ready and our plugins are available.</span><br><span class="line">      &#x2F;&#x2F; Here you can do any higher level native things you might need.</span><br><span class="line">      statusBar.styleDefault();</span><br><span class="line">      splashScreen.hide();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>平时所说的视图，主要定义了app整体的视觉表现，比如根页面、状态栏、启动界面等等。</p>
-<h2 id="app-html-APP的根界面"><a href="#app-html-APP的根界面" class="headerlink" title="app.html APP的根界面"></a>app.html APP的根界面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-nav [root]&#x3D;&quot;rootPage&quot;&gt;&lt;&#x2F;ion-nav&gt;</span><br></pre></td></tr></table></figure>
-
-<p>相当于Android的MainActivity界面显示的内容</p>
-<h2 id="app-module-ts-根模块文件"><a href="#app-module-ts-根模块文件" class="headerlink" title="app.module.ts 根模块文件"></a>app.module.ts 根模块文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; NgModule, ErrorHandler &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; BrowserModule &#125; from &#39;@angular&#x2F;platform-browser&#39;;</span><br><span class="line">import &#123; IonicApp, IonicModule, IonicErrorHandler &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; MyApp &#125; from &#39;.&#x2F;app.component&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AboutPage &#125; from &#39;..&#x2F;pages&#x2F;about&#x2F;about&#39;;</span><br><span class="line">import &#123; ContactPage &#125; from &#39;..&#x2F;pages&#x2F;contact&#x2F;contact&#39;;</span><br><span class="line">import &#123; HomePage &#125; from &#39;..&#x2F;pages&#x2F;home&#x2F;home&#39;;</span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  imports: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    IonicModule.forRoot(MyApp)</span><br><span class="line">  ],</span><br><span class="line">  bootstrap: [IonicApp],</span><br><span class="line">  entryComponents: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  providers: [</span><br><span class="line">    StatusBar,</span><br><span class="line">    SplashScreen,</span><br><span class="line">    &#123;provide: ErrorHandler, useClass: IonicErrorHandler&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ionic是基于angular的，而angular是完全模块化的。配置项目中使用到的模块、组件、服务、管道、指令等。</p>
-<h2 id="app-scss-全局样式文件"><a href="#app-scss-全局样式文件" class="headerlink" title="app.scss 全局样式文件"></a>app.scss 全局样式文件</h2><h2 id="main-ts-入口文件"><a href="#main-ts-入口文件" class="headerlink" title="main.ts 入口文件"></a>main.ts 入口文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; platformBrowserDynamic &#125; from &#39;@angular&#x2F;platform-browser-dynamic&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AppModule &#125; from &#39;.&#x2F;app.module&#39;;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule);</span><br></pre></td></tr></table></figure>
-
-<p>在最初接触到网页开发时，都是用到一个js，就在HTML中增加一个 script 标签，现在只需要调用入口文件，然后由入口文件去引入其它依赖的文件。</p>
-<h2 id="assets文件夹"><a href="#assets文件夹" class="headerlink" title="assets文件夹"></a>assets文件夹</h2><p>存放项目中使用到的各种资源</p>
-<h2 id="pages文件夹"><a href="#pages文件夹" class="headerlink" title="pages文件夹"></a>pages文件夹</h2><p>存放APP中用到的所有界面，其下的一个文件夹就是独立的一个界面</p>
-<p><img src="/imgs/59.png"></p>
-<p>每一个界面文件夹下存放三个文件，分别是界面、模板样式和业务处理逻辑（用TypeScript—JavaScript的超级 语法编写）</p>
-<h2 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h2><p>APP主题样式文件</p>
-]]></content>
-      <categories>
-        <category>混合开发</category>
-      </categories>
-      <tags>
-        <tag>hybrid app</tag>
-        <tag>Ionic3</tag>
-        <tag>源码目录</tag>
-        <tag>开发目录</tag>
       </tags>
   </entry>
   <entry>
@@ -1374,25 +1425,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础面试题：使用最快的效率将2变成8</title>
-    <url>/2020/11/24/java-mst-2-to-8/</url>
-    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
-<p>原理：将被转换的数字进行位移运算</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
-]]></content>
-      <categories>
-        <category>面试题 - Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试题</tag>
-        <tag>数字转换</tag>
-        <tag>最快效率将2转换为8</tag>
-        <tag>二进制</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java基础面试题：int 与 Integer 的区别</title>
     <url>/2020/11/24/java-mst-int-integer/</url>
     <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
@@ -1454,6 +1486,25 @@
         <tag>Android</tag>
         <tag>极光</tag>
         <tag>DownloadProvider</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础面试题：使用最快的效率将2变成8</title>
+    <url>/2020/11/24/java-mst-2-to-8/</url>
+    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
+<p>原理：将被转换的数字进行位移运算</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
+]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>数字转换</tag>
+        <tag>最快效率将2转换为8</tag>
+        <tag>二进制</tag>
       </tags>
   </entry>
   <entry>
