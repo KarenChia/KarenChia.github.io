@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Lint found fatal errors while assembling a release target</title>
-    <url>/2020/11/23/apk-release-lint/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
-<p>Android在debug模式下应用没有问题，但是在打包release版本时出现一下问题：</p>
-<p><img src="/imgs/apk-release-lint-reason.webp"></p>
-<p>提示中，关闭lint checkReleaseBuilds 的检查，可以这样实现：</p>
-<p><img src="/imgs/1.webp"></p>
-<p>虽然这样可以解决问题，但是没有解决根本问题。也就是说隐患依旧会存在。</p>
-<p>lint 是代码检查，可以优化代码，发现一些潜在的bug，所以尽量不要关闭</p>
-<p>这个错误报告会生成在</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[app module]&#x2F;build&#x2F;reports&#x2F;lint-results-yourBuildName-fatal.html </span><br></pre></td></tr></table></figure>
-
-<p>打开这个网页，一定要用浏览器打开。</p>
-<p><img src="/imgs/2.webp"></p>
-<p>这样错误就很明显了，改掉即可。</p>
+    <title>Android 常用开源库（持续更新）</title>
+    <url>/2020/11/25/android-kyk/</url>
+    <content><![CDATA[<h1 id="View组件"><a href="#View组件" class="headerlink" title="View组件"></a>View组件</h1><h2 id="Banner"><a href="#Banner" class="headerlink" title="Banner"></a>Banner</h2><p><a href="https://github.com/youth5201314/banner">图片轮播控件 https://github.com/youth5201314/banner</a></p>
+<p>Android广告图片轮播控件，支持无限循环和多种主题，可以灵活设置轮播样式、动画、轮播和切换时间、位置、图片加载框架等！</p>
 ]]></content>
       <categories>
-        <category>Android开发问题汇总</category>
+        <category>AA博客导航AA</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>release</tag>
-        <tag>lint</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
+        <tag>开源库</tag>
       </tags>
   </entry>
   <entry>
@@ -101,6 +66,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac终端常用命令</title>
     <url>/2020/11/24/apple-cmd/</url>
     <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
@@ -152,6 +140,24 @@
       </tags>
   </entry>
   <entry>
+    <title>macOS中安装node.js</title>
+    <url>/2020/11/24/apple-node/</url>
+    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
+<p><img src="/imgs/38.png"></p>
+<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
+<p><img src="/imgs/39.png"></p>
+<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>node.js</tag>
+        <tag>macOS</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>macOS中配置JDK环境变量</title>
     <url>/2020/11/24/apple-jdk/</url>
     <content><![CDATA[<p>macOS中JDK安装路径：</p>
@@ -197,24 +203,6 @@
         <tag>macOS</tag>
         <tag>JDK</tag>
         <tag>环境变量</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>macOS中安装node.js</title>
-    <url>/2020/11/24/apple-node/</url>
-    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
-<p><img src="/imgs/38.png"></p>
-<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
-<p><img src="/imgs/39.png"></p>
-<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>macOS</tag>
-        <tag>node.js</tag>
-        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -402,36 +390,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中的方法说明</title>
-    <url>/2020/11/24/apple-oc-method/</url>
-    <content><![CDATA[<p>1、Objective-C中两种类型的方法</p>
-<p>实例方法或对象方法：在类中以“-”号声明的方法，在此之前的文章中所声明的方法都是实例方法，实例方法的声明请参考之前的文章Objective-C中类的声明与实现</p>
-<p>类方法：在类中以“+”号声明，其余与实例方法都一样</p>
-<p>2、类方法的声明</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">+ (void)talk;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-
-<p>3、类方法的实现</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">+(void)talk&#123;</span><br><span class="line">    NSLog(@&quot;我是一个类方法&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-
-<p>注意：类方法的声明和实现与实例方法的声明和实现唯一的区别就在于“+”号和“-”号，其它地方均一样</p>
-<p>4、类方法的调用</p>
-<p>类方法的调用不同于实例方法，直接通过类名调用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassMethod 类方法的声明与调用</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    [Person talk];&#x2F;&#x2F;直接使用类名调用类方法</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>程序运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 11:43:03.617613+0800 ClassMethod[1389:47747] 我是一个类方法</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
-<p>5、类方法的调用过程</p>
-<p>我之前的文章Objective-C中类是如何存储在内存中的对实例方法在内存中的存储进行了说明，类方法在内存中的存储方式和实例方法一样，都是在内存的代码段中。在调用类方法时，直接在代码段中调用，省去了类的实例对象的创建，从而节省了内存空间，提高了类方法的调用效率。</p>
-<p>此外，在类方法中不能直接访问类的属性和实例方法。因为在类方法被调用时，有可能类的实例没有被创建。可以在类方法中直接创建类的实例，通过创建的实例来访问实例的属性和实例方法。在实例方法中可以直接调用类方法。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>类方法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Objective-C中NSString的使用</title>
     <url>/2020/11/24/apple-oc-nsstring/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -442,18 +400,6 @@
         <tag>iOS</tag>
         <tag>objective-c</tag>
         <tag>NSString</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中的访问权限</title>
-    <url>/2020/11/24/apple-oc-permission/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>访问权限</tag>
       </tags>
   </entry>
   <entry>
@@ -473,6 +419,18 @@
       <tags>
         <tag>objective-c</tag>
         <tag>nil</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>访问权限</tag>
       </tags>
   </entry>
   <entry>
@@ -609,6 +567,49 @@
       </tags>
   </entry>
   <entry>
+    <title>Lint found fatal errors while assembling a release target</title>
+    <url>/2020/11/23/apk-release-lint/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/6b82ddbeab5d">https://www.jianshu.com/p/6b82ddbeab5d</a></strong></p>
+<p>Android在debug模式下应用没有问题，但是在打包release版本时出现一下问题：</p>
+<p><img src="/imgs/apk-release-lint-reason.webp"></p>
+<p>提示中，关闭lint checkReleaseBuilds 的检查，可以这样实现：</p>
+<p><img src="/imgs/1.webp"></p>
+<p>虽然这样可以解决问题，但是没有解决根本问题。也就是说隐患依旧会存在。</p>
+<p>lint 是代码检查，可以优化代码，发现一些潜在的bug，所以尽量不要关闭</p>
+<p>这个错误报告会生成在</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[app module]&#x2F;build&#x2F;reports&#x2F;lint-results-yourBuildName-fatal.html </span><br></pre></td></tr></table></figure>
+
+<p>打开这个网页，一定要用浏览器打开。</p>
+<p><img src="/imgs/2.webp"></p>
+<p>这样错误就很明显了，改掉即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>release</tag>
+        <tag>lint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Studio 下载 Gradle 失败或下载速度慢的解决方案</title>
+    <url>/2020/11/25/as-gradle-error/</url>
+    <content><![CDATA[<p>方案1：<a href="https://blog.csdn.net/u012195640/article/details/79460885">参考文档</a></p>
+<p>方案2：<a href="https://blog.csdn.net/qq_35495763/article/details/77592337">参考文档</a></p>
+<p>方案3：更改 Android Studio 中使用的 Gradle 的路径</p>
+<p>在安装 Android Studio 时，会默认安装一个 Gradle 版本，文件在 Android Studio 安装目录的根目录下</p>
+<p>修改路径步骤<img src="https://img-blog.csdnimg.cn/20190104182901214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70"></p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Gradle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Studio 设置国内镜像网站</title>
     <url>/2020/11/23/as-http-proxy/</url>
     <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
@@ -692,6 +693,27 @@
         <tag>Hexo</tag>
         <tag>Buszanui</tag>
         <tag>站点数据统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相机调用失败原因</title>
+    <url>/2020/11/25/camera-use-error/</url>
+    <content><![CDATA[<blockquote>
+<p>应用场景：相机在应用中被多次打开时，每一次使用完相机后，都应及时释放相机资源，解除占用。</p>
+</blockquote>
+<p>这里只介绍楼主开发过程中遇到的且容易忽略的两点：</p>
+<ol>
+<li>是否开启相关权限。</li>
+<li>在打开相机之前，就已经使用了相机（二次打开相机），且未对相机资源进行回收。<br>也就是说，在相机使用结束后，应及时释放相机资源，解除相机占用，接下来才能正常使用相机。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>相机</tag>
+        <tag>camera</tag>
+        <tag>权限</tag>
       </tags>
   </entry>
   <entry>
@@ -1300,6 +1322,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Ionic 3 项目实战------项目开发目录</title>
+    <url>/2020/11/24/ionic-project-catalog/</url>
+    <content><![CDATA[<p>在之前的文章中有提到项目的源码全部存放在项目根目录的src文件夹，我们之后所有的代码开发也是在该目录进行</p>
+<p><img src="/imgs/58.png"></p>
+<h1 id="app文件夹"><a href="#app文件夹" class="headerlink" title="app文件夹"></a>app文件夹</h1><h2 id="pp-component-ts-根组件"><a href="#pp-component-ts-根组件" class="headerlink" title="pp.component.ts 根组件"></a>pp.component.ts 根组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; Component &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; Platform &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  templateUrl: &#39;app.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class MyApp &#123;</span><br><span class="line">  rootPage:any &#x3D; TabsPage;</span><br><span class="line"></span><br><span class="line">  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) &#123;</span><br><span class="line">    platform.ready().then(() &#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; Okay, so the platform is ready and our plugins are available.</span><br><span class="line">      &#x2F;&#x2F; Here you can do any higher level native things you might need.</span><br><span class="line">      statusBar.styleDefault();</span><br><span class="line">      splashScreen.hide();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>平时所说的视图，主要定义了app整体的视觉表现，比如根页面、状态栏、启动界面等等。</p>
+<h2 id="app-html-APP的根界面"><a href="#app-html-APP的根界面" class="headerlink" title="app.html APP的根界面"></a>app.html APP的根界面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-nav [root]&#x3D;&quot;rootPage&quot;&gt;&lt;&#x2F;ion-nav&gt;</span><br></pre></td></tr></table></figure>
+
+<p>相当于Android的MainActivity界面显示的内容</p>
+<h2 id="app-module-ts-根模块文件"><a href="#app-module-ts-根模块文件" class="headerlink" title="app.module.ts 根模块文件"></a>app.module.ts 根模块文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; NgModule, ErrorHandler &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; BrowserModule &#125; from &#39;@angular&#x2F;platform-browser&#39;;</span><br><span class="line">import &#123; IonicApp, IonicModule, IonicErrorHandler &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; MyApp &#125; from &#39;.&#x2F;app.component&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AboutPage &#125; from &#39;..&#x2F;pages&#x2F;about&#x2F;about&#39;;</span><br><span class="line">import &#123; ContactPage &#125; from &#39;..&#x2F;pages&#x2F;contact&#x2F;contact&#39;;</span><br><span class="line">import &#123; HomePage &#125; from &#39;..&#x2F;pages&#x2F;home&#x2F;home&#39;;</span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  imports: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    IonicModule.forRoot(MyApp)</span><br><span class="line">  ],</span><br><span class="line">  bootstrap: [IonicApp],</span><br><span class="line">  entryComponents: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  providers: [</span><br><span class="line">    StatusBar,</span><br><span class="line">    SplashScreen,</span><br><span class="line">    &#123;provide: ErrorHandler, useClass: IonicErrorHandler&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ionic是基于angular的，而angular是完全模块化的。配置项目中使用到的模块、组件、服务、管道、指令等。</p>
+<h2 id="app-scss-全局样式文件"><a href="#app-scss-全局样式文件" class="headerlink" title="app.scss 全局样式文件"></a>app.scss 全局样式文件</h2><h2 id="main-ts-入口文件"><a href="#main-ts-入口文件" class="headerlink" title="main.ts 入口文件"></a>main.ts 入口文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; platformBrowserDynamic &#125; from &#39;@angular&#x2F;platform-browser-dynamic&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AppModule &#125; from &#39;.&#x2F;app.module&#39;;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule);</span><br></pre></td></tr></table></figure>
+
+<p>在最初接触到网页开发时，都是用到一个js，就在HTML中增加一个 script 标签，现在只需要调用入口文件，然后由入口文件去引入其它依赖的文件。</p>
+<h2 id="assets文件夹"><a href="#assets文件夹" class="headerlink" title="assets文件夹"></a>assets文件夹</h2><p>存放项目中使用到的各种资源</p>
+<h2 id="pages文件夹"><a href="#pages文件夹" class="headerlink" title="pages文件夹"></a>pages文件夹</h2><p>存放APP中用到的所有界面，其下的一个文件夹就是独立的一个界面</p>
+<p><img src="/imgs/59.png"></p>
+<p>每一个界面文件夹下存放三个文件，分别是界面、模板样式和业务处理逻辑（用TypeScript—JavaScript的超级 语法编写）</p>
+<h2 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h2><p>APP主题样式文件</p>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>源码目录</tag>
+        <tag>开发目录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ionic 介绍、安装、配置、项目不同平台编译、DeBug调试经验总结</title>
     <url>/2020/11/25/ionic-project-base-configuration/</url>
     <content><![CDATA[<h1 id="Ionic简介"><a href="#Ionic简介" class="headerlink" title="Ionic简介"></a>Ionic简介</h1><p>一个H5的移动应用开发框架，非常适合 Hybrid APP 混合开发模式，使用标准的HTML、 CSS和JavaScript，开发跨平台（目前支持：Android、iOS） 的原生App应用，ionic是一个轻量级别的手机UI库，具有速度快，界面现代化、美观等特点。</p>
@@ -1344,39 +1399,6 @@
         <tag>简介</tag>
         <tag>安装配置</tag>
         <tag>编译调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ionic 3 项目实战------项目开发目录</title>
-    <url>/2020/11/24/ionic-project-catalog/</url>
-    <content><![CDATA[<p>在之前的文章中有提到项目的源码全部存放在项目根目录的src文件夹，我们之后所有的代码开发也是在该目录进行</p>
-<p><img src="/imgs/58.png"></p>
-<h1 id="app文件夹"><a href="#app文件夹" class="headerlink" title="app文件夹"></a>app文件夹</h1><h2 id="pp-component-ts-根组件"><a href="#pp-component-ts-根组件" class="headerlink" title="pp.component.ts 根组件"></a>pp.component.ts 根组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; Component &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; Platform &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  templateUrl: &#39;app.html&#39;</span><br><span class="line">&#125;)</span><br><span class="line">export class MyApp &#123;</span><br><span class="line">  rootPage:any &#x3D; TabsPage;</span><br><span class="line"></span><br><span class="line">  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) &#123;</span><br><span class="line">    platform.ready().then(() &#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; Okay, so the platform is ready and our plugins are available.</span><br><span class="line">      &#x2F;&#x2F; Here you can do any higher level native things you might need.</span><br><span class="line">      statusBar.styleDefault();</span><br><span class="line">      splashScreen.hide();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>平时所说的视图，主要定义了app整体的视觉表现，比如根页面、状态栏、启动界面等等。</p>
-<h2 id="app-html-APP的根界面"><a href="#app-html-APP的根界面" class="headerlink" title="app.html APP的根界面"></a>app.html APP的根界面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ion-nav [root]&#x3D;&quot;rootPage&quot;&gt;&lt;&#x2F;ion-nav&gt;</span><br></pre></td></tr></table></figure>
-
-<p>相当于Android的MainActivity界面显示的内容</p>
-<h2 id="app-module-ts-根模块文件"><a href="#app-module-ts-根模块文件" class="headerlink" title="app.module.ts 根模块文件"></a>app.module.ts 根模块文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; NgModule, ErrorHandler &#125; from &#39;@angular&#x2F;core&#39;;</span><br><span class="line">import &#123; BrowserModule &#125; from &#39;@angular&#x2F;platform-browser&#39;;</span><br><span class="line">import &#123; IonicApp, IonicModule, IonicErrorHandler &#125; from &#39;ionic-angular&#39;;</span><br><span class="line">import &#123; MyApp &#125; from &#39;.&#x2F;app.component&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AboutPage &#125; from &#39;..&#x2F;pages&#x2F;about&#x2F;about&#39;;</span><br><span class="line">import &#123; ContactPage &#125; from &#39;..&#x2F;pages&#x2F;contact&#x2F;contact&#39;;</span><br><span class="line">import &#123; HomePage &#125; from &#39;..&#x2F;pages&#x2F;home&#x2F;home&#39;;</span><br><span class="line">import &#123; TabsPage &#125; from &#39;..&#x2F;pages&#x2F;tabs&#x2F;tabs&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; StatusBar &#125; from &#39;@ionic-native&#x2F;status-bar&#39;;</span><br><span class="line">import &#123; SplashScreen &#125; from &#39;@ionic-native&#x2F;splash-screen&#39;;</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  imports: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    IonicModule.forRoot(MyApp)</span><br><span class="line">  ],</span><br><span class="line">  bootstrap: [IonicApp],</span><br><span class="line">  entryComponents: [</span><br><span class="line">    MyApp,</span><br><span class="line">    AboutPage,</span><br><span class="line">    ContactPage,</span><br><span class="line">    HomePage,</span><br><span class="line">    TabsPage</span><br><span class="line">  ],</span><br><span class="line">  providers: [</span><br><span class="line">    StatusBar,</span><br><span class="line">    SplashScreen,</span><br><span class="line">    &#123;provide: ErrorHandler, useClass: IonicErrorHandler&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ionic是基于angular的，而angular是完全模块化的。配置项目中使用到的模块、组件、服务、管道、指令等。</p>
-<h2 id="app-scss-全局样式文件"><a href="#app-scss-全局样式文件" class="headerlink" title="app.scss 全局样式文件"></a>app.scss 全局样式文件</h2><h2 id="main-ts-入口文件"><a href="#main-ts-入口文件" class="headerlink" title="main.ts 入口文件"></a>main.ts 入口文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import &#123; platformBrowserDynamic &#125; from &#39;@angular&#x2F;platform-browser-dynamic&#39;;</span><br><span class="line"></span><br><span class="line">import &#123; AppModule &#125; from &#39;.&#x2F;app.module&#39;;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule);</span><br></pre></td></tr></table></figure>
-
-<p>在最初接触到网页开发时，都是用到一个js，就在HTML中增加一个 script 标签，现在只需要调用入口文件，然后由入口文件去引入其它依赖的文件。</p>
-<h2 id="assets文件夹"><a href="#assets文件夹" class="headerlink" title="assets文件夹"></a>assets文件夹</h2><p>存放项目中使用到的各种资源</p>
-<h2 id="pages文件夹"><a href="#pages文件夹" class="headerlink" title="pages文件夹"></a>pages文件夹</h2><p>存放APP中用到的所有界面，其下的一个文件夹就是独立的一个界面</p>
-<p><img src="/imgs/59.png"></p>
-<p>每一个界面文件夹下存放三个文件，分别是界面、模板样式和业务处理逻辑（用TypeScript—JavaScript的超级 语法编写）</p>
-<h2 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h2><p>APP主题样式文件</p>
-]]></content>
-      <categories>
-        <category>混合开发</category>
-      </categories>
-      <tags>
-        <tag>hybrid app</tag>
-        <tag>Ionic3</tag>
-        <tag>源码目录</tag>
-        <tag>开发目录</tag>
       </tags>
   </entry>
   <entry>
@@ -1889,6 +1911,78 @@
       </tags>
   </entry>
   <entry>
+    <title>Android权限sharedUserId使用：设备关机重启、调用隐藏方法、静默安装升级卸载APP等需要使用system权限的场景</title>
+    <url>/2020/11/25/shared-user-id/</url>
+    <content><![CDATA[<blockquote>
+<p>声明：本文所列出的解决方案为转载文章，原文出处：<a href="https://blog.csdn.net/hmg25/article/details/6447067">https://blog.csdn.net/hmg25/article/details/6447067</a></p>
+</blockquote>
+<h1 id="1-楼主开发中遇见的问题"><a href="#1-楼主开发中遇见的问题" class="headerlink" title="1 楼主开发中遇见的问题"></a>1 楼主开发中遇见的问题</h1><h2 id="1-1-问题出现场景"><a href="#1-1-问题出现场景" class="headerlink" title="1.1 问题出现场景"></a>1.1 问题出现场景</h2><p>在自己开发的APP中发送系统重启广播</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 重启系统</span><br><span class="line"> *</span><br><span class="line"> * @param context 上下文对象</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void reboot(Context context) &#123;</span><br><span class="line">    Intent intent &#x3D; new Intent(Intent.ACTION_REBOOT);</span><br><span class="line">    intent.putExtra(&quot;nowait&quot;, 1);</span><br><span class="line">    intent.putExtra(&quot;interval&quot;, 1);</span><br><span class="line">    intent.putExtra(&quot;window&quot;, 0);</span><br><span class="line">    context.sendBroadcast(intent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-问题描述"><a href="#1-2-问题描述" class="headerlink" title="1.2 问题描述"></a>1.2 问题描述</h2><p>APP是可以正常安装运行的，但是在接收到系统重启的广播之后，APP崩溃。。。</p>
+<p>捕获到的异常信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java.lang.SecurityException: Permission Denial: not allowed to send broadcast android.intent.action.REBOOT from pid&#x3D;5254, uid&#x3D;10050</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-1-崩溃原因分析"><a href="#1-2-1-崩溃原因分析" class="headerlink" title="1.2.1 崩溃原因分析"></a>1.2.1 崩溃原因分析</h3><p>非系统应用不能发送 android.intent.action.REBOOT 广播，其实在Android4.0之前是可以的，在之后的Android系统中出于安全考虑，非系统级应用已经不能调用系统权限了。。。</p>
+<p>所以，在manifest标签中，给自己的APP增加sharedUserId权限，可以调用系统权限即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;manifest xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    xmlns:tools&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;tools&quot;</span><br><span class="line">    android:sharedUserId&#x3D;&quot;android.uid.system&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>把程序的UID配成android.uid.system，也就是要让程序运行在系统进程中，这样就可以访问系统权限。</p>
+<blockquote>
+<p>此时APP需要正式签名打包，签名打包流程在下文的解决方案中有提到。</p>
+</blockquote>
+<h1 id="2-问题拓展延伸"><a href="#2-问题拓展延伸" class="headerlink" title="2 问题拓展延伸"></a>2 问题拓展延伸</h1><p>开发中凡涉及设备关机重启、调用隐藏方法、静默安装升级卸载APP等需要使用system权限的场景，都可以用类似的方法解决。</p>
+<h1 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3 解决方案"></a>3 解决方案</h1><blockquote>
+<p>安装在设备中的每一个apk文件，Android给每个APK进程分配一个单独的用户空间，其manifest中的userid就是对应一个Linux用户都会被分配到一个属于自己的统一的Linux用户ID，并且为它创建一个沙箱，以防止影响其他应用程序（或者其他应用程序影响它）。用户ID 在应用程序安装到设备中时被分配，并且在这个设备中保持它的永久性。</p>
+</blockquote>
+<p>通过Shared User id，拥有同一个User id的多个APK可以配置成运行在同一个进程中。所以默认就是可以互相访问任意数据，也可以配置成运行成不同的进程, 同时可以访问其他APK的数据目录下的数据库和文件.就像访问本程序的数据一样。</p>
+<p>对于一个APK来说，如果要使用某个共享UID的话，必须做三步：</p>
+<ul>
+<li><p>1、在Manifest节点中增加android:sharedUserId属性。</p>
+</li>
+<li><p>2、在Android.mk中增加LOCAL_CERTIFICATE的定义。</p>
+</li>
+</ul>
+<p>如果增加了上面的属性但没有定义与之对应的LOCAL_CERTIFICATE的话，APK是安装不上去的。提示错误是：Package com.test.MyTest has no signatures that match those in shared user android.uid.system; ignoring!也就是说，仅有相同签名和相同sharedUserID标签的两个应用程序签名都会被分配相同的用户ID。例如所有和media/download相关的APK都使用android.media作为sharedUserId的话，那么它们必须有相同的签名media。</p>
+<ul>
+<li>3、把APK的源码放到packages/apps/目录下，用mm进行编译。</li>
+</ul>
+<p>举例说明一下。</p>
+<p>系统中所有使用android.uid.system作为共享UID的APK，都会首先在manifest节点中增加android:sharedUserId=”android.uid.system”，然后在Android.mk中增加LOCAL_CERTIFICATE := platform。可以参见Settings等</p>
+<p>系统中所有使用android.uid.shared作为共享UID的APK，都会在manifest节点中增加android:sharedUserId=”android.uid.shared”，然后在Android.mk中增加LOCAL_CERTIFICATE := shared。可以参见Launcher等</p>
+<p>系统中所有使用android.media作为共享UID的APK，都会在manifest节点中增加android:sharedUserId=”android.media”，然后在Android.mk中增加LOCAL_CERTIFICATE := media。可以参见Gallery等。</p>
+<p>另外，应用创建的任何文件都会被赋予应用的用户标识，并且正常情况下不能被其他包访问。当通过getSharedPreferences（String，int）、openFileOutput（String、int）或者openOrCreate Database（String、int、SQLiteDatabase.CursorFactory）创建一个新文件时，开发者可以同时或分别使用MODE_WORLD_READABLE和MODE_WORLD_RITEABLE标志允许其他包读/写此文件。当设置了这些标志后，这个文件仍然属于自己的应用程序，但是它的全局读/写和读/写权限已经设置，所以其他任何应用程序可以看到它。</p>
+<p>关于签名：</p>
+<p>build/target/product/security目录中有四组默认签名供Android.mk在编译APK使用：</p>
+<ul>
+<li><p>1、testkey：普通APK，默认情况下使用。</p>
+</li>
+<li><p>2、platform：该APK完成一些系统的核心功能。经过对系统中存在的文件夹的访问测试，这种方式编译出来的APK所在进程的UID为system。</p>
+</li>
+<li><p>3、shared：该APK需要和home/contacts进程共享数据。</p>
+</li>
+<li><p>4、media：该APK是media/download系统中的一环。</p>
+</li>
+</ul>
+<p>应用程序的Android.mk中有一个LOCAL_CERTIFICATE字段，由它指定用哪个key签名，未指定的默认用testkey.</p>
+<blockquote>
+<p>对于使用eclipse编译的apk，可以使用signapk.jar来手动进行签名，其源码在build/tools/signapk下，编译后在out/host/linux-x86/framework/signapk.jar，也可以从网上下载。使用方法，以platform为例：java -jar ./signapk　platform.x509.pem platform.pk8 input.apk output.apk  (platform.x509.pem platform.pk8在build/target/product/security获取)</p>
+</blockquote>
+<h1 id="4-sharedUserId使用注意事项"><a href="#4-sharedUserId使用注意事项" class="headerlink" title="4 sharedUserId使用注意事项"></a>4 sharedUserId使用注意事项</h1><ul>
+<li>在应用需要使用system权限，在应用程序中使用SHELL 命令时，需要添加android:sharedUserId=”android.uid.system”，并且需要的签名要和系统相同。</li>
+<li>部分应用不需要system权限，但也加了android:sharedUserId=”android.uid.system”，并且签名和系统相同，其好处在于：但内存不足，或优先级低的时候不容易被干掉。</li>
+<li>具备系统级权限的应用必须具有和系统一样的权限。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>sharedUserId</tag>
+        <tag>系统权限</tag>
+        <tag>重启设备</tag>
+        <tag>shell命令</tag>
+        <tag>system权限</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Valine评论插件报错：Code 403</title>
     <url>/2020/11/17/valine-code-403/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用 Hexo 搭建博客过程中，集成了 Valine 评论插件，本地使用时正常，将项目部署至静态网站后，Valine 插件在页面使用处提示 Code 403错误。</p>
@@ -1906,6 +2000,25 @@
         <tag>Hexo</tag>
         <tag>Valine插件</tag>
         <tag>Code 403</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android项目中音频文件的存储位置</title>
+    <url>/2020/11/25/video-file-storage/</url>
+    <content><![CDATA[<p>1、Android工程中声音文件的存储位置在资源文件的raw文件夹下</p>
+<p>2、如果在res文件夹下没有raw文件夹，新建一个即可</p>
+<p><img src="/imgs/03.png"></p>
+<p>3、在音频文件数量多的情况下，将音频文件存放在assets目录，可避免文件的重复编译</p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>音频文件的存储</tag>
+        <tag>res</tag>
+        <tag>raw</tag>
+        <tag>assets</tag>
       </tags>
   </entry>
   <entry>
@@ -1937,6 +2050,36 @@
         <tag>Webview</tag>
         <tag>加载闪退问题处理</tag>
         <tag>崩溃</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中的方法说明</title>
+    <url>/2020/11/24/apple-oc-method/</url>
+    <content><![CDATA[<p>1、Objective-C中两种类型的方法</p>
+<p>实例方法或对象方法：在类中以“-”号声明的方法，在此之前的文章中所声明的方法都是实例方法，实例方法的声明请参考之前的文章Objective-C中类的声明与实现</p>
+<p>类方法：在类中以“+”号声明，其余与实例方法都一样</p>
+<p>2、类方法的声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.h</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">+ (void)talk;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+
+<p>3、类方法的实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Person.m</span><br><span class="line">&#x2F;&#x2F;  MyObjective-C</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line">+(void)talk&#123;</span><br><span class="line">    NSLog(@&quot;我是一个类方法&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+
+<p>注意：类方法的声明和实现与实例方法的声明和实现唯一的区别就在于“+”号和“-”号，其它地方均一样</p>
+<p>4、类方法的调用</p>
+<p>类方法的调用不同于实例方法，直接通过类名调用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassMethod 类方法的声明与调用</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;11.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line">#import &quot;Person.h&quot;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    </span><br><span class="line">    [Person talk];&#x2F;&#x2F;直接使用类名调用类方法</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2017-10-11 11:43:03.617613+0800 ClassMethod[1389:47747] 我是一个类方法</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
+<p>5、类方法的调用过程</p>
+<p>我之前的文章Objective-C中类是如何存储在内存中的对实例方法在内存中的存储进行了说明，类方法在内存中的存储方式和实例方法一样，都是在内存的代码段中。在调用类方法时，直接在代码段中调用，省去了类的实例对象的创建，从而节省了内存空间，提高了类方法的调用效率。</p>
+<p>此外，在类方法中不能直接访问类的属性和实例方法。因为在类方法被调用时，有可能类的实例没有被创建。可以在类方法中直接创建类的实例，通过创建的实例来访问实例的属性和实例方法。在实例方法中可以直接调用类方法。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>类方法</tag>
       </tags>
   </entry>
 </search>
