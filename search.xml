@@ -27,6 +27,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac终端常用命令</title>
     <url>/2020/11/24/apple-cmd/</url>
     <content><![CDATA[<p>以下是小编常用的命令，更多命令可自行百度，最简单的方式是：在终端中使用 help 帮助命令</p>
@@ -57,6 +80,24 @@
         <tag>mac</tag>
         <tag>终端</tag>
         <tag>常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
+    <url>/2020/11/24/apple-http-1004/</url>
+    <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nw_proxy_resolver_create_parsed_array PAC evaluation error: NSURLErrorDomain: -1004</span><br></pre></td></tr></table></figure>
+
+<p>这主要是在Mac系统中设置了网络自动代理而导致</p>
+<p>解决方案：系统偏好设置 → 网络 → 高级 → 代理 → 取消自动代理配置</p>
+]]></content>
+      <categories>
+        <category>Apple开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>网络</tag>
+        <tag>-1004</tag>
       </tags>
   </entry>
   <entry>
@@ -108,26 +149,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
+    <title>macOS中安装node.js</title>
+    <url>/2020/11/24/apple-node/</url>
+    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
+<p><img src="/imgs/38.png"></p>
+<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
+<p><img src="/imgs/39.png"></p>
+<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Android开发问题汇总</category>
+        <category>Apple开发基础</category>
       </categories>
       <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
+        <tag>macOS</tag>
+        <tag>node.js</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -146,39 +182,24 @@
       </tags>
   </entry>
   <entry>
-    <title>iOS网络请求错误nw_proxy_resolver_create_parsed_array PAC evaluation error:NSURLErrorDomain:-1004</title>
-    <url>/2020/11/24/apple-http-1004/</url>
-    <content><![CDATA[<p>在发起一个网络请求时，出现错误</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nw_proxy_resolver_create_parsed_array PAC evaluation error: NSURLErrorDomain: -1004</span><br></pre></td></tr></table></figure>
+    <title>Objective-C中类的声明与实现</title>
+    <url>/2020/11/24/apple-oc-class-sm/</url>
+    <content><![CDATA[<h1 id="类的声明和实现语法"><a href="#类的声明和实现语法" class="headerlink" title="类的声明和实现语法"></a>类的声明和实现语法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这主要是在Mac系统中设置了网络自动代理而导致</p>
-<p>解决方案：系统偏好设置 → 网络 → 高级 → 代理 → 取消自动代理配置</p>
-]]></content>
-      <categories>
-        <category>Apple开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>网络</tag>
-        <tag>-1004</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>macOS中安装node.js</title>
-    <url>/2020/11/24/apple-node/</url>
-    <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
-<p><img src="/imgs/38.png"></p>
-<p>双击运行以上文件，安装过程直接下一步即可。安装后显示：</p>
-<p><img src="/imgs/39.png"></p>
-<p>node.js和npm安装成功测试，在终端输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">appledeMac-mini:~ zhaikun$ node -v</span><br><span class="line">v10.1.0</span><br><span class="line">appledeMac-mini:~ zhaikun$ npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="类的属性-特征"><a href="#类的属性-特征" class="headerlink" title="类的属性/特征"></a>类的属性/特征</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类属性的调用"><a href="#类属性的调用" class="headerlink" title="类属性的调用"></a>类属性的调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    @public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"><a href="#类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用" class="headerlink" title="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"></a>类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">@public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;方法的声明</span><br><span class="line">- (void)noParamMethod;&#x2F;&#x2F;声明一个 返回值为空void 无参数 名为noParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带有一个参数的方法</span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam;&#x2F;&#x2F;声明一个 返回值为空void 参数类型为NSString * 参数名为name 名为oneParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带多个参数的方法</span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在类方法的实现中，可以直接访问类的属性</span><br><span class="line">- (int)classSelfParamMethod;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line">&#x2F;&#x2F;方法的实现</span><br><span class="line">- (void)noParamMethod&#123;</span><br><span class="line">    NSLog(@&quot;noParamMethod方法的实现&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam&#123;</span><br><span class="line">    nameParam &#x3D; @&quot;带有一个参数的方法&quot;;</span><br><span class="line">    NSLog(@&quot;%@&quot;, nameParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2&#123;</span><br><span class="line">    NSLog(@&quot;多个参数的方法：%d&quot;, age1+age2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (int)classSelfParamMethod&#123;</span><br><span class="line">    age &#x3D; 18;</span><br><span class="line">    return age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的，类中的属性和方法必须通过类的实例对象进行调用</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;方法的调用</span><br><span class="line">        [person noParamMethod];</span><br><span class="line">        [person oneParamMethod:@&quot;&quot;];</span><br><span class="line">        [person paramsMethod:1 :2];</span><br><span class="line">        NSLog(@&quot;在方法中直接调用类的属性：%d&quot;, [person classSelfParamMethod]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Apple开发基础</category>
       </categories>
       <tags>
-        <tag>macOS</tag>
-        <tag>node.js</tag>
-        <tag>npm</tag>
+        <tag>objective-c</tag>
+        <tag>class</tag>
+        <tag>类</tag>
+        <tag>属性</tag>
+        <tag>方法</tag>
       </tags>
   </entry>
   <entry>
@@ -203,41 +224,6 @@
         <tag>内存</tag>
         <tag>对象</tag>
         <tag>数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>import指令与include指令的区别</title>
-    <url>/2020/11/24/apple-oc-import/</url>
-    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
-<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
-<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中类的声明与实现</title>
-    <url>/2020/11/24/apple-oc-class-sm/</url>
-    <content><![CDATA[<h1 id="类的声明和实现语法"><a href="#类的声明和实现语法" class="headerlink" title="类的声明和实现语法"></a>类的声明和实现语法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="类的属性-特征"><a href="#类的属性-特征" class="headerlink" title="类的属性/特征"></a>类的属性/特征</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="类属性的调用"><a href="#类属性的调用" class="headerlink" title="类属性的调用"></a>类属性的调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">    @public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"><a href="#类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用" class="headerlink" title="类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用"></a>类行为（方法或函数，就是某一个功能的实现）的声明、实现与调用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  ClassDemo 类</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> 类：具有相同特征和行为的对象的集合</span><br><span class="line"> 对象：个人的理解是 万物皆对象</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的声明</span><br><span class="line">&#x2F;&#x2F;Person 类名 首字母大写</span><br><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类的属性定义在 &#123; &#125; 中</span><br><span class="line">@public</span><br><span class="line">    NSString *name;</span><br><span class="line">    int age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;方法的声明</span><br><span class="line">- (void)noParamMethod;&#x2F;&#x2F;声明一个 返回值为空void 无参数 名为noParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带有一个参数的方法</span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam;&#x2F;&#x2F;声明一个 返回值为空void 参数类型为NSString * 参数名为name 名为oneParamMethod的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;带多个参数的方法</span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在类方法的实现中，可以直接访问类的属性</span><br><span class="line">- (int)classSelfParamMethod;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;类的实现</span><br><span class="line">@implementation Person</span><br><span class="line">&#x2F;&#x2F;方法的实现</span><br><span class="line">- (void)noParamMethod&#123;</span><br><span class="line">    NSLog(@&quot;noParamMethod方法的实现&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)oneParamMethod:(NSString *)nameParam&#123;</span><br><span class="line">    nameParam &#x3D; @&quot;带有一个参数的方法&quot;;</span><br><span class="line">    NSLog(@&quot;%@&quot;, nameParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)paramsMethod:(int)age1 :(int)age2&#123;</span><br><span class="line">    NSLog(@&quot;多个参数的方法：%d&quot;, age1+age2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (int)classSelfParamMethod&#123;</span><br><span class="line">    age &#x3D; 18;</span><br><span class="line">    return age;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        Person *person &#x3D; [Person new];&#x2F;&#x2F;类的一个实例对象，类的每一个对象是各不相同的，类中的属性和方法必须通过类的实例对象进行调用</span><br><span class="line">        &#x2F;&#x2F;person-&gt;name &#x3D; @&quot;类属性的调用&quot;;</span><br><span class="line">        (*person).name &#x3D; @&quot;类属性的另一种调用方式&quot;;</span><br><span class="line">        NSLog(@&quot;%@&quot;, person-&gt;name);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;方法的调用</span><br><span class="line">        [person noParamMethod];</span><br><span class="line">        [person oneParamMethod:@&quot;&quot;];</span><br><span class="line">        [person paramsMethod:1 :2];</span><br><span class="line">        NSLog(@&quot;在方法中直接调用类的属性：%d&quot;, [person classSelfParamMethod]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>class</tag>
-        <tag>类</tag>
-        <tag>属性</tag>
-        <tag>方法</tag>
       </tags>
   </entry>
   <entry>
@@ -291,6 +277,20 @@
       <tags>
         <tag>objective-c</tag>
         <tag>异常处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>import指令与include指令的区别</title>
+    <url>/2020/11/24/apple-oc-import/</url>
+    <content><![CDATA[<p>#import指令和#include指令都是在引用系统的资源，  也可以理解为引用一个API或者代码包，但对引用的资源的操作不同。</p>
+<p>对于资源A，如果连续多次使用 #import A 将A资源导入到我们的代码中，资源只会被导入一次，简单的描述为：底层对#import所导入的资源有一个重复验证，如果某一资源已经由#import导入，则不再对导入的资源进行再次导入。</p>
+<p>而#include指令对同一资源的导入，会根据#include指令的使用次数，导入对应次数的同一资源。也就是说，如果有N条 #include A 指令，A资源就会被导入N次。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
@@ -394,6 +394,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>访问权限</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Objective-C中NULL与nil的区别</title>
     <url>/2020/11/24/apple-oc-null-nil/</url>
     <content><![CDATA[<h1 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h1><p>指针变量的值，表示该指针不指向内存中的任何1个地址空间，与0等价。</p>
@@ -410,18 +422,6 @@
       <tags>
         <tag>objective-c</tag>
         <tag>nil</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C中的访问权限</title>
-    <url>/2020/11/24/apple-oc-permission/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>objective-c</tag>
-        <tag>访问权限</tag>
       </tags>
   </entry>
   <entry>
@@ -495,6 +495,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Studio 设置国内镜像网站</title>
+    <url>/2020/11/23/as-http-proxy/</url>
+    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
+<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
+<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
+<p><img src="/imgs/4.webp"></p>
+]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Android Studio</tag>
+        <tag>国内镜像网站访问地址</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
     <url>/2020/11/19/blog-csdn/</url>
     <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
@@ -536,23 +553,6 @@
         <tag>Hexo</tag>
         <tag>Buszanui</tag>
         <tag>站点数据统计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Studio 设置国内镜像网站</title>
-    <url>/2020/11/23/as-http-proxy/</url>
-    <content><![CDATA[<p><strong>转载文章 原文链接：<a href="https://www.jianshu.com/p/0936af70cda3">https://www.jianshu.com/p/0936af70cda3</a></strong></p>
-<p>我们平时在使用android studio时，难免需要从android官网下载一些项目运行所需要的SDK文件，但是因为android官网在国外，访问起来会比较慢，所以配置国内android官网镜像网站可以提高下载速度，这里比较常用的android镜像网站是电子科技大学的镜像网站：mirrors.dormforce.net 端口：80</p>
-<p>通过File=》Setting=》Appearance &amp; Behavior =》System Settings =》Http Proxy，选择Auto-detect proxy settings，并且填写URL为：mirrors.dormforce.net :80，点击clear passwords，最后点击OK保存设置即可</p>
-<p><img src="/imgs/4.webp"></p>
-]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Android Studio</tag>
-        <tag>国内镜像网站访问地址</tag>
       </tags>
   </entry>
   <entry>
@@ -617,6 +617,23 @@
       </tags>
   </entry>
   <entry>
+    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
+    <url>/2020/11/24/cmd-adb-screenshot/</url>
+    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
+<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CMD终端命令</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>adb</tag>
+        <tag>屏幕截图</tag>
+        <tag>保存到电脑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Coding 搭建博客之自定义域名的坑</title>
     <url>/2020/11/18/coding-dns/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo 搭建的博客一般都是托管到第三方网站，如GitHub、Gitee、Coding。</p>
@@ -664,23 +681,6 @@
         <tag>自定义域名</tag>
         <tag>域名解析</tag>
         <tag>DNS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用adb命令对连接设备进行截图，并保存到电脑</title>
-    <url>/2020/11/24/cmd-adb-screenshot/</url>
-    <content><![CDATA[<h2 id="1-确定设备或模拟器已连接"><a href="#1-确定设备或模拟器已连接" class="headerlink" title="1 确定设备或模拟器已连接"></a>1 确定设备或模拟器已连接</h2><h2 id="2-将截屏图片保存到设备或模拟器的sdcard"><a href="#2-将截屏图片保存到设备或模拟器的sdcard" class="headerlink" title="2 将截屏图片保存到设备或模拟器的sdcard"></a>2 将截屏图片保存到设备或模拟器的sdcard</h2><p>命令：adb shell /system/bin/screencap -p /sdcard/保存的图片名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br></pre></td></tr></table></figure>
-<h2 id="3-将图片从设备或模拟器的sdcard中保存到电脑"><a href="#3-将图片从设备或模拟器的sdcard中保存到电脑" class="headerlink" title="3 将图片从设备或模拟器的sdcard中保存到电脑"></a>3 将图片从设备或模拟器的sdcard中保存到电脑</h2><p>命令：adb pull /sdcard/sdcard中保存的图片名称 电脑保存路径/电脑中保存图片的名称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 6.1.7601]</span><br><span class="line">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb shell &#x2F;system&#x2F;bin&#x2F;screencap -p &#x2F;sdcard&#x2F;screenshot.png</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;adb pull &#x2F;sdcard&#x2F;screenshot.png f:&#x2F;img&#x2F;screenshot.png</span><br><span class="line">&#x2F;sdcard&#x2F;screenshot.png: 1 file pulled. 7.5 MB&#x2F;s (70375 bytes in 0.009s)</span><br><span class="line"></span><br><span class="line">C:\Users\jiemi&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>adb</tag>
-        <tag>屏幕截图</tag>
-        <tag>保存到电脑</tag>
       </tags>
   </entry>
   <entry>
@@ -781,6 +781,23 @@
       </tags>
   </entry>
   <entry>
+    <title>WebStorm代码输入提示忽略首字母大小写</title>
+    <url>/2020/11/25/html-webtorm-ignore-dxx/</url>
+    <content><![CDATA[<p>在写代码时，我是无法容忍为了一个大写开头的代码而特意的切换我的输入法的，那就来解决一下下。</p>
+<p>在代码自动完成菜单中，设置Case sensitive completion（字母的敏感度）的值为none，that`s ok!</p>
+<p><img src="/imgs/77.png"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>WebStorm</tag>
+        <tag>智能提示</tag>
+        <tag>忽略大小写</tag>
+        <tag>代码敏感度设置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WebStorm安装、配置、激活码</title>
     <url>/2020/11/25/html-webstorm-install/</url>
     <content><![CDATA[<h1 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h1><p>下载最新版的<a href="https://www.jetbrains.com/webstorm/">WebStorm官网地址</a></p>
@@ -815,23 +832,6 @@
         <tag>配置</tag>
         <tag>激活码注册</tag>
         <tag>ide</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebStorm代码输入提示忽略首字母大小写</title>
-    <url>/2020/11/25/html-webtorm-ignore-dxx/</url>
-    <content><![CDATA[<p>在写代码时，我是无法容忍为了一个大写开头的代码而特意的切换我的输入法的，那就来解决一下下。</p>
-<p>在代码自动完成菜单中，设置Case sensitive completion（字母的敏感度）的值为none，that`s ok!</p>
-<p><img src="/imgs/77.png"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>WebStorm</tag>
-        <tag>智能提示</tag>
-        <tag>忽略大小写</tag>
-        <tag>代码敏感度设置</tag>
       </tags>
   </entry>
   <entry>
@@ -1065,6 +1065,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Ionic 3 项目实战------插件原理</title>
+    <url>/2020/11/24/ionic-plugin-theory/</url>
+    <content><![CDATA[<p>在此之前，JS和原生的交互主要是通过WebView（Android）和UIWebView（iOS）进行，但在Ionic 3 中，Cordova提供了标准的API，来让JS和native进行数据交互。</p>
+<p>在Android中，Cordova提供了exec（）方法，将访问原生的方法暴露给JS，而Java通过CordovaPlugin.execute（）方法与之进行数据对接</p>
+<p><img src="/imgs/61.png"></p>
+<p>以下是Cordova.exec（）方法说明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cordova.exec(function(winParam) &#123;&#125;,</span><br><span class="line">             function(error) &#123;&#125;,</span><br><span class="line">             &quot;service&quot;,</span><br><span class="line">             &quot;action&quot;,</span><br><span class="line">             [&quot;firstArgument&quot;, &quot;secondArgument&quot;, 42, false]);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>function(winParam) {}：成功回调函数。假设您的 exec成功完成，此功能将随您传递给它的任何参数一起执行。</p>
+</li>
+<li><p>function(error) {}：错误回调函数。如果操作未成功完成，则此功能将执行可选的错误参数。</p>
+</li>
+<li><p>“service”：在本机端呼叫的服务名称。上面图中的java代码中未A.java，那么此处对应的就是A。</p>
+</li>
+<li><p>“action”：在本机端调用的动作名称。原生代码通过对action进行判断，从而知道JS让原生端执行什么样的功能。</p>
+</li>
+<li><p>[/* arguments */]：传到原生环境的参数数组。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>混合开发</category>
+      </categories>
+      <tags>
+        <tag>hybrid app</tag>
+        <tag>Ionic3</tag>
+        <tag>java</tag>
+        <tag>javascript</tag>
+        <tag>插件原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ionic 3 插件应用：plugin基本知识了解</title>
     <url>/2020/11/24/ionic-plugin-knowledge/</url>
     <content><![CDATA[<p>既然Ionic CLI（命令行工具）依赖于Cordova，就可调用原生的API，那么在我们的Ionic项目中如何实现，今天我们了解下ionic中plugin的使用。</p>
@@ -1102,39 +1135,6 @@
         <tag>插件</tag>
         <tag>cordova</tag>
         <tag>基本知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ionic 3 项目实战------插件原理</title>
-    <url>/2020/11/24/ionic-plugin-theory/</url>
-    <content><![CDATA[<p>在此之前，JS和原生的交互主要是通过WebView（Android）和UIWebView（iOS）进行，但在Ionic 3 中，Cordova提供了标准的API，来让JS和native进行数据交互。</p>
-<p>在Android中，Cordova提供了exec（）方法，将访问原生的方法暴露给JS，而Java通过CordovaPlugin.execute（）方法与之进行数据对接</p>
-<p><img src="/imgs/61.png"></p>
-<p>以下是Cordova.exec（）方法说明</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cordova.exec(function(winParam) &#123;&#125;,</span><br><span class="line">             function(error) &#123;&#125;,</span><br><span class="line">             &quot;service&quot;,</span><br><span class="line">             &quot;action&quot;,</span><br><span class="line">             [&quot;firstArgument&quot;, &quot;secondArgument&quot;, 42, false]);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>function(winParam) {}：成功回调函数。假设您的 exec成功完成，此功能将随您传递给它的任何参数一起执行。</p>
-</li>
-<li><p>function(error) {}：错误回调函数。如果操作未成功完成，则此功能将执行可选的错误参数。</p>
-</li>
-<li><p>“service”：在本机端呼叫的服务名称。上面图中的java代码中未A.java，那么此处对应的就是A。</p>
-</li>
-<li><p>“action”：在本机端调用的动作名称。原生代码通过对action进行判断，从而知道JS让原生端执行什么样的功能。</p>
-</li>
-<li><p>[/* arguments */]：传到原生环境的参数数组。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>混合开发</category>
-      </categories>
-      <tags>
-        <tag>hybrid app</tag>
-        <tag>Ionic3</tag>
-        <tag>java</tag>
-        <tag>javascript</tag>
-        <tag>插件原理</tag>
       </tags>
   </entry>
   <entry>
@@ -1218,6 +1218,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Java基础面试题：使用最快的效率将2变成8</title>
+    <url>/2020/11/24/java-mst-2-to-8/</url>
+    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
+<p>原理：将被转换的数字进行位移运算</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
+]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>数字转换</tag>
+        <tag>最快效率将2转换为8</tag>
+        <tag>二进制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ionic 3 项目的工程目录结构</title>
     <url>/2020/11/25/ionic-project-construction/</url>
     <content><![CDATA[<p>在使用Ionic 3 创建项目后，添加platform，相关命令如下</p>
@@ -1253,25 +1272,6 @@
         <tag>integer</tag>
         <tag>区别</tag>
         <tag>异同点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java基础面试题：使用最快的效率将2变成8</title>
-    <url>/2020/11/24/java-mst-2-to-8/</url>
-    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
-<p>原理：将被转换的数字进行位移运算</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
-]]></content>
-      <categories>
-        <category>面试题 - Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试题</tag>
-        <tag>数字转换</tag>
-        <tag>最快效率将2转换为8</tag>
-        <tag>二进制</tag>
       </tags>
   </entry>
   <entry>
@@ -1317,6 +1317,80 @@
         <tag>Android</tag>
         <tag>极光</tag>
         <tag>DownloadProvider</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown基本语法</title>
+    <url>/2020/11/25/markdown-base-grammar/</url>
+    <content><![CDATA[<p>本文仅用于对Markdown基本语法的记录，便于查看，如有任何错误，敬请谅解！</p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法</p>
+<h1 id="有序列表与无序列表"><a href="#有序列表与无序列表" class="headerlink" title="有序列表与无序列表"></a>有序列表与无序列表</h1><p>在 Markdown 下，列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加1. 2. 3.符号要和文字之间加上一个字符的空格。</p>
+<h1 id="如果你需要引用一小段别处的句子，那么就要用引用的格式"><a href="#如果你需要引用一小段别处的句子，那么就要用引用的格式" class="headerlink" title="如果你需要引用一小段别处的句子，那么就要用引用的格式"></a>如果你需要引用一小段别处的句子，那么就要用引用的格式</h1><p>例如这样</p>
+<p>只需要在文本前加入 &gt; 这种尖括号（大于号）即可</p>
+<h1 id="插入链接与插入图片"><a href="#插入链接与插入图片" class="headerlink" title="插入链接与插入图片"></a>插入链接与插入图片</h1><p>图片为：<img src="">{ImgCap}{/ImgCap}</p>
+<p>链接为：<a href="http://baidu.com/">百度</a></p>
+<h1 id="粗体与斜体"><a href="#粗体与斜体" class="headerlink" title="粗体与斜体"></a>粗体与斜体</h1><p>用两个 * 包含一段文本就是粗体的语法</p>
+<p>用一个 * 包含一段文本就是斜体的语法。</p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+<tr>
+<td>Are</td>
+<td align="center">Cool</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>————-</td>
+<td align="center">:————-:</td>
+<td align="right">—–:</td>
+</tr>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<h1 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h1><p>两个 ` 把中间的代码包裹起来</p>
+<p>使用 tab 键即可缩进</p>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>分割线的语法只需要三个 * 号</p>
+]]></content>
+      <categories>
+        <category>MarkDown编辑器</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>标准</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
