@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android 常用开源库（持续更新）</title>
+    <url>/2020/11/25/android-kyk/</url>
+    <content><![CDATA[<h1 id="View组件"><a href="#View组件" class="headerlink" title="View组件"></a>View组件</h1><h2 id="Banner"><a href="#Banner" class="headerlink" title="Banner"></a>Banner</h2><p><a href="https://github.com/youth5201314/banner">图片轮播控件 https://github.com/youth5201314/banner</a></p>
+<p>Android广告图片轮播控件，支持无限循环和多种主题，可以灵活设置轮播样式、动画、轮播和切换时间、位置、图片加载框架等！</p>
+<h2 id="Butterknife"><a href="#Butterknife" class="headerlink" title="Butterknife"></a>Butterknife</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/76986977">View注入框架 https://blog.csdn.net/ZhaiKun68/article/details/76986977</a></p>
+]]></content>
+      <categories>
+        <category>AA博客导航AA</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开源库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android的四大组件</title>
     <url>/2020/11/25/android-four-view/</url>
     <content><![CDATA[<h1 id="Android的四大组件"><a href="#Android的四大组件" class="headerlink" title="Android的四大组件"></a>Android的四大组件</h1><p>Activity（活动或者界面）</p>
@@ -17,21 +32,6 @@
         <tag>Android</tag>
         <tag>四大组件</tag>
         <tag>信息传递交互共享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android 常用开源库（持续更新）</title>
-    <url>/2020/11/25/android-kyk/</url>
-    <content><![CDATA[<h1 id="View组件"><a href="#View组件" class="headerlink" title="View组件"></a>View组件</h1><h2 id="Banner"><a href="#Banner" class="headerlink" title="Banner"></a>Banner</h2><p><a href="https://github.com/youth5201314/banner">图片轮播控件 https://github.com/youth5201314/banner</a></p>
-<p>Android广告图片轮播控件，支持无限循环和多种主题，可以灵活设置轮播样式、动画、轮播和切换时间、位置、图片加载框架等！</p>
-<h2 id="Butterknife"><a href="#Butterknife" class="headerlink" title="Butterknife"></a>Butterknife</h2><p><a href="https://blog.csdn.net/ZhaiKun68/article/details/76986977">View注入框架 https://blog.csdn.net/ZhaiKun68/article/details/76986977</a></p>
-]]></content>
-      <categories>
-        <category>AA博客导航AA</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>开源库</tag>
       </tags>
   </entry>
   <entry>
@@ -79,6 +79,29 @@
         <tag>Android</tag>
         <tag>release</tag>
         <tag>lint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android 更换 APP Logo 无效问题处理</title>
+    <url>/2020/11/24/app-logo-invalid/</url>
+    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
+<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
+<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
+<blockquote>
+<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
+</blockquote>
+<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>logo</tag>
+        <tag>app</tag>
+        <tag>logo更换无效</tag>
       </tags>
   </entry>
   <entry>
@@ -133,64 +156,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android 更换 APP Logo 无效问题处理</title>
-    <url>/2020/11/24/app-logo-invalid/</url>
-    <content><![CDATA[<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>在 AndroidManifest.xml 文件中，修改 APP logo 后，桌面显示的图标还是以前的图标，新修改的 logo 未生效</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>确保修改 logo 的方式正确</p>
-<p>正常情况下，APP logo 修改无效的情况是不会出现的</p>
-<p>楼主使用的测试机是被刷机过的，导致某些系统文件缺失</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在手机系统【设置】中，找到【应用程序】，并找到安装的应用，点击【清除数据】，再点击【清除缓存】，然后将应用卸载。</p>
-<blockquote>
-<p>每个品牌手机清除应用数据的方式或菜单可能不一样，但原理都是一样的，即将应用的全部数据清除，然后再将应用卸载。</p>
-</blockquote>
-<p>打开开发项目，先将项目【clean】，然后再【rebuild】，之后重新向手机安装应用即可。</p>
-]]></content>
-      <categories>
-        <category>Android开发问题汇总</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>logo</tag>
-        <tag>app</tag>
-        <tag>logo更换无效</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>APP兼容不同的设备之适配不同的屏幕</title>
-    <url>/2020/11/25/app-sp-screen/</url>
-    <content><![CDATA[<p>在适配不同的屏幕时，主要针对的是不同设备的尺寸大小和分辨率、同一设备的横屏和竖屏。</p>
-<p>尺寸大小普遍的分为4类：small（小尺寸）、normal（普通尺寸）、large（大尺寸）、xlarge（超大尺寸）</p>
-<p>分辨率普遍分为4类：ldpi（低精度）、mdpi（中精度）、hdpi（高精度）、xhdpi（超高精度）</p>
-<p>与适配不同区域的语言类似，在APP中应该包含一些所需要的可选资源，针对不同的屏幕声明对应的UI布局资源layout和图片资源bitmap，然后将这些可选的资源存放在独立的对应的目录中。</p>
-<h1 id="UI布局资源layout"><a href="#UI布局资源layout" class="headerlink" title="UI布局资源layout"></a>UI布局资源layout</h1><p>根据所需要支持的屏幕尺寸大小创建唯一的XML文件，每一种资源文件存放在相应的资源目录中，资源目录以layout-&lt;屏幕尺寸大小&gt;命名。例如，超大尺寸屏幕目录layout-xlarge，针对超大尺寸屏幕有一资源文件activity_main.xml，那么该XML文件就应该存放在res/layout-xlarge/目录中。</p>
-<p><img src="/imgs/116.png"></p>
-<p>在程序运行时，Android会根据屏幕尺寸的大小自动的测量layout文件，确保不同屏幕尺寸的XML文件存放于对应的目录中，并且XML文件要具有唯一性，不同目录下的XML文件 文件名 相同，内容不同。</p>
-<p>在activity中直接引用资源文件即可：</p>
-<p><img src="/imgs/117.png"></p>
-<p>支持横屏尺寸的layout资源：</p>
-<p><img src="/imgs/118.png"></p>
-<h1 id="图片资源bitmap"><a href="#图片资源bitmap" class="headerlink" title="图片资源bitmap"></a>图片资源bitmap</h1><p>为4中普遍存在的分辨率提供对应的图片资源bitmap，根据原始的矢量图片资源，按以下比例生成不同密度的图像：</p>
-<p>ldpi：0.75</p>
-<p>mdpi：1.0（这个是标准）</p>
-<p>hdpi：1.5</p>
-<p>xhdpi：2.0</p>
-<p>也就是说，如果针对中精度mdpi的图片为48 X 48，那么低精度ldpi的图片为36 X 36，高精度hdpi的图片为72 X 72，超高精度的图片为96 X 96，然后将图片存入对应的mipmap资源目录中：</p>
-<p><img src="/imgs/119.png"></p>
-<p>当使用@mipmap/ic_launcher.png引用图片资源时，系统将根据对应设备屏幕的分辨率选择合适的图片资源bitmap。</p>
-<p>适配不同的系统版本，请关注我的下一篇文章—APP兼容不同的设备之适配不同的系统版本</p>
-]]></content>
-      <categories>
-        <category>Android机型适配</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-        <tag>ui</tag>
-        <tag>体验</tag>
-        <tag>兼容不同的设备</tag>
-        <tag>适配不同的屏幕</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>APP兼容不同的设备之适配不同的语言</title>
     <url>/2020/11/25/app-sp-language/</url>
     <content><![CDATA[<p>随着智能化时代的到来，Android设备具有了各种各样的大小和尺寸。为了让我们的APP能在不同平台的Android设备上使用，需要将APP兼容各种不同的设备类型，例如各个地区的语言、屏幕的尺寸大小和分辨率、横竖屏幕的切换、Android的各个系统版本等都是需要重点考虑的因素。</p>
@@ -227,6 +192,41 @@
         <tag>体验</tag>
         <tag>屏幕适配</tag>
         <tag>适配不同的语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APP兼容不同的设备之适配不同的屏幕</title>
+    <url>/2020/11/25/app-sp-screen/</url>
+    <content><![CDATA[<p>在适配不同的屏幕时，主要针对的是不同设备的尺寸大小和分辨率、同一设备的横屏和竖屏。</p>
+<p>尺寸大小普遍的分为4类：small（小尺寸）、normal（普通尺寸）、large（大尺寸）、xlarge（超大尺寸）</p>
+<p>分辨率普遍分为4类：ldpi（低精度）、mdpi（中精度）、hdpi（高精度）、xhdpi（超高精度）</p>
+<p>与适配不同区域的语言类似，在APP中应该包含一些所需要的可选资源，针对不同的屏幕声明对应的UI布局资源layout和图片资源bitmap，然后将这些可选的资源存放在独立的对应的目录中。</p>
+<h1 id="UI布局资源layout"><a href="#UI布局资源layout" class="headerlink" title="UI布局资源layout"></a>UI布局资源layout</h1><p>根据所需要支持的屏幕尺寸大小创建唯一的XML文件，每一种资源文件存放在相应的资源目录中，资源目录以layout-&lt;屏幕尺寸大小&gt;命名。例如，超大尺寸屏幕目录layout-xlarge，针对超大尺寸屏幕有一资源文件activity_main.xml，那么该XML文件就应该存放在res/layout-xlarge/目录中。</p>
+<p><img src="/imgs/116.png"></p>
+<p>在程序运行时，Android会根据屏幕尺寸的大小自动的测量layout文件，确保不同屏幕尺寸的XML文件存放于对应的目录中，并且XML文件要具有唯一性，不同目录下的XML文件 文件名 相同，内容不同。</p>
+<p>在activity中直接引用资源文件即可：</p>
+<p><img src="/imgs/117.png"></p>
+<p>支持横屏尺寸的layout资源：</p>
+<p><img src="/imgs/118.png"></p>
+<h1 id="图片资源bitmap"><a href="#图片资源bitmap" class="headerlink" title="图片资源bitmap"></a>图片资源bitmap</h1><p>为4中普遍存在的分辨率提供对应的图片资源bitmap，根据原始的矢量图片资源，按以下比例生成不同密度的图像：</p>
+<p>ldpi：0.75</p>
+<p>mdpi：1.0（这个是标准）</p>
+<p>hdpi：1.5</p>
+<p>xhdpi：2.0</p>
+<p>也就是说，如果针对中精度mdpi的图片为48 X 48，那么低精度ldpi的图片为36 X 36，高精度hdpi的图片为72 X 72，超高精度的图片为96 X 96，然后将图片存入对应的mipmap资源目录中：</p>
+<p><img src="/imgs/119.png"></p>
+<p>当使用@mipmap/ic_launcher.png引用图片资源时，系统将根据对应设备屏幕的分辨率选择合适的图片资源bitmap。</p>
+<p>适配不同的系统版本，请关注我的下一篇文章—APP兼容不同的设备之适配不同的系统版本</p>
+]]></content>
+      <categories>
+        <category>Android机型适配</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>ui</tag>
+        <tag>体验</tag>
+        <tag>兼容不同的设备</tag>
+        <tag>适配不同的屏幕</tag>
       </tags>
   </entry>
   <entry>
@@ -348,6 +348,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac中NTFS格式文件的读写</title>
+    <url>/2020/11/24/apple-ntfs/</url>
+    <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
+<p>Tuxera NTFS 自行百度下载安装即可。</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>iOS</tag>
+        <tag>NTFS格式文件读写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>macOS中安装node.js</title>
     <url>/2020/11/24/apple-node/</url>
     <content><![CDATA[<p>node.js最新版下载地址：<a href="https://nodejs.org/en/#download">https://nodejs.org/en/#download</a></p>
@@ -384,21 +399,6 @@
         <tag>类</tag>
         <tag>属性</tag>
         <tag>方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac中NTFS格式文件的读写</title>
-    <url>/2020/11/24/apple-ntfs/</url>
-    <content><![CDATA[<p>在Mac中是不支持NTFS文件的读写的，我们可以在Mac中安装 Tuxera NTFS 软件，之后便可对NTFS格式的文件进行读写操作。</p>
-<p>Tuxera NTFS 自行百度下载安装即可。</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>iOS</tag>
-        <tag>NTFS格式文件读写</tag>
       </tags>
   </entry>
   <entry>
@@ -550,19 +550,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中NSString的使用</title>
-    <url>/2020/11/24/apple-oc-nsstring/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>NSString</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Objective-C中的方法说明</title>
     <url>/2020/11/24/apple-oc-method/</url>
     <content><![CDATA[<p>1、Objective-C中两种类型的方法</p>
@@ -593,15 +580,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中的访问权限</title>
-    <url>/2020/11/24/apple-oc-permission/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Objective-C中NSString的使用</title>
+    <url>/2020/11/24/apple-oc-nsstring/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  NSStringDemo</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;9&#x2F;29.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;&#x2F;&#x2F;Objective-C的一个基本框架，包含了很多的基本功能，Foundation.h头文件包含了Foundation框架中所有的头文件</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;*</span><br><span class="line">         NSString</span><br><span class="line">         1、用于声明字符串类型的指针变量，存储Objective-C字符串的地址</span><br><span class="line">         2、Objective-C字符串常量带有前缀@符号</span><br><span class="line">         *&#x2F;</span><br><span class="line">        NSString *str &#x3D; @&quot;这里是一个Objective-C字符串常量&quot;;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;输出Objective-C字符串：%@&quot;, str);&#x2F;&#x2F;使用占位符%@输出一个Objective-C字符串</span><br><span class="line">        &#x2F;&#x2F;NSLog(str);&#x2F;&#x2F;也可以这么写，但是有编译警告，建议使用占位符输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Apple开发基础</category>
       </categories>
       <tags>
+        <tag>iOS</tag>
         <tag>objective-c</tag>
-        <tag>访问权限</tag>
+        <tag>NSString</tag>
       </tags>
   </entry>
   <entry>
@@ -624,6 +612,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Objective-C中的访问权限</title>
+    <url>/2020/11/24/apple-oc-permission/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  main.m</span><br><span class="line">&#x2F;&#x2F;  PermissionDemo 权限访问修饰符</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by ZhaiKun on 2017&#x2F;10&#x2F;9.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2017年 ZhaiKun. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">#import &lt;Foundation&#x2F;Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Permission : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;默认的访问权限，当前类和子类可访问</span><br><span class="line">    @protected</span><br><span class="line">    int protectedPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;所有类都可以访问</span><br><span class="line">    @public</span><br><span class="line">    int publicPermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;只有当前类可以访问</span><br><span class="line">    @private</span><br><span class="line">    int privatePermission;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;框架级的访问权限，在当前framework的类中视为@protected，在当前框架以外视为@private</span><br><span class="line">    @package</span><br><span class="line">    int packagePermisson;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        &#x2F;&#x2F; insert code here...</span><br><span class="line">        NSLog(@&quot;Hello, World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>objective-c</tag>
+        <tag>访问权限</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Objective-C中注释和函数的定义</title>
     <url>/2020/11/24/apple-oc-zs/</url>
     <content><![CDATA[<p>小编之前是从事Android开发的，不浪费口舌了，直接上代码，看看注释就明了了</p>
@@ -636,6 +636,51 @@
         <tag>objective-c</tag>
         <tag>函数</tag>
         <tag>注释</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C中@符号说明</title>
+    <url>/2020/11/24/apple-oc/</url>
+    <content><![CDATA[<p>常见的两个功能：</p>
+<p>1、将C字符串转换为OC字符串</p>
+<p>2、OC中的大多数关键字都是以@符号开头</p>
+]]></content>
+      <categories>
+        <category>Apple开发基础</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>objective-c</tag>
+        <tag>符号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>冒泡排序</title>
+    <url>/2020/11/25/arithmetic-bubble-sort/</url>
+    <content><![CDATA[<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>将相邻的两个元素逐一进行比较，将大的一个元素后移，每比较完一次都会将最大的一个元素移动到最后，然后再用相同的方法依次比较剩余的元素。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;22.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 冒泡排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class BubbleSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TAG &#x3D; &quot;BubbleSortDemo&quot;;&#x2F;&#x2F;日志打印标记</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;9, 10, 1, 2, 0, 8, 0, 5, 8, 3&#125;;</span><br><span class="line">        int[] sortAfterArray &#x3D; bubbleSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 冒泡排序算法实现，以简单数组为例</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序的数组</span><br><span class="line">     * @return 排序后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] bubbleSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int outIndex &#x3D; sortArray.length - 1; outIndex &gt; 1; outIndex--) &#123;</span><br><span class="line">            for (int inIndex &#x3D; 0; inIndex &lt; outIndex; inIndex++) &#123;</span><br><span class="line">                if (sortArray[inIndex] &gt; sortArray[inIndex + 1]) &#123;</span><br><span class="line">                    int temp &#x3D; sortArray[inIndex];</span><br><span class="line">                    sortArray[inIndex] &#x3D; sortArray[inIndex + 1];</span><br><span class="line">                    sortArray[inIndex + 1] &#x3D; temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>算法</tag>
+        <tag>排序</tag>
+        <tag>冒泡排序</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插入排序</title>
+    <url>/2020/11/25/arithmetic-insertion-sorting/</url>
+    <content><![CDATA[<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>有待排序数组A，任意指定A中某一位置作为元素的插入位置B。此时，假设B位置左端的所有元素都是有序的，记录下B位置的元素ValueB，将ValueB与其左端的有序元素进行比较，如果ValueB左端的元素大于或等于ValueB，则将其后移一位，最后在后移空出的位置将ValueB插入。重复以上步骤，直到数组中的最后一个元素，排序结束。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;24.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 插入排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class InsertSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 插入排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 已排序数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] insertSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int temp;&#x2F;&#x2F;记录插入数组中的元素</span><br><span class="line">        int inIndex;&#x2F;&#x2F;内层循环索引</span><br><span class="line">        for (int outIndex &#x3D; 1; outIndex &lt; sortArray.length; outIndex++) &#123;</span><br><span class="line">            temp &#x3D; sortArray[outIndex];</span><br><span class="line">            inIndex &#x3D; outIndex;</span><br><span class="line">            while (inIndex &gt; 0 &amp;&amp; sortArray[inIndex - 1] &gt;&#x3D; temp) &#123;</span><br><span class="line">                sortArray[inIndex] &#x3D; sortArray[inIndex - 1];</span><br><span class="line">                --inIndex;</span><br><span class="line">            &#125;</span><br><span class="line">            sortArray[inIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;2, 3, 2, 2, 6, 9, 0, 7, 4, 5&#125;;&#x2F;&#x2F;初始化一个待排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; insertSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>插入排序</tag>
       </tags>
   </entry>
   <entry>
@@ -678,48 +723,17 @@
       </tags>
   </entry>
   <entry>
-    <title>Objective-C中@符号说明</title>
-    <url>/2020/11/24/apple-oc/</url>
-    <content><![CDATA[<p>常见的两个功能：</p>
-<p>1、将C字符串转换为OC字符串</p>
-<p>2、OC中的大多数关键字都是以@符号开头</p>
-]]></content>
-      <categories>
-        <category>Apple开发基础</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>objective-c</tag>
-        <tag>符号</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>插入排序</title>
-    <url>/2020/11/25/arithmetic-insertion-sorting/</url>
-    <content><![CDATA[<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>有待排序数组A，任意指定A中某一位置作为元素的插入位置B。此时，假设B位置左端的所有元素都是有序的，记录下B位置的元素ValueB，将ValueB与其左端的有序元素进行比较，如果ValueB左端的元素大于或等于ValueB，则将其后移一位，最后在后移空出的位置将ValueB插入。重复以上步骤，直到数组中的最后一个元素，排序结束。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;24.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 插入排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class InsertSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 插入排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 已排序数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] insertSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int temp;&#x2F;&#x2F;记录插入数组中的元素</span><br><span class="line">        int inIndex;&#x2F;&#x2F;内层循环索引</span><br><span class="line">        for (int outIndex &#x3D; 1; outIndex &lt; sortArray.length; outIndex++) &#123;</span><br><span class="line">            temp &#x3D; sortArray[outIndex];</span><br><span class="line">            inIndex &#x3D; outIndex;</span><br><span class="line">            while (inIndex &gt; 0 &amp;&amp; sortArray[inIndex - 1] &gt;&#x3D; temp) &#123;</span><br><span class="line">                sortArray[inIndex] &#x3D; sortArray[inIndex - 1];</span><br><span class="line">                --inIndex;</span><br><span class="line">            &#125;</span><br><span class="line">            sortArray[inIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;2, 3, 2, 2, 6, 9, 0, 7, 4, 5&#125;;&#x2F;&#x2F;初始化一个待排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; insertSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>选择排序</title>
+    <url>/2020/11/25/arithmetic-selection-sort/</url>
+    <content><![CDATA[<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>在待排序的数组中，任意指定一个数作为数组中最小的数并记录其在数组中的位置，记为a，将该数与待排序数组中的数据依次进行比较，当该数字比数组中的数字大时，将此时数组中小的数据的位置交给a，此时a位置所对应在数组中的值作为指定的最小数再次与数组中剩余的数依次进行比较；当指定的最小数与数组中的数据全部比较完之后，得到一个数组中最小的数，然后将这个最小的数排到数组的最左端，在待排序数组中排除最左端已经完成排序的数，将剩下的数作为一个数组，按一样的方式再次进行比较。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;23.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 选择排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SelectionSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 选择排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 排序完成后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] selectionSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int minIndex;&#x2F;&#x2F;指定一个比较值在待比较数组中的下标</span><br><span class="line">        for (int outIndex &#x3D; 0; outIndex &lt; sortArray.length - 1; outIndex++) &#123;</span><br><span class="line">            minIndex &#x3D; outIndex;</span><br><span class="line">            for (int inIndex &#x3D; outIndex + 1; inIndex &lt; sortArray.length; inIndex++) &#123;</span><br><span class="line">                if (sortArray[minIndex] &gt; sortArray[inIndex]) &#123;</span><br><span class="line">                    minIndex &#x3D; inIndex;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int temp &#x3D; sortArray[outIndex];</span><br><span class="line">            sortArray[outIndex] &#x3D; sortArray[minIndex];</span><br><span class="line">            sortArray[minIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;1, 1, 5, 0, 2, 2, 10, 5, 3, 6&#125;;&#x2F;&#x2F;初始化一个需要排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; selectionSort(initArray);</span><br><span class="line">        System.out.print(Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法</category>
       </categories>
       <tags>
         <tag>数组</tag>
-        <tag>插入排序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>冒泡排序</title>
-    <url>/2020/11/25/arithmetic-bubble-sort/</url>
-    <content><![CDATA[<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>将相邻的两个元素逐一进行比较，将大的一个元素后移，每比较完一次都会将最大的一个元素移动到最后，然后再用相同的方法依次比较剩余的元素。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;22.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 冒泡排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class BubbleSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TAG &#x3D; &quot;BubbleSortDemo&quot;;&#x2F;&#x2F;日志打印标记</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;9, 10, 1, 2, 0, 8, 0, 5, 8, 3&#125;;</span><br><span class="line">        int[] sortAfterArray &#x3D; bubbleSort(initArray);</span><br><span class="line">        System.out.print(&quot;排序后的数组 &#x3D; &quot; + Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 冒泡排序算法实现，以简单数组为例</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序的数组</span><br><span class="line">     * @return 排序后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] bubbleSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int outIndex &#x3D; sortArray.length - 1; outIndex &gt; 1; outIndex--) &#123;</span><br><span class="line">            for (int inIndex &#x3D; 0; inIndex &lt; outIndex; inIndex++) &#123;</span><br><span class="line">                if (sortArray[inIndex] &gt; sortArray[inIndex + 1]) &#123;</span><br><span class="line">                    int temp &#x3D; sortArray[inIndex];</span><br><span class="line">                    sortArray[inIndex] &#x3D; sortArray[inIndex + 1];</span><br><span class="line">                    sortArray[inIndex + 1] &#x3D; temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>算法</tag>
         <tag>排序</tag>
-        <tag>冒泡排序</tag>
-        <tag>Java</tag>
+        <tag>选择排序</tag>
       </tags>
   </entry>
   <entry>
@@ -740,20 +754,6 @@
         <tag>Android</tag>
         <tag>Gradle</tag>
         <tag>AAPT2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>选择排序</title>
-    <url>/2020/11/25/arithmetic-selection-sort/</url>
-    <content><![CDATA[<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>在待排序的数组中，任意指定一个数作为数组中最小的数并记录其在数组中的位置，记为a，将该数与待排序数组中的数据依次进行比较，当该数字比数组中的数字大时，将此时数组中小的数据的位置交给a，此时a位置所对应在数组中的值作为指定的最小数再次与数组中剩余的数依次进行比较；当指定的最小数与数组中的数据全部比较完之后，得到一个数组中最小的数，然后将这个最小的数排到数组的最左端，在待排序数组中排除最左端已经完成排序的数，将剩下的数作为一个数组，按一样的方式再次进行比较。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.zhaikun.arithmeticdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2018&#x2F;2&#x2F;23.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * 选择排序Demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SelectionSortDemo &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 选择排序</span><br><span class="line">     *</span><br><span class="line">     * @param sortArray 待排序数组</span><br><span class="line">     * @return 排序完成后的数组</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static int[] selectionSort(int[] sortArray) &#123;</span><br><span class="line">        if (sortArray &#x3D;&#x3D; null || sortArray.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.print(&quot;待排序数组为空，不进行排序&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        int minIndex;&#x2F;&#x2F;指定一个比较值在待比较数组中的下标</span><br><span class="line">        for (int outIndex &#x3D; 0; outIndex &lt; sortArray.length - 1; outIndex++) &#123;</span><br><span class="line">            minIndex &#x3D; outIndex;</span><br><span class="line">            for (int inIndex &#x3D; outIndex + 1; inIndex &lt; sortArray.length; inIndex++) &#123;</span><br><span class="line">                if (sortArray[minIndex] &gt; sortArray[inIndex]) &#123;</span><br><span class="line">                    minIndex &#x3D; inIndex;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int temp &#x3D; sortArray[outIndex];</span><br><span class="line">            sortArray[outIndex] &#x3D; sortArray[minIndex];</span><br><span class="line">            sortArray[minIndex] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">        return sortArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] initArray &#x3D; &#123;1, 1, 5, 0, 2, 2, 10, 5, 3, 6&#125;;&#x2F;&#x2F;初始化一个需要排序的数组</span><br><span class="line">        int[] sortAfterArray &#x3D; selectionSort(initArray);</span><br><span class="line">        System.out.print(Arrays.toString(sortAfterArray));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>排序</tag>
-        <tag>选择排序</tag>
       </tags>
   </entry>
   <entry>
@@ -816,12 +816,33 @@
       </tags>
   </entry>
   <entry>
+    <title>相机调用失败原因</title>
+    <url>/2020/11/25/camera-use-error/</url>
+    <content><![CDATA[<blockquote>
+<p>应用场景：相机在应用中被多次打开时，每一次使用完相机后，都应及时释放相机资源，解除占用。</p>
+</blockquote>
+<p>这里只介绍楼主开发过程中遇到的且容易忽略的两点：</p>
+<ol>
+<li>是否开启相关权限。</li>
+<li>在打开相机之前，就已经使用了相机（二次打开相机），且未对相机资源进行回收。<br>也就是说，在相机使用结束后，应及时释放相机资源，解除相机占用，接下来才能正常使用相机。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Android开发问题汇总</category>
+      </categories>
+      <tags>
+        <tag>相机</tag>
+        <tag>camera</tag>
+        <tag>权限</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的 CSDN 博客 https://blog.csdn.net/zhaikun68</title>
     <url>/2020/11/19/blog-csdn/</url>
     <content><![CDATA[<p>文章同步更新至 CSDN 博客 <a href="https://blog.csdn.net/zhaikun68">我的 CSDN 博客</a></p>
 ]]></content>
       <categories>
-        <category>CSDN博客</category>
+        <category>AA博客导航AA</category>
       </categories>
       <tags>
         <tag>博客</tag>
@@ -860,24 +881,44 @@
       </tags>
   </entry>
   <entry>
-    <title>相机调用失败原因</title>
-    <url>/2020/11/25/camera-use-error/</url>
-    <content><![CDATA[<blockquote>
-<p>应用场景：相机在应用中被多次打开时，每一次使用完相机后，都应及时释放相机资源，解除占用。</p>
-</blockquote>
-<p>这里只介绍楼主开发过程中遇到的且容易忽略的两点：</p>
-<ol>
-<li>是否开启相关权限。</li>
-<li>在打开相机之前，就已经使用了相机（二次打开相机），且未对相机资源进行回收。<br>也就是说，在相机使用结束后，应及时释放相机资源，解除相机占用，接下来才能正常使用相机。</li>
-</ol>
+    <title>使用adb命令导出设备中安装的APP中的数据库（DB）文件</title>
+    <url>/2020/11/24/cmd-adb-db/</url>
+    <content><![CDATA[<h2 id="1-在导出数据库文件之前，需要确保设备处于连接状态"><a href="#1-在导出数据库文件之前，需要确保设备处于连接状态" class="headerlink" title="1 在导出数据库文件之前，需要确保设备处于连接状态"></a>1 在导出数据库文件之前，需要确保设备处于连接状态</h2><p>打开命令行窗口，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+<p>显示结果：<br><img src="https://img-blog.csdnimg.cn/20190403132134420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图中箭头所指处为已连接设备的唯一序列号，唯一标识已连接的设备。如果同时连接多台设备，可以看到所有设备的信息，以列表形式展示；如果没有连接设备，也会有相应的提示信息。</p>
+<h2 id="2-导出设备中的数据库文件"><a href="#2-导出设备中的数据库文件" class="headerlink" title="2 导出设备中的数据库文件"></a>2 导出设备中的数据库文件</h2><h3 id="2-1-选择数据库文件的导出目录"><a href="#2-1-选择数据库文件的导出目录" class="headerlink" title="2.1 选择数据库文件的导出目录"></a>2.1 选择数据库文件的导出目录</h3><p>在命令行窗口中直接切换到数据库文件保存目录，如F盘根目录：<br><img src="https://img-blog.csdnimg.cn/20190403133953302.png" alt="在这里插入图片描述"></p>
+<h3 id="2-2-使用adb命令"><a href="#2-2-使用adb命令" class="headerlink" title="2.2 使用adb命令"></a>2.2 使用adb命令</h3><h4 id="2-2-1-adb-shell"><a href="#2-2-1-adb-shell" class="headerlink" title="2.2.1 adb shell"></a>2.2.1 adb shell</h4><p>命令：adb shell</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-2-选择应用包名"><a href="#2-2-2-选择应用包名" class="headerlink" title="2.2.2 选择应用包名"></a>2.2.2 选择应用包名</h4><p>命令：run-as 你自己的应用包名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-3-进入数据库文件在设备中的保存路径"><a href="#2-2-3-进入数据库文件在设备中的保存路径" class="headerlink" title="2.2.3 进入数据库文件在设备中的保存路径"></a>2.2.3 进入数据库文件在设备中的保存路径</h3><p>命令：cd databases</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-4-查看当前应用的所有数据库文件"><a href="#2-2-4-查看当前应用的所有数据库文件" class="headerlink" title="2.2.4 查看当前应用的所有数据库文件"></a>2.2.4 查看当前应用的所有数据库文件</h3><p>命令：ls</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
+<p>数据库中的DB文件显示后，选择自己需要的进行导出即可。</p>
+<h3 id="2-2-5-选择导出文件"><a href="#2-2-5-选择导出文件" class="headerlink" title="2.2.5 选择导出文件"></a>2.2.5 选择导出文件</h3><p>将数据库目录下的文件导出到设备的 sdcard。</p>
+<p>命令：cat 数据库名.db&gt;/sdcard/数据库名.db</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
+<p>在执行一遍 命令：cat 数据库名.db&gt;/sdcard/数据库名.db</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-6-退出-adb-shell-命令下的当前应用"><a href="#2-2-6-退出-adb-shell-命令下的当前应用" class="headerlink" title="2.2.6 退出 adb shell 命令下的当前应用"></a>2.2.6 退出 adb shell 命令下的当前应用</h3><p>命令：exit</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-7-退出到系统盘F"><a href="#2-2-7-退出到系统盘F" class="headerlink" title="2.2.7 退出到系统盘F"></a>2.2.7 退出到系统盘F</h3><p>命令：exit</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $ exit</span><br><span class="line">f:\&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-8-导出数据库文件"><a href="#2-2-8-导出数据库文件" class="headerlink" title="2.2.8 导出数据库文件"></a>2.2.8 导出数据库文件</h3><p>命令：adb pull /sdcard/accs.db</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $ exit</span><br><span class="line"></span><br><span class="line">f:\&gt;adb pull &#x2F;sdcard&#x2F;accs.db</span><br><span class="line">&#x2F;sdcard&#x2F;accs.db: 1 file pulled. 3.9 MB&#x2F;s (20480 bytes in 0.005s)</span><br><span class="line"></span><br><span class="line">f:\&gt;</span><br></pre></td></tr></table></figure>
+<p>在F盘下即可看到导出的数据库文件：<br><img src="https://img-blog.csdnimg.cn/20190403150107307.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">使用相关的DB文件打开软件便可浏览文件中的相关信息。</p>
+<h2 id="3-查看数据库DB文件"><a href="#3-查看数据库DB文件" class="headerlink" title="3 查看数据库DB文件"></a>3 查看数据库DB文件</h2><p><a href="https://www.navicat.com.cn/">数据库DB文件打开工具Navicat</a></p>
 ]]></content>
       <categories>
-        <category>Android开发问题汇总</category>
+        <category>CMD终端命令</category>
       </categories>
       <tags>
-        <tag>相机</tag>
-        <tag>camera</tag>
-        <tag>权限</tag>
+        <tag>Android</tag>
+        <tag>数据库</tag>
+        <tag>ADB</tag>
+        <tag>数据库文件</tag>
+        <tag>DB</tag>
       </tags>
   </entry>
   <entry>
@@ -925,47 +966,6 @@
         <tag>Android</tag>
         <tag>adb</tag>
         <tag>CMD终端命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用adb命令导出设备中安装的APP中的数据库（DB）文件</title>
-    <url>/2020/11/24/cmd-adb-db/</url>
-    <content><![CDATA[<h2 id="1-在导出数据库文件之前，需要确保设备处于连接状态"><a href="#1-在导出数据库文件之前，需要确保设备处于连接状态" class="headerlink" title="1 在导出数据库文件之前，需要确保设备处于连接状态"></a>1 在导出数据库文件之前，需要确保设备处于连接状态</h2><p>打开命令行窗口，输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
-<p>显示结果：<br><img src="https://img-blog.csdnimg.cn/20190403132134420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图中箭头所指处为已连接设备的唯一序列号，唯一标识已连接的设备。如果同时连接多台设备，可以看到所有设备的信息，以列表形式展示；如果没有连接设备，也会有相应的提示信息。</p>
-<h2 id="2-导出设备中的数据库文件"><a href="#2-导出设备中的数据库文件" class="headerlink" title="2 导出设备中的数据库文件"></a>2 导出设备中的数据库文件</h2><h3 id="2-1-选择数据库文件的导出目录"><a href="#2-1-选择数据库文件的导出目录" class="headerlink" title="2.1 选择数据库文件的导出目录"></a>2.1 选择数据库文件的导出目录</h3><p>在命令行窗口中直接切换到数据库文件保存目录，如F盘根目录：<br><img src="https://img-blog.csdnimg.cn/20190403133953302.png" alt="在这里插入图片描述"></p>
-<h3 id="2-2-使用adb命令"><a href="#2-2-使用adb命令" class="headerlink" title="2.2 使用adb命令"></a>2.2 使用adb命令</h3><h4 id="2-2-1-adb-shell"><a href="#2-2-1-adb-shell" class="headerlink" title="2.2.1 adb shell"></a>2.2.1 adb shell</h4><p>命令：adb shell</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-2-选择应用包名"><a href="#2-2-2-选择应用包名" class="headerlink" title="2.2.2 选择应用包名"></a>2.2.2 选择应用包名</h4><p>命令：run-as 你自己的应用包名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-3-进入数据库文件在设备中的保存路径"><a href="#2-2-3-进入数据库文件在设备中的保存路径" class="headerlink" title="2.2.3 进入数据库文件在设备中的保存路径"></a>2.2.3 进入数据库文件在设备中的保存路径</h3><p>命令：cd databases</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-4-查看当前应用的所有数据库文件"><a href="#2-2-4-查看当前应用的所有数据库文件" class="headerlink" title="2.2.4 查看当前应用的所有数据库文件"></a>2.2.4 查看当前应用的所有数据库文件</h3><p>命令：ls</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
-<p>数据库中的DB文件显示后，选择自己需要的进行导出即可。</p>
-<h3 id="2-2-5-选择导出文件"><a href="#2-2-5-选择导出文件" class="headerlink" title="2.2.5 选择导出文件"></a>2.2.5 选择导出文件</h3><p>将数据库目录下的文件导出到设备的 sdcard。</p>
-<p>命令：cat 数据库名.db&gt;/sdcard/数据库名.db</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
-<p>在执行一遍 命令：cat 数据库名.db&gt;/sdcard/数据库名.db</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-6-退出-adb-shell-命令下的当前应用"><a href="#2-2-6-退出-adb-shell-命令下的当前应用" class="headerlink" title="2.2.6 退出 adb shell 命令下的当前应用"></a>2.2.6 退出 adb shell 命令下的当前应用</h3><p>命令：exit</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-7-退出到系统盘F"><a href="#2-2-7-退出到系统盘F" class="headerlink" title="2.2.7 退出到系统盘F"></a>2.2.7 退出到系统盘F</h3><p>命令：exit</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $ exit</span><br><span class="line">f:\&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-8-导出数据库文件"><a href="#2-2-8-导出数据库文件" class="headerlink" title="2.2.8 导出数据库文件"></a>2.2.8 导出数据库文件</h3><p>命令：adb pull /sdcard/accs.db</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f:\&gt;adb shell</span><br><span class="line">A1:&#x2F; $ run-as blog.csdn.net.karenchia</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia $ cd databases</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ ls</span><br><span class="line">accs.db         facedoor.db         message_accs_db         ut.db</span><br><span class="line">accs.db-journal facedoor.db-journal message_accs_db-journal ut.db-journal</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ cat accs.db&gt;&#x2F;sdcard&#x2F;accs.db</span><br><span class="line">A1:&#x2F;data&#x2F;data&#x2F;blog.csdn.net.karenchia&#x2F;databases $ exit</span><br><span class="line">A1:&#x2F; $ exit</span><br><span class="line"></span><br><span class="line">f:\&gt;adb pull &#x2F;sdcard&#x2F;accs.db</span><br><span class="line">&#x2F;sdcard&#x2F;accs.db: 1 file pulled. 3.9 MB&#x2F;s (20480 bytes in 0.005s)</span><br><span class="line"></span><br><span class="line">f:\&gt;</span><br></pre></td></tr></table></figure>
-<p>在F盘下即可看到导出的数据库文件：<br><img src="https://img-blog.csdnimg.cn/20190403150107307.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYWlLdW42OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">使用相关的DB文件打开软件便可浏览文件中的相关信息。</p>
-<h2 id="3-查看数据库DB文件"><a href="#3-查看数据库DB文件" class="headerlink" title="3 查看数据库DB文件"></a>3 查看数据库DB文件</h2><p><a href="https://www.navicat.com.cn/">数据库DB文件打开工具Navicat</a></p>
-]]></content>
-      <categories>
-        <category>CMD终端命令</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>数据库</tag>
-        <tag>ADB</tag>
-        <tag>数据库文件</tag>
-        <tag>DB</tag>
       </tags>
   </entry>
   <entry>
@@ -1036,25 +1036,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android数据存储-DB（SQLite）</title>
-    <url>/2020/11/25/db-sqlite/</url>
-    <content><![CDATA[<p>适用类型：重复、大量、结构化的数据</p>
-<p>在APP中，DB被保存到了程序的private空间，这些空间默认是私有的，不能被其它的应用所访问，从而保证了DB中数据的安全性</p>
-<p>在程序中，我们借助SQLiteOpenHelper对数据库进行读写操作，系统对于一些耗时的操作会在程序需要时才执行，而不是程序启动就开始执行，对于耗时的操作，我们应该AsyncTask or IntentService中进行，避免对程序主线程的影响</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.oschina.git.zhaikun.androiddeveloped.db;</span><br><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.database.sqlite.SQLiteDatabase;</span><br><span class="line">import android.database.sqlite.SQLiteOpenHelper;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2017&#x2F;8&#x2F;2.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * SQLite数据操作类</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SQLiteHelper extends SQLiteOpenHelper &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TABLE_NAME &#x3D; &quot;students&quot;;&#x2F;&#x2F;表名</span><br><span class="line">    private static final String CREATE_TABLE_SQL &#x3D;&#x2F;&#x2F;创建表students</span><br><span class="line">            &quot;create table &quot; + TABLE_NAME +</span><br><span class="line">                    &quot;(&quot; +</span><br><span class="line">                    &quot;_id integer primary key,&quot; +&#x2F;&#x2F;Android中SQLite默认的主键</span><br><span class="line">                    &quot;id integer,&quot; +</span><br><span class="line">                    &quot;name text&quot; +</span><br><span class="line">                    &#x2F;&#x2F;添加更多的属性</span><br><span class="line">                    &quot;)&quot;;</span><br><span class="line">    private static final String DELETE_TABLE_SQL &#x3D;</span><br><span class="line">            &quot;DROP TABLE IF EXISTS &quot; + TABLE_NAME;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Create a helper object to create, open, and&#x2F;or manage a database.</span><br><span class="line">     * This method always returns very quickly.  The database is not actually</span><br><span class="line">     * created or opened until one of &#123;@link #getWritableDatabase&#125; or</span><br><span class="line">     * &#123;@link #getReadableDatabase&#125; is called.</span><br><span class="line">     *</span><br><span class="line">     * @param context to use to open or create the database</span><br><span class="line">     * @param name    of the database file, or null for an in-memory database</span><br><span class="line">     * @param factory to use for creating cursor objects, or null for the default</span><br><span class="line">     * @param version number of the database (starting at 1); if the database is older,</span><br><span class="line">     *                &#123;@link #onUpgrade&#125; will be used to upgrade the database; if the database is</span><br><span class="line">     *                newer, &#123;@link #onDowngrade&#125; will be used to downgrade the database</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) &#123;</span><br><span class="line">        super(context, name, factory, version);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Called when the database is created for the first time. This is where the</span><br><span class="line">     * creation of tables and the initial population of the tables should happen.</span><br><span class="line">     *</span><br><span class="line">     * @param db The database.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onCreate(SQLiteDatabase db) &#123;</span><br><span class="line">        db.execSQL(CREATE_TABLE_SQL);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Called when the database needs to be upgraded. The implementation</span><br><span class="line">     * should use this method to drop tables, add tables, or do anything else it</span><br><span class="line">     * needs to upgrade to the new schema version.</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * The SQLite ALTER TABLE documentation can be found</span><br><span class="line">     * &lt;a href&#x3D;&quot;http:&#x2F;&#x2F;sqlite.org&#x2F;lang_altertable.html&quot;&gt;here&lt;&#x2F;a&gt;. If you add new columns</span><br><span class="line">     * you can use ALTER TABLE to insert them into a live table. If you rename or remove columns</span><br><span class="line">     * you can use ALTER TABLE to rename the old table, then create the new table and then</span><br><span class="line">     * populate the new table with the contents of the old table.</span><br><span class="line">     * &lt;&#x2F;p&gt;&lt;p&gt;</span><br><span class="line">     * This method executes within a transaction.  If an exception is thrown, all changes</span><br><span class="line">     * will automatically be rolled back.</span><br><span class="line">     * &lt;&#x2F;p&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param db         The database.</span><br><span class="line">     * @param oldVersion The old database version.</span><br><span class="line">     * @param newVersion The new database version.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) &#123;</span><br><span class="line">        db.execSQL(DELETE_TABLE_SQL);</span><br><span class="line">        onCreate(db);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onOpen(SQLiteDatabase db) &#123;</span><br><span class="line">        super.onOpen(db);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) &#123;</span><br><span class="line">        super.onDowngrade(db, oldVersion, newVersion);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.oschina.git.zhaikun.androiddeveloped.activitys;</span><br><span class="line"></span><br><span class="line">import android.content.ContentValues;</span><br><span class="line">import android.database.Cursor;</span><br><span class="line">import android.database.sqlite.SQLiteDatabase;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line"></span><br><span class="line">import net.oschina.git.zhaikun.androiddeveloped.db.SQLiteHelper;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2017&#x2F;8&#x2F;2.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * DB数据操作</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class DBActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    private static final String DATABASE_NAME &#x3D; &quot;dbTest.db&quot;;&#x2F;&#x2F;数据库名臣</span><br><span class="line">    private static final int DATABASE_VERSION &#x3D; 1;&#x2F;&#x2F;数据库版本号</span><br><span class="line"></span><br><span class="line">    private SQLiteHelper sqLiteHelper &#x3D; new SQLiteHelper(this, DATABASE_NAME, null, DATABASE_VERSION);</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(@Nullable Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        &#x2F;&#x2F;1、向数据库写入数据</span><br><span class="line">        SQLiteDatabase dbWrite &#x3D; sqLiteHelper.getWritableDatabase();</span><br><span class="line">        &#x2F;&#x2F;向数据库中插入的列对应的值</span><br><span class="line">        ContentValues contentValues &#x3D; new ContentValues();</span><br><span class="line">        contentValues.put(&quot;name&quot;, &quot;123456&quot;);</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * insert()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：参数会使得系统自动对那些ContentValues 没有提供数据的列填充数据为null，如果第二个参数传递的是null，那么系统则不会对那些没有提供数据的列进行填充</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbWrite.insert(&quot;students&quot;, null, contentValues);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2、读取数据库中的数据</span><br><span class="line">        SQLiteDatabase dbRead &#x3D; sqLiteHelper.getReadableDatabase();</span><br><span class="line">        String[] columns &#x3D; &#123;&quot;name&quot;&#125;;</span><br><span class="line">        String selection &#x3D; &quot;id&#x3D;? and name&#x3D;?&quot;;</span><br><span class="line">        String[] selectionArgs &#x3D; &#123;&quot;1&quot;, &quot;小明&quot;&#125;;&#x2F;&#x2F;与selection中问号的先后顺序相对应，一个问号对应一个值</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * query()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：查询的列的名称，返回所查询列对应的结果</span><br><span class="line">         * 参数三：查询条件中的列</span><br><span class="line">         * 参数四：查询条件中的列对应的值</span><br><span class="line">         * 参数五：分组</span><br><span class="line">         * 参数六：分组过滤</span><br><span class="line">         * 参数七：排序</span><br><span class="line">         * 返回Cursor游标对象</span><br><span class="line">         *&#x2F;</span><br><span class="line">        Cursor cursor &#x3D; dbRead.query(&quot;students&quot;, columns, selection, selectionArgs, null, null, null);</span><br><span class="line">        cursor.moveToFirst();&#x2F;&#x2F;取游标中的数据，将读取位置移动到数据集中最开始的位置，使用cursor的其中一个get方法如getString()或getLong()获取列的值</span><br><span class="line">        String name &#x3D; cursor.getString(cursor.getColumnIndex(&quot;name&quot;));&#x2F;&#x2F;对于每一个get方法必须传递想要获取的列的索引位置，索引位置可以通过调用getColumnIndex()或getColumnIndexOrThrow()获得</span><br><span class="line">        while (cursor.moveToNext()) &#123;</span><br><span class="line">            name &#x3D; cursor.getString(cursor.getColumnIndex(&quot;name&quot;));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3、删除数据</span><br><span class="line">        String whereClause &#x3D; &quot;id like ?&quot;;</span><br><span class="line">        String[] whereClauseArgs &#x3D; &#123;&quot;12&quot;&#125;;</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * delete()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：删除条件</span><br><span class="line">         * 参数三：删除条件中对应的值</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbRead.delete(&quot;students&quot;, whereClause, whereClauseArgs);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;4、跟新数据</span><br><span class="line">        ContentValues updateContentValues &#x3D; new ContentValues();</span><br><span class="line">        contentValues.put(&quot;name&quot;, &quot;小花&quot;);</span><br><span class="line">        String updateSelection &#x3D; &quot;id &#x3D; ?&quot;;</span><br><span class="line">        String[] updateSelectionArgs &#x3D; &#123;&quot;123456&quot;&#125;;&#x2F;&#x2F;更新条件对应的值，与updateSelection中？顺序一致</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * update()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：更新的列对应的值</span><br><span class="line">         * 参数三：更新条件</span><br><span class="line">         * 参数四：更新条件对应的值</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbRead.update(&quot;students&quot;, updateContentValues, updateSelection, updateSelectionArgs);</span><br><span class="line"></span><br><span class="line">        dbWrite.close();</span><br><span class="line">        dbRead.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-        <tag>数据</tag>
-        <tag>数据库</tag>
-        <tag>sqlite</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android数据存储之文件File</title>
     <url>/2020/11/25/data-file/</url>
     <content><![CDATA[<p>适用类型：流式顺序数据的读写</p>
@@ -1122,6 +1103,25 @@
         <tag>fragment</tag>
         <tag>child fragment</tag>
         <tag>嵌套</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android数据存储-DB（SQLite）</title>
+    <url>/2020/11/25/db-sqlite/</url>
+    <content><![CDATA[<p>适用类型：重复、大量、结构化的数据</p>
+<p>在APP中，DB被保存到了程序的private空间，这些空间默认是私有的，不能被其它的应用所访问，从而保证了DB中数据的安全性</p>
+<p>在程序中，我们借助SQLiteOpenHelper对数据库进行读写操作，系统对于一些耗时的操作会在程序需要时才执行，而不是程序启动就开始执行，对于耗时的操作，我们应该AsyncTask or IntentService中进行，避免对程序主线程的影响</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.oschina.git.zhaikun.androiddeveloped.db;</span><br><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.database.sqlite.SQLiteDatabase;</span><br><span class="line">import android.database.sqlite.SQLiteOpenHelper;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2017&#x2F;8&#x2F;2.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * SQLite数据操作类</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SQLiteHelper extends SQLiteOpenHelper &#123;</span><br><span class="line"></span><br><span class="line">    private static final String TABLE_NAME &#x3D; &quot;students&quot;;&#x2F;&#x2F;表名</span><br><span class="line">    private static final String CREATE_TABLE_SQL &#x3D;&#x2F;&#x2F;创建表students</span><br><span class="line">            &quot;create table &quot; + TABLE_NAME +</span><br><span class="line">                    &quot;(&quot; +</span><br><span class="line">                    &quot;_id integer primary key,&quot; +&#x2F;&#x2F;Android中SQLite默认的主键</span><br><span class="line">                    &quot;id integer,&quot; +</span><br><span class="line">                    &quot;name text&quot; +</span><br><span class="line">                    &#x2F;&#x2F;添加更多的属性</span><br><span class="line">                    &quot;)&quot;;</span><br><span class="line">    private static final String DELETE_TABLE_SQL &#x3D;</span><br><span class="line">            &quot;DROP TABLE IF EXISTS &quot; + TABLE_NAME;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Create a helper object to create, open, and&#x2F;or manage a database.</span><br><span class="line">     * This method always returns very quickly.  The database is not actually</span><br><span class="line">     * created or opened until one of &#123;@link #getWritableDatabase&#125; or</span><br><span class="line">     * &#123;@link #getReadableDatabase&#125; is called.</span><br><span class="line">     *</span><br><span class="line">     * @param context to use to open or create the database</span><br><span class="line">     * @param name    of the database file, or null for an in-memory database</span><br><span class="line">     * @param factory to use for creating cursor objects, or null for the default</span><br><span class="line">     * @param version number of the database (starting at 1); if the database is older,</span><br><span class="line">     *                &#123;@link #onUpgrade&#125; will be used to upgrade the database; if the database is</span><br><span class="line">     *                newer, &#123;@link #onDowngrade&#125; will be used to downgrade the database</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) &#123;</span><br><span class="line">        super(context, name, factory, version);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Called when the database is created for the first time. This is where the</span><br><span class="line">     * creation of tables and the initial population of the tables should happen.</span><br><span class="line">     *</span><br><span class="line">     * @param db The database.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onCreate(SQLiteDatabase db) &#123;</span><br><span class="line">        db.execSQL(CREATE_TABLE_SQL);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Called when the database needs to be upgraded. The implementation</span><br><span class="line">     * should use this method to drop tables, add tables, or do anything else it</span><br><span class="line">     * needs to upgrade to the new schema version.</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * The SQLite ALTER TABLE documentation can be found</span><br><span class="line">     * &lt;a href&#x3D;&quot;http:&#x2F;&#x2F;sqlite.org&#x2F;lang_altertable.html&quot;&gt;here&lt;&#x2F;a&gt;. If you add new columns</span><br><span class="line">     * you can use ALTER TABLE to insert them into a live table. If you rename or remove columns</span><br><span class="line">     * you can use ALTER TABLE to rename the old table, then create the new table and then</span><br><span class="line">     * populate the new table with the contents of the old table.</span><br><span class="line">     * &lt;&#x2F;p&gt;&lt;p&gt;</span><br><span class="line">     * This method executes within a transaction.  If an exception is thrown, all changes</span><br><span class="line">     * will automatically be rolled back.</span><br><span class="line">     * &lt;&#x2F;p&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param db         The database.</span><br><span class="line">     * @param oldVersion The old database version.</span><br><span class="line">     * @param newVersion The new database version.</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) &#123;</span><br><span class="line">        db.execSQL(DELETE_TABLE_SQL);</span><br><span class="line">        onCreate(db);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onOpen(SQLiteDatabase db) &#123;</span><br><span class="line">        super.onOpen(db);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) &#123;</span><br><span class="line">        super.onDowngrade(db, oldVersion, newVersion);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.oschina.git.zhaikun.androiddeveloped.activitys;</span><br><span class="line"></span><br><span class="line">import android.content.ContentValues;</span><br><span class="line">import android.database.Cursor;</span><br><span class="line">import android.database.sqlite.SQLiteDatabase;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line"></span><br><span class="line">import net.oschina.git.zhaikun.androiddeveloped.db.SQLiteHelper;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by zhaikun68 on 2017&#x2F;8&#x2F;2.</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * DB数据操作</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class DBActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    private static final String DATABASE_NAME &#x3D; &quot;dbTest.db&quot;;&#x2F;&#x2F;数据库名臣</span><br><span class="line">    private static final int DATABASE_VERSION &#x3D; 1;&#x2F;&#x2F;数据库版本号</span><br><span class="line"></span><br><span class="line">    private SQLiteHelper sqLiteHelper &#x3D; new SQLiteHelper(this, DATABASE_NAME, null, DATABASE_VERSION);</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(@Nullable Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        &#x2F;&#x2F;1、向数据库写入数据</span><br><span class="line">        SQLiteDatabase dbWrite &#x3D; sqLiteHelper.getWritableDatabase();</span><br><span class="line">        &#x2F;&#x2F;向数据库中插入的列对应的值</span><br><span class="line">        ContentValues contentValues &#x3D; new ContentValues();</span><br><span class="line">        contentValues.put(&quot;name&quot;, &quot;123456&quot;);</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * insert()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：参数会使得系统自动对那些ContentValues 没有提供数据的列填充数据为null，如果第二个参数传递的是null，那么系统则不会对那些没有提供数据的列进行填充</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbWrite.insert(&quot;students&quot;, null, contentValues);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2、读取数据库中的数据</span><br><span class="line">        SQLiteDatabase dbRead &#x3D; sqLiteHelper.getReadableDatabase();</span><br><span class="line">        String[] columns &#x3D; &#123;&quot;name&quot;&#125;;</span><br><span class="line">        String selection &#x3D; &quot;id&#x3D;? and name&#x3D;?&quot;;</span><br><span class="line">        String[] selectionArgs &#x3D; &#123;&quot;1&quot;, &quot;小明&quot;&#125;;&#x2F;&#x2F;与selection中问号的先后顺序相对应，一个问号对应一个值</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * query()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：查询的列的名称，返回所查询列对应的结果</span><br><span class="line">         * 参数三：查询条件中的列</span><br><span class="line">         * 参数四：查询条件中的列对应的值</span><br><span class="line">         * 参数五：分组</span><br><span class="line">         * 参数六：分组过滤</span><br><span class="line">         * 参数七：排序</span><br><span class="line">         * 返回Cursor游标对象</span><br><span class="line">         *&#x2F;</span><br><span class="line">        Cursor cursor &#x3D; dbRead.query(&quot;students&quot;, columns, selection, selectionArgs, null, null, null);</span><br><span class="line">        cursor.moveToFirst();&#x2F;&#x2F;取游标中的数据，将读取位置移动到数据集中最开始的位置，使用cursor的其中一个get方法如getString()或getLong()获取列的值</span><br><span class="line">        String name &#x3D; cursor.getString(cursor.getColumnIndex(&quot;name&quot;));&#x2F;&#x2F;对于每一个get方法必须传递想要获取的列的索引位置，索引位置可以通过调用getColumnIndex()或getColumnIndexOrThrow()获得</span><br><span class="line">        while (cursor.moveToNext()) &#123;</span><br><span class="line">            name &#x3D; cursor.getString(cursor.getColumnIndex(&quot;name&quot;));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3、删除数据</span><br><span class="line">        String whereClause &#x3D; &quot;id like ?&quot;;</span><br><span class="line">        String[] whereClauseArgs &#x3D; &#123;&quot;12&quot;&#125;;</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * delete()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：删除条件</span><br><span class="line">         * 参数三：删除条件中对应的值</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbRead.delete(&quot;students&quot;, whereClause, whereClauseArgs);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;4、跟新数据</span><br><span class="line">        ContentValues updateContentValues &#x3D; new ContentValues();</span><br><span class="line">        contentValues.put(&quot;name&quot;, &quot;小花&quot;);</span><br><span class="line">        String updateSelection &#x3D; &quot;id &#x3D; ?&quot;;</span><br><span class="line">        String[] updateSelectionArgs &#x3D; &#123;&quot;123456&quot;&#125;;&#x2F;&#x2F;更新条件对应的值，与updateSelection中？顺序一致</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * update()方法说明</span><br><span class="line">         * 参数一：操作的表名</span><br><span class="line">         * 参数二：更新的列对应的值</span><br><span class="line">         * 参数三：更新条件</span><br><span class="line">         * 参数四：更新条件对应的值</span><br><span class="line">         *&#x2F;</span><br><span class="line">        dbRead.update(&quot;students&quot;, updateContentValues, updateSelection, updateSelectionArgs);</span><br><span class="line"></span><br><span class="line">        dbWrite.close();</span><br><span class="line">        dbRead.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>数据</tag>
+        <tag>数据库</tag>
+        <tag>sqlite</tag>
       </tags>
   </entry>
   <entry>
@@ -1307,6 +1307,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Intent将在APP中获取到的联系人信息保存到通讯录</title>
+    <url>/2020/11/25/intent-contract-to-phone/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;声明Intent时指定Action为ContactsContract.Intents.Insert.ACTION</span><br><span class="line">Intent intent &#x3D; new Intent(ContactsContract.Intents.Insert.ACTION);</span><br><span class="line">intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);</span><br><span class="line">&#x2F;&#x2F;使用如putExtra()方法将联系人的信息以key-value的方式保存</span><br><span class="line">intent.putExtra(ContactsContract.Intents.Insert.NAME, name)</span><br><span class="line">        .putExtra(ContactsContract.Intents.Insert.PHONE, phoneNumber);</span><br><span class="line">&#x2F;&#x2F;检查是否有APP接收我们传入的Intent</span><br><span class="line">List&lt;ResolveInfo&gt; acceptActivityList &#x3D; context.getPackageManager().queryIntentActivities(intent, 0);</span><br><span class="line">if (acceptActivityList &#x3D;&#x3D; null || acceptActivityList.size() &#x3D;&#x3D; 0)</span><br><span class="line">    ToastUtils.showLong(context, &quot;联系人信息保存错误&quot;);</span><br><span class="line">else</span><br><span class="line">    context.startActivity(intent);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>app</tag>
+        <tag>android</tag>
+        <tag>Intent</tag>
+        <tag>通讯录</tag>
+        <tag>保存联系人信息</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>隐式意图 implicit intent</title>
     <url>/2020/11/25/implicit-intent/</url>
     <content><![CDATA[<p>在我们的APP中用于与其他APP交互</p>
@@ -1324,21 +1339,6 @@
         <tag>Intent</tag>
         <tag>隐式意图</tag>
         <tag>电话呼叫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Intent将在APP中获取到的联系人信息保存到通讯录</title>
-    <url>/2020/11/25/intent-contract-to-phone/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;声明Intent时指定Action为ContactsContract.Intents.Insert.ACTION</span><br><span class="line">Intent intent &#x3D; new Intent(ContactsContract.Intents.Insert.ACTION);</span><br><span class="line">intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);</span><br><span class="line">&#x2F;&#x2F;使用如putExtra()方法将联系人的信息以key-value的方式保存</span><br><span class="line">intent.putExtra(ContactsContract.Intents.Insert.NAME, name)</span><br><span class="line">        .putExtra(ContactsContract.Intents.Insert.PHONE, phoneNumber);</span><br><span class="line">&#x2F;&#x2F;检查是否有APP接收我们传入的Intent</span><br><span class="line">List&lt;ResolveInfo&gt; acceptActivityList &#x3D; context.getPackageManager().queryIntentActivities(intent, 0);</span><br><span class="line">if (acceptActivityList &#x3D;&#x3D; null || acceptActivityList.size() &#x3D;&#x3D; 0)</span><br><span class="line">    ToastUtils.showLong(context, &quot;联系人信息保存错误&quot;);</span><br><span class="line">else</span><br><span class="line">    context.startActivity(intent);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>app</tag>
-        <tag>android</tag>
-        <tag>Intent</tag>
-        <tag>通讯录</tag>
-        <tag>保存联系人信息</tag>
       </tags>
   </entry>
   <entry>
@@ -1794,25 +1794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础面试题：使用最快的效率将2变成8</title>
-    <url>/2020/11/24/java-mst-2-to-8/</url>
-    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
-<p>原理：将被转换的数字进行位移运算</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
-]]></content>
-      <categories>
-        <category>面试题 - Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试题</tag>
-        <tag>数字转换</tag>
-        <tag>最快效率将2转换为8</tag>
-        <tag>二进制</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数组在声明时的小建议</title>
     <url>/2020/11/25/java-array-statement-suggest/</url>
     <content><![CDATA[<p>此处不再赘述如何声明一个数组，看以下声明：</p>
@@ -1834,22 +1815,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础面试题：int 与 Integer 的区别</title>
-    <url>/2020/11/24/java-mst-int-integer/</url>
-    <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
-<p>2 当int、Integer作为类的属性声明时的类型时，int的默认值是0，Integer的默认值是null</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.csdn.blog.karen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装类演示</span><br><span class="line"> * </span><br><span class="line"> * @author：Karen Chia</span><br><span class="line"> * @date：2018年11月13日 上午9:32:06</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class ClazzDemo &#123;</span><br><span class="line"></span><br><span class="line">	private static int intVal;</span><br><span class="line">	private static Integer integerVal;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;int类型的初始值 &#x3D; &quot; + intVal);</span><br><span class="line">		System.out.println(&quot;Integer类型的初始值 &#x3D; &quot; + integerVal);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int类型的初始值 &#x3D; 0</span><br><span class="line">Integer类型的初始值 &#x3D; null</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Java基础面试题：使用最快的效率将2变成8</title>
+    <url>/2020/11/24/java-mst-2-to-8/</url>
+    <content><![CDATA[<h2 id="Java基础面试题：使用最快的效率将2变成8"><a href="#Java基础面试题：使用最快的效率将2变成8" class="headerlink" title="Java基础面试题：使用最快的效率将2变成8"></a>Java基础面试题：使用最快的效率将2变成8</h2><blockquote>
+<p>原理：将被转换的数字进行位移运算</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package blog.csdn.net.karen.javasedemo;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 位移运算演示</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * Created by Karen Chia on 2018&#x2F;11&#x2F;8</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        byte number1 &#x3D; 2;</span><br><span class="line">        byte res &#x3D; (byte) (number1 &lt;&lt; 2);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="演算过程"><a href="#演算过程" class="headerlink" title="演算过程"></a>演算过程</h3><p>1 本文中将被转换的数字定为 byte 数据类型，只是为了演示方便，定为其它数据类型均可<br>2 表达式 ==number1 &lt;&lt; 2== 说明：将数字 number1 对应的二进制数左移2位，空出的低位使用“0”补足<br>3 数字 2 的二进制表示：byte类型占内存空间为1个字节，1个字节为8个位<br>| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |<br>|–|–|–|–|–|–|–|–|<br>4 将2的二进制表示数左移2位<br>| 0 | 0 | 0 | 0 | 1 | 0 |  |  |<br>|–|–|–|–|–|–|–|–|<br>5 二进制数被移动后，空出的低位用“0”补齐<br>| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |<br>|–|–|–|–|–|–|–|–|<br>将以上二进制数转换为十进制表示，结果为8</p>
+]]></content>
       <categories>
         <category>面试题 - Java</category>
       </categories>
       <tags>
         <tag>Java面试题</tag>
-        <tag>int</tag>
-        <tag>integer</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
+        <tag>数字转换</tag>
+        <tag>最快效率将2转换为8</tag>
+        <tag>二进制</tag>
       </tags>
   </entry>
   <entry>
@@ -1863,10 +1844,29 @@
       </categories>
       <tags>
         <tag>Java面试题</tag>
-        <tag>区别</tag>
-        <tag>异同点</tag>
         <tag>String</tag>
         <tag>StringBuffer</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础面试题：int 与 Integer 的区别</title>
+    <url>/2020/11/24/java-mst-int-integer/</url>
+    <content><![CDATA[<p>1 int是基本数据类型，Integer是int的包装类，包装类中提供了对整数的操作方法，int和Integer可以自动装箱和拆箱</p>
+<p>2 当int、Integer作为类的属性声明时的类型时，int的默认值是0，Integer的默认值是null</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package net.csdn.blog.karen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 包装类演示</span><br><span class="line"> * </span><br><span class="line"> * @author：Karen Chia</span><br><span class="line"> * @date：2018年11月13日 上午9:32:06</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class ClazzDemo &#123;</span><br><span class="line"></span><br><span class="line">	private static int intVal;</span><br><span class="line">	private static Integer integerVal;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;int类型的初始值 &#x3D; &quot; + intVal);</span><br><span class="line">		System.out.println(&quot;Integer类型的初始值 &#x3D; &quot; + integerVal);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int类型的初始值 &#x3D; 0</span><br><span class="line">Integer类型的初始值 &#x3D; null</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>面试题 - Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试题</tag>
+        <tag>区别</tag>
+        <tag>异同点</tag>
+        <tag>int</tag>
+        <tag>integer</tag>
       </tags>
   </entry>
   <entry>
@@ -1950,20 +1950,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android列表组件ListView使用详解之隐藏滚动条</title>
-    <url>/2020/11/25/listview-hint-scrollbar/</url>
-    <content><![CDATA[<p>默认情况下的ListView在发生滚动时，组件的右侧会出现滚动条，通过将ListView的属性设置为以下值时，隐藏滚动条</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">android:scrollbars&#x3D;&quot;none&quot;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Android开发基础</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>ListView</tag>
-        <tag>隐藏滚动条</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ListView组件中嵌套GridView（重算GridView的高度）</title>
     <url>/2020/11/25/listview-in-gridview/</url>
     <content><![CDATA[<blockquote>
@@ -1980,6 +1966,20 @@
         <tag>GridView</tag>
         <tag>重写列表子项的高度</tag>
         <tag>自定义控件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android列表组件ListView使用详解之隐藏滚动条</title>
+    <url>/2020/11/25/listview-hint-scrollbar/</url>
+    <content><![CDATA[<p>默认情况下的ListView在发生滚动时，组件的右侧会出现滚动条，通过将ListView的属性设置为以下值时，隐藏滚动条</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">android:scrollbars&#x3D;&quot;none&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Android开发基础</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>ListView</tag>
+        <tag>隐藏滚动条</tag>
       </tags>
   </entry>
   <entry>
